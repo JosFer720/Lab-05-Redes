@@ -16,6 +16,24 @@ Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 └── shared/              # Valores compartidos y plantillas
 ```
 
+## Web
+
+La implementación de Apache con login LDAP está en [`web/README.md`](web/README.md).
+El sitio se compila con `npm run build` en `web/site` y luego se despliega en la
+VM web:
+
+```bash
+cd web
+sudo ./scripts/install.sh
+sudo ./scripts/verify-local.sh
+```
+
+Desde el cliente:
+
+```bash
+WEB_USER='usuario' WEB_PASSWORD='clave-ldap' ./client/tests/test-web.sh
+```
+
 ## FTP
 
 La implementación lista para desplegar está en [`ftp/README.md`](ftp/README.md).
