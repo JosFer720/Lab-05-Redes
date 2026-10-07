@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.bak
+*.env
+prueba.txt
+bajado.txt
+descargado.txt
+resultados_*.log
+resumen.txt
