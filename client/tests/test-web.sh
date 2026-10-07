@@ -55,7 +55,7 @@ private_shows_user() {
 
 touch "${WORK_DIR}/vacia.txt"
 
-run_pass WEB-01 'resolución DNS' getent hosts "${WEB_HOST}"
+run_pass WEB-01 'resolución DNS' bash -c "[[ -n \$(dig +short '${WEB_HOST}' A) ]]"
 run_pass WEB-02 'página principal' bash -c "curl --fail --silent '${WEB_URL}/' | grep -q 'Aerolínea Redes'"
 run_pass WEB-03a 'área privada exige login' redirects_to "${WEB_URL}/privado/" "${WORK_DIR}/vacia.txt" /login/
 run_pass WEB-03b 'login LDAP válido' login_accepted

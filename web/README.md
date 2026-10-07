@@ -62,7 +62,7 @@ que cada acceso se valide contra el servidor.
 Desde el cliente, con DNS apuntando a `ns1`:
 
 ```bash
-WEB_USER='usuario' WEB_PASSWORD='clave-ldap' ./client/tests/test-web.sh
+WEB_USER='usuario' WEB_PASSWORD='clave-ldap' ../client/tests/test-web.sh
 ```
 
 Para WEB-05, detener LDAP con `sudo systemctl stop slapd`, intentar ingresar y
