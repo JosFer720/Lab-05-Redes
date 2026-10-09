@@ -1,0 +1,67 @@
+# Validación local de BIND DNS
+# Fecha real de ejecución: 2026-10-09, hora de Guatemala.
+# Entorno: Ubuntu 24.04, BIND 9.18.39, WSL2 lab5-ns1.
+# El instalador se ejecutó y reinició named antes de estas pruebas.
+# Servidor consultado: IP actual local de ns1 (192.168.100.11).
+# Registros esperados: IPs históricas del hotspot del grupo, serial 2026100702.
+# No comprueba la conectividad hacia las VMs de otros integrantes.
+# La actualización de IPs se probó sobre una copia temporal; la zona real se conservó.
+
+[PASS] Sintaxis de todos los scripts Bash
+[PASS] servicio activo
+[PASS] servicio habilitado al arranque
+[PASS] puerto 53/udp escuchando
+[PASS] puerto 53/tcp escuchando
+[PASS] named-checkconf sin errores
+[PASS] named-checkzone sin errores
+[PASS] zona desplegada igual a la del repositorio
+[PASS] serial con formato AAAAMMDDNN
+[PASS] BIND tiene cargado el serial del archivo
+[PASS] respuesta autoritativa para el SOA (flag aa)
+[PASS] A ns1.aerolinea.redes.test = 10.223.12.73
+[PASS] A ldap.aerolinea.redes.test = 10.223.12.169
+[PASS] A www.aerolinea.redes.test = 10.223.12.11
+[PASS] A mail.aerolinea.redes.test = 10.223.12.202
+[PASS] A ftp.aerolinea.redes.test = 10.223.12.123
+[PASS] NS = ns1
+[PASS] MX = 10 mail
+[PASS] nombre inexistente da NXDOMAIN
+[PASS] consultas DNS por TCP
+[PASS] la zona no tiene IPs pendientes
+[PASS] resuelve nombres externos mediante forwarders
+[PASS] DNS-01 ns1.aerolinea.redes.test devuelve 10.223.12.73
+[PASS] DNS-02a ldap.aerolinea.redes.test devuelve 10.223.12.169
+[PASS] DNS-02b www.aerolinea.redes.test devuelve 10.223.12.11
+[PASS] DNS-02c mail.aerolinea.redes.test devuelve 10.223.12.202
+[PASS] DNS-02d ftp.aerolinea.redes.test devuelve 10.223.12.123
+[PASS] DNS-02e la zona no tiene IPs pendientes (192.0.2.x)
+[PASS] DNS-03a SOA con respuesta autoritativa (flag aa)
+[PASS] DNS-03b NS de la zona es ns1.aerolinea.redes.test
+[PASS] DNS-04 MX de la zona es mail.aerolinea.redes.test (prioridad 10)
+[PASS] DNS-05 nombre inexistente responde NXDOMAIN
+[PASS] DNS-06 resolución DNS también disponible por TCP
+
+Resultado: 11 PASS, 0 FAIL
+zone aerolinea.redes.test/IN: loaded serial 2026100702
+OK
+ns1   10.223.12.73 -> 192.168.50.10
+ldap  10.223.12.169 -> 192.168.50.11
+www   10.223.12.11 -> 192.168.50.12
+mail  10.223.12.202 -> 192.168.50.13
+ftp   10.223.12.123 -> 192.168.50.14
+serial 2026100702 -> 2026100901
+Tabla generada: /tmp/tmp.6oMsvAM2T3/table.md
+[PASS] Actualización de cinco IPs, incremento de serial y generación de tabla
+[PASS] Entradas inválidas rechazadas sin modificar la zona
+Evidencias guardadas:
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-01.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-02.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-03.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-04.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-05.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/DNS-06.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/MAIL-01.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/named-checkzone.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/INT-02-dns.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/INT-03-dns.txt
+  /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../../docs/evidencias/dns/INT-04-dns.txt

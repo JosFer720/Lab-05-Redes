@@ -1,0 +1,9 @@
+# Validación de la configuración y de la zona
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ named-checkconf /etc/bind/named.conf && echo "named-checkconf: sin errores"
+named-checkconf: sin errores
+
+$ named-checkzone aerolinea.redes.test /mnt/c/Users/ianro/OneDrive/Documentos/Uvg/Octavo Semestre/Redes/Lab-05-Redes/dns/scripts/../zones/db.aerolinea.redes.test
+zone aerolinea.redes.test/IN: loaded serial 2026100702
+OK

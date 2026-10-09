@@ -1,0 +1,26 @@
+# DNS-06 Resolución del servidor DNS por TCP
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ dig +tcp @192.168.100.11 ns1.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +tcp @192.168.100.11 ns1.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48016
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: ba8026ceed8af08f010000006ac8e3986d20fab75a3bbc12 (good)
+;; QUESTION SECTION:
+;ns1.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+ns1.aerolinea.redes.test. 300	IN	A	10.223.12.73
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (TCP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 97
+

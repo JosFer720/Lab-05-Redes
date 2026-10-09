@@ -1,0 +1,8 @@
+// /etc/bind/named.conf.local
+// Zona autoritativa del grupo (caso Aerolínea).
+zone "aerolinea.redes.test" {
+    type master;
+    file "/etc/bind/zones/db.aerolinea.redes.test";
+    allow-transfer { none; };   // no hay servidores secundarios
+    notify no;
+};

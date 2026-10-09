@@ -1,0 +1,64 @@
+# INT-04 Logs de named: arranque de la zona y consultas recibidas
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ journalctl -u named --no-pager -n 60
+Oct 09 06:52:35 ns1 named[2917]: automatic empty zone: EMPTY.AS112.ARPA
+Oct 09 06:52:35 ns1 named[2917]: automatic empty zone: HOME.ARPA
+Oct 09 06:52:35 ns1 named[2917]: automatic empty zone: RESOLVER.ARPA
+Oct 09 06:52:35 ns1 named[2917]: configuring command channel from '/etc/bind/rndc.key'
+Oct 09 06:52:35 ns1 named[2917]: command channel listening on 127.0.0.1#953
+Oct 09 06:52:35 ns1 named[2917]: managed-keys-zone: loaded serial 19
+Oct 09 06:52:35 ns1 named[2917]: zone 0.in-addr.arpa/IN: loaded serial 1
+Oct 09 06:52:35 ns1 named[2917]: zone 127.in-addr.arpa/IN: loaded serial 1
+Oct 09 06:52:35 ns1 named[2917]: zone 255.in-addr.arpa/IN: loaded serial 1
+Oct 09 06:52:35 ns1 named[2917]: zone localhost/IN: loaded serial 2
+Oct 09 06:52:35 ns1 named[2917]: zone aerolinea.redes.test/IN: loaded serial 2026100702
+Oct 09 06:52:35 ns1 named[2917]: all zones loaded
+Oct 09 06:52:35 ns1 named[2917]: running
+Oct 09 06:52:35 ns1 systemd[1]: Started named.service - BIND Domain Name Server.
+Oct 09 06:52:35 ns1 named[2917]: managed-keys-zone: Key 20326 for zone . is now trusted (acceptance timer complete)
+Oct 09 06:52:35 ns1 named[2917]: managed-keys-zone: Key 38696 for zone . is now trusted (acceptance timer complete)
+Oct 09 06:52:36 ns1 named[2917]: received control channel command 'zonestatus aerolinea.redes.test'
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47683 (aerolinea.redes.test): query: aerolinea.redes.test IN SOA -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#48406 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#47601 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#48457 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#44647 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#46450 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#45891 (aerolinea.redes.test): query: aerolinea.redes.test IN NS -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#48555 (aerolinea.redes.test): query: aerolinea.redes.test IN MX -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#46528 (noexiste.aerolinea.redes.test): query: noexiste.aerolinea.redes.test IN A -E(0)K (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d9530e1a8 192.168.100.11#45362 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A -E(0)TK (192.168.100.11)
+Oct 09 06:52:36 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47101 (ubuntu.com): query: ubuntu.com IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:37 ns1 named[2917]: timed out resolving 'ubuntu.com/A/IN': 1.1.1.1#53
+Oct 09 06:52:38 ns1 named[2917]: timed out resolving 'ubuntu.com/A/IN': 8.8.8.8#53
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45773 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47887 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#46400 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45529 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#48137 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47975 (aerolinea.redes.test): query: aerolinea.redes.test IN SOA -E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#46516 (aerolinea.redes.test): query: aerolinea.redes.test IN NS +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#45359 (aerolinea.redes.test): query: aerolinea.redes.test IN MX +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#48101 (noexiste.aerolinea.redes.test): query: noexiste.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:39 ns1 named[2917]: client @0x7f4d95311cf8 192.168.100.11#44884 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A +E(0)TK (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#44689 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45972 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A + (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#46344 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN AAAA + (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#46773 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#48472 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#45517 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47788 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#48124 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45006 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA + (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'a.gtld-servers.net/A/IN': 8.8.8.8#53
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'e.gtld-servers.net/A/IN': 8.8.8.8#53
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45233 (aerolinea.redes.test): query: aerolinea.redes.test IN SOA +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#48623 (aerolinea.redes.test): query: aerolinea.redes.test IN NS +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#47766 (aerolinea.redes.test): query: aerolinea.redes.test IN MX +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#47069 (noexiste.aerolinea.redes.test): query: noexiste.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'ns1.canonical.com/A/IN': 8.8.8.8#53
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95311cf8 192.168.100.11#45076 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A +E(0)TK (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d95308218 192.168.100.11#48291 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45980 (aerolinea.redes.test): query: aerolinea.redes.test IN MX +E(0)K (192.168.100.11)
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'k.gtld-servers.net/A/IN': 8.8.8.8#53

@@ -1,0 +1,106 @@
+# DNS-02 Resolución de los servicios: ldap, www, mail y ftp
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ dig @192.168.100.11 ldap.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 ldap.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55910
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 01671ee69fc98b16010000006ac8e3988706546c04a32045 (good)
+;; QUESTION SECTION:
+;ldap.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+ldap.aerolinea.redes.test. 300	IN	A	10.223.12.169
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 98
+
+
+$ dig @192.168.100.11 www.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 www.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8835
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: ee3d5dc767da791c010000006ac8e3988f461178749e64f8 (good)
+;; QUESTION SECTION:
+;www.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+www.aerolinea.redes.test. 300	IN	A	10.223.12.11
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 97
+
+
+$ dig @192.168.100.11 mail.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 mail.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22228
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 42c8d5706d9ba2f6010000006ac8e398cedef68d476c8c10 (good)
+;; QUESTION SECTION:
+;mail.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+mail.aerolinea.redes.test. 300	IN	A	10.223.12.202
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 98
+
+
+$ dig @192.168.100.11 ftp.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 ftp.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2767
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 49c527bca9a8d562010000006ac8e398991e720ac32069f7 (good)
+;; QUESTION SECTION:
+;ftp.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+ftp.aerolinea.redes.test. 300	IN	A	10.223.12.123
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 97
+
+
+$ nslookup ldap.aerolinea.redes.test 192.168.100.11
+Server:		192.168.100.11
+Address:	192.168.100.11#53
+
+Name:	ldap.aerolinea.redes.test
+Address: 10.223.12.169
+

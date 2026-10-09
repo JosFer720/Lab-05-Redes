@@ -1,0 +1,35 @@
+# INT-03 Puertos en escucha de ns1 (53 UDP y TCP)
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ ss -lntup | grep -E '^Netid|[:.]53[[:space:]]'
+Netid State  Recv-Q Send-Q  Local Address:Port Peer Address:PortProcess                                   
+udp   UNCONN 0      0          172.19.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=54))         
+udp   UNCONN 0      0          172.19.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=55))         
+udp   UNCONN 0      0          172.17.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=50))         
+udp   UNCONN 0      0          172.17.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=51))         
+udp   UNCONN 0      0          172.18.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=46))         
+udp   UNCONN 0      0          172.18.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=47))         
+udp   UNCONN 0      0          172.20.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=42))         
+udp   UNCONN 0      0          172.20.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=43))         
+udp   UNCONN 0      0      192.168.100.11:53        0.0.0.0:*    users:(("named",pid=2917,fd=38))         
+udp   UNCONN 0      0      192.168.100.11:53        0.0.0.0:*    users:(("named",pid=2917,fd=39))         
+udp   UNCONN 0      0           127.0.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=32))         
+udp   UNCONN 0      0           127.0.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=33))         
+udp   UNCONN 0      0          127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=108,fd=15))
+udp   UNCONN 0      0       127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=108,fd=13))
+udp   UNCONN 0      0      10.255.255.254:53        0.0.0.0:*                                             
+tcp   LISTEN 0      1000   10.255.255.254:53        0.0.0.0:*                                             
+tcp   LISTEN 0      10          127.0.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=36))         
+tcp   LISTEN 0      10          127.0.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=34))         
+tcp   LISTEN 0      4096       127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=108,fd=16))
+tcp   LISTEN 0      10         172.18.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=48))         
+tcp   LISTEN 0      10         172.18.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=49))         
+tcp   LISTEN 0      4096    127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=108,fd=14))
+tcp   LISTEN 0      10         172.17.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=53))         
+tcp   LISTEN 0      10         172.17.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=52))         
+tcp   LISTEN 0      10     192.168.100.11:53        0.0.0.0:*    users:(("named",pid=2917,fd=41))         
+tcp   LISTEN 0      10     192.168.100.11:53        0.0.0.0:*    users:(("named",pid=2917,fd=40))         
+tcp   LISTEN 0      10         172.20.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=44))         
+tcp   LISTEN 0      10         172.20.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=45))         
+tcp   LISTEN 0      10         172.19.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=57))         
+tcp   LISTEN 0      10         172.19.0.1:53        0.0.0.0:*    users:(("named",pid=2917,fd=56))         

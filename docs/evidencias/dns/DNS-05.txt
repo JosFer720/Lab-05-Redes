@@ -1,0 +1,26 @@
+# DNS-05 Consulta de nombre inexistente (debe dar NXDOMAIN)
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ dig @192.168.100.11 noexiste.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 noexiste.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 50970
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 9e44a515fb540925010000006ac8e398837d49de562214de (good)
+;; QUESTION SECTION:
+;noexiste.aerolinea.redes.test.	IN	A
+
+;; AUTHORITY SECTION:
+aerolinea.redes.test.	300	IN	SOA	ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100702 3600 900 604800 300
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 132
+

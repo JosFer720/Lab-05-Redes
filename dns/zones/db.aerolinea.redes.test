@@ -1,0 +1,22 @@
+; Zona autoritativa aerolinea.redes.test
+; Cada cambio de IP sube el serial (AAAAMMDDNN); lo hace scripts/set-ips.sh.
+; Las IPs 192.0.2.x son un rango de documentación (RFC 5737): si alguna queda
+; aquí, todavía falta la IP real de esa máquina.
+$TTL 300
+@   IN  SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. (
+            2026100702 ; serial (AAAAMMDDNN)
+            3600       ; refresh
+            900        ; retry
+            604800     ; expire
+            300 )      ; negative cache TTL
+
+; Servidor de nombres y servidor de correo de la zona
+@       IN  NS   ns1.aerolinea.redes.test.
+@       IN  MX   10 mail.aerolinea.redes.test.
+
+; Servicios del laboratorio
+ns1     IN  A    10.223.12.73    ; BIND9
+ldap    IN  A    10.223.12.169   ; OpenLDAP
+www     IN  A    10.223.12.11    ; Apache
+mail    IN  A    10.223.12.202   ; Postfix + Dovecot
+ftp     IN  A    10.223.12.123   ; vsftpd

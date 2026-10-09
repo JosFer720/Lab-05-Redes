@@ -1,0 +1,24 @@
+# INT-02 Estado del servicio named (repetir después de reiniciar)
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ systemctl is-active named
+active
+
+$ systemctl is-enabled named
+enabled
+
+$ systemctl --no-pager --full status named | head -n 14
+● named.service - BIND Domain Name Server
+     Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-10-09 06:52:35 CST; 5s ago
+       Docs: man:named(8)
+   Main PID: 2917 (named)
+     Status: "running"
+      Tasks: 10 (limit: 9299)
+     Memory: 25.4M ()
+     CGroup: /system.slice/named.service
+             └─2917 /usr/sbin/named -f -u bind -4 -n 2
+
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'a.gtld-servers.net/A/IN': 8.8.8.8#53
+Oct 09 06:52:40 ns1 named[2917]: timed out resolving 'e.gtld-servers.net/A/IN': 8.8.8.8#53
+Oct 09 06:52:40 ns1 named[2917]: client @0x7f4d8c030638 192.168.100.11#45233 (aerolinea.redes.test): query: aerolinea.redes.test IN SOA +E(0)K (192.168.100.11)

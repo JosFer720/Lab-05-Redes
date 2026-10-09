@@ -1,0 +1,53 @@
+# MAIL-01 Resolución del servidor de correo: A de mail y registro MX
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ dig @192.168.100.11 mail.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 mail.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57816
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 6b6dc3fb0483f7c5010000006ac8e3982b52947dc65ebaf8 (good)
+;; QUESTION SECTION:
+;mail.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+mail.aerolinea.redes.test. 300	IN	A	10.223.12.202
+
+;; Query time: 9 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 98
+
+
+$ dig @192.168.100.11 aerolinea.redes.test MX
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 aerolinea.redes.test MX
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8801
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 63b7f66d48ebc093010000006ac8e398133fd52e263ce332 (good)
+;; QUESTION SECTION:
+;aerolinea.redes.test.		IN	MX
+
+;; ANSWER SECTION:
+aerolinea.redes.test.	300	IN	MX	10 mail.aerolinea.redes.test.
+
+;; ADDITIONAL SECTION:
+mail.aerolinea.redes.test. 300	IN	A	10.223.12.202
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 114
+

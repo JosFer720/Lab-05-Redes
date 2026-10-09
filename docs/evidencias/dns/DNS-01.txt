@@ -1,0 +1,34 @@
+# DNS-01 Resolución del servidor DNS: ns1
+# Fecha: 2026-10-09 06:52:40 CST | Equipo: ns1 | Servidor DNS consultado: 192.168.100.11
+
+$ dig @192.168.100.11 ns1.aerolinea.redes.test A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @192.168.100.11 ns1.aerolinea.redes.test A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62718
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 46e90282a5d722b2010000006ac8e398c0231e0e33caa9f7 (good)
+;; QUESTION SECTION:
+;ns1.aerolinea.redes.test.	IN	A
+
+;; ANSWER SECTION:
+ns1.aerolinea.redes.test. 300	IN	A	10.223.12.73
+
+;; Query time: 0 msec
+;; SERVER: 192.168.100.11#53(192.168.100.11) (UDP)
+;; WHEN: Fri Oct 09 06:52:40 CST 2026
+;; MSG SIZE  rcvd: 97
+
+
+$ nslookup ns1.aerolinea.redes.test 192.168.100.11
+Server:		192.168.100.11
+Address:	192.168.100.11#53
+
+Name:	ns1.aerolinea.redes.test
+Address: 10.223.12.73
+

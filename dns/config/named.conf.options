@@ -1,0 +1,42 @@
+// /etc/bind/named.conf.options
+// Opciones generales de BIND9 para ns1.aerolinea.redes.test
+
+// Redes desde las que se permite usar este servidor como resolvedor
+// recursivo (apt, navegador, etc.). La IP del laboratorio todavía no es
+// fija, así que se aceptan los rangos privados; Internet público queda fuera.
+acl "red-lab" {
+    127.0.0.0/8;
+    10.0.0.0/8;
+    172.16.0.0/12;
+    192.168.0.0/16;
+    100.64.0.0/10;      // VPN tipo Tailscale/ZeroTier, si el grupo la usa
+};
+
+options {
+    directory "/var/cache/bind";
+
+    // Escucha en todas las IPv4 salvo 10.255.255.254: es una IP interna de WSL
+    // que ya usa su propio proxy DNS; sin excluirla BIND falla y reintenta
+    // cada segundo, llenando el journal. En una VM normal no existe y no afecta.
+    listen-on { !10.255.255.254; any; };
+    listen-on-v6 { none; };
+
+    // Revisa cada minuto si apareció una IP nueva (cambio de red, hotspot) y
+    // empieza a escuchar en ella; por defecto lo hace cada 60 minutos.
+    interface-interval 1;
+
+    // La zona del grupo debe poder consultarla cualquier cliente.
+    allow-query { any; };
+
+    // Recursión solo para la red del laboratorio, reenviando a DNS públicos
+    // para que las VMs sigan teniendo internet.
+    recursion yes;
+    allow-recursion { red-lab; };
+    forwarders { 8.8.8.8; 1.1.1.1; };
+    forward first;
+
+    dnssec-validation auto;
+
+    // Registra cada consulta en el journal (evidencia INT-04).
+    querylog yes;
+};
