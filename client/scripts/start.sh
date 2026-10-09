@@ -39,23 +39,25 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y dnsutils ldap-utils curl swaks
 
-if ! command -v resolvectl >/dev/null 2>&1; then
-  echo "Error: el cliente necesita systemd-resolved y resolvectl." >&2
-  exit 1
+RESOLVED_STATE=$(systemctl is-enabled systemd-resolved.service 2>/dev/null || true)
+if command -v resolvectl >/dev/null 2>&1 && [[ ${RESOLVED_STATE} != masked ]]; then
+  if [[ -z ${NETWORK_INTERFACE} ]]; then
+    NETWORK_INTERFACE=$(ip route show default | awk 'NR == 1 {print $5}')
+  fi
+  if [[ -z ${NETWORK_INTERFACE} || ! -d /sys/class/net/${NETWORK_INTERFACE} ]]; then
+    echo "Error: no se pudo identificar la interfaz de red." >&2
+    exit 1
+  fi
+  systemctl enable --now systemd-resolved
+  resolvectl dns "${NETWORK_INTERFACE}" "${DNS_SERVER}"
+  resolvectl domain "${NETWORK_INTERFACE}" "~${DOMAIN}"
+  resolvectl flush-caches
+else
+  [[ -e /etc/resolv.conf.aerolinea.bak ]] || cp -L /etc/resolv.conf /etc/resolv.conf.aerolinea.bak
+  rm -f /etc/resolv.conf
+  printf 'nameserver %s\noptions edns0\n' "${DNS_SERVER}" > /etc/resolv.conf
+  NETWORK_INTERFACE=${NETWORK_INTERFACE:-configuración directa}
 fi
-
-if [[ -z ${NETWORK_INTERFACE} ]]; then
-  NETWORK_INTERFACE=$(ip route show default | awk 'NR == 1 {print $5}')
-fi
-if [[ -z ${NETWORK_INTERFACE} || ! -d /sys/class/net/${NETWORK_INTERFACE} ]]; then
-  echo "Error: no se pudo identificar la interfaz de red." >&2
-  exit 1
-fi
-
-systemctl enable --now systemd-resolved
-resolvectl dns "${NETWORK_INTERFACE}" "${DNS_SERVER}"
-resolvectl domain "${NETWORK_INTERFACE}" "~${DOMAIN}"
-resolvectl flush-caches
 
 if ! dig +short "@${DNS_SERVER}" "ns1.${DOMAIN}" A | grep -q .; then
   echo "Error: el DNS no responde por la dirección ${DNS_SERVER}." >&2
