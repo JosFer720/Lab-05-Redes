@@ -1,0 +1,59 @@
+2026-10-07T21:41:55.789220-06:00
+
+lab5-ldap
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: false
+      dhcp6: false
+      addresses: [192.168.50.4/24, 192.168.50.11/24]
+      routes:
+        - to: default
+          via: 192.168.50.2
+      nameservers:
+        addresses: [10.223.12.73]
+        search: [aerolinea.redes.test]
+Link 2 (eth0): 10.223.12.73
+
+lab5-cliente
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: false
+      dhcp6: false
+      addresses: [192.168.50.5/24, 192.168.50.20/24]
+      routes:
+        - to: default
+          via: 192.168.50.2
+      nameservers:
+        addresses: [10.223.12.73]
+        search: [aerolinea.redes.test]
+Link 2 (eth0): 10.223.12.73
+
+$ dig @10.223.12.73 ldap.aerolinea.redes.test A +time=2 +tries=1
+
+; <<>> DiG 9.10.6 <<>> @10.223.12.73 ldap.aerolinea.redes.test A +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+Código de salida: 9
+
+$ limactl shell --workdir /home/javier lab5-cliente dig @10.223.12.73 ldap.aerolinea.redes.test A +time=2 +tries=1
+;; communications error to 10.223.12.73#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> @10.223.12.73 ldap.aerolinea.redes.test A +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+Código de salida: 9
+
+$ limactl shell --workdir /home/javier lab5-cliente dig @10.223.12.73 aerolinea.redes.test SOA +tcp +time=2 +tries=1
+;; Connection to 10.223.12.73#53(10.223.12.73) for aerolinea.redes.test failed: timed out.
+;; no servers could be reached
+Código de salida: 9
+
+Comprobación propia desde el Mac: LDAP por IP
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+Código de salida: 0

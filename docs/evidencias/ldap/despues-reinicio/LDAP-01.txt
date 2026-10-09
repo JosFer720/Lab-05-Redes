@@ -1,0 +1,39 @@
+2026-10-08T02:11:12.267572+00:00
+Exactamente los seis integrantes dentro de ou=People
+PASS
+
+dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: fruiz
+cn: Fernando Ruiz
+sn: Ruiz
+mail: fruiz@aerolinea.redes.test
+
+dn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: hbarillas
+cn: Hugo Barillas
+sn: Barillas
+mail: hbarillas@aerolinea.redes.test
+
+dn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: icumes
+cn: Ian Cumes
+sn: Cumes
+mail: icumes@aerolinea.redes.test
+
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: jvalladares
+cn: Javier Valladares
+sn: Valladares
+mail: jvalladares@aerolinea.redes.test
+
+dn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: nmolina
+cn: Nery Molina
+sn: Molina
+mail: nmolina@aerolinea.redes.test
+
+dn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: mpolanco
+cn: Milton Polanco
+sn: Polanco
+mail: mpolanco@aerolinea.redes.test

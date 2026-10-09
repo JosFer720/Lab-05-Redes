@@ -1,0 +1,13 @@
+{
+  "antes": {
+    "lab5-ns1": "99928d18-bfd3-48d2-92cb-03967114bcf1",
+    "lab5-ldap": "5da63e95-ce87-4935-aee6-c76ffc8d9363",
+    "lab5-cliente": "94fa41b0-3bbe-4748-8ed1-00f440e37bef"
+  },
+  "despues": {
+    "lab5-ns1": "68895e79-23c7-49e6-a3c9-c0f43fcb29b1",
+    "lab5-ldap": "f243af83-a2fa-4711-9414-6f5a1523cc16",
+    "lab5-cliente": "a094741d-ff4d-4ff6-96af-1e677b3d0543"
+  },
+  "todos_cambiaron": true
+}

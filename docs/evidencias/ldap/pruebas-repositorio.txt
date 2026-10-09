@@ -1,0 +1,5 @@
+[PASS] LDAP-01 consulta de usuarios
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+[PASS] LDAP-02 autenticación válida
+[PASS] LDAP-03 autenticación inválida
+[PASS] LDAP-04 atributos requeridos

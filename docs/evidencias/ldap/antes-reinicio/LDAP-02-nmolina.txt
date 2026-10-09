@@ -1,0 +1,5 @@
+2026-10-08T02:09:46.295364+00:00
+Bind válido de nmolina
+PASS
+
+dn:uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test

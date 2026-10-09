@@ -1,0 +1,34 @@
+Thu Oct  8 02:11:12 UTC 2026
+ldap.aerolinea.redes.test
+slapd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install is-enabled slapd
+enabled
+active
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+eth0             UP             192.168.50.4/24 192.168.50.11/24 fe80::5055:55ff:fe0f:b347/64
+default via 192.168.50.2 dev eth0 proto static
+192.168.50.0/24 dev eth0 proto kernel scope link src 192.168.50.4
+Global
+         Protocols: -LLMNR +mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (eth0)
+    Current Scopes: DNS mDNS/IPv4 mDNS/IPv6
+         Protocols: +DefaultRoute -LLMNR +mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 192.168.50.10
+       DNS Servers: 192.168.50.10
+        DNS Domain: aerolinea.redes.test
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=430,fd=18))
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=430,fd=16))
+udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*    users:(("systemd-resolve",pid=430,fd=11))
+udp   UNCONN 0      0               [::]:5353         [::]:*    users:(("systemd-resolve",pid=430,fd=12))
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=430,fd=17))
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=430,fd=19))
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=737,fd=3),("systemd",pid=1,fd=153))
+tcp   LISTEN 0      2048         0.0.0.0:389       0.0.0.0:*    users:(("slapd",pid=717,fd=8))
+tcp   LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=737,fd=4),("systemd",pid=1,fd=154))
+tcp   LISTEN 0      2048            [::]:389          [::]:*    users:(("slapd",pid=717,fd=9))
+config file testing succeeded
+ldap-utils	2.6.10+dfsg-0ubuntu0.24.04.1
+slapd	2.6.10+dfsg-0ubuntu0.24.04.1

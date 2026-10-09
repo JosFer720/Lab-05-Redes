@@ -1,0 +1,14 @@
+2026-10-08T02:09:46.295364+00:00
+Cliente utiliza ns1 192.168.50.10
+PASS
+
+Global
+         Protocols: -LLMNR +mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (eth0)
+    Current Scopes: DNS mDNS/IPv4 mDNS/IPv6
+         Protocols: +DefaultRoute -LLMNR +mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 192.168.50.10
+       DNS Servers: 192.168.50.10
+        DNS Domain: aerolinea.redes.test

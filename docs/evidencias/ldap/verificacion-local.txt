@@ -1,0 +1,9 @@
+[PASS] servicio activo
+[PASS] servicio habilitado
+[PASS] puerto 389 escuchando
+dn: ou=People,dc=aerolinea,dc=redes,dc=test
+
+[PASS] unidad People disponible
+[PASS] usuarios disponibles
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+[PASS] autenticación válida

@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-08T02:09:46.295364+00:00",
+  "host": "ldap.aerolinea.redes.test",
+  "base": "dc=aerolinea,dc=redes,dc=test",
+  "results": [
+    {
+      "id": "INT-01-DNS-LDAP",
+      "description": "Nombre LDAP resuelto por el DNS de la VM cliente",
+      "status": "PASS"
+    },
+    {
+      "id": "INT-01-RESOLVER",
+      "description": "Cliente utiliza ns1 192.168.50.10",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-01",
+      "description": "Exactamente los seis integrantes dentro de ou=People",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-fruiz",
+      "description": "Bind válido de fruiz",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-hbarillas",
+      "description": "Bind válido de hbarillas",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-icumes",
+      "description": "Bind válido de icumes",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-jvalladares",
+      "description": "Bind válido de jvalladares",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-nmolina",
+      "description": "Bind válido de nmolina",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-02-mpolanco",
+      "description": "Bind válido de mpolanco",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-03",
+      "description": "Contraseña incorrecta rechazada con código LDAP 49",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-03-USUARIO-INEXISTENTE",
+      "description": "Usuario inexistente rechazado con código LDAP 49",
+      "status": "PASS"
+    },
+    {
+      "id": "LDAP-04",
+      "description": "uid, cn, sn y mail correctos en las seis cuentas",
+      "status": "PASS"
+    },
+    {
+      "id": "ACL-PASSWORD-ANONIMO",
+      "description": "Búsqueda anónima no expone userPassword",
+      "status": "PASS"
+    },
+    {
+      "id": "ACL-PASSWORD-OTRO-USUARIO",
+      "description": "Usuario autenticado no lee el hash de otra cuenta",
+      "status": "PASS"
+    }
+  ]
+}

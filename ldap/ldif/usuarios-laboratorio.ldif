@@ -1,0 +1,58 @@
+dn: dc=aerolinea,dc=redes,dc=test
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: AeroQuetzal
+dc: aerolinea
+
+dn: ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: fruiz
+userPassword: {SSHA}bupZ9s83etDl7HfLPdZo9Z6282J7Dbhx
+cn: Fernando Ruiz
+sn: Ruiz
+mail: fruiz@aerolinea.redes.test
+
+dn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: hbarillas
+userPassword: {SSHA}59Fvd3QeUX1TFMW7A6jmIy7Ype2dI4yz
+cn: Hugo Barillas
+sn: Barillas
+mail: hbarillas@aerolinea.redes.test
+
+dn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: icumes
+userPassword: {SSHA}QKzEOTqzh3jxrl0fCdq4KVM6l+H8kZkb
+cn: Ian Cumes
+sn: Cumes
+mail: icumes@aerolinea.redes.test
+
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: jvalladares
+userPassword: {SSHA}kxnoab1yplRk28uuXfhYUSBXr5fGwbt2
+cn: Javier Valladares
+sn: Valladares
+mail: jvalladares@aerolinea.redes.test
+
+dn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: nmolina
+userPassword: {SSHA}1lLzGNoAIK4w57BpDBhKwIoedw0PfA7W
+cn: Nery Molina
+sn: Molina
+mail: nmolina@aerolinea.redes.test
+
+dn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: mpolanco
+userPassword: {SSHA}k64odGWReKdaaeby9OCmJIbH8ZwdSpMI
+cn: Milton Polanco
+sn: Polanco
+mail: mpolanco@aerolinea.redes.test

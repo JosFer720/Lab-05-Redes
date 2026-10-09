@@ -1,0 +1,5 @@
+2026-10-08T02:09:46.295364+00:00
+Usuario inexistente rechazado con código LDAP 49
+PASS
+
+ldap_bind: Invalid credentials (49)

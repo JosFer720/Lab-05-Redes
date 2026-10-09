@@ -1,0 +1,10 @@
+dn: olcDatabase={1}mdb,cn=config
+olcDbDirectory: /var/lib/ldap
+olcSuffix: dc=aerolinea,dc=redes,dc=test
+olcAccess: {0}to attrs=userPassword by self write by anonymous auth by * none
+olcAccess: {1}to attrs=shadowLastChange by self write by * read
+olcAccess: {2}to * by * read
+olcRootDN: cn=admin,dc=aerolinea,dc=redes,dc=test
+olcDbIndex: objectClass eq
+olcDbIndex: uid eq
+olcDbIndex: cn,sn,mail eq,sub

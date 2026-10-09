@@ -1,0 +1,7 @@
+ldap://127.0.0.1:1389
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+Resultado: PASS
+
+ldap://172.20.10.5:1389
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+Resultado: PASS

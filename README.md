@@ -16,6 +16,13 @@ Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 └── shared/              # Valores compartidos y plantillas
 ```
 
+## OpenLDAP
+
+La instalación de OpenLDAP en Ubuntu, los seis usuarios del laboratorio y las
+pruebas están en [`ldap/README.md`](ldap/README.md). La guía
+[`OpenLDAP en Ubuntu sobre Mac`](docs/openldap-en-mac.md) documenta las VMs,
+los puertos, la integración con el DNS del grupo y las evidencias reales.
+
 ## Web
 
 La implementación de Apache con login LDAP está en [`web/README.md`](web/README.md).

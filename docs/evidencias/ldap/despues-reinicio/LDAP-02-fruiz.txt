@@ -1,0 +1,5 @@
+2026-10-08T02:11:12.267572+00:00
+Bind válido de fruiz
+PASS
+
+dn:uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test

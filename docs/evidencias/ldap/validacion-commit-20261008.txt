@@ -1,0 +1,32 @@
+2026-10-09T04:04:25.379189+00:00
+Pruebas desde el Mac contra la VM Ubuntu: ldap://127.0.0.1:1389
+No comprueba el DNS del grupo ni el acceso desde otro equipo.
+
+dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: fruiz
+
+dn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: hbarillas
+
+dn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: icumes
+
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: jvalladares
+
+dn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: nmolina
+
+dn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: mpolanco
+[PASS] LDAP-01 consulta de usuarios
+dn:uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+[PASS] LDAP-02 autenticación válida
+[PASS] LDAP-03 autenticación inválida (LDAP 49)
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: jvalladares
+cn: Javier Valladares
+sn: Valladares
+mail: jvalladares@aerolinea.redes.test
+[PASS] LDAP-04 atributos requeridos: uid, cn, sn y mail
+Código de salida: 0

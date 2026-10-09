@@ -1,0 +1,157 @@
+Oct 07 20:10:13 ldap.aerolinea.redes.test slapd[637]:  * Starting OpenLDAP slapd
+Oct 07 20:10:13 ldap.aerolinea.redes.test slapd[684]: @(#) $OpenLDAP: slapd 2.6.10+dfsg-0ubuntu0.24.04.1 (Sep 23 2025 16:26:39) $
+                                                              Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Oct 07 20:10:13 ldap.aerolinea.redes.test slapd[717]: slapd starting
+Oct 07 20:10:13 ldap.aerolinea.redes.test slapd[637]:    ...done.
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 fd=12 ACCEPT from IP=192.168.50.5:44062 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=0 RESULT tag=97 err=0 qtime=0.000009 etime=0.000095 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(objectClass=inetOrgPerson)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=1 SRCH attr=uid cn sn mail
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000005 etime=0.000467 nentries=6 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1000 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 fd=12 ACCEPT from IP=192.168.50.5:44064 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=0 RESULT tag=97 err=0 qtime=0.000006 etime=0.000275 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=1 RESULT oid= err=0 qtime=0.000008 etime=0.000027 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1001 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 fd=12 ACCEPT from IP=192.168.50.5:44074 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=0 RESULT tag=97 err=0 qtime=0.000002 etime=0.000061 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=1 RESULT oid= err=0 qtime=0.000003 etime=0.000020 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1002 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 fd=12 ACCEPT from IP=192.168.50.5:44078 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=0 RESULT tag=97 err=0 qtime=0.000007 etime=0.000057 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=1 RESULT oid= err=0 qtime=0.000002 etime=0.000020 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1003 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 fd=12 ACCEPT from IP=192.168.50.5:44094 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=0 RESULT tag=97 err=0 qtime=0.000004 etime=0.000063 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=1 RESULT oid= err=0 qtime=0.000005 etime=0.000023 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1004 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 fd=12 ACCEPT from IP=192.168.50.5:44100 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=0 RESULT tag=97 err=0 qtime=0.000005 etime=0.000046 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=1 RESULT oid= err=0 qtime=0.000002 etime=0.000023 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1005 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 fd=12 ACCEPT from IP=192.168.50.5:44106 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=0 RESULT tag=97 err=0 qtime=0.000002 etime=0.000040 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=1 RESULT oid= err=0 qtime=0.000002 etime=0.000020 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1006 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1007 fd=12 ACCEPT from IP=192.168.50.5:44116 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1007 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1007 op=0 RESULT tag=97 err=49 qtime=0.000005 etime=0.000047 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1007 op=1 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1007 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1008 fd=12 ACCEPT from IP=192.168.50.5:44130 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1008 op=0 BIND dn="uid=noexiste,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1008 op=0 RESULT tag=97 err=49 qtime=0.000003 etime=0.000031 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1008 op=1 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1008 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 fd=12 ACCEPT from IP=192.168.50.5:44142 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=0 RESULT tag=97 err=0 qtime=0.000002 etime=0.000018 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(objectClass=inetOrgPerson)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=1 SRCH attr=uid cn sn mail
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000005 etime=0.000092 nentries=6 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1009 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 fd=12 ACCEPT from IP=192.168.50.5:44148 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=0 RESULT tag=97 err=0 qtime=0.000005 etime=0.000021 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(objectClass=inetOrgPerson)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=1 SRCH attr=uid userPassword
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000003 etime=0.000093 nentries=6 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1010 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 fd=12 ACCEPT from IP=192.168.50.5:44150 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=0 RESULT tag=97 err=0 qtime=0.000008 etime=0.000048 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=1 SRCH base="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=1 SRCH attr=uid userPassword
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000006 etime=0.000037 nentries=1 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1011 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 fd=12 ACCEPT from IP=192.168.50.5:44158 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=0 RESULT tag=97 err=0 qtime=0.000002 etime=0.000026 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(objectClass=*)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=1 SRCH attr=uid
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000007 etime=0.000119 nentries=6 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1012 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=0 RESULT tag=97 err=0 qtime=0.000004 etime=0.000052 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 fd=12 ACCEPT from IP=192.168.50.5:44170 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=1 RESULT oid= err=0 qtime=0.000002 etime=0.000023 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1013 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1014 fd=12 ACCEPT from IP=192.168.50.5:44184 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1014 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1014 op=0 RESULT tag=97 err=49 qtime=0.000005 etime=0.000049 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1014 op=1 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1014 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=0 RESULT tag=97 err=0 qtime=0.000003 etime=0.000028 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 fd=12 ACCEPT from IP=192.168.50.5:44200 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=1 SRCH base="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=1 SRCH attr=uid cn sn mail
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000002 etime=0.000084 nentries=1 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1015 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 fd=12 ACCEPT from IP=127.0.0.1:51700 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=0 RESULT tag=97 err=0 qtime=0.000003 etime=0.000041 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=1 SRCH attr=dn
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000004 etime=0.000051 nentries=1 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1016 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=0 BIND dn="" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=0 RESULT tag=97 err=0 qtime=0.000003 etime=0.000042 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(objectClass=*)"
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=1 SRCH attr=uid
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000003 etime=0.000115 nentries=6 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 fd=12 ACCEPT from IP=127.0.0.1:51706 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1017 fd=12 closed
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 fd=12 ACCEPT from IP=127.0.0.1:51722 (IP=0.0.0.0:389)
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=0 RESULT tag=97 err=0 qtime=0.000002 etime=0.000064 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=1 WHOAMI
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=1 RESULT oid= err=0 qtime=0.000003 etime=0.000017 text=
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 op=2 UNBIND
+Oct 07 20:11:12 ldap.aerolinea.redes.test slapd[717]: conn=1018 fd=12 closed

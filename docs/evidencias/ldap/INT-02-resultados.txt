@@ -1,0 +1,14 @@
+INT-01-DNS-LDAP: PASS - Nombre LDAP resuelto por el DNS de la VM cliente
+INT-01-RESOLVER: PASS - Cliente utiliza ns1 192.168.50.10
+LDAP-01: PASS - Exactamente los seis integrantes dentro de ou=People
+LDAP-02-fruiz: PASS - Bind válido de fruiz
+LDAP-02-hbarillas: PASS - Bind válido de hbarillas
+LDAP-02-icumes: PASS - Bind válido de icumes
+LDAP-02-jvalladares: PASS - Bind válido de jvalladares
+LDAP-02-nmolina: PASS - Bind válido de nmolina
+LDAP-02-mpolanco: PASS - Bind válido de mpolanco
+LDAP-03: PASS - Contraseña incorrecta rechazada con código LDAP 49
+LDAP-03-USUARIO-INEXISTENTE: PASS - Usuario inexistente rechazado con código LDAP 49
+LDAP-04: PASS - uid, cn, sn y mail correctos en las seis cuentas
+ACL-PASSWORD-ANONIMO: PASS - Búsqueda anónima no expone userPassword
+ACL-PASSWORD-OTRO-USUARIO: PASS - Usuario autenticado no lee el hash de otra cuenta
