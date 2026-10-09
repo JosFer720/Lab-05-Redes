@@ -1,0 +1,29 @@
+compatibility_level = 3.6
+myhostname = mail.DOMAIN
+mydomain = DOMAIN
+myorigin = $mydomain
+inet_interfaces = all
+inet_protocols = ipv4
+mydestination = $myhostname, localhost.$mydomain, localhost
+
+virtual_mailbox_domains = DOMAIN
+virtual_mailbox_base = /var/mail/vhosts
+virtual_mailbox_maps = ldap:/etc/postfix/ldap-virtual-mailbox.cf
+virtual_uid_maps = static:5000
+virtual_gid_maps = static:5000
+virtual_minimum_uid = 5000
+virtual_transport = lmtp:unix:private/dovecot-lmtp
+
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+smtpd_reject_unlisted_recipient = yes
+
+smtpd_tls_security_level = none
+smtp_tls_security_level = none
+home_mailbox = Maildir/
+mailbox_size_limit = 0
+recipient_delimiter = +

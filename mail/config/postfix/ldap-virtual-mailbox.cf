@@ -1,0 +1,7 @@
+server_host = ldap://ldap.DOMAIN
+version = 3
+search_base = ou=People,BASE_DN
+scope = one
+query_filter = (&(objectClass=inetOrgPerson)(mail=%s))
+result_attribute = uid
+result_format = DOMAIN/%s/Maildir/
