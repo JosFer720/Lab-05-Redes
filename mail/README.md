@@ -5,56 +5,35 @@ Postfix y Dovecot con buzones Maildir y autenticación LDAP.
 La implementación habilita SMTP en los puertos 25 y 587, IMAP en el puerto
 143 y entrega local mediante LMTP. Las cuentas se validan contra OpenLDAP.
 
-## Docker (forma recomendada para este equipo)
+## Instalación en Ubuntu
 
-Docker Desktop publica el servidor de correo en la computadora anfitriona.
-Copiar el archivo de ejemplo y ajustar las IPs únicamente si el equipo de DNS
-o LDAP usa valores distintos de los del plan:
-
-```powershell
-Copy-Item .env.example .env
-notepad .env
-docker compose up --build -d
-docker compose ps
-```
-
-El estado debe ser `healthy` y los puertos `25`, `143` y `587` deben aparecer
-publicados. Para revisar el servicio:
-
-```powershell
-docker compose logs -f
-```
-
-El DNS del laboratorio debe apuntar `mail.aerolinea.redes.test` a la dirección
-IPv4 de la computadora que ejecuta Docker, no a una IP interna del contenedor.
-Esa IP se ve con `ipconfig`. Si el cliente está en otra máquina, permitir en
-el firewall de Windows los puertos TCP 25, 143 y 587.
-
-Cuando LDAP esté disponible, desde el cliente se ejecuta la prueba integrada:
+La VM de correo debe estar conectada a la red del laboratorio y utilizar como
+resolvedor el servidor DNS autoritativo del grupo. Antes de instalar, comprobar
+que DNS resuelve el servidor LDAP y que el puerto 389 está disponible:
 
 ```bash
-MAIL_USER='usuario1' \
-MAIL_PASSWORD='clave-del-usuario1' \
-MAIL_RECIPIENT='usuario2@aerolinea.redes.test' \
-MAIL_RECIPIENT_USER='usuario2' \
-MAIL_RECIPIENT_PASSWORD='clave-del-usuario2' \
-  ./client/tests/test-mail.sh
+getent hosts ldap.aerolinea.redes.test
+nc -vz ldap.aerolinea.redes.test 389
 ```
-
-Para apagar el servicio sin borrar los correos:
-
-```powershell
-docker compose down
-```
-
-Los buzones permanecen en el volumen Docker `mail_mail_data`.
-
-## Instalación directa en VM
 
 Ejecutar en la VM de correo cuando DNS y LDAP ya respondan:
 
 ```bash
 sudo ./scripts/install.sh
+```
+
+El instalador no modifica la red de la VM ni las reglas de firewall. Si UFW
+está activo, permitir los puertos del servicio:
+
+```bash
+sudo ufw allow 25/tcp
+sudo ufw allow 143/tcp
+sudo ufw allow 587/tcp
+```
+
+Verificar la configuración y la autenticación con una cuenta LDAP:
+
+```bash
 sudo MAIL_TEST_USER='usuario1' \
   MAIL_TEST_PASSWORD='clave-del-usuario' \
   ./scripts/verify-local.sh
@@ -69,6 +48,12 @@ MAIL_RECIPIENT='usuario2@aerolinea.redes.test' \
 MAIL_RECIPIENT_USER='usuario2' \
 MAIL_RECIPIENT_PASSWORD='clave-del-destinatario' \
   ../client/tests/test-mail.sh
+```
+
+Los logs relacionados con las pruebas se consultan con:
+
+```bash
+sudo journalctl -u postfix -u dovecot --since today
 ```
 
 Configuración del cliente de correo:
