@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 // CSS-grid layout (shadcn-style): drop an icon as a direct child and the alert
-// auto-arranges into an icon column + a content column — no manual flex wrapper.
+// Auto-arranges into an icon column and a content column without a flex wrapper.
 // `has-[>svg]` adds the icon column only when an icon is present. NeoBrutalist
 // chrome: hard 2px border, square corners, hard offset shadow.
 const alertVariants = cva(
@@ -26,7 +26,7 @@ const alertVariants = cva(
         solid:
           "border-border bg-foreground text-background *:data-[slot=alert-description]:text-background/80",
       },
-      // Neobrutalism status axis — additive; overrides the variant's colors when set.
+      // Neobrutalism status axis. It overrides the variant colors when set.
       status: {
         error:
           "border-red-900 bg-red-300 text-red-900 *:data-[slot=alert-description]:text-red-900/80",

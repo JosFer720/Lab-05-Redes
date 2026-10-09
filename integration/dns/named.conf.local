@@ -1,0 +1,6 @@
+zone "aerolinea.redes.test" {
+    type master;
+    file "/etc/bind/db.aerolinea.redes.test";
+    allow-transfer { none; };
+    notify no;
+};

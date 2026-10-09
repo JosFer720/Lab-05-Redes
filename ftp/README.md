@@ -54,3 +54,30 @@ El puerto 21 mantiene la conexión de control (`USER`, `PASS`, `LIST`, `RETR`,
 conexión a un puerto de 40000 a 40100 y la cierra al finalizar. FTP transmite
 credenciales y datos sin cifrado; esta configuración es solo para la red
 aislada del laboratorio.
+
+## Ejecución local en macOS
+
+Con Docker y OrbStack activos:
+
+```bash
+cd ftp
+PASV_ADDRESS='IP-DE-LA-COMPUTADORA' \
+FTP_PASSWORD='Lab5-ftp' \
+docker compose up -d --build
+```
+
+El servidor queda disponible en el puerto 21 de la computadora. Los datos usan
+el puerto 40000. `PASV_ADDRESS` debe ser la dirección que utilizarán los
+demás equipos de la red.
+
+Prueba local:
+
+```bash
+curl --user 'ftpuser:Lab5-ftp' ftp://127.0.0.1/
+```
+
+Para detenerlo:
+
+```bash
+docker compose down
+```

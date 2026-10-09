@@ -1,14 +1,5 @@
 export const dominio = "aerolinea.redes.test"
 
-export const integrantes = [
-  "Hugo Barillas",
-  "Ian Cumes",
-  "Fernando Ruiz",
-  "Javier Valladares",
-  "Nery Molina",
-  "Milton Polanco",
-]
-
 export const servicios = [
   { nombre: "DNS", host: `ns1.${dominio}`, software: "BIND9", puerto: "53" },
   { nombre: "Directorio", host: `ldap.${dominio}`, software: "OpenLDAP", puerto: "389" },

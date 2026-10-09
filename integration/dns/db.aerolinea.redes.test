@@ -1,0 +1,9 @@
+$TTL 300
+@ IN SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. (2026100701 3600 900 604800 300)
+@ IN NS ns1.aerolinea.redes.test.
+@ IN MX 10 mail.aerolinea.redes.test.
+ns1 IN A 172.30.0.53
+ldap IN A 172.30.0.11
+www IN A 172.30.0.12
+mail IN A 172.30.0.13
+ftp IN A 172.30.0.14

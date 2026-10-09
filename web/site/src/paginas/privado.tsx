@@ -33,11 +33,11 @@ export function Privado() {
             <Separator className="bg-foreground" />
             <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 font-sans text-lg">
               <dt className="font-bold">uid</dt>
-              <dd className="font-mono">{pasajero?.uid ?? "—"}</dd>
+              <dd className="font-mono">{pasajero?.uid ?? "Sin datos"}</dd>
               <dt className="font-bold">cn</dt>
-              <dd>{pasajero?.cn ?? "—"}</dd>
+              <dd>{pasajero?.cn ?? "Sin datos"}</dd>
               <dt className="font-bold">mail</dt>
-              <dd className="font-mono">{pasajero?.mail ?? "—"}</dd>
+              <dd className="font-mono">{pasajero?.mail ?? "Sin datos"}</dd>
             </dl>
           </CardContent>
         </Card>

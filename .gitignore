@@ -2,8 +2,10 @@
 *.log
 *.bak
 *.env
+!shared/lab.example.env
 prueba.txt
 bajado.txt
 descargado.txt
 resultados_*.log
+resultados.txt
 resumen.txt

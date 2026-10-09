@@ -1,0 +1,127 @@
+# Validación de integración en Docker
+# Fecha real de ejecución: 2026-10-09, hora de Guatemala.
+# Proyecto Compose: lab05-entrega; red de prueba 172.30.0.0/24.
+# Comandos: docker compose -f integration/docker-compose.yml up --build --detach --wait
+#           docker compose -f integration/docker-compose.yml exec -T client /tests/test-all.sh
+# Resultado: 39 PASS, 0 FAIL; las cinco suites aprobadas.
+# DNS: 11; LDAP: 4; WEB: 9; MAIL: 6; FTP: 9.
+# Usuarios y contraseñas del log: datos públicos de prueba del entorno Docker.
+# Esta prueba no verifica la conectividad hacia las VMs de los compañeros.
+
+
+===== DNS =====
+[PASS] DNS-01 ns1.aerolinea.redes.test devuelve 172.30.0.53
+[PASS] DNS-02a ldap.aerolinea.redes.test devuelve 172.30.0.11
+[PASS] DNS-02b www.aerolinea.redes.test devuelve 172.30.0.12
+[PASS] DNS-02c mail.aerolinea.redes.test devuelve 172.30.0.13
+[PASS] DNS-02d ftp.aerolinea.redes.test devuelve 172.30.0.14
+[PASS] DNS-02e la zona no tiene IPs pendientes (192.0.2.x)
+[PASS] DNS-03a SOA con respuesta autoritativa (flag aa)
+[PASS] DNS-03b NS de la zona es ns1.aerolinea.redes.test
+[PASS] DNS-04 MX de la zona es mail.aerolinea.redes.test (prioridad 10)
+[PASS] DNS-05 nombre inexistente responde NXDOMAIN
+[PASS] DNS-06 resolución DNS también disponible por TCP
+
+Resultado: 11 PASS, 0 FAIL
+[PASS] Suite DNS
+
+===== LDAP =====
+dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: usuario1
+
+dn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: usuario2
+[PASS] LDAP-01 consulta de usuarios
+dn:uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test
+[PASS] LDAP-02 autenticación válida
+[PASS] LDAP-03 autenticación inválida (LDAP 49)
+dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: usuario1
+cn: Usuario Uno
+sn: Uno
+mail: usuario1@aerolinea.redes.test
+[PASS] LDAP-04 atributos requeridos: uid, cn, sn y mail
+[PASS] Suite LDAP
+
+===== WEB =====
+[PASS] WEB-01 resolución DNS
+[PASS] WEB-02 página principal
+[PASS] WEB-03a área privada exige login
+[PASS] WEB-03b login LDAP válido
+[PASS] WEB-03c acceso con sesión
+[PASS] WEB-04a contraseña incorrecta rechazada
+[PASS] WEB-04b usuario inexistente rechazado
+[PASS] WEB-04c logout cierra la sesión
+[PASS] WEB-04d sin acceso tras logout
+
+Resultado: 9 PASS, 0 FAIL
+[PASS] Suite WEB
+
+===== MAIL =====
+[PASS] MAIL-01 resolución y MX
+[PASS] MAIL-03 autenticación IMAP válida
+[PASS] MAIL-04 autenticación IMAP inválida
+=== Trying mail.aerolinea.redes.test:587...
+=== Connected to mail.aerolinea.redes.test.
+<-  220 mail.aerolinea.redes.test ESMTP Postfix
+ -> EHLO a72ef1292ac4
+<-  250-mail.aerolinea.redes.test
+<-  250-PIPELINING
+<-  250-SIZE 10240000
+<-  250-VRFY
+<-  250-ETRN
+<-  250-AUTH PLAIN LOGIN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> AUTH LOGIN
+<-  334 VXNlcm5hbWU6
+ -> dXN1YXJpbzE=
+<-  334 UGFzc3dvcmQ6
+ -> Q2xhdmVVc3VhcmlvMQ==
+<-  235 2.7.0 Authentication successful
+ -> MAIL FROM:<usuario1@aerolinea.redes.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<usuario2@aerolinea.redes.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> Date: Fri, 09 Oct 2026 12:58:55 +0000
+ -> To: usuario2@aerolinea.redes.test
+ -> From: usuario1@aerolinea.redes.test
+ -> Subject: Prueba interna
+ -> Message-Id: <20261009125855.000137@a72ef1292ac4>
+ -> X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/
+ -> 
+ -> Mensaje de prueba interna
+ -> 
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as 2A2D41B5C0
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.
+[PASS] MAIL-05 envío interno autenticado
+[PASS] MAIL-06 mensaje recibido por IMAP
+[PASS] MAIL-07 destinatario inexistente
+[PASS] Suite MAIL
+
+===== FTP =====
+172.30.0.14     ftp.aerolinea.redes.test
+[PASS] FTP-01 resolución DNS
+[PASS] FTP-02 autenticación válida
+[PASS] FTP-03 contraseña incorrecta
+[PASS] FTP-04 acceso anónimo
+[PASS] FTP-05 listado de directorio
+[PASS] FTP-06 carga de archivo
+[PASS] FTP-07 descarga de archivo
+[PASS] FTP-07b integridad de descarga
+[PASS] FTP-08 salida de la jaula
+
+Resultado: 9 PASS, 0 FAIL
+[PASS] Suite FTP
+
+===== Resultado integrado =====
+[PASS] Todos los servicios respondieron correctamente.

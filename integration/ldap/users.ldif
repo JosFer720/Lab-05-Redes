@@ -1,0 +1,19 @@
+dn: ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: usuario1
+cn: Usuario Uno
+sn: Uno
+mail: usuario1@aerolinea.redes.test
+userPassword: ClaveUsuario1
+
+dn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test
+objectClass: inetOrgPerson
+uid: usuario2
+cn: Usuario Dos
+sn: Dos
+mail: usuario2@aerolinea.redes.test
+userPassword: ClaveUsuario2

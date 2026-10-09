@@ -1,22 +1,12 @@
 import { ArrowRight, Lock } from "lucide-react"
 
 import { Marco } from "@/components/marco"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { dominio, integrantes, servicios } from "@/data/grupo"
+import { dominio, servicios } from "@/data/grupo"
 import { montar } from "@/main"
-
-const colores = ["bg-primary", "bg-sky", "bg-coral", "bg-mint"]
-
-function iniciales(nombre: string) {
-  return nombre
-    .split(" ")
-    .map((parte) => parte[0])
-    .join("")
-}
 
 export function Portada() {
   return (
@@ -47,22 +37,6 @@ export function Portada() {
             </div>
           </CardContent>
         </Card>
-      </section>
-
-      <section className="mt-20 space-y-6">
-        <h2 className="text-3xl">Tripulación</h2>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {integrantes.map((nombre, i) => (
-            <Card key={nombre} className={`${colores[i % colores.length]} transition hover:-translate-y-1 hover:shadow-lg`}>
-              <CardContent className="flex items-center gap-4">
-                <Avatar size="lg">
-                  <AvatarFallback className="bg-card text-foreground">{iniciales(nombre)}</AvatarFallback>
-                </Avatar>
-                <span className="text-lg font-bold">{nombre}</span>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </section>
 
       <section className="mt-20 space-y-6">

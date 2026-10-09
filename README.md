@@ -2,6 +2,10 @@
 
 Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 
+La relación entre los servicios está en [`docs/diagramas/arquitectura.md`](docs/diagramas/arquitectura.md).
+El orden de despliegue, las dependencias y los puertos están en
+[`docs/puesta-en-marcha.md`](docs/puesta-en-marcha.md).
+
 ## Estructura
 
 ```text
@@ -15,6 +19,30 @@ Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 ├── docs/                # Reporte, diagramas, tablas y evidencias
 └── shared/              # Valores compartidos y plantillas
 ```
+
+## BIND DNS
+
+[`dns/README.md`](dns/README.md) incluye la zona autoritativa, instalación en Ubuntu,
+actualización de IPs, verificación UDP/TCP, herramientas para WSL y recolección de evidencias.
+Antes de desplegar, actualizar las direcciones para la red actual del grupo:
+
+```bash
+cd dns
+DEPLOY=0 ./scripts/set-ips.sh ns1=<IP> ldap=<IP> www=<IP> mail=<IP> ftp=<IP>
+sudo ./scripts/start.sh
+```
+
+La tabla de resolución se genera en [`docs/tablas/resolucion-dns.md`](docs/tablas/resolucion-dns.md).
+
+## Verificación integrada
+
+Completar `shared/lab.env` siguiendo [`client/README.md`](client/README.md) y ejecutar
+`./client/tests/test-all.sh` desde el cliente del laboratorio. La suite comprueba
+DNS, LDAP, web, correo y FTP.
+
+Para probar todos los servicios localmente en contenedores Linux, seguir
+[`integration/README.md`](integration/README.md). Ese entorno se construye desde el
+repositorio y usa una red de prueba independiente de las VMs del grupo.
 
 ## OpenLDAP
 

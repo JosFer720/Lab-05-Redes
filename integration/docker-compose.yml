@@ -1,0 +1,94 @@
+name: lab05-entrega
+services:
+  dns:
+    build:
+      context: ./dns
+    networks: {lab: {ipv4_address: 172.30.0.53}}
+    ports: ["15353:53/tcp", "15353:53/udp"]
+    healthcheck:
+      test: ["CMD-SHELL", "dig +norecurse +short @127.0.0.1 aerolinea.redes.test SOA | grep -q ns1.aerolinea.redes.test"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  ldap:
+    build:
+      context: ./ldap
+    networks: {lab: {ipv4_address: 172.30.0.11}}
+    ports: ["1389:389"]
+    healthcheck:
+      test: ["CMD-SHELL", "ldapsearch -x -H ldap://127.0.0.1 -b 'ou=People,dc=aerolinea,dc=redes,dc=test' -s base dn >/dev/null"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  web:
+    build:
+      context: ..
+      dockerfile: integration/web/Dockerfile
+    depends_on:
+      dns: {condition: service_healthy}
+      ldap: {condition: service_healthy}
+    networks: {lab: {ipv4_address: 172.30.0.12}}
+    dns: [172.30.0.53]
+    ports: ["8080:80"]
+    healthcheck:
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/80"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  mail:
+    build:
+      context: ..
+      dockerfile: integration/mail/Dockerfile
+    depends_on:
+      dns: {condition: service_healthy}
+      ldap: {condition: service_healthy}
+    networks: {lab: {ipv4_address: 172.30.0.13}}
+    dns: [172.30.0.53]
+    ports: ["2525:25", "1587:587", "1143:143"]
+    healthcheck:
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/587 && exec 4<>/dev/tcp/127.0.0.1/143"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  ftp:
+    build:
+      context: ../ftp/docker
+    environment: {FTP_USER: ftpuser, FTP_PASSWORD: Lab5-ftp, PASV_ADDRESS: 172.30.0.14}
+    entrypoint: ["/usr/local/bin/ftp-entrypoint"]
+    networks: {lab: {ipv4_address: 172.30.0.14}}
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail --silent --user \"$$FTP_USER:$$FTP_PASSWORD\" ftp://127.0.0.1/ >/dev/null"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  client:
+    build:
+      context: ..
+      dockerfile: integration/client/Dockerfile
+    depends_on:
+      dns: {condition: service_healthy}
+      ldap: {condition: service_healthy}
+      web: {condition: service_healthy}
+      mail: {condition: service_healthy}
+      ftp: {condition: service_healthy}
+    networks: {lab: {ipv4_address: 172.30.0.20}}
+    dns: [172.30.0.53]
+    environment:
+      DNS_SERVER: 172.30.0.53
+      ZONE_FILE: /zones/db.aerolinea.redes.test
+      LDAP_USER: usuario1
+      LDAP_PASSWORD: ClaveUsuario1
+      WEB_USER: usuario1
+      WEB_PASSWORD: ClaveUsuario1
+      MAIL_USER: usuario1
+      MAIL_PASSWORD: ClaveUsuario1
+      MAIL_RECIPIENT: usuario2@aerolinea.redes.test
+      MAIL_RECIPIENT_USER: usuario2
+      MAIL_RECIPIENT_PASSWORD: ClaveUsuario2
+      FTP_USER: ftpuser
+      FTP_PASSWORD: Lab5-ftp
+    command: sleep infinity
+networks:
+  lab:
+    ipam:
+      config: [{subnet: 172.30.0.0/24}]

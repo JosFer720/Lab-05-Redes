@@ -7,15 +7,15 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
   build: {
     rollupOptions: {
       input: {
-        portada: path.resolve(__dirname, 'index.html'),
-        login: path.resolve(__dirname, 'login/index.html'),
-        privado: path.resolve(__dirname, 'privado/index.html'),
+        portada: path.resolve(import.meta.dirname, 'index.html'),
+        login: path.resolve(import.meta.dirname, 'login/index.html'),
+        privado: path.resolve(import.meta.dirname, 'privado/index.html'),
       },
     },
   },
