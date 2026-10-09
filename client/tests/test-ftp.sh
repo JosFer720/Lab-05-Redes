@@ -3,15 +3,10 @@ set -Eeuo pipefail
 
 DOMAIN=${DOMAIN:-aerolinea.redes.test}
 FTP_HOST=${FTP_HOST:-ftp.${DOMAIN}}
-FTP_USER=${FTP_USER:-ftpuser}
-FTP_PASSWORD=${FTP_PASSWORD:-}
+FTP_USER=${FTP_USER:-fernando}
+FTP_PASSWORD=${FTP_PASSWORD:-FernandoLab5}
 WORK_DIR=$(mktemp -d)
 trap 'rm -rf "${WORK_DIR}"' EXIT
-
-if [[ -z ${FTP_PASSWORD} ]]; then
-  echo "Error: defina FTP_PASSWORD." >&2
-  exit 1
-fi
 
 passed=0
 failed=0
