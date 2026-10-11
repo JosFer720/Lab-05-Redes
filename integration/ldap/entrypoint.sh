@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-/usr/sbin/slapd -h 'ldap://0.0.0.0:389/' -u openldap -g openldap -d 0 &
+/usr/sbin/slapd -h 'ldap://0.0.0.0:389/ ldapi:///' -u openldap -g openldap -d 256 &
 pid=$!
 trap 'kill ${pid}' TERM INT
 for attempt in 1 2 3 4 5 6 7 8 9 10; do

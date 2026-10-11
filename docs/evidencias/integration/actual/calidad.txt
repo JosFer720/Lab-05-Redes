@@ -1,0 +1,165 @@
+Fecha UTC: 2026-10-11T17:57:17.758350+00:00
+Máquina: NERY; checks ejecutados; alcance local
+PASS BIND named-checkconf
+
+PASS Zona Docker named-checkzone
+zone aerolinea.redes.test/IN: loaded serial 2026100701
+OK
+
+PASS Zona histórica (sintaxis; IP históricas no comprobadas)
+zone aerolinea.redes.test/IN: loaded serial 2026100702
+OK
+
+PASS Apache configuración
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.30.0.12. Set the 'ServerName' directive globally to suppress this message
+Syntax OK
+
+PASS Postfix check
+
+PASS Dovecot configuración
+# 2.3.21 (47349e2482): /etc/dovecot/dovecot.conf
+# Pigeonhole version 0.5.21 (f6cd4b8e)
+# OS: Linux 6.18.33.2-microsoft-standard-WSL2 x86_64 Ubuntu 24.04.5 LTS
+# Hostname: a006fb26eda2
+auth_mechanisms = plain login
+auth_username_format = %Ln
+disable_plaintext_auth = no
+first_valid_uid = 5000
+info_log_path = /dev/stdout
+last_valid_uid = 5000
+listen = *
+log_path = /dev/stderr
+mail_gid = vmail
+mail_location = maildir:~/Maildir
+mail_privileged_group = mail
+mail_uid = vmail
+namespace inbox {
+  inbox = yes
+  location =
+  mailbox Drafts {
+    special_use = \Drafts
+  }
+  mailbox Junk {
+    special_use = \Junk
+  }
+  mailbox Sent {
+    special_use = \Sent
+  }
+  mailbox "Sent Messages" {
+    special_use = \Sent
+  }
+  mailbox Trash {
+    special_use = \Trash
+  }
+  prefix =
+}
+passdb {
+  args = /etc/dovecot/dovecot-ldap.conf.ext
+  driver = ldap
+}
+protocols = imap lmtp
+service auth {
+  unix_listener /var/spool/postfix/private/auth {
+    group = postfix
+    mode = 0660
+    user = postfix
+  }
+}
+service lmtp {
+  unix_listener /var/spool/postfix/private/dovecot-lmtp {
+    group = postfix
+    mode = 0600
+    user = postfix
+  }
+}
+ssl = no
+ssl_cert = </etc/dovecot/private/dovecot.pem
+ssl_client_ca_dir = /etc/ssl/certs
+ssl_dh = # hidden, use -P to show it
+ssl_key = # hidden, use -P to show it
+userdb {
+  args = uid=vmail gid=vmail home=/var/mail/vhosts/aerolinea.redes.test/%n
+  driver = static
+}
+protocol lmtp {
+  postmaster_address = postmaster@aerolinea.redes.test
+}
+
+PASS Apache variante LDAP 1389 (configuración, no servidor remoto)
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+Syntax OK
+
+PASS Postfix/Dovecot variante LDAP 1389 (configuración, no servidor remoto)
+
+PASS Bash -n client/scripts/start.sh
+
+PASS Bash -n client/tests/test-all.sh
+
+PASS Bash -n client/tests/test-dns.sh
+
+PASS Bash -n client/tests/test-ftp.sh
+
+PASS Bash -n client/tests/test-ldap.sh
+
+PASS Bash -n client/tests/test-mail.sh
+
+PASS Bash -n client/tests/test-web.sh
+
+PASS Bash -n dns/scripts/collect-evidence.sh
+
+PASS Bash -n dns/scripts/gen-table.sh
+
+PASS Bash -n dns/scripts/install.sh
+
+PASS Bash -n dns/scripts/set-ips.sh
+
+PASS Bash -n dns/scripts/start.sh
+
+PASS Bash -n dns/scripts/verify-local.sh
+
+PASS Bash -n ftp/docker/entrypoint.sh
+
+PASS Bash -n ftp/scripts/install.sh
+
+PASS Bash -n ftp/scripts/start.sh
+
+PASS Bash -n ftp/scripts/verify-local.sh
+
+PASS Bash -n integration/ldap/entrypoint.sh
+
+PASS Bash -n integration/mail/entrypoint.sh
+
+PASS Bash -n ldap/scripts/install.sh
+
+PASS Bash -n ldap/scripts/start.sh
+
+PASS Bash -n ldap/scripts/verify-local.sh
+
+PASS Bash -n mail/scripts/install.sh
+
+PASS Bash -n mail/scripts/start.sh
+
+PASS Bash -n mail/scripts/verify-local.sh
+
+PASS Bash -n web/scripts/install.sh
+
+PASS Bash -n web/scripts/start.sh
+
+PASS Bash -n web/scripts/verify-local.sh
+
+PASS PowerShell parser todos los scripts
+PASS iniciar-ns1.ps1
+PASS lan-off.ps1
+PASS lan-on.ps1
+PASS diagnostico-host.ps1
+
+PASS Python sintaxis client/tests/test-official.py
+PASS Python sintaxis integration/audit-run.py
+PASS Python sintaxis integration/check-quality.py
+PASS Python sintaxis docs/reporte/generar-reporte.py
+PASS Compose configuración
+
+PASS Git diff HEAD --check (incluye índice)
+
+PASS búsqueda de claves nuevas y base64 en cambios/evidencias: []
+PASS seis MAC únicas unicast locales: ['7a:81:bc:6b:49:6d', 'da:be:92:8d:ec:a3', 'd2:6f:38:29:ab:b7', 'ae:80:58:42:27:14', '5e:58:f7:76:6f:26', 'ae:a8:01:58:34:8c']

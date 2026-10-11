@@ -5,3 +5,7 @@
 *.yaml text eol=lf
 Dockerfile text eol=lf
 db.* text eol=lf
+*.py text eol=lf
+*.pdf binary
+*.png binary
+*.pptx binary

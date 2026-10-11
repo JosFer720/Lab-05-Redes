@@ -4,8 +4,9 @@ set -Eeuo pipefail
 DOMAIN=${DOMAIN:-aerolinea.redes.test}
 FTP_HOST=${FTP_HOST:-ftp.${DOMAIN}}
 FTP_USER=${FTP_USER:-fernando}
-FTP_PASSWORD=${FTP_PASSWORD:-FernandoLab5}
+FTP_PASSWORD=${FTP_PASSWORD:?Defina FTP_PASSWORD con una clave exclusiva del laboratorio}
 WORK_DIR=$(mktemp -d)
+curl() { command curl --connect-timeout 5 --max-time 20 "$@"; }
 trap 'rm -rf "${WORK_DIR}"' EXIT
 
 passed=0
@@ -24,12 +25,18 @@ run_pass() {
 run_fail() {
   local id=$1 description=$2
   shift 2
-  if "$@"; then
+  local code=0
+  "$@" >/dev/null 2>&1 || code=$?
+  if [[ ${code} -eq 0 ]]; then
     printf '[FAIL] %s %s: se esperaba rechazo\n' "${id}" "${description}" >&2
     ((failed+=1))
-  else
+  elif { [[ ${id} == FTP-03 || ${id} == FTP-04 ]] && [[ ${code} -eq 67 ]]; } ||
+       { [[ ${id} == FTP-08 ]] && [[ ${code} -eq 9 || ${code} -eq 78 ]]; }; then
     printf '[PASS] %s %s\n' "${id}" "${description}"
     ((passed+=1))
+  else
+    printf '[FAIL] %s %s: fallo distinto del rechazo esperado (%s)\n' "${id}" "${description}" "${code}" >&2
+    ((failed+=1))
   fi
 }
 

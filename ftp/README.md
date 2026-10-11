@@ -62,12 +62,14 @@ Con Docker y OrbStack activos:
 ```bash
 cd ftp
 PASV_ADDRESS='IP-DE-LA-COMPUTADORA' \
+BIND_IP='IP-DE-LA-RED-AISLADA' \
 FTP_PASSWORD='Lab5-ftp' \
 docker compose up -d --build
 ```
 
-El servidor queda disponible en el puerto 21 de la computadora. Los datos usan
-el puerto 40000. `PASV_ADDRESS` debe ser la dirección que utilizarán los
+El servidor queda disponible en el puerto 21 de la interfaz seleccionada; sin
+`BIND_IP` se publica solamente en localhost. Los datos usan
+40000–40100. `PASV_ADDRESS` debe ser la dirección que utilizarán los
 demás equipos de la red.
 
 Prueba local:
@@ -81,3 +83,7 @@ Para detenerlo:
 ```bash
 docker compose down
 ```
+
+## Cuentas y auditoría de octubre de 2026
+
+El instalador exige FTP_ACCOUNTS (filas usuario:clave por ambiente) o FTP_USER y FTP_PASSWORD. Se retiraron las claves predeterminadas y la creación automática de invitados. Para crear seis usuarios, proporcionar seis filas privadas. El instalador anterior creaba ian, javier, fernando, nery, hugo, milton y guest; el README anterior describía solo ftpuser. No se eliminan cuentas ya instaladas. Docker conserva su usuario ftpuser separado de LDAP.

@@ -1,0 +1,98 @@
+Fecha: 2026-10-11T10:42:57.3848245-07:00
+Equipo: NERY
+
+ifIndex DestinationPrefix                              NextHop                                  RouteMetric ifMetric PolicyStore
+------- -----------------                              -------                                  ----------- -------- -----------
+1       ::1/128                                        ::                                               256 75       ActiveStore
+1       127.0.0.0/8                                    0.0.0.0                                          256 75       ActiveStore
+1       127.0.0.1/32                                   0.0.0.0                                          256 75       ActiveStore
+1       127.255.255.255/32                             0.0.0.0                                          256 75       ActiveStore
+1       224.0.0.0/4                                    0.0.0.0                                          256 75       ActiveStore
+1       255.255.255.255/32                             0.0.0.0                                          256 75       ActiveStore
+1       ff00::/8                                       ::                                               256 75       ActiveStore
+6       224.0.0.0/4                                    0.0.0.0                                          256 25       ActiveStore
+6       255.255.255.255/32                             0.0.0.0                                          256 25       ActiveStore
+6       fe80::/64                                      ::                                               256 25       ActiveStore
+6       fe80::9048:e80f:ff77:bd43/128                  ::                                               256 25       ActiveStore
+6       ff00::/8                                       ::                                               256 25       ActiveStore
+12      0.0.0.0/0                                      192.168.0.1                                        0 45       ActiveStore
+12      192.168.0.0/24                                 0.0.0.0                                          256 45       ActiveStore
+12      192.168.0.151/32                               0.0.0.0                                          256 45       ActiveStore
+12      192.168.0.255/32                               0.0.0.0                                          256 45       ActiveStore
+12      224.0.0.0/4                                    0.0.0.0                                          256 45       ActiveStore
+12      255.255.255.255/32                             0.0.0.0                                          256 45       ActiveStore
+12      fe80::/64                                      ::                                               256 45       ActiveStore
+12      fe80::b084:b846:a47f:7e51/128                  ::                                               256 45       ActiveStore
+12      ff00::/8                                       ::                                               256 45       ActiveStore
+14      224.0.0.0/4                                    0.0.0.0                                          256 65       ActiveStore
+14      255.255.255.255/32                             0.0.0.0                                          256 65       ActiveStore
+14      fe80::/64                                      ::                                               256 65       ActiveStore
+14      fe80::fd97:d7d8:6d49:af6d/128                  ::                                               256 65       ActiveStore
+14      ff00::/8                                       ::                                               256 65       ActiveStore
+17      192.168.56.0/24                                0.0.0.0                                          256 25       ActiveStore
+17      192.168.56.1/32                                0.0.0.0                                          256 25       ActiveStore
+17      192.168.56.255/32                              0.0.0.0                                          256 25       ActiveStore
+17      224.0.0.0/4                                    0.0.0.0                                          256 25       ActiveStore
+17      255.255.255.255/32                             0.0.0.0                                          256 25       ActiveStore
+17      fe80::/64                                      ::                                               256 25       ActiveStore
+17      fe80::94ac:cf81:c3dd:e7b0/128                  ::                                               256 25       ActiveStore
+17      ff00::/8                                       ::                                               256 25       ActiveStore
+18      ::/0                                           fe80::8601:12ff:fe9f:fca5                        256 25       ActiveStore
+18      0.0.0.0/0                                      192.168.1.1                                        0 25       ActiveStore
+18      192.168.1.0/24                                 0.0.0.0                                          256 25       ActiveStore
+18      192.168.1.22/32                                0.0.0.0                                          256 25       ActiveStore
+18      192.168.1.255/32                               0.0.0.0                                          256 25       ActiveStore
+18      224.0.0.0/4                                    0.0.0.0                                          256 25       ActiveStore
+18      255.255.255.255/32                             0.0.0.0                                          256 25       ActiveStore
+18      2800:98:1120:864::/64                          ::                                               256 25       ActiveStore
+18      2800:98:1120:864::/64                          fe80::8601:12ff:fe9f:fca5                        256 25       ActiveStore
+18      2800:98:1120:864::1/128                        ::                                               256 25       ActiveStore
+18      2800:98:1120:864:b038:89b0:4d52:fb52/128       ::                                               256 25       ActiveStore
+18      2800:98:1120:864:e91:78e9:7b54:6017/128        ::                                               256 25       ActiveStore
+18      fe80::/64                                      ::                                               256 25       ActiveStore
+18      fe80::d230:5b64:190e:6388/128                  ::                                               256 25       ActiveStore
+18      ff00::/8                                       ::                                               256 25       ActiveStore
+19      224.0.0.0/4                                    0.0.0.0                                          256 25       ActiveStore
+19      255.255.255.255/32                             0.0.0.0                                          256 25       ActiveStore
+19      fe80::/64                                      ::                                               256 25       ActiveStore
+19      fe80::cffe:816:a6b6:1dc3/128                   ::                                               256 25       ActiveStore
+19      ff00::/8                                       ::                                               256 25       ActiveStore
+61      172.30.208.0/20                                0.0.0.0                                          256 5000     ActiveStore
+61      172.30.208.1/32                                0.0.0.0                                          256 5000     ActiveStore
+61      172.30.223.255/32                              0.0.0.0                                          256 5000     ActiveStore
+61      224.0.0.0/4                                    0.0.0.0                                          256 5000     ActiveStore
+61      255.255.255.255/32                             0.0.0.0                                          256 5000     ActiveStore
+61      fe80::/64                                      ::                                               256 5000     ActiveStore
+61      fe80::3f6b:36d4:b732:424c/128                  ::                                               256 5000     ActiveStore
+61      ff00::/8                                       ::                                               256 5000     ActiveStore
+
+Interface: 192.168.56.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.56.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+
+Interface: 192.168.1.22 --- 0x12
+  Internet Address      Physical Address      Type
+  192.168.0.1           c0-25-67-8a-c7-2f     dynamic
+  192.168.1.1           84-01-12-9f-fc-a5     dynamic
+  192.168.1.6           c0-25-67-8a-c7-2f     dynamic
+  192.168.1.28          64-e4-a5-e7-d9-1d     dynamic
+  192.168.1.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+Interface: 172.30.208.1 --- 0x3d
+  Internet Address      Physical Address      Type
+  172.30.209.167        00-15-5d-d2-c8-70     dynamic
+  172.30.223.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static

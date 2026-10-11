@@ -11,6 +11,6 @@ COPY entrypoint.sh /usr/local/bin/ftp-entrypoint
 
 RUN chmod 0755 /usr/local/bin/ftp-entrypoint
 
-EXPOSE 21 40000-40010
+EXPOSE 21 40000-40100
 
 ENTRYPOINT ["/usr/local/bin/ftp-entrypoint"]

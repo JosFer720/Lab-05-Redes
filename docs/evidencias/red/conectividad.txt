@@ -1,0 +1,13 @@
+Fecha UTC: 2026-10-11T17:50:45.790892+00:00
+Máquina: NERY Windows; alcance: host hacia puertos Docker publicados en loopback; no prueba entre computadoras físicas
+127.0.0.1:15353 TCP conectado
+127.0.0.1:1389 TCP conectado
+127.0.0.1:8080 TCP conectado
+127.0.0.1:2525 TCP conectado
+127.0.0.1:1587 TCP conectado
+127.0.0.1:1143 TCP conectado
+Fecha UTC: 2026-10-11T17:50:45.945667+00:00
+Host Windows NERY -> DNS Docker publicado; puerto 15353
+aerolinea.redes.test SOA UDP: aerolinea.redes.test. 300 IN SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300 TCP: aerolinea.redes.test. 300 IN SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300
+aerolinea.redes.test MX UDP: aerolinea.redes.test. 300 IN MX 10 mail.aerolinea.redes.test. TCP: aerolinea.redes.test. 300 IN MX 10 mail.aerolinea.redes.test.
+ns1.aerolinea.redes.test A UDP: ns1.aerolinea.redes.test. 300 IN A 172.30.0.53 TCP: ns1.aerolinea.redes.test. 300 IN A 172.30.0.53

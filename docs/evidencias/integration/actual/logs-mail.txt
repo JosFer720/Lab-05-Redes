@@ -1,0 +1,123 @@
+Fecha UTC: 2026-10-11T17:52:29.018095+00:00
+mail-1  | Oct 11 17:52:00 auth: Error: ldap(/etc/dovecot/dovecot-ldap.conf.ext): Connection lost to LDAP server, reconnecting
+mail-1  | Oct 11 17:52:00 auth: Error: ldap(/etc/dovecot/dovecot-ldap.conf.ext): Can't connect to server: ldap://ldap.aerolinea.redes.test
+mail-1  | Oct 11 17:52:01 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<UtMVPZRdHJx/AAAB>
+mail-1  | Oct 11 17:52:04 imap-login: Info: Disconnected: Connection closed (disconnected before auth was ready, waited 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=</vpDPZRdNuF/AAAB>
+mail-1  | postfix/postlog: stopping the Postfix mail system
+mail-1  | Oct 11 17:52:06 master: Warning: Killed with signal 15 (by pid=1 uid=0 code=kill)
+mail-1  | Oct 11 17:52:07 master: Info: Dovecot v2.3.21 (47349e2482) starting up for imap, lmtp (core dumps disabled)
+mail-1  | postfix/postlog: starting the Postfix mail system
+mail-1  | Oct 11 17:52:10 imap-login: Info: Disconnected: Connection closed (disconnected before auth was ready, waited 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=</eOhPZRdOuF/AAAB>
+mail-1  | Oct 11 17:52:13 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<C/7PPZRdSOF/AAAB>
+mail-1  | Oct 11 17:52:16 imap-login: Info: Disconnected: Aborted login by logging out (auth failed, 1 attempts in 2 secs): user=<nmolina>, method=PLAIN, rip=172.30.0.20, lip=172.30.0.13, session=<O3vePZRdKJKsHgAU>
+mail-1  | Oct 11 17:52:16 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<YST+PZRdgtl/AAAB>
+mail-1  | Oct 11 17:52:19 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<11IsPpRdhNl/AAAB>
+mail-1  | Oct 11 17:52:20 imap-login: Info: Login: user=<jvalladares>, method=PLAIN, rip=172.30.0.20, lip=172.30.0.13, mpid=138, session=<is8yPpRdKpKsHgAU>
+mail-1  | Oct 11 17:52:20 lmtp(137): Info: Connect from local
+mail-1  | Oct 11 17:52:20 imap(jvalladares)<138><is8yPpRdKpKsHgAU>: Info: Disconnected: Logged out in=85 out=853 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+mail-1  | Oct 11 17:52:20 lmtp(jvalladares)<137><w116E9TMy2qJAAAAp3jWQQ>: Info: msgid=unspecified: saved mail to INBOX
+mail-1  | Oct 11 17:52:20 lmtp(137): Info: Disconnect from local: Logged out (state=READY)
+mail-1  | Oct 11 17:52:21 imap-login: Info: Login: user=<jvalladares>, method=PLAIN, rip=172.30.0.20, lip=172.30.0.13, mpid=140, session=<rjNCPpRdNpKsHgAU>
+mail-1  | Oct 11 17:52:21 imap(jvalladares)<140><rjNCPpRdNpKsHgAU>: Info: Disconnected: Logged out in=110 out=1706 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=1 body_bytes=719
+mail-1  | Oct 11 17:52:22 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<TX9aPpRdkNl/AAAB>
+mail-1  | Oct 11 17:52:25 imap-login: Info: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=127.0.0.1, lip=127.0.0.1, secured, session=<RquIPpRdpLd/AAAB>
+Oct 11 17:51:19 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:22 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:51:22 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:22 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:25 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:25 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:25 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:28 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:51:28 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:28 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:31 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:31 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:31 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:34 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:51:34 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:34 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:37 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:37 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:37 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:40 mail postfix/submission/smtpd[104]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:51:40 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:40 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:40 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:43 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:43 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:43 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:44 mail postfix/submission/smtpd[104]: 1C444FBB3: client=lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20], sasl_method=LOGIN, sasl_username=nmolina
+Oct 11 17:51:44 mail postfix/cleanup[810]: 1C444FBB3: message-id=<20261011175140.000119@1d59e7fe6a1b>
+Oct 11 17:51:44 mail postfix/qmgr[96]: 1C444FBB3: from=<nmolina@aerolinea.redes.test>, size=534, nrcpt=1 (queue active)
+Oct 11 17:51:44 mail postfix/submission/smtpd[104]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=1 data=1 quit=1 commands=6
+Oct 11 17:51:44 mail postfix/lmtp[812]: 1C444FBB3: to=<jvalladares@aerolinea.redes.test>, relay=mail.aerolinea.redes.test[private/dovecot-lmtp], delay=0.02, delays=0.01/0/0/0.01, dsn=2.0.0, status=sent (250 2.0.0 <jvalladares@aerolinea.redes.test> phPDB7DMy2otAwAAp3jWQQ Saved)
+Oct 11 17:51:44 mail postfix/qmgr[96]: 1C444FBB3: removed
+Oct 11 17:51:44 mail postfix/submission/smtpd[131]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:51:44 mail postfix/submission/smtpd[131]: NOQUEUE: reject: RCPT from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table; from=<nmolina@aerolinea.redes.test> to=<noexiste@aerolinea.redes.test> proto=ESMTP helo=<1d59e7fe6a1b>
+Oct 11 17:51:44 mail postfix/submission/smtpd[131]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=0/1 quit=1 commands=4/5
+Oct 11 17:51:46 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:51:46 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:46 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:49 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:49 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:49 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:51 mail postfix/submission/smtpd[104]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:51:52 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:52 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:52 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:55 mail postfix/submission/smtpd[104]: 2A644FBB2: client=lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20], sasl_method=PLAIN, sasl_username=nmolina
+Oct 11 17:51:55 mail postfix/cleanup[810]: 2A644FBB2: message-id=<>
+Oct 11 17:51:55 mail postfix/qmgr[96]: 2A644FBB2: from=<nmolina@aerolinea.redes.test>, size=404, nrcpt=1 (queue active)
+Oct 11 17:51:55 mail postfix/submission/smtpd[104]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=1 data=1 quit=1 commands=6
+Oct 11 17:51:55 mail postfix/lmtp[812]: 2A644FBB2: to=<jvalladares@aerolinea.redes.test>, relay=mail.aerolinea.redes.test[private/dovecot-lmtp], delay=0.01, delays=0/0/0/0.01, dsn=2.0.0, status=sent (250 2.0.0 <jvalladares@aerolinea.redes.test> QD+PCrvMy2otAwAAp3jWQQ Saved)
+Oct 11 17:51:55 mail postfix/qmgr[96]: 2A644FBB2: removed
+Oct 11 17:51:55 mail postfix/submission/smtpd[131]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:51:55 mail postfix/submission/smtpd[131]: NOQUEUE: reject: RCPT from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table; from=<nmolina@aerolinea.redes.test> to=<noexiste@aerolinea.redes.test> proto=ESMTP helo=<[172.30.0.20]>
+Oct 11 17:51:55 mail postfix/submission/smtpd[131]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=0/1 quit=1 commands=4/5
+Oct 11 17:51:55 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:51:55 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:55 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:51:58 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:51:58 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:51:58 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:01 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:52:01 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:01 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:04 mail postfix/submission/smtpd[131]: connect from localhost[127.0.0.1]
+Oct 11 17:52:04 mail postfix/submission/smtpd[131]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:04 mail postfix/submission/smtpd[131]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:06 mail postfix/postfix-script[882]: stopping the Postfix mail system
+Oct 11 17:52:09 mail postfix/postfix-script[92]: starting the Postfix mail system
+Oct 11 17:52:09 mail postfix/master[94]: daemon started -- version 3.8.6, configuration /etc/postfix
+Oct 11 17:52:10 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:52:10 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:10 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:13 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:52:13 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:13 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:16 mail postfix/submission/smtpd[104]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:52:16 mail postfix/submission/smtpd[124]: connect from localhost[127.0.0.1]
+Oct 11 17:52:16 mail postfix/submission/smtpd[124]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:16 mail postfix/submission/smtpd[124]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:19 mail postfix/submission/smtpd[124]: connect from localhost[127.0.0.1]
+Oct 11 17:52:19 mail postfix/submission/smtpd[124]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:19 mail postfix/submission/smtpd[124]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:20 mail postfix/submission/smtpd[104]: 4CC252A837: client=lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20], sasl_method=PLAIN, sasl_username=nmolina
+Oct 11 17:52:20 mail postfix/cleanup[134]: 4CC252A837: message-id=<>
+Oct 11 17:52:20 mail postfix/qmgr[96]: 4CC252A837: from=<nmolina@aerolinea.redes.test>, size=405, nrcpt=1 (queue active)
+Oct 11 17:52:20 mail postfix/submission/smtpd[104]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=1 data=1 quit=1 commands=6
+Oct 11 17:52:20 mail postfix/lmtp[135]: 4CC252A837: to=<jvalladares@aerolinea.redes.test>, relay=mail.aerolinea.redes.test[private/dovecot-lmtp], delay=0.02, delays=0.01/0/0/0.01, dsn=2.0.0, status=sent (250 2.0.0 <jvalladares@aerolinea.redes.test> w116E9TMy2qJAAAAp3jWQQ Saved)
+Oct 11 17:52:20 mail postfix/qmgr[96]: 4CC252A837: removed
+Oct 11 17:52:21 mail postfix/submission/smtpd[124]: connect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]
+Oct 11 17:52:21 mail postfix/submission/smtpd[124]: NOQUEUE: reject: RCPT from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20]: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table; from=<nmolina@aerolinea.redes.test> to=<noexiste@aerolinea.redes.test> proto=ESMTP helo=<[172.30.0.20]>
+Oct 11 17:52:21 mail postfix/submission/smtpd[124]: disconnect from lab05-entrega-client-1.lab05-entrega_lab[172.30.0.20] ehlo=1 auth=1 mail=1 rcpt=0/1 quit=1 commands=4/5
+Oct 11 17:52:22 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:52:22 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:22 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:25 mail postfix/submission/smtpd[124]: connect from localhost[127.0.0.1]
+Oct 11 17:52:25 mail postfix/submission/smtpd[124]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:25 mail postfix/submission/smtpd[124]: disconnect from localhost[127.0.0.1] commands=0/0
+Oct 11 17:52:28 mail postfix/submission/smtpd[104]: connect from localhost[127.0.0.1]
+Oct 11 17:52:28 mail postfix/submission/smtpd[104]: lost connection after CONNECT from localhost[127.0.0.1]
+Oct 11 17:52:28 mail postfix/submission/smtpd[104]: disconnect from localhost[127.0.0.1] commands=0/0

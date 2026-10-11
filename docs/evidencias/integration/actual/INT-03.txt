@@ -1,0 +1,41 @@
+Fecha UTC: 2026-10-11T17:52:28.437510+00:00
+dns
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.11:39392      0.0.0.0:*
+udp   UNCONN 0      0        172.30.0.53:53         0.0.0.0:*
+udp   UNCONN 0      0        172.30.0.53:53         0.0.0.0:*
+udp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*
+udp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*
+tcp   LISTEN 0      4096      127.0.0.11:37147      0.0.0.0:*
+tcp   LISTEN 0      10       172.30.0.53:53         0.0.0.0:*
+tcp   LISTEN 0      10       172.30.0.53:53         0.0.0.0:*
+tcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*
+tcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*
+tcp   LISTEN 0      5          127.0.0.1:953        0.0.0.0:*
+tcp   LISTEN 0      5          127.0.0.1:953        0.0.0.0:*
+
+ldap
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.11:38129      0.0.0.0:*
+tcp   LISTEN 0      4096      127.0.0.11:35617      0.0.0.0:*
+tcp   LISTEN 0      2048         0.0.0.0:389        0.0.0.0:*
+
+web
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.11:43018      0.0.0.0:*
+tcp   LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("apache2",pid=8,fd=3))
+tcp   LISTEN 0      4096      127.0.0.11:45137      0.0.0.0:*
+
+mail
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.11:34315      0.0.0.0:*
+tcp   LISTEN 0      100          0.0.0.0:25         0.0.0.0:*
+tcp   LISTEN 0      100          0.0.0.0:143        0.0.0.0:*    users:(("dovecot",pid=10,fd=36))
+tcp   LISTEN 0      100          0.0.0.0:587        0.0.0.0:*
+tcp   LISTEN 0      4096      127.0.0.11:34665      0.0.0.0:*
+
+ftp
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.11:55340      0.0.0.0:*
+tcp   LISTEN 0      4096      127.0.0.11:33971      0.0.0.0:*
+tcp   LISTEN 0      32           0.0.0.0:21         0.0.0.0:*    users:(("vsftpd",pid=19,fd=3))

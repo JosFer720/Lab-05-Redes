@@ -6,7 +6,10 @@ if [[ ${EUID} -ne 0 ]]; then
   exit 1
 fi
 
-FTP_ACCOUNTS=${FTP_ACCOUNTS:-$'ian:IanLab5\njavier:JavierLab5\nfernando:FernandoLab5\nnery:NeryLab5\nhugo:HugoLab5\nmilton:MiltonLab5\nguest:GuestLab5'}
+FTP_ACCOUNTS=${FTP_ACCOUNTS:-}
+if [[ -z ${FTP_ACCOUNTS} && -n ${FTP_PASSWORD:-} ]]; then
+  FTP_ACCOUNTS="${FTP_USER:-ftpuser}:${FTP_PASSWORD}"
+fi
 PASV_MIN_PORT=${PASV_MIN_PORT:-40000}
 PASV_MAX_PORT=${PASV_MAX_PORT:-40100}
 PASV_ADDRESS=${PASV_ADDRESS:-}

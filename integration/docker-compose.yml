@@ -3,8 +3,9 @@ services:
   dns:
     build:
       context: ./dns
-    networks: {lab: {ipv4_address: 172.30.0.53}}
-    ports: ["15353:53/tcp", "15353:53/udp"]
+    networks: {lab: {ipv4_address: 172.30.0.53, mac_address: "7a:81:bc:6b:49:6d"}}
+    ports: ["127.0.0.1:15353:53/tcp", "127.0.0.1:15353:53/udp"]
+    restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "dig +norecurse +short @127.0.0.1 aerolinea.redes.test SOA | grep -q ns1.aerolinea.redes.test"]
       interval: 3s
@@ -13,8 +14,12 @@ services:
   ldap:
     build:
       context: ./ldap
-    networks: {lab: {ipv4_address: 172.30.0.11}}
-    ports: ["1389:389"]
+    networks: {lab: {ipv4_address: 172.30.0.11, mac_address: "da:be:92:8d:ec:a3"}}
+    ports: ["127.0.0.1:1389:389"]
+    restart: unless-stopped
+    volumes:
+      - ldap_data:/var/lib/ldap
+      - ldap_config:/etc/ldap/slapd.d
     healthcheck:
       test: ["CMD-SHELL", "ldapsearch -x -H ldap://127.0.0.1 -b 'ou=People,dc=aerolinea,dc=redes,dc=test' -s base dn >/dev/null"]
       interval: 3s
@@ -27,9 +32,10 @@ services:
     depends_on:
       dns: {condition: service_healthy}
       ldap: {condition: service_healthy}
-    networks: {lab: {ipv4_address: 172.30.0.12}}
+    networks: {lab: {ipv4_address: 172.30.0.12, mac_address: "d2:6f:38:29:ab:b7"}}
     dns: [172.30.0.53]
-    ports: ["8080:80"]
+    ports: ["127.0.0.1:8080:80"]
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/80"]
       interval: 3s
@@ -42,9 +48,12 @@ services:
     depends_on:
       dns: {condition: service_healthy}
       ldap: {condition: service_healthy}
-    networks: {lab: {ipv4_address: 172.30.0.13}}
+    networks: {lab: {ipv4_address: 172.30.0.13, mac_address: "ae:80:58:42:27:14"}}
     dns: [172.30.0.53]
-    ports: ["2525:25", "1587:587", "1143:143"]
+    ports: ["127.0.0.1:2525:25", "127.0.0.1:1587:587", "127.0.0.1:1143:143"]
+    restart: unless-stopped
+    volumes:
+      - mail_data:/var/mail/vhosts
     healthcheck:
       test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/587 && exec 4<>/dev/tcp/127.0.0.1/143"]
       interval: 3s
@@ -55,7 +64,10 @@ services:
       context: ../ftp/docker
     environment: {FTP_USER: ftpuser, FTP_PASSWORD: Lab5-ftp, PASV_ADDRESS: 172.30.0.14}
     entrypoint: ["/usr/local/bin/ftp-entrypoint"]
-    networks: {lab: {ipv4_address: 172.30.0.14}}
+    networks: {lab: {ipv4_address: 172.30.0.14, mac_address: "5e:58:f7:76:6f:26"}}
+    restart: unless-stopped
+    volumes:
+      - ftp_data:/srv/ftp
     healthcheck:
       test: ["CMD-SHELL", "curl --fail --silent --user \"$$FTP_USER:$$FTP_PASSWORD\" ftp://127.0.0.1/ >/dev/null"]
       interval: 3s
@@ -71,7 +83,7 @@ services:
       web: {condition: service_healthy}
       mail: {condition: service_healthy}
       ftp: {condition: service_healthy}
-    networks: {lab: {ipv4_address: 172.30.0.20}}
+    networks: {lab: {ipv4_address: 172.30.0.20, mac_address: "ae:a8:01:58:34:8c"}}
     dns: [172.30.0.53]
     environment:
       DNS_SERVER: 172.30.0.53
@@ -92,3 +104,8 @@ networks:
   lab:
     ipam:
       config: [{subnet: 172.30.0.0/24}]
+volumes:
+  ldap_data:
+  ldap_config:
+  mail_data:
+  ftp_data:

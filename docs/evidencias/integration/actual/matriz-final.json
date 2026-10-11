@@ -1,0 +1,332 @@
+[
+  {
+    "id": "DNS-01",
+    "status": "PASS",
+    "expected": "IP de ns1 correcta",
+    "observed": "172.30.0.53",
+    "time": "2026-10-11T17:51:48.682018+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('DNS-01',lambda: dns('ns1.'+DOMAIN,expected=os.getenv('DNS_SERVER')), 'IP de ns1 correcta')"
+  },
+  {
+    "id": "DNS-02",
+    "status": "PASS",
+    "expected": "Cuatro IP coinciden con la zona",
+    "observed": "{'ldap': '172.30.0.11', 'www': '172.30.0.12', 'mail': '172.30.0.13', 'ftp': '172.30.0.14'}",
+    "time": "2026-10-11T17:51:48.688629+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "dig +short ldap/www/mail/ftp.aerolinea.redes.test A; comparar con zona esperada"
+  },
+  {
+    "id": "DNS-03",
+    "status": "PASS",
+    "expected": "SOA con flag aa",
+    "observed": "\n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +norecurse +time=3 +tries=1 @172.30.0.53 aerolinea.redes.test SOA\n; (1 server found)\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45680\n;; flags: qr aa ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: 55873b7aa7aa927d010000006acbccb41e5168896968f2f2 (good)\n;; QUESTION SECTION:\n;aerolinea.redes.test.\t\tIN\tSOA\n\n;; ANSWER SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tNS\tns1.aerolinea.redes.test.\n\n;; ADDITIONAL SECTION:\nns1.aerolinea.redes.test. 300\tIN\tA\t172.30.0.53\n\n;; Query time: 0 msec\n;; SERVER: 172.30.0.53#53(172.30.0.53) (UDP)\n;; WHEN: Sun Oct 11 17:51:48 UTC 2026\n;; MSG SIZE  rcvd: 153\n\n",
+    "time": "2026-10-11T17:51:48.712848+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "dig +norecurse @DNS_SERVER aerolinea.redes.test SOA"
+  },
+  {
+    "id": "DNS-04",
+    "status": "PASS",
+    "expected": "MX prioridad 10",
+    "observed": "10 mail.aerolinea.redes.test.",
+    "time": "2026-10-11T17:51:48.719267+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('DNS-04',lambda:dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.'),'MX prioridad 10')"
+  },
+  {
+    "id": "DNS-05",
+    "status": "PASS",
+    "expected": "NXDOMAIN",
+    "observed": "\n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +time=3 +tries=1 noexiste.aerolinea.redes.test A\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 17189\n;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: 8baa934d8729cae4010000006acbccb4901524dae8b750c9 (good)\n;; QUESTION SECTION:\n;noexiste.aerolinea.redes.test.\tIN\tA\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300\n\n;; Query time: 0 msec\n;; SERVER: 127.0.0.11#53(127.0.0.11) (UDP)\n;; WHEN: Sun Oct 11 17:51:48 UTC 2026\n;; MSG SIZE  rcvd: 132\n\n",
+    "time": "2026-10-11T17:51:48.725798+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "dig noexiste.aerolinea.redes.test A"
+  },
+  {
+    "id": "LDAP-01",
+    "status": "PASS",
+    "expected": "Seis integrantes presentes; pueden existir fixtures adicionales",
+    "observed": "dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario1\ncn: Usuario Uno\nsn: Uno\nmail: usuario1@aerolinea.redes.test\n\ndn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario2\ncn: Usuario Dos\nsn: Dos\nmail: usuario2@aerolinea.redes.test\n\ndn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n",
+    "time": "2026-10-11T17:51:48.732323+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "ldapsearch -LLL -b ou=People,... uid cn sn mail; exigir las seis cuentas"
+  },
+  {
+    "id": "LDAP-02",
+    "status": "PASS",
+    "expected": "Bind correcto de los seis",
+    "observed": "Seis binds válidos",
+    "time": "2026-10-11T17:51:48.736227+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "ldapwhoami con archivo privado -y; bind individual de seis uid"
+  },
+  {
+    "id": "LDAP-03",
+    "status": "PASS",
+    "expected": "Credenciales rechazadas con LDAP 49",
+    "observed": "Siete rechazos LDAP 49",
+    "time": "2026-10-11T17:51:48.756588+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "ldapwhoami de cada uid con clave incorrecta y de usuario inexistente; exigir LDAP 49"
+  },
+  {
+    "id": "LDAP-04",
+    "status": "PASS",
+    "expected": "Identidades y correos correctos en seis cuentas",
+    "observed": "dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario1\ncn: Usuario Uno\nsn: Uno\nmail: usuario1@aerolinea.redes.test\n\ndn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario2\ncn: Usuario Dos\nsn: Dos\nmail: usuario2@aerolinea.redes.test\n\ndn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n",
+    "time": "2026-10-11T17:51:48.779399+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "ldapsearch uid cn sn mail; comparar identidad y correo de cada integrante"
+  },
+  {
+    "id": "WEB-01",
+    "status": "PASS",
+    "expected": "DNS del sitio",
+    "observed": "172.30.0.12",
+    "time": "2026-10-11T17:51:48.782809+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('WEB-01',lambda:dns('www.'+DOMAIN),'DNS del sitio')"
+  },
+  {
+    "id": "WEB-02",
+    "status": "PASS",
+    "expected": "Página original accesible; evidencia HTTP, captura gráfica pendiente",
+    "observed": "HTTP 200; Aerolínea Redes",
+    "time": "2026-10-11T17:51:48.789853+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "HTTP GET / por FQDN; exigir marca del sitio React/Vite"
+  },
+  {
+    "id": "WEB-03",
+    "status": "PASS",
+    "expected": "Área privada accesible solo con sesión válida",
+    "observed": "Seis logins y logout correctos",
+    "time": "2026-10-11T17:51:48.807719+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "HTTP POST /dologin y GET /privado/usuario.json para las seis cuentas"
+  },
+  {
+    "id": "WEB-04",
+    "status": "PASS",
+    "expected": "No se crea sesión autorizada",
+    "observed": "Ambos accesos rechazados",
+    "time": "2026-10-11T17:51:49.065144+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "POST /dologin con clave incorrecta y usuario inexistente; exigir redirección a login"
+  },
+  {
+    "id": "WEB-05",
+    "status": "PASS",
+    "expected": "Login válido falla al caer LDAP; log del servidor; recuperación verificada",
+    "observed": "HTTP 500; [Sun Oct 11 17:43:50.015408 2026] [authnz_ldap:info] [pid 9:tid 137973064525504] [client 172.30.0.20:52390] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:43:50.015445 2026] [auth_form:error] [pid 9:tid 137973064525504] [client 172.30.0.20:52390] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:43:50.043966 2026] [authnz_ldap:info] [pid 9:tid 137972527654592] [client 172.30.0.20:52430] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:43:50.043980 2026] [auth_form:error] [pid 9:tid 137972527654592] [client 172.30.0.20:52430] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:44:02.039703 2026] [authnz_ldap:info] [pid 9:tid 137973584611008] [client 172.30.0.20:56330] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]\n[Sun Oct 11 17:44:15.809667 2026] [authnz_ldap:info] [pid 10:tid 137275300095680] [client 172.30.0.20:45712] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:44:15.809682 2026] [auth_form:error] [pid 10:tid 137275300095680] [client 172.30.0.20:45712] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:44:15.837701 2026] [authnz_ldap:info] [pid 10:tid 137274897442496] [client 172.30.0.20:45752] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:44:15.837714 2026] [auth_form:error] [pid 10:tid 137274897442496] [client 172.30.0.20:45752] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:45:41.554851 2026] [authnz_ldap:info] [pid 10:tid 137275333666496] [client 172.30.0.20:46046] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:45:41.555534 2026] [auth_form:error] [pid 10:tid 137275333666496] [client 172.30.0.20:46046] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:45:41.564327 2026] [authnz_ldap:info] [pid 10:tid 137275308488384] [client 172.30.0.20:46062] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:45:41.564342 2026] [auth_form:error] [pid 10:tid 137275308488384] [client 172.30.0.20:46062] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:46:22.580040 2026] [authnz_ldap:info] [pid 10:tid 137274939406016] [client 172.30.0.20:40788] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:46:22.580058 2026] [auth_form:error] [pid 10:tid 137274939406016] [client 172.30.0.20:40788] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:46:22.588606 2026] [authnz_ldap:info] [pid 10:tid 137274931013312] [client 172.30.0.20:40798] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:46:22.588620 2026] [auth_form:error] [pid 10:tid 137274931013312] [client 172.30.0.20:40798] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:46:32.726040 2026] [authnz_ldap:info] [pid 10:tid 137275566933696] [client 172.30.0.20:51348] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:46:32.726055 2026] [auth_form:error] [pid 10:tid 137275566933696] [client 172.30.0.20:51348] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:46:32.755717 2026] [authnz_ldap:info] [pid 9:tid 137274771617472] [client 172.30.0.20:51382] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:46:32.755741 2026] [auth_form:error] [pid 9:tid 137274771617472] [client 172.30.0.20:51382] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:46:46.017682 2026] [authnz_ldap:info] [pid 10:tid 137274889049792] [client 172.30.0.20:58478] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [LDAP: ldap_simple_bind() failed][Can't contact LDAP server]\n[Sun Oct 11 17:46:59.969175 2026] [authnz_ldap:info] [pid 10:tid 132219536393920] [client 172.30.0.20:33720] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:46:59.969188 2026] [auth_form:error] [pid 10:tid 132219536393920] [client 172.30.0.20:33720] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:46:59.997765 2026] [authnz_ldap:info] [pid 10:tid 132218991130304] [client 172.30.0.20:33764] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:46:59.997781 2026] [auth_form:error] [pid 10:tid 132218991130304] [client 172.30.0.20:33764] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:51:37.995447 2026] [authnz_ldap:info] [pid 10:tid 132219561572032] [client 172.30.0.20:34550] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:51:37.996163 2026] [auth_form:error] [pid 10:tid 132219561572032] [client 172.30.0.20:34550] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:51:38.006633 2026] [authnz_ldap:info] [pid 10:tid 132219544786624] [client 172.30.0.20:34566] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:51:38.006649 2026] [auth_form:error] [pid 10:tid 132219544786624] [client 172.30.0.20:34566] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:51:49.080123 2026] [authnz_ldap:info] [pid 10:tid 132218353612480] [client 172.30.0.20:51142] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]\n[Sun Oct 11 17:51:49.080138 2026] [auth_form:error] [pid 10:tid 132218353612480] [client 172.30.0.20:51142] AH01807: user 'nmolina': authentication failure for \"/dologin\": password Mismatch\n[Sun Oct 11 17:51:49.108710 2026] [authnz_ldap:info] [pid 10:tid 132219807393472] [client 172.30.0.20:51162] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]\n[Sun Oct 11 17:51:49.108724 2026] [auth_form:error] [pid 10:tid 132219807393472] [client 172.30.0.20:51162] AH01808: user 'noexiste' not found: /dologin\n[Sun Oct 11 17:52:00.749937 2026] [authnz_ldap:info] [pid 10:tid 132219528001216] [client 172.30.0.20:45834] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]\n",
+    "time": "2026-10-11T17:52:00.931244+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "docker compose stop ldap; POST /dologin con credenciales válidas sin cookie; tail log Apache; start ldap en finally"
+  },
+  {
+    "id": "MAIL-01",
+    "status": "PASS",
+    "expected": "A y MX correctos",
+    "observed": "('172.30.0.13', '10 mail.aerolinea.redes.test.')",
+    "time": "2026-10-11T17:51:49.123967+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('MAIL-01',lambda:(dns('mail.'+DOMAIN),dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.')),'A y MX correctos')"
+  },
+  {
+    "id": "MAIL-02",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T17:51:49.158173+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-03",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T17:51:49.158189+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-06",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T17:51:49.158191+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-04",
+    "status": "PASS",
+    "expected": "Dovecot rechaza credenciales incorrectas",
+    "observed": "IMAP AUTHENTICATIONFAILED; reproducción gráfica pendiente",
+    "time": "2026-10-11T17:51:49.158194+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "IMAP LOGIN con clave incorrecta; exigir respuesta NO, no error de conectividad"
+  },
+  {
+    "id": "MAIL-05",
+    "status": "PASS",
+    "expected": "Envío entre dos integrantes y entrega real; IMAP complementario",
+    "observed": "SMTP entregado e IMAP FETCH verificado: Lab5-audit-1791741111167351998",
+    "time": "2026-10-11T17:51:51.167361+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "SMTP AUTH LOGIN/PLAIN :587 nmolina -> jvalladares; mensaje único; IMAP FETCH contenido"
+  },
+  {
+    "id": "MAIL-07",
+    "status": "PASS",
+    "expected": "550 destinatario inexistente",
+    "observed": "550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table",
+    "time": "2026-10-11T17:51:55.186698+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "SMTP autenticado, RCPT TO noexiste; exigir rechazo 550"
+  },
+  {
+    "id": "FTP-01",
+    "status": "PASS",
+    "expected": "DNS FTP",
+    "observed": "172.30.0.14",
+    "time": "2026-10-11T17:51:55.189947+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('FTP-01',lambda:dns('ftp.'+DOMAIN),'DNS FTP')"
+  },
+  {
+    "id": "FTP-02",
+    "status": "PASS",
+    "expected": "Login válido",
+    "observed": "220 (vsFTPd 3.0.5)",
+    "time": "2026-10-11T17:51:55.196918+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "FTP USER/PASS y QUIT por FQDN"
+  },
+  {
+    "id": "FTP-03",
+    "status": "PASS",
+    "expected": "530 clave incorrecta",
+    "observed": "530 Login incorrect.",
+    "time": "2026-10-11T17:51:55.224761+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('FTP-03',lambda:ftpreject(credentials['ftp_user'],'incorrecta-audit'),'530 clave incorrecta')"
+  },
+  {
+    "id": "FTP-04",
+    "status": "PASS",
+    "expected": "530 anónimo",
+    "observed": "530 Permission denied.",
+    "time": "2026-10-11T17:51:58.842094+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "record('FTP-04',lambda:ftpreject('anonymous','audit@example.test'),'530 anónimo')"
+  },
+  {
+    "id": "FTP-05",
+    "status": "PASS",
+    "expected": "Listado autorizado",
+    "observed": "['bienvenida.txt', 'uploads']",
+    "time": "2026-10-11T17:51:59.844456+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "FTP NLST pasivo; exigir bienvenida.txt"
+  },
+  {
+    "id": "FTP-06",
+    "status": "PASS",
+    "expected": "226 carga completa",
+    "observed": "226 Transfer complete.",
+    "time": "2026-10-11T17:51:59.872590+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "FTP STOR uploads/<id único>.txt en modo pasivo"
+  },
+  {
+    "id": "FTP-07",
+    "status": "PASS",
+    "expected": "Descarga idéntica",
+    "observed": "SHA256 b0f60acab7fd43f2f951a02cf7df89fec9a9d736fcd6a0a47bd3b1516eddc70f",
+    "time": "2026-10-11T17:51:59.900572+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "FTP RETR del mismo archivo; comparar bytes y SHA256"
+  },
+  {
+    "id": "FTP-08",
+    "status": "PASS",
+    "expected": "No se escapa de chroot",
+    "observed": "CWD .. permanece /; 550 Failed to open file.",
+    "time": "2026-10-11T17:51:59.927754+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "FTP CWD .. debe permanecer en /; RETR /etc/passwd debe dar 550"
+  },
+  {
+    "id": "INT-01",
+    "status": "PASS",
+    "expected": "Sin sustitución de DNS en /etc/hosts",
+    "observed": "127.0.0.1\tlocalhost\n::1\tlocalhost ip6-localhost ip6-loopback\nfe00::\tip6-localnet\nff00::\tip6-mcastprefix\nff02::1\tip6-allnodes\nff02::2\tip6-allrouters\n172.30.0.20\t1d59e7fe6a1b\n\nTodos los protocolos usan FQDN",
+    "time": "2026-10-11T17:51:59.956673+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "Inspeccionar /etc/hosts y exigir pruebas FQDN de todos los protocolos PASS"
+  },
+  {
+    "id": "INT-02",
+    "status": "PASS",
+    "expected": "Regresión PASS; IP/MAC estables; archivos previos conservados",
+    "observed": "[PASS] DNS-01: 172.30.0.53\n[PASS] DNS-02: {'ldap': '172.30.0.11', 'www': '172.30.0.12', 'mail': '172.30.0.13', 'ftp': '172.30.0.14'}\n[PASS] DNS-03: \n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +norecurse +time=3 +tries=1 @172.30.0.53 aerolinea.redes.test SOA\n; (1 server found)\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2401\n;; flags: qr aa ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: db3f3740b474281d010000006acbccce00d3a5a583ff01d3 (good)\n;; QUESTION SECTION:\n;aerolinea.redes.test.\t\tIN\tSOA\n\n;; ANSWER SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tNS\tns1.aerolinea.redes.test.\n\n;; ADDITIONAL SECTION:\nns1.aerolinea.redes.test. 300\tIN\tA\t172.30.0.53\n\n;; Query time: 0 msec\n;; SERVER: 172.30.0.53#53(172.30.0.53) (UDP)\n;; WHEN: Sun Oct 11 17:52:14 UTC 2026\n;; MSG SIZE  rcvd: 153\n\n\n[PASS] DNS-04: 10 mail.aerolinea.redes.test.\n[PASS] DNS-05: \n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +time=3 +tries=1 noexiste.aerolinea.redes.test A\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 63184\n;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: 6571bf10ebdca28b010000006acbcccea0c8292b8a7f9fe5 (good)\n;; QUESTION SECTION:\n;noexiste.aerolinea.redes.test.\tIN\tA\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026100701 3600 900 604800 300\n\n;; Query time: 0 msec\n;; SERVER: 127.0.0.11#53(127.0.0.11) (UDP)\n;; WHEN: Sun Oct 11 17:52:14 UTC 2026\n;; MSG SIZE  rcvd: 132\n\n\n[PASS] LDAP-01: dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario1\ncn: Usuario Uno\nsn: Uno\nmail: usuario1@aerolinea.redes.test\n\ndn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario2\ncn: Usuario Dos\nsn: Dos\nmail: usuario2@aerolinea.redes.test\n\ndn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n\n[PASS] LDAP-02: Seis binds válidos\n[PASS] LDAP-03: Siete rechazos LDAP 49\n[PASS] LDAP-04: dn: uid=usuario1,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario1\ncn: Usuario Uno\nsn: Uno\nmail: usuario1@aerolinea.redes.test\n\ndn: uid=usuario2,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: usuario2\ncn: Usuario Dos\nsn: Dos\nmail: usuario2@aerolinea.redes.test\n\ndn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n\n[PASS] WEB-01: 172.30.0.12\n[PASS] WEB-02: HTTP 200; Aerolínea Redes\n[PASS] WEB-03: Seis logins y logout correctos\n[PASS] WEB-04: Ambos accesos rechazados\n[PASS] MAIL-01: ('172.30.0.13', '10 mail.aerolinea.redes.test.')\n[PASS] MAIL-04: IMAP AUTHENTICATIONFAILED; reproducción gráfica pendiente\n[PASS] MAIL-05: SMTP entregado e IMAP FETCH verificado: Lab5-audit-1791741136300749360\n[PASS] MAIL-07: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table\n[PASS] FTP-01: 172.30.0.14\n[PASS] FTP-02: 220 (vsFTPd 3.0.5)\n[PASS] FTP-03: 530 Login incorrect.\n[PASS] FTP-04: 530 Permission denied.\n[PASS] FTP-05: ['bienvenida.txt', 'uploads']\n[PASS] FTP-06: 226 Transfer complete.\n[PASS] FTP-07: SHA256 fe9ea592427b29403fb5b69bd0625acbb40f1bfc24744a7687b3e8c2d8e9fbef\n[PASS] FTP-08: CWD .. permanece /; 550 Failed to open file.\n[PASS] INT-01: 127.0.0.1\tlocalhost\n::1\tlocalhost ip6-localhost ip6-loopback\nfe00::\tip6-localnet\nff00::\tip6-mcastprefix\nff02::1\tip6-allnodes\nff02::2\tip6-allrouters\n172.30.0.20\t1d59e7fe6a1b\n\nTodos los protocolos usan FQDN\n\nInterfaces estables: True; archivos anteriores conservados: True",
+    "time": "2026-10-11T17:52:26.651120+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "compose restart cinco servicios; suite completa; comparar interfaces y archivos Maildir/FTP anteriores"
+  },
+  {
+    "id": "INT-03",
+    "status": "PASS",
+    "expected": "DNS 53 TCP/UDP; LDAP 389; Web 80; SMTP 25/587; IMAP 143; FTP 21",
+    "observed": "dns\nNetid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nudp   UNCONN 0      0         127.0.0.11:39392      0.0.0.0:*          \nudp   UNCONN 0      0        172.30.0.53:53         0.0.0.0:*          \nudp   UNCONN 0      0        172.30.0.53:53         0.0.0.0:*          \nudp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*          \nudp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*          \ntcp   LISTEN 0      4096      127.0.0.11:37147      0.0.0.0:*          \ntcp   LISTEN 0      10       172.30.0.53:53         0.0.0.0:*          \ntcp   LISTEN 0      10       172.30.0.53:53         0.0.0.0:*          \ntcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*          \ntcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*          \ntcp   LISTEN 0      5          127.0.0.1:953        0.0.0.0:*          \ntcp   LISTEN 0      5          127.0.0.1:953        0.0.0.0:*          \n\nldap\nNetid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nudp   UNCONN 0      0         127.0.0.11:38129      0.0.0.0:*          \ntcp   LISTEN 0      4096      127.0.0.11:35617      0.0.0.0:*          \ntcp   LISTEN 0      2048         0.0.0.0:389        0.0.0.0:*          \n\nweb\nNetid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                        \nudp   UNCONN 0      0         127.0.0.11:43018      0.0.0.0:*                                  \ntcp   LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:((\"apache2\",pid=8,fd=3))\ntcp   LISTEN 0      4096      127.0.0.11:45137      0.0.0.0:*                                  \n\nmail\nNetid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                          \nudp   UNCONN 0      0         127.0.0.11:34315      0.0.0.0:*                                    \ntcp   LISTEN 0      100          0.0.0.0:25         0.0.0.0:*                                    \ntcp   LISTEN 0      100          0.0.0.0:143        0.0.0.0:*    users:((\"dovecot\",pid=10,fd=36))\ntcp   LISTEN 0      100          0.0.0.0:587        0.0.0.0:*                                    \ntcp   LISTEN 0      4096      127.0.0.11:34665      0.0.0.0:*                                    \n\nftp\nNetid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nudp   UNCONN 0      0         127.0.0.11:55340      0.0.0.0:*          \ntcp   LISTEN 0      4096      127.0.0.11:33971      0.0.0.0:*          \ntcp   LISTEN 0      32           0.0.0.0:21         0.0.0.0:*    users:((\"vsftpd\",pid=19,fd=3))\n",
+    "time": "2026-10-11T17:52:28.438033+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "ss -lntup desde contenedor auxiliar que comparte network y pid de cada servidor"
+  },
+  {
+    "id": "INT-04",
+    "status": "PASS",
+    "expected": "Logs de operaciones LDAP, HTTP, autenticación IMAP, entrega SMTP/LMTP y transferencia FTP",
+    "observed": "Logs por servicio; revisar logs-*.txt. Fallos de autenticación y LDAP esperados durante pruebas negativas.",
+    "time": "2026-10-11T17:52:29.631957+00:00",
+    "machine": "1d59e7fe6a1b",
+    "scope": "Docker; cliente separado, mismo host físico",
+    "procedure": "compose logs y tail logs Apache/vsftpd"
+  }
+]

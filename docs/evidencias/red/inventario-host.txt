@@ -1,0 +1,323 @@
+Fecha: 2026-10-11T10:42:47.3738792-07:00
+Equipo: NERY
+
+
+WindowsProductName    : Windows 10 Home
+WindowsVersion        : 2009
+OsName                : Microsoft Windows 11 Home
+OsVersion             : 10.0.26300
+OsArchitecture        : 64-bit
+HyperVisorPresent     : True
+CsTotalPhysicalMemory : 16849256448
+
+Caption                : Microsoft Windows 11 Home
+TotalVisibleMemorySize : 16454352
+FreePhysicalMemory     : 970960
+
+Name                          : 13th Gen Intel(R) Core(TM) i7-13650HX
+NumberOfCores                 : 14
+NumberOfLogicalProcessors     : 20
+VirtualizationFirmwareEnabled : False
+VMMonitorModeExtensions       : False
+
+Name : C
+Used : 292281417728
+Free : 705095757824
+
+Get-WindowsOptionalFeature : The requested operation requires elevation.
+
+At C:\Users\josem\Downloads\Lab-05-Redes\virtualbox\diagnostico-host.ps1:15 char:9
++         Get-WindowsOptionalFeature -Online -FeatureName $feature
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-WindowsOptionalFeature], COMException
+    + FullyQualifiedErrorId : Microsoft.Dism.Commands.GetWindowsOptionalFeatureCommand
+
+Get-WindowsOptionalFeature : The requested operation requires elevation.
+
+At C:\Users\josem\Downloads\Lab-05-Redes\virtualbox\diagnostico-host.ps1:15 char:9
++         Get-WindowsOptionalFeature -Online -FeatureName $feature
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-WindowsOptionalFeature], COMException
+    + FullyQualifiedErrorId : Microsoft.Dism.Commands.GetWindowsOptionalFeatureCommand
+
+Get-WindowsOptionalFeature : The requested operation requires elevation.
+
+At C:\Users\josem\Downloads\Lab-05-Redes\virtualbox\diagnostico-host.ps1:15 char:9
++         Get-WindowsOptionalFeature -Online -FeatureName $feature
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-WindowsOptionalFeature], COMException
+    + FullyQualifiedErrorId : Microsoft.Dism.Commands.GetWindowsOptionalFeatureCommand
+
+  NAME              STATE           VERSION
+
+* docker-desktop    Running         2
+
+  Ubuntu-24.04      Stopped         2
+
+
+Client:
+ Version:           29.8.0
+ API version:       1.56
+ Go version:        go1.26.8
+ Git commit:        88096ef
+ Built:             Thu Sep  3 21:53:38 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.92.0 (240144)
+ Engine:
+  Version:          29.8.0
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.8
+  Git commit:       3ce5872
+  Built:            Thu Sep  3 21:51:20 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.3.5
+  GitCommit:        1294c24a7da8e5a793ed378161673abe94118892
+ runc:
+  Version:          1.5.1
+  GitCommit:        v1.5.1-0-g8f2685a4
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Name                 : vEthernet (WSL (Hyper-V firewall))
+Status               : Up
+MacAddress           : 00-15-5D-4D-36-34
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter
+ifIndex              : 61
+
+Name                 : Ethernet
+Status               : Up
+MacAddress           : 04-BF-1B-BC-3F-77
+InterfaceDescription : Realtek PCIe GbE Family Controller
+ifIndex              : 18
+
+Name                 : Ethernet 2
+Status               : Up
+MacAddress           : 0A-00-27-00-00-11
+InterfaceDescription : VirtualBox Host-Only Ethernet Adapter
+ifIndex              : 17
+
+Name                 : Bluetooth Network Connection
+Status               : Disconnected
+MacAddress           : 4C-49-6C-38-14-EE
+InterfaceDescription : Bluetooth Device (Personal Area Network)
+ifIndex              : 14
+
+Name                 : Wi-Fi
+Status               : Disconnected
+MacAddress           : 4C-49-6C-38-14-EA
+InterfaceDescription : Intel(R) Wi-Fi 6 AX201 160MHz
+ifIndex              : 12
+
+ComputerName         : NERY
+InterfaceAlias       : Ethernet 2
+InterfaceIndex       : 17
+InterfaceDescription : VirtualBox Host-Only Ethernet Adapter
+CompartmentId        : 1
+NetAdapter           : MSFT_NetAdapter (CreationClassName = "MSFT_NetAdapter", DeviceID = "{C3A49210-82B7-4B9F-AB02-EBA67590AE5A}", SystemCreationClassName = "CIM_NetworkPort", SystemName = "Nery")
+NetCompartment       : MSFT_NetCompartment (InstanceID = ";55;")
+NetIPv6Interface     : MSFT_NetIPInterface (Name = ";A55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetIPv4Interface     : MSFT_NetIPInterface (Name = ";A55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetProfile           :
+AllIPAddresses       : {192.168.56.1, fe80::94ac:cf81:c3dd:e7b0%17}
+IPv6Address          : {}
+IPv6TemporaryAddress : {}
+IPv6LinkLocalAddress : {fe80::94ac:cf81:c3dd:e7b0%17}
+IPv4Address          : {192.168.56.1}
+IPv6DefaultGateway   :
+IPv4DefaultGateway   :
+DNSServer            : {MSFT_DNSClientServerAddress (Name = "17", CreationClassName = "", SystemCreationClassName = "", SystemName = "23"), MSFT_DNSClientServerAddress (Name = "17", CreationClassName = "", SystemCreationClassName = "",
+                       SystemName = "2")}
+Detailed             : False
+
+ComputerName         : NERY
+InterfaceAlias       : Ethernet
+InterfaceIndex       : 18
+InterfaceDescription : Realtek PCIe GbE Family Controller
+CompartmentId        : 1
+NetAdapter           : MSFT_NetAdapter (CreationClassName = "MSFT_NetAdapter", DeviceID = "{D1808425-3A9A-48DB-BFC9-18D8995DB15E}", SystemCreationClassName = "CIM_NetworkPort", SystemName = "Nery")
+NetCompartment       : MSFT_NetCompartment (InstanceID = ";55;")
+NetIPv6Interface     : MSFT_NetIPInterface (Name = ";B55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetIPv4Interface     : MSFT_NetIPInterface (Name = ";B55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetProfile           : MSFT_NetConnectionProfile (InstanceID = "{D1808425-3A9A-48DB-BFC9-18D8995DB15E}")
+AllIPAddresses       : {192.168.1.22, 2800:98:1120:864:e91:78e9:7b54:6017, 2800:98:1120:864::1, 2800:98:1120:864:b038:89b0:4d52:fb52...}
+IPv6Address          : {2800:98:1120:864:e91:78e9:7b54:6017, 2800:98:1120:864::1}
+IPv6TemporaryAddress : {2800:98:1120:864:b038:89b0:4d52:fb52}
+IPv6LinkLocalAddress : {fe80::d230:5b64:190e:6388%18}
+IPv4Address          : {192.168.1.22}
+IPv6DefaultGateway   : {MSFT_NetRoute (InstanceID = "DD9:55;B55poB:DDB@:;D;?ppDpoCpDpmk?55;")}
+IPv4DefaultGateway   : {MSFT_NetRoute (InstanceID = ":8:8:8:9:55;B55;C?8;@B8;8;55;")}
+DNSServer            : {MSFT_DNSClientServerAddress (Name = "18", CreationClassName = "", SystemCreationClassName = "", SystemName = "23"), MSFT_DNSClientServerAddress (Name = "18", CreationClassName = "", SystemCreationClassName = "",
+                       SystemName = "2")}
+Detailed             : False
+
+ComputerName         : NERY
+InterfaceAlias       : vEthernet (WSL (Hyper-V firewall))
+InterfaceIndex       : 61
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter
+CompartmentId        : 1
+NetAdapter           : MSFT_NetAdapter (CreationClassName = "MSFT_NetAdapter", DeviceID = "{FEDC6B00-63E6-45F3-A0C2-7CE94B72389F}", SystemCreationClassName = "CIM_NetworkPort", SystemName = "Nery")
+NetCompartment       : MSFT_NetCompartment (InstanceID = ";55;")
+NetIPv6Interface     : MSFT_NetIPInterface (Name = "@;55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetIPv4Interface     : MSFT_NetIPInterface (Name = "@;55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetProfile           :
+AllIPAddresses       : {172.30.208.1, fe80::3f6b:36d4:b732:424c%61}
+IPv6Address          : {}
+IPv6TemporaryAddress : {}
+IPv6LinkLocalAddress : {fe80::3f6b:36d4:b732:424c%61}
+IPv4Address          : {172.30.208.1}
+IPv6DefaultGateway   :
+IPv4DefaultGateway   :
+DNSServer            : {MSFT_DNSClientServerAddress (Name = "61", CreationClassName = "", SystemCreationClassName = "", SystemName = "23"), MSFT_DNSClientServerAddress (Name = "61", CreationClassName = "", SystemCreationClassName = "",
+                       SystemName = "2")}
+Detailed             : False
+
+ComputerName         : NERY
+InterfaceAlias       : Wi-Fi
+InterfaceIndex       : 12
+InterfaceDescription : Intel(R) Wi-Fi 6 AX201 160MHz
+CompartmentId        : 1
+NetAdapter           : MSFT_NetAdapter (CreationClassName = "MSFT_NetAdapter", DeviceID = "{75C87FF0-31C2-4BA2-BA18-FD496AAB87DC}", SystemCreationClassName = "CIM_NetworkPort", SystemName = "Nery")
+NetCompartment       : MSFT_NetCompartment (InstanceID = ";55;")
+NetIPv6Interface     : MSFT_NetIPInterface (Name = ";?55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetIPv4Interface     : MSFT_NetIPInterface (Name = ";?55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetProfile           :
+AllIPAddresses       : {192.168.0.151, fe80::b084:b846:a47f:7e51%12}
+IPv6Address          : {}
+IPv6TemporaryAddress : {}
+IPv6LinkLocalAddress : {fe80::b084:b846:a47f:7e51%12}
+IPv4Address          : {192.168.0.151}
+IPv6DefaultGateway   :
+IPv4DefaultGateway   : {MSFT_NetRoute (InstanceID = ":8:8:8:9:55;?55;C?8;@B8:8;55;")}
+DNSServer            : {MSFT_DNSClientServerAddress (Name = "12", CreationClassName = "", SystemCreationClassName = "", SystemName = "23"), MSFT_DNSClientServerAddress (Name = "12", CreationClassName = "", SystemCreationClassName = "",
+                       SystemName = "2")}
+Detailed             : False
+
+ComputerName         : NERY
+InterfaceAlias       : Bluetooth Network Connection
+InterfaceIndex       : 14
+InterfaceDescription : Bluetooth Device (Personal Area Network)
+CompartmentId        : 1
+NetAdapter           : MSFT_NetAdapter (CreationClassName = "MSFT_NetAdapter", DeviceID = "{9D41FA98-CFF0-4839-9AAB-962BB7E3BBE4}", SystemCreationClassName = "CIM_NetworkPort", SystemName = "Nery")
+NetCompartment       : MSFT_NetCompartment (InstanceID = ";55;")
+NetIPv6Interface     : MSFT_NetIPInterface (Name = ";?55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetIPv4Interface     : MSFT_NetIPInterface (Name = ";?55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")
+NetProfile           :
+AllIPAddresses       : {169.254.70.57, fe80::fd97:d7d8:6d49:af6d%14}
+IPv6Address          : {}
+IPv6TemporaryAddress : {}
+IPv6LinkLocalAddress : {fe80::fd97:d7d8:6d49:af6d%14}
+IPv4Address          : {169.254.70.57}
+IPv6DefaultGateway   :
+IPv4DefaultGateway   :
+DNSServer            : {MSFT_DNSClientServerAddress (Name = "14", CreationClassName = "", SystemCreationClassName = "", SystemName = "23"), MSFT_DNSClientServerAddress (Name = "14", CreationClassName = "", SystemCreationClassName = "",
+                       SystemName = "2")}
+Detailed             : False
+
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Nery
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek PCIe GbE Family Controller
+   Physical Address. . . . . . . . . : 04-BF-1B-BC-3F-77
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2800:98:1120:864::1(Preferred)
+   Lease Obtained. . . . . . . . . . : Sunday, October 11, 2026 9:38:45 AM
+   Lease Expires . . . . . . . . . . : Friday, October 16, 2026 9:38:45 AM
+   IPv6 Address. . . . . . . . . . . : 2800:98:1120:864:e91:78e9:7b54:6017(Preferred)
+   Temporary IPv6 Address. . . . . . : 2800:98:1120:864:b038:89b0:4d52:fb52(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::d230:5b64:190e:6388%18(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.1.22(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Sunday, October 11, 2026 9:38:50 AM
+   Lease Expires . . . . . . . . . . : Monday, October 12, 2026 9:38:49 AM
+   Default Gateway . . . . . . . . . : fe80::8601:12ff:fe9f:fca5%18
+                                       192.168.1.1
+   DHCP Server . . . . . . . . . . . : 192.168.1.1
+   DHCPv6 IAID . . . . . . . . . . . : 84197147
+   DHCPv6 Client DUID. . . . . . . . : 00-01-01-00-31-D1-E1-DF-04-BF-1B-BC-3F-77
+   DNS Servers . . . . . . . . . . . : 2800:98:0:4::4
+                                       2803:f340:1300::c
+                                       216.230.147.90
+                                       216.230.139.8
+                                       2800:98:0:4::4
+                                       2803:f340:1300::c
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Ethernet 2:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-11
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::94ac:cf81:c3dd:e7b0%17(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 889847847
+   DHCPv6 Client DUID. . . . . . . . : 00-01-01-00-31-D1-E1-DF-04-BF-1B-BC-3F-77
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 4C-49-6C-38-14-EB
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : 4E-49-6C-38-14-EA
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : Nexxt Solutions
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : 4C-49-6C-38-14-EA
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 4C-49-6C-38-14-EE
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter vEthernet (WSL (Hyper-V firewall)):
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-4D-36-34
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::3f6b:36d4:b732:424c%61(Preferred)
+   IPv4 Address. . . . . . . . . . . : 172.30.208.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 1023415645
+   DHCPv6 Client DUID. . . . . . . . : 00-01-01-00-31-D1-E1-DF-04-BF-1B-BC-3F-77
+   NetBIOS over Tcpip. . . . . . . . : Enabled

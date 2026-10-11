@@ -1,0 +1,29 @@
+
+> site@0.0.0 lint
+> oxlint
+
+
+  ! react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+     ,-[src/components/ui/alert.tsx:101:60]
+ 100 |
+ 101 | export { Alert, AlertTitle, AlertDescription, AlertAction, alertVariants }
+     :                                                            ^^^^^^^^^^^^^
+     `----
+
+  ! react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+    ,-[src/components/ui/badge.tsx:49:17]
+ 48 |
+ 49 | export { Badge, badgeVariants }
+    :                 ^^^^^^^^^^^^^
+    `----
+
+  ! react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+    ,-[src/components/ui/button.tsx:71:18]
+ 70 |
+ 71 | export { Button, buttonVariants }
+    :                  ^^^^^^^^^^^^^^
+    `----
+
+Found 3 warnings and 0 errors.
+Finished in 77ms on 17 files with 116 rules using 20 threads.
+found 0 vulnerabilities

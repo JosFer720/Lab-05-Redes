@@ -24,21 +24,21 @@ probarse desde ese equipo.
 - Base: `dc=aerolinea,dc=redes,dc=test`.
 - Usuarios: `ou=People,dc=aerolinea,dc=redes,dc=test`.
 - Administrador: `cn=admin,dc=aerolinea,dc=redes,dc=test`.
-- Contraseña administrativa de laboratorio: `Lab5-AdminLDAP`.
+- Contraseña administrativa de laboratorio: `[credencial retirada; coordinar rotación]`.
 - Búsquedas anónimas de `uid`, `cn`, `sn` y `mail` habilitadas para Apache y correo.
 - `userPassword` oculto en consultas anónimas y a otros usuarios.
 
-Todas las credenciales son las del plan y se usan únicamente en este laboratorio.
+Las credenciales históricas fueron publicadas y se consideran comprometidas. Coordinar su rotación con el responsable antes de usar el servidor del compañero. Los hashes históricos del LDIF también requieren sustitución tras esa rotación.
 El transporte es LDAP sin TLS, como la configuración del repositorio.
 
 | Usuario | Integrante | Contraseña de laboratorio |
 |---|---|---|
-| fruiz | Fernando Ruiz | Lab5-fruiz |
-| hbarillas | Hugo Barillas | Lab5-hbarillas |
-| icumes | Ian Cumes | Lab5-icumes |
-| jvalladares | Javier Valladares | Lab5-jvalladares |
-| nmolina | Nery Molina | Lab5-nmolina |
-| mpolanco | Milton Polanco | Lab5-mpolanco |
+| fruiz | Fernando Ruiz | [credencial retirada; coordinar rotación] |
+| hbarillas | Hugo Barillas | [credencial retirada; coordinar rotación] |
+| icumes | Ian Cumes | [credencial retirada; coordinar rotación] |
+| jvalladares | Javier Valladares | [credencial retirada; coordinar rotación] |
+| nmolina | Nery Molina | [credencial retirada; coordinar rotación] |
+| mpolanco | Milton Polanco | [credencial retirada; coordinar rotación] |
 
 El instalador recibió las seis filas desde
 `/root/lab5-secrets/users.tsv`, con permisos 600, dentro de la VM.
@@ -141,7 +141,7 @@ copias APFS de discos y configuración con las VMs apagadas, fuera de iCloud y
 del repositorio, en:
 
 ```text
-~/Virtual Machines/Redes-Lab5-Respaldos/
+~/Virtual Machines/Redes-[credencial retirada; coordinar rotación]/
   00-base/
   01-dns/
   02-ldap/
@@ -173,7 +173,7 @@ desde las otras computadoras del grupo.
    ```
 
    El nombre debe devolver `10.223.12.169`. La contraseña de esta cuenta es
-   `Lab5-jvalladares` y el bind debe devolver su DN.
+   `[credencial retirada; coordinar rotación]` y el bind debe devolver su DN.
 3. Apache debe usar la URL con `:1389` indicada arriba. En el servidor de
    correo, editar los archivos desplegados:
 

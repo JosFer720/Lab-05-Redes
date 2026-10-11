@@ -2,6 +2,12 @@
 
 Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 
+Auditoría actual, matriz y PDF: [docs/README.md](docs/README.md).
+Para reproducir el montaje local validado y las seis cuentas del grupo:
+`python integration/audit-run.py`. Los puertos publicados están limitados a
+localhost y los secretos quedan fuera de Git en `.git/lab5-private/`.
+La validación entre computadoras físicas y Thunderbird sigue pendiente.
+
 La relación entre los servicios está en [`docs/diagramas/arquitectura.md`](docs/diagramas/arquitectura.md).
 El orden de despliegue, las dependencias y los puertos están en
 [`docs/puesta-en-marcha.md`](docs/puesta-en-marcha.md).

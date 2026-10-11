@@ -1,0 +1,37 @@
+Fecha UTC: 2026-10-11T17:52:00.930713+00:00
+HTTP 500
+[Sun Oct 11 17:43:50.015408 2026] [authnz_ldap:info] [pid 9:tid 137973064525504] [client 172.30.0.20:52390] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:43:50.015445 2026] [auth_form:error] [pid 9:tid 137973064525504] [client 172.30.0.20:52390] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:43:50.043966 2026] [authnz_ldap:info] [pid 9:tid 137972527654592] [client 172.30.0.20:52430] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:43:50.043980 2026] [auth_form:error] [pid 9:tid 137972527654592] [client 172.30.0.20:52430] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:44:02.039703 2026] [authnz_ldap:info] [pid 9:tid 137973584611008] [client 172.30.0.20:56330] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]
+[Sun Oct 11 17:44:15.809667 2026] [authnz_ldap:info] [pid 10:tid 137275300095680] [client 172.30.0.20:45712] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:44:15.809682 2026] [auth_form:error] [pid 10:tid 137275300095680] [client 172.30.0.20:45712] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:44:15.837701 2026] [authnz_ldap:info] [pid 10:tid 137274897442496] [client 172.30.0.20:45752] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:44:15.837714 2026] [auth_form:error] [pid 10:tid 137274897442496] [client 172.30.0.20:45752] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:45:41.554851 2026] [authnz_ldap:info] [pid 10:tid 137275333666496] [client 172.30.0.20:46046] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:45:41.555534 2026] [auth_form:error] [pid 10:tid 137275333666496] [client 172.30.0.20:46046] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:45:41.564327 2026] [authnz_ldap:info] [pid 10:tid 137275308488384] [client 172.30.0.20:46062] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:45:41.564342 2026] [auth_form:error] [pid 10:tid 137275308488384] [client 172.30.0.20:46062] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:46:22.580040 2026] [authnz_ldap:info] [pid 10:tid 137274939406016] [client 172.30.0.20:40788] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:46:22.580058 2026] [auth_form:error] [pid 10:tid 137274939406016] [client 172.30.0.20:40788] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:46:22.588606 2026] [authnz_ldap:info] [pid 10:tid 137274931013312] [client 172.30.0.20:40798] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:46:22.588620 2026] [auth_form:error] [pid 10:tid 137274931013312] [client 172.30.0.20:40798] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:46:32.726040 2026] [authnz_ldap:info] [pid 10:tid 137275566933696] [client 172.30.0.20:51348] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:46:32.726055 2026] [auth_form:error] [pid 10:tid 137275566933696] [client 172.30.0.20:51348] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:46:32.755717 2026] [authnz_ldap:info] [pid 9:tid 137274771617472] [client 172.30.0.20:51382] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:46:32.755741 2026] [auth_form:error] [pid 9:tid 137274771617472] [client 172.30.0.20:51382] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:46:46.017682 2026] [authnz_ldap:info] [pid 10:tid 137274889049792] [client 172.30.0.20:58478] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [LDAP: ldap_simple_bind() failed][Can't contact LDAP server]
+[Sun Oct 11 17:46:59.969175 2026] [authnz_ldap:info] [pid 10:tid 132219536393920] [client 172.30.0.20:33720] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:46:59.969188 2026] [auth_form:error] [pid 10:tid 132219536393920] [client 172.30.0.20:33720] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:46:59.997765 2026] [authnz_ldap:info] [pid 10:tid 132218991130304] [client 172.30.0.20:33764] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:46:59.997781 2026] [auth_form:error] [pid 10:tid 132218991130304] [client 172.30.0.20:33764] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:51:37.995447 2026] [authnz_ldap:info] [pid 10:tid 132219561572032] [client 172.30.0.20:34550] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:51:37.996163 2026] [auth_form:error] [pid 10:tid 132219561572032] [client 172.30.0.20:34550] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:51:38.006633 2026] [authnz_ldap:info] [pid 10:tid 132219544786624] [client 172.30.0.20:34566] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:51:38.006649 2026] [auth_form:error] [pid 10:tid 132219544786624] [client 172.30.0.20:34566] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:51:49.080123 2026] [authnz_ldap:info] [pid 10:tid 132218353612480] [client 172.30.0.20:51142] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 17:51:49.080138 2026] [auth_form:error] [pid 10:tid 132218353612480] [client 172.30.0.20:51142] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 17:51:49.108710 2026] [authnz_ldap:info] [pid 10:tid 132219807393472] [client 172.30.0.20:51162] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 17:51:49.108724 2026] [auth_form:error] [pid 10:tid 132219807393472] [client 172.30.0.20:51162] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 17:52:00.749937 2026] [authnz_ldap:info] [pid 10:tid 132219528001216] [client 172.30.0.20:45834] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]

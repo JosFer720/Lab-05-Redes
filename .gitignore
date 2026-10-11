@@ -9,3 +9,5 @@ descargado.txt
 resultados_*.log
 resultados.txt
 resumen.txt
+__pycache__/
+*.pyc

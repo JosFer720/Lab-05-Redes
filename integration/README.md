@@ -1,5 +1,24 @@
 # Integración local
 
+## Auditoría completa y cuentas reales del grupo
+
+Desde la raíz: `python integration/audit-run.py`. Requiere Python 3 y Docker Desktop activo.
+El comando conserva la implementación, crea las seis cuentas desde el LDIF existente,
+genera claves exclusivas, verifica 33 identificadores, ejecuta la suite anterior,
+detiene LDAP temporalmente y reinicia los cinco servicios con recuperación verificada.
+Las pruebas de Thunderbird quedan BLOCKED hasta obtener evidencia gráfica real.
+
+Los secretos y el override Compose se guardan en `.git/lab5-private/` y no se publican.
+Para administrar este montaje usar ambos archivos Compose, incluida
+`.git/lab5-private/compose.private.json`, evitando restablecer la clave FTP del fixture.
+Los puertos publicados están limitados a `127.0.0.1`: este montaje es una integración
+aislada y no una demostración desde las computadoras físicas del grupo.
+LDAP, Maildir y FTP usan volúmenes; no ejecutar `down -v` si se desean conservar.
+Las MAC originalmente generadas se fijaron tras comprobar que cambiaban al reiniciar.
+La subred Docker 172.30.0.0/24 y WSL 172.30.208.0/20 son redes distintas sin solapamiento.
+
+## Fixture básico (dos cuentas de prueba)
+
 ```bash
 cd integration
 docker compose up -d --build --wait --wait-timeout 120

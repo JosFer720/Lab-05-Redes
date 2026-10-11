@@ -1,5 +1,11 @@
 # Correo
 
+Los instaladores admiten `LDAP_HOST` y `LDAP_PORT` (389 por defecto; 1389 para
+el reenvío del Mac cuando se haya comprobado desde el servidor de correo).
+La integración Docker actual y sus evidencias están en `../integration/README.md`.
+El archivo `mail/docker/entrypoint.sh` pertenece a una versión anterior eliminada
+por el equipo; la implementación vigente utiliza `integration/mail/entrypoint.sh`.
+
 Postfix y Dovecot con buzones Maildir y autenticación LDAP.
 
 La implementación habilita SMTP en los puertos 25 y 587, IMAP en el puerto

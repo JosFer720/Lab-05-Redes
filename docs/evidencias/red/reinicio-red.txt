@@ -1,0 +1,3 @@
+Fecha: 2026-10-11, NERY
+PASS: reinicio de servicios Docker, IP/MAC estables; ver ../integration/actual/interfaces-antes-reinicio.json y interfaces-contenedores.json.
+BLOCKED: reinicio de Windows, router, VM GNS3 o computadores físicos no efectuado; no necesario para la integración aislada. WSL MAC estable después de su propio reinicio no comprobada.

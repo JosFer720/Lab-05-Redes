@@ -8,6 +8,13 @@ fi
 
 DOMAIN=${DOMAIN:-aerolinea.redes.test}
 BASE_DN=${BASE_DN:-dc=aerolinea,dc=redes,dc=test}
+LDAP_HOST=${LDAP_HOST:-ldap.${DOMAIN}}
+LDAP_PORT=${LDAP_PORT:-389}
+if [[ ! ${LDAP_HOST} =~ ^[a-zA-Z0-9.-]+$ || ! ${LDAP_PORT} =~ ^[0-9]{1,5}$ ]] ||
+   (( 10#${LDAP_PORT} < 1 || 10#${LDAP_PORT} > 65535 )); then
+  echo 'Error: LDAP_HOST o LDAP_PORT inválido.' >&2
+  exit 1
+fi
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 CONFIG_DIR=${SCRIPT_DIR}/../config
 export DEBIAN_FRONTEND=noninteractive
@@ -25,12 +32,14 @@ if ! getent passwd vmail >/dev/null; then
 fi
 install -d -o vmail -g vmail -m 0750 "/var/mail/vhosts/${DOMAIN}"
 
-for file in /etc/postfix/main.cf /etc/postfix/master.cf /etc/dovecot/conf.d/10-auth.conf; do
+for file in /etc/postfix/main.cf /etc/postfix/master.cf /etc/postfix/ldap-virtual-mailbox.cf \
+            /etc/dovecot/conf.d/10-auth.conf /etc/dovecot/conf.d/auth-ldap.conf.ext \
+            /etc/dovecot/dovecot-ldap.conf.ext /etc/dovecot/conf.d/99-aerolinea.conf; do
   [[ -f ${file} ]] && cp -a "${file}" "${file}.bak.$(date +%Y%m%d%H%M%S)"
 done
 
 sed -e "s|DOMAIN|${DOMAIN}|g" "${CONFIG_DIR}/postfix/main.cf" > /etc/postfix/main.cf
-sed -e "s|DOMAIN|${DOMAIN}|g" -e "s|BASE_DN|${BASE_DN}|g" \
+sed -e "s|ldap.DOMAIN|${LDAP_HOST}:${LDAP_PORT}|g" -e "s|DOMAIN|${DOMAIN}|g" -e "s|BASE_DN|${BASE_DN}|g" \
   "${CONFIG_DIR}/postfix/ldap-virtual-mailbox.cf" > /etc/postfix/ldap-virtual-mailbox.cf
 chown root:postfix /etc/postfix/ldap-virtual-mailbox.cf
 chmod 0640 /etc/postfix/ldap-virtual-mailbox.cf
@@ -44,7 +53,7 @@ sed -i '/^# BEGIN AEROLINEA$/,/^# END AEROLINEA$/d' /etc/postfix/master.cf
 
 sed -e "s|DOMAIN|${DOMAIN}|g" "${CONFIG_DIR}/dovecot/10-auth.conf" > /etc/dovecot/conf.d/10-auth.conf
 sed -e "s|DOMAIN|${DOMAIN}|g" "${CONFIG_DIR}/dovecot/auth-ldap.conf.ext" > /etc/dovecot/conf.d/auth-ldap.conf.ext
-sed -e "s|DOMAIN|${DOMAIN}|g" -e "s|BASE_DN|${BASE_DN}|g" \
+sed -e "s|ldap.DOMAIN|${LDAP_HOST}:${LDAP_PORT}|g" -e "s|DOMAIN|${DOMAIN}|g" -e "s|BASE_DN|${BASE_DN}|g" \
   "${CONFIG_DIR}/dovecot/dovecot-ldap.conf.ext" > /etc/dovecot/dovecot-ldap.conf.ext
 sed -e "s|DOMAIN|${DOMAIN}|g" "${CONFIG_DIR}/dovecot/99-aerolinea.conf" > /etc/dovecot/conf.d/99-aerolinea.conf
 chown root:dovecot /etc/dovecot/dovecot-ldap.conf.ext

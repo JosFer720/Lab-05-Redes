@@ -1,0 +1,318 @@
+Fecha UTC: 2026-10-11T17:51:34.102860+00:00
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.95kB done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 815B 0.0s done
+#2 DONE 0.0s
+
+#3 [ldap internal] load build definition from Dockerfile
+#3 transferring dockerfile: 682B done
+#3 DONE 0.0s
+
+#4 [ftp internal] load build definition from Dockerfile
+#4 transferring dockerfile: 413B done
+#4 DONE 0.0s
+
+#5 [client internal] load build definition from Dockerfile
+#5 transferring dockerfile: 382B done
+#5 DONE 0.0s
+
+#6 [dns internal] load build definition from Dockerfile
+#6 transferring dockerfile: 565B done
+#6 DONE 0.0s
+
+#7 [mail internal] load build definition from Dockerfile
+#7 transferring dockerfile: 2.01kB done
+#7 DONE 0.0s
+
+#8 [auth] library/node:pull token for registry-1.docker.io
+#8 DONE 0.0s
+
+#9 [auth] library/ubuntu:pull token for registry-1.docker.io
+#9 DONE 0.0s
+
+#10 [mail internal] load metadata for docker.io/library/ubuntu:24.04
+#10 DONE 0.6s
+
+#11 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#11 DONE 0.7s
+
+#12 [ftp internal] load .dockerignore
+#12 transferring context: 2B done
+#12 DONE 0.0s
+
+#13 [ldap internal] load .dockerignore
+#13 transferring context: 2B done
+#13 DONE 0.0s
+
+#14 [dns internal] load .dockerignore
+#14 transferring context: 2B done
+#14 DONE 0.0s
+
+#15 [web internal] load .dockerignore
+#15 transferring context: 109B done
+#15 DONE 0.0s
+
+#16 [ldap 1/5] FROM docker.io/library/ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55
+#16 resolve docker.io/library/ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55 0.0s done
+#16 DONE 0.0s
+
+#17 [web site 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+#17 resolve docker.io/library/node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20 0.0s done
+#17 DONE 0.0s
+
+#18 [dns internal] load build context
+#18 transferring context: 119B done
+#18 DONE 0.0s
+
+#19 [ldap internal] load build context
+#19 transferring context: 65B done
+#19 DONE 0.0s
+
+#20 [ftp internal] load build context
+#20 transferring context: 66B done
+#20 DONE 0.0s
+
+#21 [client internal] load build context
+#21 transferring context: 61.58kB done
+#21 DONE 0.0s
+
+#22 [mail internal] load build context
+#22 transferring context: 3.77kB done
+#22 DONE 0.0s
+
+#23 [dns 3/6] COPY named.conf.options /etc/bind/named.conf.options
+#23 CACHED
+
+#24 [dns 2/6] RUN apt-get update && apt-get install -y --no-install-recommends bind9 bind9-utils dnsutils && rm -rf /var/lib/apt/lists/*
+#24 CACHED
+
+#25 [dns 4/6] COPY named.conf.local /etc/bind/named.conf.local
+#25 CACHED
+
+#26 [dns 5/6] COPY db.aerolinea.redes.test /etc/bind/db.aerolinea.redes.test
+#26 CACHED
+
+#27 [client 2/5] RUN apt-get update && apt-get install -y --no-install-recommends dnsutils ldap-utils curl swaks ca-certificates python3 iproute2 && rm -rf /var/lib/apt/lists/*
+#27 CACHED
+
+#28 [ldap 2/5] RUN printf '%s\n' 'slapd slapd/no_configuration boolean false' 'slapd slapd/domain string aerolinea.redes.test' 'slapd shared/organization string Aerolinea' 'slapd slapd/password1 password AdminLDAP' 'slapd slapd/password2 password AdminLDAP' 'slapd slapd/backend select MDB' | debconf-set-selections  && apt-get update && apt-get install -y --no-install-recommends slapd ldap-utils && rm -rf /var/lib/apt/lists/*
+#28 CACHED
+
+#29 [ldap 3/5] COPY users.ldif /opt/users.ldif
+#29 CACHED
+
+#30 [ldap 4/5] COPY entrypoint.sh /usr/local/bin/ldap-entrypoint
+#30 CACHED
+
+#31 [ldap 5/5] RUN chmod 0755 /usr/local/bin/ldap-entrypoint
+#31 CACHED
+
+#32 [mail 2/5] RUN echo 'postfix postfix/mailname string aerolinea.redes.test' | debconf-set-selections  && echo 'postfix postfix/main_mailer_type select Internet Site' | debconf-set-selections  && apt-get update && apt-get install -y --no-install-recommends postfix postfix-ldap dovecot-core dovecot-imapd dovecot-ldap dovecot-lmtpd && rm -rf /var/lib/apt/lists/*
+#32 CACHED
+
+#33 [mail 3/5] COPY mail/config/ /opt/mail-config/
+#33 CACHED
+
+#34 [mail 4/5] COPY integration/mail/entrypoint.sh /usr/local/bin/mail-entrypoint
+#34 CACHED
+
+#35 [ftp 3/5] COPY vsftpd.conf /etc/vsftpd.conf
+#35 CACHED
+
+#36 [ftp 2/5] RUN apt-get update     && apt-get install -y --no-install-recommends vsftpd curl     && rm -rf /var/lib/apt/lists/*
+#36 CACHED
+
+#37 [ftp 4/5] COPY entrypoint.sh /usr/local/bin/ftp-entrypoint
+#37 CACHED
+
+#38 [ftp 5/5] RUN chmod 0755 /usr/local/bin/ftp-entrypoint
+#38 CACHED
+
+#39 [dns 6/6] RUN named-checkconf && named-checkzone aerolinea.redes.test /etc/bind/db.aerolinea.redes.test
+#39 CACHED
+
+#40 [mail 5/5] RUN groupadd -g 5000 vmail && useradd -u 5000 -g vmail -d /var/mail/vhosts -s /usr/sbin/nologin vmail  && install -d -o vmail -g vmail -m 0750 /var/mail/vhosts/aerolinea.redes.test  && sed 's/DOMAIN/aerolinea.redes.test/g' /opt/mail-config/postfix/main.cf > /etc/postfix/main.cf  && sed -e 's/DOMAIN/aerolinea.redes.test/g' -e 's/BASE_DN/dc=aerolinea,dc=redes,dc=test/g' /opt/mail-config/postfix/ldap-virtual-mailbox.cf > /etc/postfix/ldap-virtual-mailbox.cf  && cat /opt/mail-config/postfix/submission.master.cf >> /etc/postfix/master.cf  && sed 's/DOMAIN/aerolinea.redes.test/g' /opt/mail-config/dovecot/10-auth.conf > /etc/dovecot/conf.d/10-auth.conf  && sed 's/DOMAIN/aerolinea.redes.test/g' /opt/mail-config/dovecot/auth-ldap.conf.ext > /etc/dovecot/conf.d/auth-ldap.conf.ext  && sed -e 's/DOMAIN/aerolinea.redes.test/g' -e 's/BASE_DN/dc=aerolinea,dc=redes,dc=test/g' /opt/mail-config/dovecot/dovecot-ldap.conf.ext > /etc/dovecot/dovecot-ldap.conf.ext  && sed 's/DOMAIN/aerolinea.redes.test/g' /opt/mail-config/dovecot/99-aerolinea.conf > /etc/dovecot/conf.d/99-aerolinea.conf  && chown root:postfix /etc/postfix/ldap-virtual-mailbox.cf && chmod 0640 /etc/postfix/ldap-virtual-mailbox.cf  && chown root:dovecot /etc/dovecot/dovecot-ldap.conf.ext && chmod 0640 /etc/dovecot/dovecot-ldap.conf.ext  && chmod 0755 /usr/local/bin/mail-entrypoint && postfix check && doveconf -n >/dev/null
+#40 CACHED
+
+#41 [web internal] load build context
+#41 transferring context: 2.02kB done
+#41 DONE 0.0s
+
+#42 [dns] exporting to image
+#42 exporting layers done
+#42 exporting manifest sha256:a9ceb15d103c3e17d4a92705a6c1d11d1c3a6afa352058656c34446b71f46a67 done
+#42 exporting config sha256:bebe4eab6af2f9790f2ed17aaa2d51392cf1924c9dbd1fd99a915ff80ba7e441
+#42 ...
+
+#43 [web site 4/6] RUN npm ci
+#43 CACHED
+
+#44 [web site 5/6] COPY web/site/ ./
+#44 CACHED
+
+#45 [web stage-1 3/5] COPY --from=site /site/dist/ /var/www/aerolinea/
+#45 CACHED
+
+#46 [web stage-1 4/5] COPY web/config/aerolinea.conf /etc/apache2/sites-available/aerolinea.conf
+#46 CACHED
+
+#47 [web stage-1 2/5] RUN apt-get update && apt-get install -y --no-install-recommends apache2 openssl && rm -rf /var/lib/apt/lists/*  && a2enmod ldap authnz_ldap auth_form request session session_cookie session_crypto include
+#47 CACHED
+
+#48 [web site 3/6] COPY web/site/package.json web/site/package-lock.json ./
+#48 CACHED
+
+#49 [web site 6/6] RUN npm run build
+#49 CACHED
+
+#50 [web site 2/6] WORKDIR /site
+#50 CACHED
+
+#51 [web stage-1 5/5] RUN openssl rand -base64 48 > /etc/apache2/aerolinea-session.key && chmod 0600 /etc/apache2/aerolinea-session.key  && a2dissite 000-default && a2ensite aerolinea && apache2ctl configtest
+#51 CACHED
+
+#52 [client 3/5] COPY client/tests/ /tests/
+#52 DONE 0.0s
+
+#42 [dns] exporting to image
+#42 exporting config sha256:bebe4eab6af2f9790f2ed17aaa2d51392cf1924c9dbd1fd99a915ff80ba7e441 done
+#42 exporting attestation manifest sha256:dff18256c39e27fb7554f3f8e70fadbd197c3b1d57147e47d52dae4cc4cdf340 0.1s done
+#42 exporting manifest list sha256:bd8ab76186e3976e2ddd0d72a195f0cbdba2aa143846be66c93f41d65a0211f2
+#42 ...
+
+#53 [client 4/5] COPY integration/dns/db.aerolinea.redes.test /zones/db.aerolinea.redes.test
+#53 DONE 0.2s
+
+#54 [ftp] exporting to image
+#54 exporting layers done
+#54 exporting manifest sha256:3645bfc6bd766754e4f941ff86dcab3c2b45c3e482ed33b650c5137f029d0069 done
+#54 exporting config sha256:f1e0cf1c76ff676ab969ca5304031fb469bd33c7224b025d5912c35ce0127cb0 done
+#54 exporting attestation manifest sha256:e3e058f54d48b4966b99de61d37101fbeeeb4eabec98ed760bd26ccb48974979 0.1s done
+#54 exporting manifest list sha256:b7fc9cf3b149b4203aa47861e9eba11a7d092462d60890c15868b0e69c7d834b 0.0s done
+#54 naming to docker.io/library/lab05-entrega-ftp:latest done
+#54 unpacking to docker.io/library/lab05-entrega-ftp:latest 0.0s done
+#54 DONE 0.2s
+
+#42 [dns] exporting to image
+#42 exporting manifest list sha256:bd8ab76186e3976e2ddd0d72a195f0cbdba2aa143846be66c93f41d65a0211f2 0.0s done
+#42 naming to docker.io/library/lab05-entrega-dns:latest 0.0s done
+#42 unpacking to docker.io/library/lab05-entrega-dns:latest 0.0s done
+#42 DONE 0.2s
+
+#55 [ldap] exporting to image
+#55 exporting layers done
+#55 exporting manifest sha256:6abe0040a8b51e8b3304629579cd745e3612817a9e91def56bda296ffa584d84 done
+#55 exporting config sha256:6fc2b7c26ec1f1e8abd52ffc205244b0021458ef15cd74fe31ce313a5bb3d9c3 done
+#55 exporting attestation manifest sha256:282181e4d3228343a7393693dbf4b31bffde0690b2a5e01265c5e7f9717b271a 0.1s done
+#55 exporting manifest list sha256:ed8d69953cd51bce64a099e493e44c9859824bbda3752c15010764de0ff1ca96 0.0s done
+#55 naming to docker.io/library/lab05-entrega-ldap:latest 0.0s done
+#55 unpacking to docker.io/library/lab05-entrega-ldap:latest 0.0s done
+#55 DONE 0.2s
+
+#56 [mail] exporting to image
+#56 exporting layers done
+#56 exporting manifest sha256:3d381a65e035097163260444acb1dd289f6815a85080993d89bec72f71383c1b done
+#56 exporting config sha256:c8d3903706d1696221335445ed4f66b35dcb52dffa154cf77a57d9fd2306300e 0.0s done
+#56 exporting attestation manifest sha256:79af4bbdbab7a6d58415d7c6d7f56ff1b4224449ce725d10a1895dd3662cb82f 0.1s done
+#56 exporting manifest list sha256:ca30e4dc1374a48c859955e1024d85c1c89b54ced44d8d599a519b26004475c3 0.1s done
+#56 naming to docker.io/library/lab05-entrega-mail:latest 0.0s done
+#56 unpacking to docker.io/library/lab05-entrega-mail:latest 0.0s done
+#56 DONE 0.2s
+
+#57 [web] exporting to image
+#57 exporting layers done
+#57 exporting manifest sha256:075fc892f879134d915ecbebf23c6c866a4a20674899b4890c56a8daabfa4c32 0.0s done
+#57 exporting config sha256:2407edc852d3a42517d0476af4c478a898243a441abd2764b8baede634b3f584 0.0s done
+#57 exporting attestation manifest sha256:dc4aad7da509a0dc84c7beaa44ac9ed19a3358431ff94085d02df010a56f6301 0.1s done
+#57 exporting manifest list sha256:8360485692a695ed854fbddece78278bca074f59ee9c42951d1846230f26c49f 0.0s done
+#57 naming to docker.io/library/lab05-entrega-web:latest done
+#57 unpacking to docker.io/library/lab05-entrega-web:latest 0.0s done
+#57 DONE 0.2s
+
+#58 [ftp] resolving provenance for metadata file
+#58 ...
+
+#59 [client 5/5] RUN chmod 0755 /tests/*.sh
+#59 DONE 0.3s
+
+#60 [dns] resolving provenance for metadata file
+#60 DONE 0.0s
+
+#61 [mail] resolving provenance for metadata file
+#61 DONE 0.1s
+
+#62 [ldap] resolving provenance for metadata file
+#62 DONE 0.1s
+
+#58 [ftp] resolving provenance for metadata file
+#58 DONE 0.1s
+
+#63 [web] resolving provenance for metadata file
+#63 DONE 0.0s
+
+#64 [client] exporting to image
+#64 exporting layers 0.1s done
+#64 exporting manifest sha256:964903ea20d20aecb34dfe377fd1aa3ffe4bd624f29afbc1a0c38d063e1c6b18 done
+#64 exporting config sha256:824eac5c1b29e7fcc5eab33951f558c72286ba78cc0bada0a0d7a31e852aaeac done
+#64 exporting attestation manifest sha256:b705ce38fdf5c5d0db293e12444b39955ca26101b1317b3d82c794b7bff90c53 0.0s done
+#64 exporting manifest list sha256:9a7706cb0106d14ff4444706c94373b231a4d573ba06844aa3a21310f17b366f done
+#64 naming to docker.io/library/lab05-entrega-client:latest done
+#64 unpacking to docker.io/library/lab05-entrega-client:latest 0.0s done
+#64 DONE 0.2s
+
+#65 [client] resolving provenance for metadata file
+#65 DONE 0.0s
+ Image lab05-entrega-dns Building
+ Image lab05-entrega-ldap Building
+ Image lab05-entrega-web Building
+ Image lab05-entrega-mail Building
+ Image lab05-entrega-ftp Building
+ Image lab05-entrega-client Building
+ Image lab05-entrega-ldap Built
+ Image lab05-entrega-dns Built
+ Image lab05-entrega-mail Built
+ Image lab05-entrega-web Built
+ Image lab05-entrega-client Built
+ Image lab05-entrega-ftp Built
+ Container lab05-entrega-ftp-1 Running
+ Container lab05-entrega-dns-1 Running
+ Container lab05-entrega-ldap-1 Running
+ Container lab05-entrega-web-1 Running
+ Container lab05-entrega-mail-1 Running
+ Container lab05-entrega-client-1 Recreate
+ Container lab05-entrega-client-1 Recreated
+ Container lab05-entrega-dns-1 Waiting
+ Container lab05-entrega-ldap-1 Waiting
+ Container lab05-entrega-dns-1 Waiting
+ Container lab05-entrega-ldap-1 Waiting
+ Container lab05-entrega-dns-1 Healthy
+ Container lab05-entrega-ldap-1 Healthy
+ Container lab05-entrega-dns-1 Healthy
+ Container lab05-entrega-ldap-1 Healthy
+ Container lab05-entrega-ldap-1 Waiting
+ Container lab05-entrega-web-1 Waiting
+ Container lab05-entrega-mail-1 Waiting
+ Container lab05-entrega-ftp-1 Waiting
+ Container lab05-entrega-dns-1 Waiting
+ Container lab05-entrega-dns-1 Healthy
+ Container lab05-entrega-mail-1 Healthy
+ Container lab05-entrega-ldap-1 Healthy
+ Container lab05-entrega-web-1 Healthy
+ Container lab05-entrega-ftp-1 Healthy
+ Container lab05-entrega-client-1 Starting
+ Container lab05-entrega-client-1 Started
+ Container lab05-entrega-ftp-1 Waiting
+ Container lab05-entrega-client-1 Waiting
+ Container lab05-entrega-dns-1 Waiting
+ Container lab05-entrega-ldap-1 Waiting
+ Container lab05-entrega-web-1 Waiting
+ Container lab05-entrega-mail-1 Waiting
+ Container lab05-entrega-client-1 Healthy
+ Container lab05-entrega-ldap-1 Healthy
+ Container lab05-entrega-dns-1 Healthy
+ Container lab05-entrega-mail-1 Healthy
+ Container lab05-entrega-web-1 Healthy
+ Container lab05-entrega-ftp-1 Healthy

@@ -8,8 +8,8 @@ services:
       FTP_PASSWORD: ${FTP_PASSWORD:?Debe definir FTP_PASSWORD}
       PASV_ADDRESS: ${PASV_ADDRESS:-127.0.0.1}
     ports:
-      - "21:21"
-      - "40000:40000"
+      - "${BIND_IP:-127.0.0.1}:21:21"
+      - "${BIND_IP:-127.0.0.1}:40000-40100:40000-40100"
     volumes:
       - ftp-uploads:/srv/ftp/ftpuser/uploads
     restart: unless-stopped

@@ -8,6 +8,13 @@ fi
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 SOURCE_CONFIG=${SCRIPT_DIR}/../config/aerolinea.conf
+LDAP_HOST=${LDAP_HOST:-ldap.aerolinea.redes.test}
+LDAP_PORT=${LDAP_PORT:-389}
+if [[ ! ${LDAP_HOST} =~ ^[a-zA-Z0-9.-]+$ || ! ${LDAP_PORT} =~ ^[0-9]{1,5}$ ]] ||
+   (( 10#${LDAP_PORT} < 1 || 10#${LDAP_PORT} > 65535 )); then
+  echo 'Error: LDAP_HOST o LDAP_PORT inválido.' >&2
+  exit 1
+fi
 SITE_DIST=${SITE_DIST:-${SCRIPT_DIR}/../site/dist}
 WEB_ROOT=/var/www/aerolinea
 SESSION_KEY=/etc/apache2/aerolinea-session.key
@@ -29,6 +36,10 @@ fi
 chown root:root "${SESSION_KEY}"
 chmod 0600 "${SESSION_KEY}"
 
+BACKUP_DIR=/var/backups/aerolinea/$(date +%Y%m%d%H%M%S)
+install -d -m 0700 "${BACKUP_DIR}"
+[[ ! -d ${WEB_ROOT} ]] || cp -a "${WEB_ROOT}" "${BACKUP_DIR}/site"
+[[ ! -f /etc/apache2/sites-available/aerolinea.conf ]] || cp -a /etc/apache2/sites-available/aerolinea.conf "${BACKUP_DIR}/aerolinea.conf"
 rm -rf "${WEB_ROOT}"
 install -d -o root -g root -m 0755 "${WEB_ROOT}"
 cp -r "${SITE_DIST}/." "${WEB_ROOT}/"
@@ -36,7 +47,9 @@ chown -R root:root "${WEB_ROOT}"
 find "${WEB_ROOT}" -type d -exec chmod 0755 {} +
 find "${WEB_ROOT}" -type f -exec chmod 0644 {} +
 
-install -o root -g root -m 0644 "${SOURCE_CONFIG}" /etc/apache2/sites-available/aerolinea.conf
+sed "s|ldap://ldap.aerolinea.redes.test/|ldap://${LDAP_HOST}:${LDAP_PORT}/|g" "${SOURCE_CONFIG}" > /etc/apache2/sites-available/aerolinea.conf
+chown root:root /etc/apache2/sites-available/aerolinea.conf
+chmod 0644 /etc/apache2/sites-available/aerolinea.conf
 a2dissite 000-default >/dev/null || true
 a2ensite aerolinea
 

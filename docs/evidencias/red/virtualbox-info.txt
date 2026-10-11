@@ -1,0 +1,371 @@
+Fecha: 2026-10-11T10:42:57.6353574-07:00
+Equipo: NERY
+7.2.14r174565
+VBoxManage list vms
+"GNS3 VM" {8f8a8652-a922-4fde-8b5f-6101ef8faa82}
+VBoxManage list runningvms
+VBoxManage list hostonlyifs
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            c3a49210-82b7-4b9f-ab02-eba67590ae5a
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::94ac:cf81:c3dd:e7b0
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:11
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+VBoxManage list bridgedifs
+Name:            Realtek PCIe GbE Family Controller
+GUID:            d1808425-3a9a-48db-bfc9-18d8995db15e
+DHCP:            Enabled
+IPAddress:       192.168.1.22
+NetworkMask:     255.255.255.0
+IPV6Address:     2800:98:1120:864::1
+IPV6NetworkMaskPrefixLength: 128
+HardwareAddress: 04:bf:1b:bc:3f:77
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-Realtek PCIe GbE Family Controller
+
+Name:            Intel(R) Wi-Fi 6 AX201 160MHz
+GUID:            75c87ff0-31c2-4ba2-ba18-fd496aab87dc
+DHCP:            Enabled
+IPAddress:       192.168.0.151
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::b084:b846:a47f:7e51
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 4c:49:6c:38:14:ea
+MediumType:      Ethernet
+Wireless:        Yes
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-Intel(R) Wi-Fi 6 AX201 160MHz
+
+Name:            Hyper-V Virtual Ethernet Adapter
+GUID:            fedc6b00-63e6-45f3-a0c2-7ce94b72389f
+DHCP:            Disabled
+IPAddress:       172.30.208.1
+NetworkMask:     255.255.240.0
+IPV6Address:     fe80::3f6b:36d4:b732:424c
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 00:15:5d:4d:36:34
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-Hyper-V Virtual Ethernet Adapter
+
+VBoxManage list dhcpservers
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+VBoxManage list systemproperties
+API version:                     7_2
+Minimum guest RAM size:          4 Megabytes
+Maximum guest RAM size:          2097152 Megabytes
+Minimum video RAM size:          0 Megabytes
+Maximum video RAM size:          256 Megabytes
+Maximum guest monitor count:     64
+Minimum guest CPU count:         1
+Maximum guest CPU count:         64
+Virtual disk limit (info):       2199022206976 Bytes
+Default machine folder:          C:\Users\josem\VirtualBox VMs
+Raw-mode Supported:              no
+Exclusive HW virtualization use: off
+Default hard disk format:        VDI
+VRDE auth library:               VBoxAuth
+Webservice auth. library:        VBoxAuth
+Remote desktop ExtPack:          Built-in-VBoxVRDP
+VM encryption ExtPack:
+Log history count:               3
+Default frontend:
+Default audio driver:            Windows Audio Session
+Autostart database path:
+Default Guest Additions ISO:     C:\Program Files\Oracle\VirtualBox/VBoxGuestAdditions.iso
+Logging Level:                   all
+Proxy Mode:                      System
+Proxy URL:
+User language:                   C
+Host platform properties:
+Maximum Serial Port count:              4
+Maximum Parallel Port count:            2
+Maximum Boot Position:                  4
+Maximum Floppy Port count:              1
+Maximum Floppy Devices per Port:        2
+Maximum virtio-scsi Port count:         256
+Maximum virtio-scsi Devices per Port:   1
+Maximum IDE Port count:                 2
+Maximum IDE Devices per port:           2
+Maximum SATA Port count:                30
+Maximum SATA Device per port:          1
+Maximum SCSI Port count:                16
+Maximum SCSI Devices per port:          1
+Maximum SAS Port count:                 255
+Maximum SAS Devices per Port:           1
+Maximum NVMe Port count:                255
+Maximum NVMe Devices per Port:          1
+Supported chipsets:                     PIIX3, ICH9
+PIIX3 chipset properties:
+Maximum PIIX3 Network Adapter count:   8
+Maximum PIIX3 IDE Controllers:   1
+Maximum PIIX3 SATA Controllers:  1
+Maximum PIIX3 SCSI Controllers:  1
+Maximum PIIX3 SAS Controllers:   1
+Maximum PIIX3 NVMe Controllers:  1
+Maximum PIIX3 virtio-scsi Controllers:  1
+Maximum PIIX3 Floppy Controllers:1
+
+ICH9 chipset properties:
+Maximum ICH9 Network Adapter count:   36
+Maximum ICH9 IDE Controllers:   1
+Maximum ICH9 SATA Controllers:  8
+Maximum ICH9 SCSI Controllers:  8
+Maximum ICH9 SAS Controllers:   8
+Maximum ICH9 NVMe Controllers:  8
+Maximum ICH9 virtio-scsi Controllers:  8
+Maximum ICH9 Floppy Controllers:1
+
+Supported platform architectures: x86
+
+x86 platform properties:
+Maximum Serial Port count:              4
+Maximum Parallel Port count:            2
+Maximum Boot Position:                  4
+Maximum Floppy Port count:              1
+Maximum Floppy Devices per Port:        2
+Maximum virtio-scsi Port count:         256
+Maximum virtio-scsi Devices per Port:   1
+Maximum IDE Port count:                 2
+Maximum IDE Devices per port:           2
+Maximum SATA Port count:                30
+Maximum SATA Device per port:          1
+Maximum SCSI Port count:                16
+Maximum SCSI Devices per port:          1
+Maximum SAS Port count:                 255
+Maximum SAS Devices per Port:           1
+Maximum NVMe Port count:                255
+Maximum NVMe Devices per Port:          1
+Supported chipsets:                     PIIX3, ICH9
+PIIX3 chipset properties:
+Maximum PIIX3 Network Adapter count:   8
+Maximum PIIX3 IDE Controllers:   1
+Maximum PIIX3 SATA Controllers:  1
+Maximum PIIX3 SCSI Controllers:  1
+Maximum PIIX3 SAS Controllers:   1
+Maximum PIIX3 NVMe Controllers:  1
+Maximum PIIX3 virtio-scsi Controllers:  1
+Maximum PIIX3 Floppy Controllers:1
+
+ICH9 chipset properties:
+Maximum ICH9 Network Adapter count:   36
+Maximum ICH9 IDE Controllers:   1
+Maximum ICH9 SATA Controllers:  8
+Maximum ICH9 SCSI Controllers:  8
+Maximum ICH9 SAS Controllers:   8
+Maximum ICH9 NVMe Controllers:  8
+Maximum ICH9 virtio-scsi Controllers:  8
+Maximum ICH9 Floppy Controllers:1
+VBoxManage list extpacks
+Extension Packs: 0
+VBoxManage list natnets
+name="GNS3 VM"
+encryption="disabled"
+groups="/"
+platformArchitecture="x86"
+ostype="Ubuntu (64-bit)"
+UUID="8f8a8652-a922-4fde-8b5f-6101ef8faa82"
+CfgFile="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\GNS3 VM.vbox"
+SnapFldr="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\Snapshots"
+LogFldr="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\Logs"
+hardwareuuid="8f8a8652-a922-4fde-8b5f-6101ef8faa82"
+memory=2048
+pagefusion="off"
+vram=16
+cpuexecutioncap=100
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=1
+hpet="off"
+pae="off"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="on"
+nested-hw-virt="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="off"
+vtxvpid="on"
+vtxux="on"
+virtvmsavevmload="on"
+cpuid-portability-level=0
+bootmenu="messageandmenu"
+boot1="floppy"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+NvramFile="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\GNS3 VM.nvram"
+rtcuseutc="on"
+iommu="none"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="saved"
+VMStateChangeTime="2026-07-31T04:37:52.000000000"
+VMStateFile="C:\Users\josem\VirtualBox VMs\GNS3 VM\Snapshots\2026-07-31T04-37-49-316624500Z.sav"
+graphicscontroller="vmsvga"
+monitorcount=1
+accelerate3d="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="IDE"
+storagecontrollertype0="PIIX4"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="2"
+storagecontrollerportcount0="2"
+storagecontrollerbootable0="on"
+storagecontrollername1="SCSI"
+storagecontrollertype1="LsiLogic"
+storagecontrollerinstance1="0"
+storagecontrollermaxportcount1="16"
+storagecontrollerportcount1="16"
+storagecontrollerbootable1="on"
+"IDE-0-0"="none"
+"IDE-0-1"="none"
+"IDE-1-0"="none"
+"IDE-1-1"="none"
+"SCSI-0-0"="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\GNS3 VM-disk001.vdi"
+"SCSI-ImageUUID-0-0"="af67b5c7-9eb7-4d6a-9a42-dbd59a756887"
+"SCSI-nonrotational-0-0"="off"
+"SCSI-discard-0-0"="off"
+"SCSI-1-0"="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\GNS3 VM-disk002.vdi"
+"SCSI-ImageUUID-1-0"="3f29e550-7f98-40ac-8669-02db87f9d6d1"
+"SCSI-nonrotational-1-0"="off"
+"SCSI-discard-1-0"="off"
+"SCSI-2-0"="none"
+"SCSI-3-0"="none"
+"SCSI-4-0"="none"
+"SCSI-5-0"="none"
+"SCSI-6-0"="none"
+"SCSI-7-0"="none"
+"SCSI-8-0"="none"
+"SCSI-9-0"="none"
+"SCSI-10-0"="none"
+"SCSI-11-0"="none"
+"SCSI-12-0"="none"
+"SCSI-13-0"="none"
+"SCSI-14-0"="none"
+"SCSI-15-0"="none"
+hostonlyadapter1="VirtualBox Host-Only Ethernet Adapter"
+macaddress1="0800274E6F23"
+cableconnected1="on"
+nic1="hostonly"
+nictype1="82540EM"
+nicspeed1="0"
+natnet2="nat"
+macaddress2="08002741E07C"
+cableconnected2="on"
+nic2="nat"
+nictype2="82540EM"
+nicspeed2="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+localhostReachable="1"
+forwardBroadcast="0"
+enableTFTP="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="default"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+clipboard_file_transfers="off"
+draganddrop="disabled"
+vrde="on"
+vrdeport=-1
+vrdeports="5966"
+vrdeaddress="127.0.0.1"
+vrdeauthtype="null"
+vrdemulticon="off"
+vrdereusecon="off"
+vrdevideochannel="off"
+vrdeproperty[TCP/Ports]="5966"
+vrdeproperty[TCP/Address]="127.0.0.1"
+vrdeproperty[VideoChannel/Enabled]=<not set>
+vrdeproperty[VideoChannel/Quality]=<not set>
+vrdeproperty[VideoChannel/DownscaleProtection]=<not set>
+vrdeproperty[Client/DisableDisplay]=<not set>
+vrdeproperty[Client/DisableInput]=<not set>
+vrdeproperty[Client/DisableAudio]=<not set>
+vrdeproperty[Client/DisableUSB]=<not set>
+vrdeproperty[Client/DisableClipboard]=<not set>
+vrdeproperty[Client/DisableUpstreamAudio]=<not set>
+vrdeproperty[Client/DisableRDPDR]=<not set>
+vrdeproperty[H3DRedirect/Enabled]=<not set>
+vrdeproperty[Security/Method]="TLS"
+vrdeproperty[Security/ServerCertificate]="/home/grossmj/VirtualBox VMs/GNS3 VM/VRDEAutoGeneratedCert.pem"
+vrdeproperty[Security/ServerPrivateKey]="/home/grossmj/VirtualBox VMs/GNS3 VM/VRDEAutoGeneratedPrivateKey.pem"
+vrdeproperty[Security/CACertificate]=<not set>
+vrdeproperty[Audio/RateCorrectionMode]=<not set>
+vrdeproperty[Audio/LogPath]=<not set>
+usb="off"
+ehci="off"
+xhci="off"
+recording_started="off"
+recording_enabled="off"
+recording_screens=1
+ rec_screen0
+rec_screen_enabled="on"
+rec_screen_id=0
+rec_screen_video_enabled="on"
+rec_screen_audio_enabled="off"
+rec_screen_dest="File"
+rec_screen_dest_filename="C:\\Users\\josem\\VirtualBox VMs\\GNS3 VM\\GNS3 VM-screen0.webm"
+rec_screen_opts="ac_profile=med"
+rec_screen_video_res_xy="1024x768"
+rec_screen_video_rate_kbps=512
+rec_screen_video_fps=25
+GuestMemoryBalloon=0

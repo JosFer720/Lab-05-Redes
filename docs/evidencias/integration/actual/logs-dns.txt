@@ -1,0 +1,162 @@
+Fecha UTC: 2026-10-11T17:52:28.584296+00:00
+dns-1  | 11-Oct-2026 17:52:06.998 no longer listening on 127.0.0.1#53
+dns-1  | 11-Oct-2026 17:52:06.998 no longer listening on 172.30.0.53#53
+dns-1  | 11-Oct-2026 17:52:06.998 shutting down
+dns-1  | 11-Oct-2026 17:52:06.998 stopping command channel on 127.0.0.1#953
+dns-1  | 11-Oct-2026 17:52:07.010 exiting
+dns-1  | 11-Oct-2026 17:52:08.010 starting BIND 9.18.39-0ubuntu0.24.04.7-Ubuntu (Extended Support Version) <id:>
+dns-1  | 11-Oct-2026 17:52:08.010 running on Linux x86_64 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026
+dns-1  | 11-Oct-2026 17:52:08.010 built with  '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--disable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=yes' '--with-libidn2' '--with-json-c' '--with-lmdb=/usr' '--with-gnu-ld' '--with-maxminddb' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--disable-native-pkcs11' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/bind9-8LYxaJ/bind9-9.18.39=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/bind9-8LYxaJ/bind9-9.18.39=/usr/src/bind9-1:9.18.39-0ubuntu0.24.04.7 -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now -ledit' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3'
+dns-1  | 11-Oct-2026 17:52:08.010 running as: named -u bind -4 -n 2 -g -c /etc/bind/named.conf
+dns-1  | 11-Oct-2026 17:52:08.010 compiled by GCC 13.3.0
+dns-1  | 11-Oct-2026 17:52:08.010 compiled with OpenSSL version: OpenSSL 3.0.13 30 Jan 2024
+dns-1  | 11-Oct-2026 17:52:08.010 linked to OpenSSL version: OpenSSL 3.0.13 30 Jan 2024
+dns-1  | 11-Oct-2026 17:52:08.010 compiled with libuv version: 1.48.0
+dns-1  | 11-Oct-2026 17:52:08.010 linked to libuv version: 1.48.0
+dns-1  | 11-Oct-2026 17:52:08.010 compiled with libxml2 version: 2.9.14
+dns-1  | 11-Oct-2026 17:52:08.010 linked to libxml2 version: 20914
+dns-1  | 11-Oct-2026 17:52:08.010 compiled with json-c version: 0.17
+dns-1  | 11-Oct-2026 17:52:08.010 linked to json-c version: 0.17
+dns-1  | 11-Oct-2026 17:52:08.010 compiled with zlib version: 1.3
+dns-1  | 11-Oct-2026 17:52:08.010 linked to zlib version: 1.3
+dns-1  | 11-Oct-2026 17:52:08.010 ----------------------------------------------------
+dns-1  | 11-Oct-2026 17:52:08.010 BIND 9 is maintained by Internet Systems Consortium,
+dns-1  | 11-Oct-2026 17:52:08.010 Inc. (ISC), a non-profit 501(c)(3) public-benefit
+dns-1  | 11-Oct-2026 17:52:08.010 corporation.  Support and training for BIND 9 are
+dns-1  | 11-Oct-2026 17:52:08.010 available at https://www.isc.org/support
+dns-1  | 11-Oct-2026 17:52:08.010 ----------------------------------------------------
+dns-1  | 11-Oct-2026 17:52:08.010 found 20 CPUs, using 2 worker threads
+dns-1  | 11-Oct-2026 17:52:08.010 using 2 UDP listeners per interface
+dns-1  | 11-Oct-2026 17:52:08.014 DNSSEC algorithms: RSASHA1 NSEC3RSASHA1 RSASHA256 RSASHA512 ECDSAP256SHA256 ECDSAP384SHA384 ED25519 ED448
+dns-1  | 11-Oct-2026 17:52:08.014 DS algorithms: SHA-1 SHA-256 SHA-384
+dns-1  | 11-Oct-2026 17:52:08.014 HMAC algorithms: HMAC-MD5 HMAC-SHA1 HMAC-SHA224 HMAC-SHA256 HMAC-SHA384 HMAC-SHA512
+dns-1  | 11-Oct-2026 17:52:08.014 TKEY mode 2 support (Diffie-Hellman): yes
+dns-1  | 11-Oct-2026 17:52:08.014 TKEY mode 3 support (GSS-API): yes
+dns-1  | 11-Oct-2026 17:52:08.014 the initial working directory is '/'
+dns-1  | 11-Oct-2026 17:52:08.014 loading configuration from '/etc/bind/named.conf'
+dns-1  | 11-Oct-2026 17:52:08.014 the working directory is now '/var/cache/bind'
+dns-1  | 11-Oct-2026 17:52:08.014 reading built-in trust anchors from file '/etc/bind/bind.keys'
+dns-1  | 11-Oct-2026 17:52:08.014 looking for GeoIP2 databases in '/usr/share/GeoIP'
+dns-1  | 11-Oct-2026 17:52:08.014 using default UDP/IPv4 port range: [32768, 60999]
+dns-1  | 11-Oct-2026 17:52:08.014 listening on IPv4 interface lo, 127.0.0.1#53
+dns-1  | 11-Oct-2026 17:52:08.014 listening on IPv4 interface eth0, 172.30.0.53#53
+dns-1  | 11-Oct-2026 17:52:08.014 couldn't mkdir '//run/named': Permission denied
+dns-1  | 11-Oct-2026 17:52:08.014 generating session key for dynamic DNS
+dns-1  | 11-Oct-2026 17:52:08.014 couldn't mkdir '//run/named': Permission denied
+dns-1  | 11-Oct-2026 17:52:08.014 could not create //run/named/session.key
+dns-1  | 11-Oct-2026 17:52:08.014 failed to generate session key for dynamic DNS: permission denied
+dns-1  | 11-Oct-2026 17:52:08.014 sizing zone task pool based on 6 zones
+dns-1  | 11-Oct-2026 17:52:08.014 none:99: 'max-cache-size 90%' - setting to 7004MB (out of 7782MB)
+dns-1  | 11-Oct-2026 17:52:08.022 obtaining root key for view _default from '/etc/bind/bind.keys'
+dns-1  | 11-Oct-2026 17:52:08.022 set up managed keys zone for view _default, file 'managed-keys.bind'
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 10.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 16.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 17.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 18.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 19.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 20.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 21.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 22.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 23.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 24.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 25.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 26.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 27.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 28.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 29.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 30.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 31.172.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 168.192.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 64.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 65.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 66.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 67.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 68.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 69.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 70.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 71.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 72.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 73.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 74.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 75.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 76.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 77.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 78.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 79.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 80.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 81.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 82.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 83.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 84.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 85.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 86.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 87.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 88.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 89.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 90.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 91.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 92.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 93.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 94.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 95.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 96.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 97.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 98.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 99.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 100.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 101.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 102.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 103.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 104.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 105.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 106.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 107.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 108.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 109.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 110.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 111.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 112.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 113.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 114.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 115.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 116.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 117.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 118.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 119.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 120.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 121.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 122.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 123.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 124.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 125.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 126.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 127.100.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 254.169.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 2.0.192.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 100.51.198.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 113.0.203.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 255.255.255.255.IN-ADDR.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: D.F.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 8.E.F.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 9.E.F.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: A.E.F.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: B.E.F.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: EMPTY.AS112.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: HOME.ARPA
+dns-1  | 11-Oct-2026 17:52:08.022 automatic empty zone: RESOLVER.ARPA
+dns-1  | 11-Oct-2026 17:52:08.026 configuring command channel from '/etc/bind/rndc.key'
+dns-1  | 11-Oct-2026 17:52:08.026 command channel listening on 127.0.0.1#953
+dns-1  | 11-Oct-2026 17:52:08.026 not using config file logging statement for logging due to -g option
+dns-1  | 11-Oct-2026 17:52:08.026 managed-keys-zone: loaded serial 4
+dns-1  | 11-Oct-2026 17:52:08.030 zone 0.in-addr.arpa/IN: loaded serial 1
+dns-1  | 11-Oct-2026 17:52:08.030 zone 255.in-addr.arpa/IN: loaded serial 1
+dns-1  | 11-Oct-2026 17:52:08.030 zone 127.in-addr.arpa/IN: loaded serial 1
+dns-1  | 11-Oct-2026 17:52:08.030 zone aerolinea.redes.test/IN: loaded serial 2026100701
+dns-1  | 11-Oct-2026 17:52:08.034 zone localhost/IN: loaded serial 2
+dns-1  | 11-Oct-2026 17:52:08.034 all zones loaded
+dns-1  | 11-Oct-2026 17:52:08.034 running
+dns-1  | 11-Oct-2026 17:52:08.078 managed-keys-zone: Key 20326 for zone . is now trusted (acceptance timer complete)
+dns-1  | 11-Oct-2026 17:52:08.078 managed-keys-zone: Key 38696 for zone . is now trusted (acceptance timer complete)

@@ -1,0 +1,50 @@
+{
+  "dns": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.53",
+      "MacAddress": "7a:81:bc:6b:49:6d",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  },
+  "ldap": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.11",
+      "MacAddress": "da:be:92:8d:ec:a3",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  },
+  "web": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.12",
+      "MacAddress": "d2:6f:38:29:ab:b7",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  },
+  "mail": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.13",
+      "MacAddress": "ae:80:58:42:27:14",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  },
+  "ftp": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.14",
+      "MacAddress": "5e:58:f7:76:6f:26",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  },
+  "client": {
+    "lab05-entrega_lab": {
+      "IPAddress": "172.30.0.20",
+      "MacAddress": "ae:a8:01:58:34:8c",
+      "Gateway": "172.30.0.1",
+      "IPPrefixLen": 24
+    }
+  }
+}

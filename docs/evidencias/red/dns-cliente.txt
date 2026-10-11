@@ -1,0 +1,22 @@
+Fecha: 2026-10-11T10:42:57.4955173-07:00
+Equipo: NERY
+
+InterfaceAlias               Interface Address ServerAddresses
+                             Index     Family
+--------------               --------- ------- ---------------
+Ethernet                            18 IPv4    {216.230.147.90, 216.230.139.8}
+Ethernet                            18 IPv6    {2800:98:0:4::4, 2803:f340:1300::c, 2800:98:0:4::4, 2803:f340:1300::c}
+Ethernet 2                          17 IPv4    {}
+Ethernet 2                          17 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+Local Area Connection* 1            19 IPv4    {}
+Local Area Connection* 1            19 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+Local Area Connection* 2             6 IPv4    {}
+Local Area Connection* 2             6 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+Wi-Fi                               12 IPv4    {192.168.0.1}
+Wi-Fi                               12 IPv6    {}
+Bluetooth Network Connection        14 IPv4    {}
+Bluetooth Network Connection        14 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+Loopback Pseudo-Interface 1          1 IPv4    {}
+Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+vEthernet (WSL (Hyper-V f...        61 IPv4    {}
+vEthernet (WSL (Hyper-V f...        61 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}

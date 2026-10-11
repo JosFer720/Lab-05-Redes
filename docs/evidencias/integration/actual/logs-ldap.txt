@@ -1,0 +1,423 @@
+Fecha UTC: 2026-10-11T17:52:28.730003+00:00
+ldap-1  | 6acbccc0.109a6b1f 0x71680cfff6c0 daemon: shutdown requested and initiated.
+ldap-1  | 6acbccc1.0c1ba16f 0x76646516f940 @(#) $OpenLDAP: slapd 2.6.10+dfsg-0ubuntu0.24.04.1 (Sep 23 2025 16:26:39) $
+ldap-1  | 	Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ldap-1  | 6acbccc1.1c210e3b 0x76646516f940 slapd starting
+ldap-1  | 6acbccc2.0c7258d1 0x7663f71fe6c0 conn=1000 fd=11 ACCEPT from IP=127.0.0.1:54008 (IP=0.0.0.0:389)
+ldap-1  | 6acbccc2.0c76030f 0x7663f69fd6c0 conn=1000 op=0 BIND dn="" method=128
+ldap-1  | 6acbccc2.0c770b56 0x7663f69fd6c0 conn=1000 op=0 RESULT tag=97 err=0 qtime=0.000029 etime=0.000107 text=
+ldap-1  | 6acbccc2.0c7b97ae 0x7663f71fe6c0 conn=1000 op=1 SRCH base="dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccc2.0c7bd31c 0x7663f71fe6c0 conn=1000 op=1 SRCH attr=dn
+ldap-1  | 6acbccc2.0c7d98fc 0x7663f71fe6c0 conn=1000 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000021 etime=0.000194 nentries=1 text=
+ldap-1  | 6acbccc2.0c802bf8 0x7663f69fd6c0 conn=1000 op=2 UNBIND
+ldap-1  | 6acbccc2.0c813824 0x7663f69fd6c0 conn=1000 fd=11 closed
+ldap-1  | 6acbccc2.0cbf326f 0x7663f71fe6c0 conn=1001 fd=11 ACCEPT from IP=127.0.0.1:54012 (IP=0.0.0.0:389)
+ldap-1  | 6acbccc2.0cbfbb2e 0x7663f71fe6c0 conn=1001 op=0 BIND dn="" method=128
+ldap-1  | 6acbccc2.0cc0267f 0x7663f71fe6c0 conn=1001 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000041 text=
+ldap-1  | 6acbccc2.0cc330d3 0x7663f69fd6c0 conn=1001 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccc2.0cc37a67 0x7663f69fd6c0 conn=1001 op=1 SRCH attr=dn
+ldap-1  | 6acbccc2.0cc4ce55 0x7663f69fd6c0 conn=1001 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000021 etime=0.000140 nentries=1 text=
+ldap-1  | 6acbccc2.0cc68b5c 0x7663f71fe6c0 conn=1001 op=2 UNBIND
+ldap-1  | 6acbccc2.0cc72c53 0x7663f71fe6c0 conn=1001 fd=11 closed
+ldap-1  | 6acbccc4.0dcf693e 0x7663f69fd6c0 conn=1002 fd=11 ACCEPT from IP=127.0.0.1:54018 (IP=0.0.0.0:389)
+ldap-1  | 6acbccc4.0dd00165 0x7663f69fd6c0 conn=1002 op=0 BIND dn="" method=128
+ldap-1  | 6acbccc4.0dd068bc 0x7663f69fd6c0 conn=1002 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000040 text=
+ldap-1  | 6acbccc4.0dd27648 0x7663f71fe6c0 conn=1002 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccc4.0dd2a3e8 0x7663f71fe6c0 conn=1002 op=1 SRCH attr=dn
+ldap-1  | 6acbccc4.0dd3613b 0x7663f71fe6c0 conn=1002 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000089 nentries=1 text=
+ldap-1  | 6acbccc4.0dd4be66 0x7663f69fd6c0 conn=1002 op=2 UNBIND
+ldap-1  | 6acbccc4.0dd5671f 0x7663f69fd6c0 conn=1002 fd=11 closed
+ldap-1  | 6acbccc6.3aacc279 0x7663f79ff6c0 daemon: shutdown requested and initiated.
+ldap-1  | 6acbccc7.366c3fab 0x771c358f2940 @(#) $OpenLDAP: slapd 2.6.10+dfsg-0ubuntu0.24.04.1 (Sep 23 2025 16:26:39) $
+ldap-1  | 	Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ldap-1  | 6acbccc8.06364c56 0x771c358f2940 slapd starting
+ldap-1  | 6acbccc8.36e23443 0x771bc79fe6c0 conn=1000 fd=11 ACCEPT from IP=127.0.0.1:36834 (IP=0.0.0.0:389)
+ldap-1  | 6acbccc8.36e8fa10 0x771bc71fd6c0 conn=1000 op=0 BIND dn="" method=128
+ldap-1  | 6acbccc8.36eb7bc5 0x771bc71fd6c0 conn=1000 op=0 RESULT tag=97 err=0 qtime=0.000053 etime=0.000235 text=
+ldap-1  | 6acbccc8.36f18317 0x771bc79fe6c0 conn=1000 op=1 SRCH base="dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccc8.36f20079 0x771bc79fe6c0 conn=1000 op=1 SRCH attr=dn
+ldap-1  | 6acbccc8.36f4bd6a 0x771bc79fe6c0 conn=1000 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000036 etime=0.000289 nentries=1 text=
+ldap-1  | 6acbccc8.36f8405c 0x771bc71fd6c0 conn=1000 op=2 UNBIND
+ldap-1  | 6acbccc8.36f908e0 0x771bc71fd6c0 conn=1000 fd=11 closed
+ldap-1  | 6acbccc8.3732e193 0x771bc79fe6c0 conn=1001 fd=11 ACCEPT from IP=127.0.0.1:36850 (IP=0.0.0.0:389)
+ldap-1  | 6acbccc8.3736bed3 0x771bc71fd6c0 conn=1001 op=0 BIND dn="" method=128
+ldap-1  | 6acbccc8.3738332d 0x771bc71fd6c0 conn=1001 op=0 RESULT tag=97 err=0 qtime=0.000042 etime=0.000142 text=
+ldap-1  | 6acbccc8.373a7b31 0x771bc79fe6c0 conn=1001 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccc8.373aa3a4 0x771bc79fe6c0 conn=1001 op=1 SRCH attr=dn
+ldap-1  | 6acbccc8.373b6580 0x771bc79fe6c0 conn=1001 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000089 nentries=1 text=
+ldap-1  | 6acbccc8.373dedd4 0x771bc71fd6c0 conn=1001 op=2 UNBIND
+ldap-1  | 6acbccc8.373ecbba 0x771bc71fd6c0 conn=1001 fd=11 closed
+ldap-1  | 6acbccca.319d2ed8 0x771bc79fe6c0 conn=1002 fd=11 ACCEPT from IP=172.30.0.13:60674 (IP=0.0.0.0:389)
+ldap-1  | 6acbccca.319fca7a 0x771bc71fd6c0 conn=1002 op=0 BIND dn="" method=128
+ldap-1  | 6acbccca.31a0a02c 0x771bc71fd6c0 conn=1002 op=0 RESULT tag=97 err=0 qtime=0.000015 etime=0.000072 text=
+ldap-1  | 6acbccca.3818841a 0x771bc79fe6c0 conn=1003 fd=12 ACCEPT from IP=127.0.0.1:36866 (IP=0.0.0.0:389)
+ldap-1  | 6acbccca.3819ff35 0x771bc79fe6c0 conn=1003 op=0 BIND dn="" method=128
+ldap-1  | 6acbccca.381afae0 0x771bc79fe6c0 conn=1003 op=0 RESULT tag=97 err=0 qtime=0.000022 etime=0.000090 text=
+ldap-1  | 6acbccca.381ec12c 0x771bc71fd6c0 conn=1003 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccca.381f25e9 0x771bc71fd6c0 conn=1003 op=1 SRCH attr=dn
+ldap-1  | 6acbccca.38211952 0x771bc71fd6c0 conn=1003 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000024 etime=0.000195 nentries=1 text=
+ldap-1  | 6acbccca.38239072 0x771bc79fe6c0 conn=1003 op=2 UNBIND
+ldap-1  | 6acbccca.382468fa 0x771bc79fe6c0 conn=1003 fd=12 closed
+ldap-1  | 6acbcccd.39f7c55e 0x771bc71fd6c0 conn=1004 fd=12 ACCEPT from IP=127.0.0.1:36880 (IP=0.0.0.0:389)
+ldap-1  | 6acbcccd.39f8f428 0x771bc71fd6c0 conn=1004 op=0 BIND dn="" method=128
+ldap-1  | 6acbcccd.39fa03ee 0x771bc71fd6c0 conn=1004 op=0 RESULT tag=97 err=0 qtime=0.000023 etime=0.000096 text=
+ldap-1  | 6acbcccd.39fd5b37 0x771bc79fe6c0 conn=1004 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbcccd.39fdbaa2 0x771bc79fe6c0 conn=1004 op=1 SRCH attr=dn
+ldap-1  | 6acbcccd.39feff8a 0x771bc79fe6c0 conn=1004 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000027 etime=0.000157 nentries=1 text=
+ldap-1  | 6acbcccd.3a01a8ac 0x771bc71fd6c0 conn=1004 op=2 UNBIND
+ldap-1  | 6acbcccd.3a023336 0x771bc71fd6c0 conn=1004 fd=12 closed
+ldap-1  | 6acbccce.16d54b0c 0x771bc79fe6c0 conn=1005 fd=12 ACCEPT from IP=172.30.0.20:54340 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.16d5d83a 0x771bc79fe6c0 conn=1005 op=0 BIND dn="" method=128
+ldap-1  | 6acbccce.16d661b3 0x771bc79fe6c0 conn=1005 op=0 RESULT tag=97 err=0 qtime=0.000011 etime=0.000049 text=
+ldap-1  | 6acbccce.16d8bba5 0x771bc71fd6c0 conn=1005 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(objectClass=inetOrgPerson)"
+ldap-1  | 6acbccce.16d8e976 0x771bc71fd6c0 conn=1005 op=1 SRCH attr=uid cn sn mail
+ldap-1  | 6acbccce.16dad033 0x771bc71fd6c0 conn=1005 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000170 nentries=8 text=
+ldap-1  | 6acbccce.16dc1715 0x771bc79fe6c0 conn=1005 op=2 UNBIND
+ldap-1  | 6acbccce.16dce1a7 0x771bc79fe6c0 conn=1005 fd=12 closed
+ldap-1  | 6acbccce.1716a46c 0x771bc71fd6c0 conn=1006 fd=12 ACCEPT from IP=172.30.0.20:54348 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.1717ef06 0x771bc71fd6c0 conn=1006 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.17183e80 0x771bc71fd6c0 conn=1006 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.171907c1 0x771bc71fd6c0 conn=1006 op=0 RESULT tag=97 err=0 qtime=0.000015 etime=0.000100 text=
+ldap-1  | 6acbccce.171a5c6f 0x771bc79fe6c0 conn=1006 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.171a8de5 0x771bc79fe6c0 conn=1006 op=1 WHOAMI
+ldap-1  | 6acbccce.171b1cf4 0x771bc79fe6c0 conn=1006 op=1 RESULT oid= err=0 qtime=0.000018 etime=0.000069 text=
+ldap-1  | 6acbccce.171c9648 0x771bc71fd6c0 conn=1006 op=2 UNBIND
+ldap-1  | 6acbccce.171d3ffa 0x771bc71fd6c0 conn=1006 fd=12 closed
+ldap-1  | 6acbccce.174d8147 0x771bc79fe6c0 conn=1007 fd=12 ACCEPT from IP=172.30.0.20:54362 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.174e6572 0x771bc79fe6c0 conn=1007 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.174ec800 0x771bc79fe6c0 conn=1007 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.174fa5d0 0x771bc79fe6c0 conn=1007 op=0 RESULT tag=97 err=0 qtime=0.000014 etime=0.000116 text=
+ldap-1  | 6acbccce.1751004b 0x771bc71fd6c0 conn=1007 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.17513153 0x771bc71fd6c0 conn=1007 op=1 WHOAMI
+ldap-1  | 6acbccce.1751988b 0x771bc71fd6c0 conn=1007 op=1 RESULT oid= err=0 qtime=0.000013 etime=0.000054 text=
+ldap-1  | 6acbccce.1752f41a 0x771bc79fe6c0 conn=1007 op=2 UNBIND
+ldap-1  | 6acbccce.1753b9e8 0x771bc79fe6c0 conn=1007 fd=12 closed
+ldap-1  | 6acbccce.178cabbb 0x771bc71fd6c0 conn=1008 fd=12 ACCEPT from IP=172.30.0.20:54366 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.178d7062 0x771bc71fd6c0 conn=1008 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.178dc0c7 0x771bc71fd6c0 conn=1008 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.178ea06e 0x771bc71fd6c0 conn=1008 op=0 RESULT tag=97 err=0 qtime=0.000011 etime=0.000102 text=
+ldap-1  | 6acbccce.178fd0fc 0x771bc79fe6c0 conn=1008 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.179003fa 0x771bc79fe6c0 conn=1008 op=1 WHOAMI
+ldap-1  | 6acbccce.17907a2a 0x771bc79fe6c0 conn=1008 op=1 RESULT oid= err=0 qtime=0.000015 etime=0.000060 text=
+ldap-1  | 6acbccce.1791d19b 0x771bc71fd6c0 conn=1008 op=2 UNBIND
+ldap-1  | 6acbccce.179273d7 0x771bc71fd6c0 conn=1008 fd=12 closed
+ldap-1  | 6acbccce.17bf7a9a 0x771bc79fe6c0 conn=1009 fd=12 ACCEPT from IP=172.30.0.20:54370 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.17c050e4 0x771bc71fd6c0 conn=1009 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.17c0b727 0x771bc71fd6c0 conn=1009 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.17c1788c 0x771bc71fd6c0 conn=1009 op=0 RESULT tag=97 err=0 qtime=0.000013 etime=0.000101 text=
+ldap-1  | 6acbccce.17c2981c 0x771bc79fe6c0 conn=1009 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.17c2c7fd 0x771bc79fe6c0 conn=1009 op=1 WHOAMI
+ldap-1  | 6acbccce.17c32a2a 0x771bc79fe6c0 conn=1009 op=1 RESULT oid= err=0 qtime=0.000014 etime=0.000052 text=
+ldap-1  | 6acbccce.17c47231 0x771bc71fd6c0 conn=1009 op=2 UNBIND
+ldap-1  | 6acbccce.17c53e45 0x771bc71fd6c0 conn=1009 fd=12 closed
+ldap-1  | 6acbccce.17f3bfee 0x771bc79fe6c0 conn=1010 fd=12 ACCEPT from IP=172.30.0.20:54372 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.17f46e05 0x771bc79fe6c0 conn=1010 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.17f4b3df 0x771bc79fe6c0 conn=1010 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.17f55dfd 0x771bc79fe6c0 conn=1010 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000086 text=
+ldap-1  | 6acbccce.17f6b26e 0x771bc71fd6c0 conn=1010 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.17f6e413 0x771bc71fd6c0 conn=1010 op=1 WHOAMI
+ldap-1  | 6acbccce.17f757a0 0x771bc71fd6c0 conn=1010 op=1 RESULT oid= err=0 qtime=0.000016 etime=0.000059 text=
+ldap-1  | 6acbccce.17f8a284 0x771bc79fe6c0 conn=1010 op=2 UNBIND
+ldap-1  | 6acbccce.17f95e51 0x771bc79fe6c0 conn=1010 fd=12 closed
+ldap-1  | 6acbccce.1827992b 0x771bc71fd6c0 conn=1011 fd=12 ACCEPT from IP=172.30.0.20:54380 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.182837bb 0x771bc71fd6c0 conn=1011 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.18287265 0x771bc71fd6c0 conn=1011 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.18294d53 0x771bc71fd6c0 conn=1011 op=0 RESULT tag=97 err=0 qtime=0.000011 etime=0.000093 text=
+ldap-1  | 6acbccce.182a9bd5 0x771bc79fe6c0 conn=1011 op=1 EXT oid=1.3.6.1.4.1.4203.1.11.3
+ldap-1  | 6acbccce.182ac776 0x771bc79fe6c0 conn=1011 op=1 WHOAMI
+ldap-1  | 6acbccce.182b37bd 0x771bc79fe6c0 conn=1011 op=1 RESULT oid= err=0 qtime=0.000014 etime=0.000055 text=
+ldap-1  | 6acbccce.182c5447 0x771bc71fd6c0 conn=1011 op=2 UNBIND
+ldap-1  | 6acbccce.182d0b58 0x771bc71fd6c0 conn=1011 fd=12 closed
+ldap-1  | 6acbccce.1858647e 0x771bc79fe6c0 conn=1012 fd=12 ACCEPT from IP=172.30.0.20:54386 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.18591e38 0x771bc79fe6c0 conn=1012 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1859f518 0x771bc79fe6c0 conn=1012 op=0 RESULT tag=97 err=49 qtime=0.000011 etime=0.000078 text=
+ldap-1  | 6acbccce.185c4b45 0x771bc71fd6c0 conn=1012 op=1 UNBIND
+ldap-1  | 6acbccce.185d0b16 0x771bc71fd6c0 conn=1012 fd=12 closed
+ldap-1  | 6acbccce.1888ef43 0x771bc79fe6c0 conn=1013 fd=12 ACCEPT from IP=172.30.0.20:54390 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.1889db37 0x771bc71fd6c0 conn=1013 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.188ae0a5 0x771bc71fd6c0 conn=1013 op=0 RESULT tag=97 err=49 qtime=0.000013 etime=0.000096 text=
+ldap-1  | 6acbccce.188c63d7 0x771bc79fe6c0 conn=1013 op=1 UNBIND
+ldap-1  | 6acbccce.188d0db1 0x771bc79fe6c0 conn=1013 fd=12 closed
+ldap-1  | 6acbccce.18b7316c 0x771bc71fd6c0 conn=1014 fd=12 ACCEPT from IP=172.30.0.20:54404 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.18b83370 0x771bc79fe6c0 conn=1014 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.18b9304f 0x771bc79fe6c0 conn=1014 op=0 RESULT tag=97 err=49 qtime=0.000016 etime=0.000097 text=
+ldap-1  | 6acbccce.18ba8b07 0x771bc71fd6c0 conn=1014 op=1 UNBIND
+ldap-1  | 6acbccce.18bb5671 0x771bc71fd6c0 conn=1014 fd=12 closed
+ldap-1  | 6acbccce.18e7e7e7 0x771bc79fe6c0 conn=1015 fd=12 ACCEPT from IP=172.30.0.20:54420 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.18e8a1b1 0x771bc79fe6c0 conn=1015 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.18e97373 0x771bc79fe6c0 conn=1015 op=0 RESULT tag=97 err=49 qtime=0.000015 etime=0.000081 text=
+ldap-1  | 6acbccce.18eb0669 0x771bc71fd6c0 conn=1015 op=1 UNBIND
+ldap-1  | 6acbccce.18eba43e 0x771bc71fd6c0 conn=1015 fd=12 closed
+ldap-1  | 6acbccce.19184a0a 0x771bc79fe6c0 conn=1016 fd=12 ACCEPT from IP=172.30.0.20:54428 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.19197759 0x771bc71fd6c0 conn=1016 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.191a7061 0x771bc71fd6c0 conn=1016 op=0 RESULT tag=97 err=49 qtime=0.000037 etime=0.000113 text=
+ldap-1  | 6acbccce.191c0595 0x771bc79fe6c0 conn=1016 op=1 UNBIND
+ldap-1  | 6acbccce.191cb58a 0x771bc79fe6c0 conn=1016 fd=12 closed
+ldap-1  | 6acbccce.19495cdd 0x771bc71fd6c0 conn=1017 fd=12 ACCEPT from IP=172.30.0.20:54434 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.194a214f 0x771bc71fd6c0 conn=1017 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.194b15ae 0x771bc71fd6c0 conn=1017 op=0 RESULT tag=97 err=49 qtime=0.000013 etime=0.000088 text=
+ldap-1  | 6acbccce.194cd430 0x771bc79fe6c0 conn=1017 op=1 UNBIND
+ldap-1  | 6acbccce.194dbf41 0x771bc79fe6c0 conn=1017 fd=12 closed
+ldap-1  | 6acbccce.197a17a5 0x771bc71fd6c0 conn=1018 fd=12 ACCEPT from IP=172.30.0.20:54448 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.197affed 0x771bc79fe6c0 conn=1018 op=0 BIND dn="uid=noexiste,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.197bd885 0x771bc79fe6c0 conn=1018 op=0 RESULT tag=97 err=49 qtime=0.000014 etime=0.000080 text=
+ldap-1  | 6acbccce.197d42d2 0x771bc71fd6c0 conn=1018 op=1 UNBIND
+ldap-1  | 6acbccce.197df165 0x771bc71fd6c0 conn=1018 fd=12 closed
+ldap-1  | 6acbccce.19aa16bf 0x771bc79fe6c0 conn=1019 fd=12 ACCEPT from IP=172.30.0.20:54462 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.19aa925c 0x771bc79fe6c0 conn=1019 op=0 BIND dn="" method=128
+ldap-1  | 6acbccce.19ab236d 0x771bc79fe6c0 conn=1019 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000051 text=
+ldap-1  | 6acbccce.19acc3ed 0x771bc71fd6c0 conn=1019 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(objectClass=inetOrgPerson)"
+ldap-1  | 6acbccce.19acfab2 0x771bc71fd6c0 conn=1019 op=1 SRCH attr=uid cn sn mail
+ldap-1  | 6acbccce.19af1d6f 0x771bc71fd6c0 conn=1019 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000184 nentries=8 text=
+ldap-1  | 6acbccce.19b0774f 0x771bc79fe6c0 conn=1019 op=2 UNBIND
+ldap-1  | 6acbccce.19b1289a 0x771bc79fe6c0 conn=1019 fd=12 closed
+ldap-1  | 6acbccce.1c317ca3 0x771bc71fd6c0 conn=1020 fd=12 ACCEPT from IP=172.30.0.12:38968 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.1c32300a 0x771bc71fd6c0 conn=1020 op=0 BIND dn="" method=128
+ldap-1  | 6acbccce.1c32defc 0x771bc71fd6c0 conn=1020 op=0 RESULT tag=97 err=0 qtime=0.000015 etime=0.000062 text=
+ldap-1  | 6acbccce.1c3454b5 0x771bc79fe6c0 conn=1020 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+ldap-1  | 6acbccce.1c348227 0x771bc79fe6c0 conn=1020 op=1 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1c359ada 0x771bc79fe6c0 conn=1020 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000116 nentries=1 text=
+ldap-1  | 6acbccce.1c36ea40 0x771bc71fd6c0 conn=1020 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1c374a44 0x771bc71fd6c0 conn=1020 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1c37c9f0 0x771bc71fd6c0 conn=1020 op=2 RESULT tag=97 err=0 qtime=0.000014 etime=0.000080 text=
+ldap-1  | 6acbccce.1c7ec995 0x771bc79fe6c0 conn=1020 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1c7f0dd0 0x771bc79fe6c0 conn=1020 op=3 BIND dn="" method=128
+ldap-1  | 6acbccce.1c7f9ec1 0x771bc79fe6c0 conn=1020 op=3 RESULT tag=97 err=0 qtime=0.000023 etime=0.000079 text=
+ldap-1  | 6acbccce.1c81ce54 0x771bc71fd6c0 conn=1020 op=4 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+ldap-1  | 6acbccce.1c81fbc2 0x771bc71fd6c0 conn=1020 op=4 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1c82f29f 0x771bc71fd6c0 conn=1020 op=4 SEARCH RESULT tag=101 err=0 qtime=0.000032 etime=0.000132 nentries=1 text=
+ldap-1  | 6acbccce.1c848bf1 0x771bc79fe6c0 conn=1020 op=5 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1c84f498 0x771bc79fe6c0 conn=1020 op=5 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1c8580df 0x771bc79fe6c0 conn=1020 op=5 RESULT tag=97 err=0 qtime=0.000015 etime=0.000087 text=
+ldap-1  | 6acbccce.1ce9623e 0x771bc71fd6c0 conn=1021 fd=13 ACCEPT from IP=172.30.0.12:38976 (IP=0.0.0.0:389)
+ldap-1  | 6acbccce.1ce9e9b3 0x771bc71fd6c0 conn=1021 op=0 BIND dn="" method=128
+ldap-1  | 6acbccce.1cea8629 0x771bc71fd6c0 conn=1021 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000054 text=
+ldap-1  | 6acbccce.1cebfe04 0x771bc79fe6c0 conn=1021 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+ldap-1  | 6acbccce.1cec326d 0x771bc79fe6c0 conn=1021 op=1 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1ced6be7 0x771bc79fe6c0 conn=1021 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000018 etime=0.000128 nentries=1 text=
+ldap-1  | 6acbccce.1cef4135 0x771bc71fd6c0 conn=1021 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1cef95df 0x771bc71fd6c0 conn=1021 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1cf0056f 0x771bc71fd6c0 conn=1021 op=2 RESULT tag=97 err=0 qtime=0.000014 etime=0.000072 text=
+ldap-1  | 6acbccce.1f19bffc 0x771bc79fe6c0 conn=1021 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1f1a0742 0x771bc79fe6c0 conn=1021 op=3 BIND dn="" method=128
+ldap-1  | 6acbccce.1f1a9c75 0x771bc79fe6c0 conn=1021 op=3 RESULT tag=97 err=0 qtime=0.000019 etime=0.000078 text=
+ldap-1  | 6acbccce.1f1c7be3 0x771bc71fd6c0 conn=1021 op=4 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+ldap-1  | 6acbccce.1f1ccb3b 0x771bc71fd6c0 conn=1021 op=4 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1f1dce6a 0x771bc71fd6c0 conn=1021 op=4 SEARCH RESULT tag=101 err=0 qtime=0.000016 etime=0.000120 nentries=1 text=
+ldap-1  | 6acbccce.1f1fb290 0x771bc79fe6c0 conn=1021 op=5 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1f201cfb 0x771bc79fe6c0 conn=1021 op=5 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1f20929b 0x771bc79fe6c0 conn=1021 op=5 RESULT tag=97 err=0 qtime=0.000021 etime=0.000087 text=
+ldap-1  | 6acbccce.1f64b134 0x771bc71fd6c0 conn=1020 op=6 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1f64f0f1 0x771bc71fd6c0 conn=1020 op=6 BIND dn="" method=128
+ldap-1  | 6acbccce.1f658425 0x771bc71fd6c0 conn=1020 op=6 RESULT tag=97 err=0 qtime=0.000019 etime=0.000074 text=
+ldap-1  | 6acbccce.1f670d2d 0x771bc79fe6c0 conn=1020 op=7 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+ldap-1  | 6acbccce.1f6733c3 0x771bc79fe6c0 conn=1020 op=7 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1f680291 0x771bc79fe6c0 conn=1020 op=7 SEARCH RESULT tag=101 err=0 qtime=0.000011 etime=0.000088 nentries=1 text=
+ldap-1  | 6acbccce.1f698f4e 0x771bc71fd6c0 conn=1020 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1f69effb 0x771bc71fd6c0 conn=1020 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1f6a5009 0x771bc71fd6c0 conn=1020 op=8 RESULT tag=97 err=0 qtime=0.000015 etime=0.000073 text=
+ldap-1  | 6acbccce.1fadf0c5 0x771bc79fe6c0 conn=1020 op=9 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1fae297f 0x771bc79fe6c0 conn=1020 op=9 BIND dn="" method=128
+ldap-1  | 6acbccce.1fae9526 0x771bc79fe6c0 conn=1020 op=9 RESULT tag=97 err=0 qtime=0.000018 etime=0.000062 text=
+ldap-1  | 6acbccce.1fb02472 0x771bc71fd6c0 conn=1020 op=10 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+ldap-1  | 6acbccce.1fb06928 0x771bc71fd6c0 conn=1020 op=10 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.1fb13048 0x771bc71fd6c0 conn=1020 op=10 SEARCH RESULT tag=101 err=0 qtime=0.000011 etime=0.000113 nentries=1 text=
+ldap-1  | 6acbccce.1fb24405 0x771bc79fe6c0 conn=1020 op=11 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.1fb288df 0x771bc79fe6c0 conn=1020 op=11 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.1fb2da1c 0x771bc79fe6c0 conn=1020 op=11 RESULT tag=97 err=0 qtime=0.000013 etime=0.000057 text=
+ldap-1  | 6acbccce.21cda264 0x771bc71fd6c0 conn=1020 op=12 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.21cde7a1 0x771bc71fd6c0 conn=1020 op=12 BIND dn="" method=128
+ldap-1  | 6acbccce.21ce4e5f 0x771bc71fd6c0 conn=1020 op=12 RESULT tag=97 err=0 qtime=0.000017 etime=0.000064 text=
+ldap-1  | 6acbccce.21d1d4bf 0x771bc79fe6c0 conn=1020 op=13 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+ldap-1  | 6acbccce.21d1fcf1 0x771bc79fe6c0 conn=1020 op=13 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.21d2edab 0x771bc79fe6c0 conn=1020 op=13 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000104 nentries=1 text=
+ldap-1  | 6acbccce.21d4e509 0x771bc71fd6c0 conn=1020 op=14 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.21d5445b 0x771bc71fd6c0 conn=1020 op=14 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.21d5bf08 0x771bc71fd6c0 conn=1020 op=14 RESULT tag=97 err=0 qtime=0.000023 etime=0.000088 text=
+ldap-1  | 6acbccce.22179fbd 0x771bc79fe6c0 conn=1020 op=15 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2218417f 0x771bc79fe6c0 conn=1020 op=15 BIND dn="" method=128
+ldap-1  | 6acbccce.22189ac7 0x771bc79fe6c0 conn=1020 op=15 RESULT tag=97 err=0 qtime=0.000014 etime=0.000079 text=
+ldap-1  | 6acbccce.221a4e72 0x771bc71fd6c0 conn=1020 op=16 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+ldap-1  | 6acbccce.221a8c97 0x771bc71fd6c0 conn=1020 op=16 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.221b6a8e 0x771bc71fd6c0 conn=1020 op=16 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000101 nentries=1 text=
+ldap-1  | 6acbccce.221cec1c 0x771bc79fe6c0 conn=1020 op=17 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.221d3889 0x771bc79fe6c0 conn=1020 op=17 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.221d9863 0x771bc79fe6c0 conn=1020 op=17 RESULT tag=97 err=0 qtime=0.000025 etime=0.000076 text=
+ldap-1  | 6acbccce.2264a0cb 0x771bc71fd6c0 conn=1020 op=18 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2264e8b6 0x771bc71fd6c0 conn=1020 op=18 BIND dn="" method=128
+ldap-1  | 6acbccce.22657262 0x771bc71fd6c0 conn=1020 op=18 RESULT tag=97 err=0 qtime=0.000032 etime=0.000088 text=
+ldap-1  | 6acbccce.2267a7ba 0x771bc79fe6c0 conn=1020 op=19 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+ldap-1  | 6acbccce.2267d005 0x771bc79fe6c0 conn=1020 op=19 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.2268de22 0x771bc79fe6c0 conn=1020 op=19 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000102 nentries=1 text=
+ldap-1  | 6acbccce.226a7eae 0x771bc71fd6c0 conn=1020 op=20 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.226ad02b 0x771bc71fd6c0 conn=1020 op=20 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.226b22a7 0x771bc71fd6c0 conn=1020 op=20 RESULT tag=97 err=0 qtime=0.000013 etime=0.000061 text=
+ldap-1  | 6acbccce.2457959c 0x771bc79fe6c0 conn=1020 op=21 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2457d85d 0x771bc79fe6c0 conn=1020 op=21 BIND dn="" method=128
+ldap-1  | 6acbccce.24585a22 0x771bc79fe6c0 conn=1020 op=21 RESULT tag=97 err=0 qtime=0.000040 etime=0.000092 text=
+ldap-1  | 6acbccce.245b6436 0x771bc71fd6c0 conn=1020 op=22 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+ldap-1  | 6acbccce.245b91d2 0x771bc71fd6c0 conn=1020 op=22 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.245c7f2e 0x771bc71fd6c0 conn=1020 op=22 SEARCH RESULT tag=101 err=0 qtime=0.000016 etime=0.000106 nentries=1 text=
+ldap-1  | 6acbccce.245dea26 0x771bc79fe6c0 conn=1020 op=23 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.245e44e2 0x771bc79fe6c0 conn=1020 op=23 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.245ea7b0 0x771bc79fe6c0 conn=1020 op=23 RESULT tag=97 err=0 qtime=0.000014 etime=0.000071 text=
+ldap-1  | 6acbccce.24a30611 0x771bc71fd6c0 conn=1020 op=24 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.24a33eec 0x771bc71fd6c0 conn=1020 op=24 BIND dn="" method=128
+ldap-1  | 6acbccce.24a3a8da 0x771bc71fd6c0 conn=1020 op=24 RESULT tag=97 err=0 qtime=0.000015 etime=0.000058 text=
+ldap-1  | 6acbccce.24a57754 0x771bc79fe6c0 conn=1020 op=25 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+ldap-1  | 6acbccce.24a5a4be 0x771bc79fe6c0 conn=1020 op=25 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.24a6b649 0x771bc79fe6c0 conn=1020 op=25 SEARCH RESULT tag=101 err=0 qtime=0.000017 etime=0.000108 nentries=1 text=
+ldap-1  | 6acbccce.24a8417e 0x771bc71fd6c0 conn=1020 op=26 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.24a894d9 0x771bc71fd6c0 conn=1020 op=26 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.24a8eb71 0x771bc71fd6c0 conn=1020 op=26 RESULT tag=97 err=0 qtime=0.000014 etime=0.000065 text=
+ldap-1  | 6acbccce.24edd983 0x771bc79fe6c0 conn=1020 op=27 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.24ee14f8 0x771bc79fe6c0 conn=1020 op=27 BIND dn="" method=128
+ldap-1  | 6acbccce.24ee71c3 0x771bc79fe6c0 conn=1020 op=27 RESULT tag=97 err=0 qtime=0.000015 etime=0.000056 text=
+ldap-1  | 6acbccce.24f1008b 0x771bc71fd6c0 conn=1020 op=28 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+ldap-1  | 6acbccce.24f12927 0x771bc71fd6c0 conn=1020 op=28 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.24f23190 0x771bc71fd6c0 conn=1020 op=28 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000105 nentries=1 text=
+ldap-1  | 6acbccce.24f39b17 0x771bc79fe6c0 conn=1020 op=29 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.24f3f30a 0x771bc79fe6c0 conn=1020 op=29 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.24f4d0c5 0x771bc79fe6c0 conn=1020 op=29 RESULT tag=97 err=0 qtime=0.000014 etime=0.000103 text=
+ldap-1  | 6acbccce.26d2d208 0x771bc71fd6c0 conn=1021 op=6 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.26d30db9 0x771bc71fd6c0 conn=1021 op=6 BIND dn="" method=128
+ldap-1  | 6acbccce.26d382f0 0x771bc71fd6c0 conn=1021 op=6 RESULT tag=97 err=0 qtime=0.000014 etime=0.000061 text=
+ldap-1  | 6acbccce.26d669f1 0x771bc79fe6c0 conn=1021 op=7 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+ldap-1  | 6acbccce.26d699b7 0x771bc79fe6c0 conn=1021 op=7 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.26d7c238 0x771bc79fe6c0 conn=1021 op=7 SEARCH RESULT tag=101 err=0 qtime=0.000028 etime=0.000134 nentries=1 text=
+ldap-1  | 6acbccce.26d9e2bc 0x771bc71fd6c0 conn=1021 op=8 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.26da4886 0x771bc71fd6c0 conn=1021 op=8 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.26daecfc 0x771bc71fd6c0 conn=1021 op=8 RESULT tag=97 err=0 qtime=0.000013 etime=0.000087 text=
+ldap-1  | 6acbccce.27234607 0x771bc79fe6c0 conn=1020 op=30 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2723967d 0x771bc79fe6c0 conn=1020 op=30 BIND dn="" method=128
+ldap-1  | 6acbccce.27243031 0x771bc79fe6c0 conn=1020 op=30 RESULT tag=97 err=0 qtime=0.000019 etime=0.000080 text=
+ldap-1  | 6acbccce.2726e5d9 0x771bc71fd6c0 conn=1020 op=31 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+ldap-1  | 6acbccce.27270c97 0x771bc71fd6c0 conn=1020 op=31 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.2727e5eb 0x771bc71fd6c0 conn=1020 op=31 SEARCH RESULT tag=101 err=0 qtime=0.000019 etime=0.000098 nentries=1 text=
+ldap-1  | 6acbccce.2729ec06 0x771bc79fe6c0 conn=1020 op=32 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.272a4124 0x771bc79fe6c0 conn=1020 op=32 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.272ab85c 0x771bc79fe6c0 conn=1020 op=32 RESULT tag=97 err=0 qtime=0.000014 etime=0.000074 text=
+ldap-1  | 6acbccce.277299bb 0x771bc71fd6c0 conn=1020 op=33 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2772ee43 0x771bc71fd6c0 conn=1020 op=33 BIND dn="" method=128
+ldap-1  | 6acbccce.2773a972 0x771bc71fd6c0 conn=1020 op=33 RESULT tag=97 err=0 qtime=0.000024 etime=0.000095 text=
+ldap-1  | 6acbccce.27760e7f 0x771bc79fe6c0 conn=1020 op=34 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+ldap-1  | 6acbccce.277645c1 0x771bc79fe6c0 conn=1020 op=34 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.27774fad 0x771bc79fe6c0 conn=1020 op=34 SEARCH RESULT tag=101 err=0 qtime=0.000017 etime=0.000118 nentries=1 text=
+ldap-1  | 6acbccce.27795dcc 0x771bc71fd6c0 conn=1020 op=35 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.2779d9a5 0x771bc71fd6c0 conn=1020 op=35 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.277a7eb9 0x771bc71fd6c0 conn=1020 op=35 RESULT tag=97 err=0 qtime=0.000018 etime=0.000103 text=
+ldap-1  | 6acbccce.296166af 0x771bc79fe6c0 conn=1020 op=36 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2961a5c6 0x771bc79fe6c0 conn=1020 op=36 BIND dn="" method=128
+ldap-1  | 6acbccce.29625fc4 0x771bc79fe6c0 conn=1020 op=36 RESULT tag=97 err=0 qtime=0.000018 etime=0.000084 text=
+ldap-1  | 6acbccce.29644f59 0x771bc71fd6c0 conn=1020 op=37 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+ldap-1  | 6acbccce.29648b55 0x771bc71fd6c0 conn=1020 op=37 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.29659584 0x771bc71fd6c0 conn=1020 op=37 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000116 nentries=1 text=
+ldap-1  | 6acbccce.2967549b 0x771bc79fe6c0 conn=1020 op=38 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.2967b436 0x771bc79fe6c0 conn=1020 op=38 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.29682f68 0x771bc79fe6c0 conn=1020 op=38 RESULT tag=97 err=0 qtime=0.000021 etime=0.000086 text=
+ldap-1  | 6acbccce.29a712f8 0x771bc71fd6c0 conn=1020 op=39 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.29a7403a 0x771bc71fd6c0 conn=1020 op=39 BIND dn="" method=128
+ldap-1  | 6acbccce.29a7a1b0 0x771bc71fd6c0 conn=1020 op=39 RESULT tag=97 err=0 qtime=0.000011 etime=0.000048 text=
+ldap-1  | 6acbccce.29aa5fe6 0x771bc79fe6c0 conn=1020 op=40 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+ldap-1  | 6acbccce.29aa8d0f 0x771bc79fe6c0 conn=1020 op=40 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.29ab39a5 0x771bc79fe6c0 conn=1020 op=40 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000080 nentries=1 text=
+ldap-1  | 6acbccce.29ad1618 0x771bc71fd6c0 conn=1020 op=41 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.29ad6189 0x771bc71fd6c0 conn=1020 op=41 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.29adcc26 0x771bc71fd6c0 conn=1020 op=41 RESULT tag=97 err=0 qtime=0.000013 etime=0.000067 text=
+ldap-1  | 6acbccce.29f02825 0x771bc79fe6c0 conn=1020 op=42 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.29f0600a 0x771bc79fe6c0 conn=1020 op=42 BIND dn="" method=128
+ldap-1  | 6acbccce.29f0c9fb 0x771bc79fe6c0 conn=1020 op=42 RESULT tag=97 err=0 qtime=0.000013 etime=0.000061 text=
+ldap-1  | 6acbccce.29f26908 0x771bc71fd6c0 conn=1020 op=43 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+ldap-1  | 6acbccce.29f2a573 0x771bc71fd6c0 conn=1020 op=43 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.29f376d0 0x771bc71fd6c0 conn=1020 op=43 SEARCH RESULT tag=101 err=0 qtime=0.000011 etime=0.000096 nentries=1 text=
+ldap-1  | 6acbccce.29f55cfc 0x771bc79fe6c0 conn=1020 op=44 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.29f5bcfa 0x771bc79fe6c0 conn=1020 op=44 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.29f6becb 0x771bc79fe6c0 conn=1020 op=44 RESULT tag=97 err=0 qtime=0.000023 etime=0.000122 text=
+ldap-1  | 6acbccce.2bd6e000 0x771bc71fd6c0 conn=1020 op=45 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2bd71f45 0x771bc71fd6c0 conn=1020 op=45 BIND dn="" method=128
+ldap-1  | 6acbccce.2bd7ac06 0x771bc71fd6c0 conn=1020 op=45 RESULT tag=97 err=0 qtime=0.000026 etime=0.000081 text=
+ldap-1  | 6acbccce.2bd9f053 0x771bc79fe6c0 conn=1020 op=46 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+ldap-1  | 6acbccce.2bda1881 0x771bc79fe6c0 conn=1020 op=46 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.2bdb689e 0x771bc79fe6c0 conn=1020 op=46 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000127 nentries=1 text=
+ldap-1  | 6acbccce.2bdcabf1 0x771bc71fd6c0 conn=1020 op=47 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.2bdd9498 0x771bc71fd6c0 conn=1020 op=47 RESULT tag=97 err=49 qtime=0.000015 etime=0.000083 text=
+ldap-1  | 6acbccce.2bdf1930 0x771bc79fe6c0 conn=1020 op=48 UNBIND
+ldap-1  | 6acbccce.2bdfe041 0x771bc79fe6c0 conn=1020 fd=12 closed
+ldap-1  | 6acbccce.2d849bad 0x771bc71fd6c0 conn=1021 op=9 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccce.2d84eea6 0x771bc71fd6c0 conn=1021 op=9 BIND dn="" method=128
+ldap-1  | 6acbccce.2d85ade6 0x771bc71fd6c0 conn=1021 op=9 RESULT tag=97 err=0 qtime=0.000017 etime=0.000096 text=
+ldap-1  | 6acbccce.2d88ae58 0x771bc79fe6c0 conn=1021 op=10 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=noexiste))"
+ldap-1  | 6acbccce.2d88da50 0x771bc79fe6c0 conn=1021 op=10 SRCH attr=uid cn mail
+ldap-1  | 6acbccce.2d8a09c0 0x771bc79fe6c0 conn=1021 op=10 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000120 nentries=0 text=
+ldap-1  | 6acbccce.2f8e3aca 0x771bc71fd6c0 conn=1002 op=1 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccce.2f8ef9e3 0x771bc71fd6c0 conn=1002 op=1 RESULT tag=97 err=49 qtime=0.000016 etime=0.000079 text=
+ldap-1  | 6acbccd0.3b8f9d75 0x771bc79fe6c0 conn=1022 fd=12 ACCEPT from IP=127.0.0.1:39400 (IP=0.0.0.0:389)
+ldap-1  | 6acbccd0.3b90ce78 0x771bc71fd6c0 conn=1022 op=0 BIND dn="" method=128
+ldap-1  | 6acbccd0.3b92fbbb 0x771bc71fd6c0 conn=1022 op=0 RESULT tag=97 err=0 qtime=0.000013 etime=0.000158 text=
+ldap-1  | 6acbccd0.3b952bf5 0x771bc79fe6c0 conn=1022 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccd0.3b955634 0x771bc79fe6c0 conn=1022 op=1 SRCH attr=dn
+ldap-1  | 6acbccd0.3b96083d 0x771bc79fe6c0 conn=1022 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000096 nentries=1 text=
+ldap-1  | 6acbccd0.3b977c8d 0x771bc71fd6c0 conn=1022 op=2 UNBIND
+ldap-1  | 6acbccd0.3b981607 0x771bc71fd6c0 conn=1022 fd=12 closed
+ldap-1  | 6acbccd4.01b477d3 0x771bc79fe6c0 conn=1023 fd=12 ACCEPT from IP=127.0.0.1:39414 (IP=0.0.0.0:389)
+ldap-1  | 6acbccd4.01b51c00 0x771bc79fe6c0 conn=1023 op=0 BIND dn="" method=128
+ldap-1  | 6acbccd4.01b57d97 0x771bc79fe6c0 conn=1023 op=0 RESULT tag=97 err=0 qtime=0.000015 etime=0.000043 text=
+ldap-1  | 6acbccd4.01b74a19 0x771bc71fd6c0 conn=1023 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccd4.01b779e3 0x771bc71fd6c0 conn=1023 op=1 SRCH attr=dn
+ldap-1  | 6acbccd4.01b83c9b 0x771bc71fd6c0 conn=1023 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000016 etime=0.000094 nentries=1 text=
+ldap-1  | 6acbccd4.01b95546 0x771bc79fe6c0 conn=1023 op=2 UNBIND
+ldap-1  | 6acbccd4.01b9fb60 0x771bc79fe6c0 conn=1023 fd=12 closed
+ldap-1  | 6acbccd4.123fde91 0x771bc71fd6c0 conn=1002 op=2 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccd4.1240dc05 0x771bc71fd6c0 conn=1002 op=2 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccd4.12427caf 0x771bc71fd6c0 conn=1002 op=2 RESULT tag=97 err=0 qtime=0.000044 etime=0.000245 text=
+ldap-1  | 6acbccd4.128af3e4 0x771bc79fe6c0 conn=1024 fd=12 ACCEPT from IP=172.30.0.13:47200 (IP=0.0.0.0:389)
+ldap-1  | 6acbccd4.128b8abe 0x771bc79fe6c0 conn=1024 op=0 BIND dn="" method=128
+ldap-1  | 6acbccd4.128c065c 0x771bc79fe6c0 conn=1024 op=0 RESULT tag=97 err=0 qtime=0.000012 etime=0.000046 text=
+ldap-1  | 6acbccd4.128dd392 0x771bc71fd6c0 conn=1024 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=jvalladares@aerolinea.redes.test))"
+ldap-1  | 6acbccd4.128dfde1 0x771bc71fd6c0 conn=1024 op=1 SRCH attr=uid
+ldap-1  | 6acbccd4.128eee77 0x771bc71fd6c0 conn=1024 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000012 etime=0.000104 nentries=1 text=
+ldap-1  | 6acbccd4.1356dea7 0x771bc79fe6c0 conn=1002 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccd4.13575188 0x771bc79fe6c0 conn=1002 op=3 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccd4.13579817 0x771bc79fe6c0 conn=1002 op=3 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccd4.1357fb07 0x771bc79fe6c0 conn=1002 op=3 RESULT tag=97 err=0 qtime=0.000016 etime=0.000091 text=
+ldap-1  | 6acbccd4.1380eb00 0x771bc71fd6c0 conn=1002 op=4 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccd4.13811e42 0x771bc71fd6c0 conn=1002 op=4 BIND dn="" method=128
+ldap-1  | 6acbccd4.138191ce 0x771bc71fd6c0 conn=1002 op=4 RESULT tag=97 err=0 qtime=0.000015 etime=0.000060 text=
+ldap-1  | 6acbccd4.1383b2cc 0x771bc79fe6c0 conn=1002 op=5 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(&(objectClass=inetOrgPerson)(uid=jvalladares))"
+ldap-1  | 6acbccd4.1383dc51 0x771bc79fe6c0 conn=1002 op=5 SRCH attr=uid
+ldap-1  | 6acbccd4.1384b78b 0x771bc79fe6c0 conn=1002 op=5 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000097 nentries=1 text=
+ldap-1  | 6acbccd5.13dc287d 0x771bc71fd6c0 conn=1002 op=6 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccd5.13dca830 0x771bc71fd6c0 conn=1002 op=6 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccd5.13dd495a 0x771bc71fd6c0 conn=1002 op=6 RESULT tag=97 err=0 qtime=0.000026 etime=0.000115 text=
+ldap-1  | 6acbccd5.143d4aad 0x771bc79fe6c0 conn=1002 op=7 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+ldap-1  | 6acbccd5.143db55d 0x771bc79fe6c0 conn=1002 op=7 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+ldap-1  | 6acbccd5.143dfd76 0x771bc79fe6c0 conn=1002 op=7 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+ldap-1  | 6acbccd5.143e85f0 0x771bc79fe6c0 conn=1002 op=7 RESULT tag=97 err=0 qtime=0.000026 etime=0.000109 text=
+ldap-1  | 6acbccd5.1455eb95 0x771bc71fd6c0 conn=1025 fd=14 ACCEPT from IP=172.30.0.13:47202 (IP=0.0.0.0:389)
+ldap-1  | 6acbccd5.1456827a 0x771bc79fe6c0 conn=1025 op=0 BIND dn="" method=128
+ldap-1  | 6acbccd5.14571b6e 0x771bc79fe6c0 conn=1025 op=0 RESULT tag=97 err=0 qtime=0.000005 etime=0.000045 text=
+ldap-1  | 6acbccd5.1458901b 0x771bc79fe6c0 conn=1025 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=noexiste@aerolinea.redes.test))"
+ldap-1  | 6acbccd5.1458a00c 0x771bc79fe6c0 conn=1025 op=1 SRCH attr=uid
+ldap-1  | 6acbccd5.14596494 0x771bc79fe6c0 conn=1025 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000084 nentries=0 text=
+ldap-1  | 6acbccd5.145b3cdc 0x771bc71fd6c0 conn=1025 op=2 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=noexiste))"
+ldap-1  | 6acbccd5.145b67fd 0x771bc71fd6c0 conn=1025 op=2 SRCH attr=uid
+ldap-1  | 6acbccd5.145becc1 0x771bc71fd6c0 conn=1025 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000073 nentries=0 text=
+ldap-1  | 6acbccd5.145d20f9 0x771bc79fe6c0 conn=1025 op=3 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=@aerolinea.redes.test))"
+ldap-1  | 6acbccd5.145d48c6 0x771bc79fe6c0 conn=1025 op=3 SRCH attr=uid
+ldap-1  | 6acbccd5.145df4bf 0x771bc79fe6c0 conn=1025 op=3 SEARCH RESULT tag=101 err=0 qtime=0.000013 etime=0.000078 nentries=0 text=
+ldap-1  | 6acbccd7.0347b3c6 0x771bc71fd6c0 conn=1026 fd=15 ACCEPT from IP=127.0.0.1:39416 (IP=0.0.0.0:389)
+ldap-1  | 6acbccd7.03486a59 0x771bc71fd6c0 conn=1026 op=0 BIND dn="" method=128
+ldap-1  | 6acbccd7.0348f3d0 0x771bc71fd6c0 conn=1026 op=0 RESULT tag=97 err=0 qtime=0.000015 etime=0.000053 text=
+ldap-1  | 6acbccd7.034af33d 0x771bc79fe6c0 conn=1026 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccd7.034b2094 0x771bc79fe6c0 conn=1026 op=1 SRCH attr=dn
+ldap-1  | 6acbccd7.034bc619 0x771bc79fe6c0 conn=1026 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000014 etime=0.000082 nentries=1 text=
+ldap-1  | 6acbccd7.034d5b7a 0x771bc71fd6c0 conn=1026 op=2 UNBIND
+ldap-1  | 6acbccd7.034df251 0x771bc71fd6c0 conn=1026 fd=15 closed
+ldap-1  | 6acbccda.04eb7ede 0x771bc79fe6c0 conn=1027 fd=15 ACCEPT from IP=127.0.0.1:60092 (IP=0.0.0.0:389)
+ldap-1  | 6acbccda.04ec080e 0x771bc79fe6c0 conn=1027 op=0 BIND dn="" method=128
+ldap-1  | 6acbccda.04ec7675 0x771bc79fe6c0 conn=1027 op=0 RESULT tag=97 err=0 qtime=0.000011 etime=0.000042 text=
+ldap-1  | 6acbccda.04eec963 0x771bc71fd6c0 conn=1027 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=0 deref=0 filter="(objectClass=*)"
+ldap-1  | 6acbccda.04eef3e7 0x771bc71fd6c0 conn=1027 op=1 SRCH attr=dn
+ldap-1  | 6acbccda.04efb2a4 0x771bc71fd6c0 conn=1027 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000015 etime=0.000089 nentries=1 text=
+ldap-1  | 6acbccda.04f141e6 0x771bc79fe6c0 conn=1027 op=2 UNBIND
+ldap-1  | 6acbccda.04f1ec7d 0x771bc79fe6c0 conn=1027 fd=15 closed
