@@ -1,0 +1,27 @@
+528f7a8f-7a51-407b-b6d0-f933022fa91d
+active
+active
+active
+active
+active
+active
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8,"scope":"host","label":"lo","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"ifname":"enp0s3","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"08:00:27:5c:08:8e","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[{"family":"inet","local":"10.0.2.15","prefixlen":24,"metric":100,"broadcast":"10.0.2.255","scope":"global","dynamic":true,"label":"enp0s3","valid_life_time":86328,"preferred_life_time":86328},{"family":"inet6","local":"fd17:625c:f037:2:a00:27ff:fe5c:88e","prefixlen":64,"scope":"global","dynamic":true,"mngtmpaddr":true,"noprefixroute":true,"valid_life_time":86330,"preferred_life_time":14330},{"family":"inet6","local":"fe80::a00:27ff:fe5c:88e","prefixlen":64,"scope":"link","valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":3,"ifname":"enp0s8","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"08:00:27:b1:41:d6","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[{"family":"inet","local":"192.168.56.10","prefixlen":24,"broadcast":"192.168.56.255","scope":"global","label":"enp0s8","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"fe80::a00:27ff:feb1:41d6","prefixlen":64,"scope":"link","valid_life_time":4294967295,"preferred_life_time":4294967295}]}]
+80d87b2c465a2f79044faafefdb6e4b0aafa87e70193406dafbff92b1db275a0  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791753901.M40368P1588.lab5-ubuntu,S=672,W=687:2,S
+85c93d6927c909d9729f6a9c4a4cc8a3d173007a550888ac19e08b22b2866bd8  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791753720.M198043P1572.lab5-ubuntu,S=784,W=801:2,S
+ae864e13fb943de8b884bb451e3b4e38b3c37cdcec7e810b09576864a989613d  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791753660.M482959P1572.lab5-ubuntu,S=672,W=687:2,S
+a9871bfdbafe85cdc88eb7175fad68f4fe35aa186d17a4a283d90509ad6b3ccb  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791753608.M246950P1572.lab5-ubuntu,S=896,W=915:2,S
+78dea8ad757c828fe1668f6d832188400e2f4ee6501bb7b815f3eba52bebf9f1  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791752511.M849468P14552.lab5-ubuntu,S=672,W=687:2,S
+bec08f5a16d18617f40767dd4c96b0c2ceb62ba0d4ae0554646ea9bcf1ac7804  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791752408.M485576P14552.lab5-ubuntu,S=672,W=687:2,S
+d606212b894a939115211c1ce98c1ba2f0c62fe6caa68218e20ab15c92a75fe6  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791752636.M787295P14848.lab5-ubuntu,S=896,W=915:2,S
+ce058e541966e0e03ea1641718fbcf2d3fe015a73f08447f64e6779719136e7b  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791752444.M664492P14552.lab5-ubuntu,S=784,W=801:2,S
+486467b2dcce58799713af35c71dd1f97b623073cd60b94559166450322643aa  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/cur/1791753610.M190850P1572.lab5-ubuntu,S=672,W=687:2,S
+0f1810233bd1b24bed67f37c20e40637e859654aa775ab6edceb9f036195a0ee  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/new/1791753932.M89059P1588.lab5-ubuntu,S=896,W=915
+de2fdeea1b412af5aca38baa601f0bd2ffcf1600ac89f2fd43867df258b016b6  /var/mail/vhosts/aerolinea.redes.test/jvalladares/Maildir/new/1791754461.M155387P1439.lab5-ubuntu,S=896,W=915
+400dd439b3ff7faf6f4fdb46e7fb0e53f40508a92fb1f20924c70ba4e12dc53b  /srv/ftp/ftpuser/uploads/Lab5-audit-1791753715302996796.txt
+337f064e85bbe39232f1594e5b358063eed4fb6904d6e85f2ae0618f155cc888  /srv/ftp/ftpuser/uploads/Lab5-audit-1791753894409937400.txt
+0f031217170eb10c5da528ed5d717e4c8e228dce78f56dd8034466cd853d6fcc  /srv/ftp/ftpuser/uploads/Lab5-audit-1791753604543672400.txt
+cce4db68dcab0ff66d10a1bfbbe98f79bba57d3f6823d0240dfcbded425f3a90  /srv/ftp/ftpuser/uploads/Lab5-audit-1791753656244838600.txt
+39cf816e4e5cc13669a2bec213c2a9270b4ef6765d8a78b0b384ca82cf3e87f0  /srv/ftp/ftpuser/uploads/Lab5-audit-1791752439271460032.txt
+a8e1e9baf2b307689d12c3b23601795ac8aa96cc5c9a21e0340b96223e080f14  /srv/ftp/ftpuser/uploads/Lab5-audit-1791752402310610200.txt
+ef9d1c1c3b71d84970c1fdd3d21a8f0a6c83465659e0c3f5c8813c606af8ddfa  /srv/ftp/ftpuser/uploads/Lab5-audit-1791752507268390000.txt
+fe93fc372caf81ad58e62f2d1b310808db5389e8d9895f813db131c98ecc11db  /srv/ftp/ftpuser/bienvenida.txt

@@ -1,0 +1,156 @@
+[PASS] DNS-01: 192.168.56.10
+[PASS] DNS-02: {'ldap': '192.168.56.10', 'www': '192.168.56.10', 'mail': '192.168.56.10', 'ftp': '192.168.56.10'}
+[PASS] DNS-03: 
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +norecurse +time=3 +tries=1 @192.168.56.10 aerolinea.redes.test SOA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30582
+;; flags: qr aa ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: e1aec36065cf19c4010000006acbfde70a49a77b018f229f (good)
+;; QUESTION SECTION:
+;aerolinea.redes.test.		IN	SOA
+
+;; ANSWER SECTION:
+aerolinea.redes.test.	300	IN	SOA	ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300
+
+;; AUTHORITY SECTION:
+aerolinea.redes.test.	300	IN	NS	ns1.aerolinea.redes.test.
+
+;; ADDITIONAL SECTION:
+ns1.aerolinea.redes.test. 300	IN	A	192.168.56.10
+
+;; Query time: 10 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Sun Oct 11 21:21:43 UTC 2026
+;; MSG SIZE  rcvd: 153
+
+
+[PASS] DNS-04: 10 mail.aerolinea.redes.test.
+[PASS] DNS-05: 
+; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +time=3 +tries=1 noexiste.aerolinea.redes.test A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 20744
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;noexiste.aerolinea.redes.test.	IN	A
+
+;; AUTHORITY SECTION:
+aerolinea.redes.test.	300	IN	SOA	ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Sun Oct 11 21:21:44 UTC 2026
+;; MSG SIZE  rcvd: 104
+
+
+[PASS] LDAP-01: dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: fruiz
+cn: Fernando Ruiz
+sn: Ruiz
+mail: fruiz@aerolinea.redes.test
+
+dn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: hbarillas
+cn: Hugo Barillas
+sn: Barillas
+mail: hbarillas@aerolinea.redes.test
+
+dn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: icumes
+cn: Ian Cumes
+sn: Cumes
+mail: icumes@aerolinea.redes.test
+
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: jvalladares
+cn: Javier Valladares
+sn: Valladares
+mail: jvalladares@aerolinea.redes.test
+
+dn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: nmolina
+cn: Nery Molina
+sn: Molina
+mail: nmolina@aerolinea.redes.test
+
+dn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: mpolanco
+cn: Milton Polanco
+sn: Polanco
+mail: mpolanco@aerolinea.redes.test
+
+
+[PASS] LDAP-02: Seis binds válidos
+[PASS] LDAP-03: Siete rechazos LDAP 49
+[PASS] LDAP-04: dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: fruiz
+cn: Fernando Ruiz
+sn: Ruiz
+mail: fruiz@aerolinea.redes.test
+
+dn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: hbarillas
+cn: Hugo Barillas
+sn: Barillas
+mail: hbarillas@aerolinea.redes.test
+
+dn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: icumes
+cn: Ian Cumes
+sn: Cumes
+mail: icumes@aerolinea.redes.test
+
+dn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: jvalladares
+cn: Javier Valladares
+sn: Valladares
+mail: jvalladares@aerolinea.redes.test
+
+dn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: nmolina
+cn: Nery Molina
+sn: Molina
+mail: nmolina@aerolinea.redes.test
+
+dn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test
+uid: mpolanco
+cn: Milton Polanco
+sn: Polanco
+mail: mpolanco@aerolinea.redes.test
+
+
+[PASS] WEB-01: 192.168.56.10
+[PASS] WEB-02: HTTP 200; Aerolínea Redes
+[PASS] WEB-03: Seis logins y logout correctos
+[PASS] WEB-04: Ambos accesos rechazados
+[PASS] MAIL-01: ('192.168.56.10', '10 mail.aerolinea.redes.test.')
+[PASS] MAIL-04: IMAP AUTHENTICATIONFAILED; reproducción gráfica pendiente
+[PASS] MAIL-05: SMTP entregado e IMAP FETCH verificado: Lab5-audit-1791753715302996796
+[PASS] MAIL-07: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table
+[PASS] FTP-01: 192.168.56.10
+[PASS] FTP-02: 220 (vsFTPd 3.0.5)
+[PASS] FTP-03: 530 Login incorrect.
+[PASS] FTP-04: 530 Permission denied.
+[PASS] FTP-05: ['bienvenida.txt', 'uploads']
+[PASS] FTP-06: 226 Transfer complete.
+[PASS] FTP-07: SHA256 400dd439b3ff7faf6f4fdb46e7fb0e53f40508a92fb1f20924c70ba4e12dc53b
+[PASS] FTP-08: CWD .. permanece /; 550 Failed to open file.
+[PASS] INT-01: 127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+
+Todos los protocolos usan FQDN

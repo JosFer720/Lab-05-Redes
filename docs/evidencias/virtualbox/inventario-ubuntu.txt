@@ -1,0 +1,63 @@
+ Static hostname: lab5-ubuntu
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 3f197a3bd5004e1c94eb1192924c53da
+         Boot ID: 241ca498d5794e90a1bac4ee8de7d5c5
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.4 LTS
+          Kernel: Linux 6.8.0-136-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 10month 1w 3d
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:5c:08:8e <BROADCAST,MULTICAST,UP,LOWER_UP> 
+enp0s8           UP             08:00:27:b1:41:d6 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe5c:88e/64 fe80::a00:27ff:fe5c:88e/64 
+enp0s8           UP             192.168.56.10/24 fe80::a00:27ff:feb1:41d6/64 
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100 
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.10 
+216.230.139.8 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+216.230.147.90 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 lladdr 52:54:00:12:35:00 STALE 
+192.168.56.1 dev enp0s8 lladdr 0a:00:27:00:00:11 REACHABLE 
+fd17:625c:f037:2::2 dev enp0s3 lladdr 52:54:00:12:35:00 router STALE 
+fe80::2 dev enp0s3 lladdr 52:54:00:12:35:00 router REACHABLE 
+Global
+         Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (enp0s3)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 216.230.147.90
+       DNS Servers: 216.230.147.90 216.230.139.8 fd17:625c:f037:2::3
+
+Link 3 (enp0s8)
+    Current Scopes: none
+         Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+               total        used        free      shared  buff/cache   available
+Mem:           1.4Gi       417Mi       503Mi       1.0Mi       697Mi       1.0Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        24G  2.0G   22G   9% /
+status: done
+oracle

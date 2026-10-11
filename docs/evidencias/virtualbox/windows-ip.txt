@@ -1,0 +1,50 @@
+﻿
+
+InterfaceAlias       : Ethernet 2
+InterfaceIndex       : 17
+InterfaceDescription : VirtualBox Host-Only Ethernet Adapter
+IPv4Address          : 192.168.56.1
+IPv6DefaultGateway   : 
+IPv4DefaultGateway   : 
+DNSServer            : fec0:0:0:ffff::1
+                       fec0:0:0:ffff::2
+                       fec0:0:0:ffff::3
+
+InterfaceAlias       : Ethernet
+InterfaceIndex       : 18
+InterfaceDescription : Realtek PCIe GbE Family Controller
+NetProfile.Name      : Network
+IPv6Address          : 2800:98:1120:864:e91:78e9:7b54:6017
+                       2800:98:1120:864::1
+IPv4Address          : 192.168.1.22
+IPv6DefaultGateway   : fe80::8601:12ff:fe9f:fca5
+IPv4DefaultGateway   : 192.168.1.1
+DNSServer            : 2800:98:0:4::4
+                       2803:f340:1300::c
+                       2800:98:0:4::4
+                       2803:f340:1300::c
+                       216.230.147.90
+                       216.230.139.8
+
+InterfaceAlias       : vEthernet (WSL (Hyper-V firewall))
+InterfaceIndex       : 61
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter
+IPv4Address          : 172.30.208.1
+IPv6DefaultGateway   : 
+IPv4DefaultGateway   : 
+DNSServer            : fec0:0:0:ffff::1
+                       fec0:0:0:ffff::2
+                       fec0:0:0:ffff::3
+
+InterfaceAlias       : Wi-Fi
+InterfaceIndex       : 12
+InterfaceDescription : Intel(R) Wi-Fi 6 AX201 160MHz
+NetAdapter.Status    : Disconnected
+
+InterfaceAlias       : Bluetooth Network Connection
+InterfaceIndex       : 14
+InterfaceDescription : Bluetooth Device (Personal Area Network)
+NetAdapter.Status    : Disconnected
+
+
+

@@ -1,0 +1,5 @@
+{
+  "MAIL": "(250, b'2.1.0 Ok')",
+  "RCPT": "(554, b'5.7.1 <lab5-relay-check@example.net>: Relay access denied')",
+  "DATA_enviado": false
+}

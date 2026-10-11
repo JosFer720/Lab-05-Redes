@@ -1,0 +1,1443 @@
+Oct 11 21:35:48 lab5-ubuntu apparmor.systemd[441]: Reloading AppArmor profiles
+Oct 11 21:35:48 lab5-ubuntu systemd[1]: Finished console-setup.service - Set console font and keymap.
+Oct 11 21:35:48 lab5-ubuntu systemd[1]: Finished finalrd.service - Create final runtime dir for shutdown pivot root.
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 447 (systemd-binfmt)
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.264:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=460 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.327:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=466 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.393:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=467 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.411:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=469 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Finished systemd-tmpfiles-setup.service - Create Volatile Files and Directories.
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.462:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=470 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.528:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=473 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: systemd-journal-catalog-update.service - Rebuild Journal Catalog was skipped because of an unmet condition check (ConditionNeedsUpdate=/var).
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: systemd-machine-id-commit.service - Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.589:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=476 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.654:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=477 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.671:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=479 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu kernel: audit: type=1400 audit(1791754549.711:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-run" pid=480 comm="apparmor_parser"
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: systemd-update-done.service - Update is Completed was skipped because no trigger condition checks were met.
+Oct 11 21:35:49 lab5-ubuntu systemd[1]: Starting systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Oct 11 21:35:50 lab5-ubuntu systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+Oct 11 21:35:50 lab5-ubuntu kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Oct 11 21:35:50 lab5-ubuntu kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input5
+Oct 11 21:35:50 lab5-ubuntu systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+Oct 11 21:35:50 lab5-ubuntu systemd[1]: Finished systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Oct 11 21:35:51 lab5-ubuntu systemd-resolved[475]: Positive Trust Anchors:
+Oct 11 21:35:51 lab5-ubuntu systemd-resolved[475]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+Oct 11 21:35:51 lab5-ubuntu systemd-resolved[475]: Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 170.0.0.192.in-addr.arpa 171.0.0.192.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa ipv4only.arpa corp home internal intranet lan local private test
+Oct 11 21:35:51 lab5-ubuntu systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 11 21:35:51 lab5-ubuntu systemd[1]: Reached target time-set.target - System Time Set.
+Oct 11 21:35:52 lab5-ubuntu kernel: vboxguest: host-version: 7.2.14r174565 0x8000000f
+Oct 11 21:35:52 lab5-ubuntu kernel: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+Oct 11 21:35:52 lab5-ubuntu systemd-resolved[475]: Using system hostname 'lab5-ubuntu'.
+Oct 11 21:35:52 lab5-ubuntu kernel: input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input6
+Oct 11 21:35:52 lab5-ubuntu systemd[1]: Started systemd-resolved.service - Network Name Resolution.
+Oct 11 21:35:53 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+Oct 11 21:35:54 lab5-ubuntu kernel: Console: switching to colour dummy device 80x25
+Oct 11 21:35:54 lab5-ubuntu kernel: ACPI: \_SB_.LNKB: Enabled at IRQ 10
+Oct 11 21:35:54 lab5-ubuntu kernel: PCI: setting IRQ 10 as level-triggered
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000f0000000 size is 2048 kiB
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000e0000000 size is 16384 kiB
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, alpha cursor, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, command buffers, command buffers 2, gbobject, cap2 register, 
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Capabilities2: cursor mob, 
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 16384 kB, FIFO = 2048 kB, surface = 507904 kB
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 1048576 kB, max mob pages = 262144
+Oct 11 21:35:54 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+Oct 11 21:35:55 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+Oct 11 21:35:55 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 16384 kiB
+Oct 11 21:35:55 lab5-ubuntu kernel: kauditd_printk_skb: 74 callbacks suppressed
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754554.832:86): apparmor="STATUS" operation="profile_load" profile="unconfined" name="transmission-cli" pid=603 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754554.832:87): apparmor="STATUS" operation="profile_load" profile="unconfined" name="transmission-daemon" pid=603 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754554.832:88): apparmor="STATUS" operation="profile_load" profile="unconfined" name="transmission-gtk" pid=603 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754554.832:89): apparmor="STATUS" operation="profile_load" profile="unconfined" name="transmission-qt" pid=603 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.138:90): apparmor="STATUS" operation="profile_load" profile="unconfined" name="trinity" pid=608 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.218:91): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tup" pid=613 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.266:92): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tuxedo-control-center" pid=616 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.341:93): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ubuntu_pro_apt_news" pid=617 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.508:94): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ubuntu_pro_esm_cache" pid=618 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu kernel: audit: type=1400 audit(1791754555.508:95): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ubuntu_pro_esm_cache//apt_methods" pid=618 comm="apparmor_parser"
+Oct 11 21:35:55 lab5-ubuntu systemd[1]: Finished ufw.service - Uncomplicated firewall.
+Oct 11 21:35:56 lab5-ubuntu systemd[1]: Finished apparmor.service - Load AppArmor profiles.
+Oct 11 21:35:56 lab5-ubuntu systemd[1]: Starting snapd.apparmor.service - Load AppArmor profiles managed internally by snapd...
+Oct 11 21:35:56 lab5-ubuntu systemd[1]: vgauth.service - Authentication service for virtual machines hosted on VMware was skipped because of an unmet condition check (ConditionVirtualization=vmware).
+Oct 11 21:35:56 lab5-ubuntu systemd[1]: open-vm-tools.service - Service for virtual machines hosted on VMware was skipped because of an unmet condition check (ConditionVirtualization=vmware).
+Oct 11 21:35:56 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Screen Target display unit initialized
+Oct 11 21:35:56 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Oct 11 21:35:56 lab5-ubuntu systemd[1]: Starting cloud-init-local.service - Cloud-init: Local Stage (pre-network)...
+Oct 11 21:35:56 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Using command buffers with DMA pool.
+Oct 11 21:35:56 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+Oct 11 21:35:56 lab5-ubuntu kernel: [drm] Initialized vmwgfx 2.20.0 20211206 for 0000:00:02.0 on minor 0
+Oct 11 21:35:57 lab5-ubuntu systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Oct 11 21:35:57 lab5-ubuntu kernel: fbcon: vmwgfxdrmfb (fb0) is primary device
+Oct 11 21:35:57 lab5-ubuntu kernel: Console: switching to colour frame buffer device 160x50
+Oct 11 21:35:57 lab5-ubuntu snapd-apparmor[643]: main.go:143: No profiles to load
+Oct 11 21:35:57 lab5-ubuntu kernel: vmwgfx 0000:00:02.0: [drm] fb0: vmwgfxdrmfb frame buffer device
+Oct 11 21:35:57 lab5-ubuntu systemd[1]: Finished snapd.apparmor.service - Load AppArmor profiles managed internally by snapd.
+Oct 11 21:35:58 lab5-ubuntu kernel: workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:01 lab5-ubuntu kernel: workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:09 lab5-ubuntu kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:09 lab5-ubuntu kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:09 lab5-ubuntu kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:10 lab5-ubuntu cloud-init[683]: Cloud-init v. 26.1-0ubuntu1~24.04.1 running 'init-local' at Sun, 11 Oct 2026 21:36:08 +0000. Up 52.67 seconds.
+Oct 11 21:36:10 lab5-ubuntu kernel: workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:11 lab5-ubuntu kernel: ISO 9660 Extensions: Microsoft Joliet Level 3
+Oct 11 21:36:11 lab5-ubuntu kernel: ISOFS: changing to secondary root
+Oct 11 21:36:11 lab5-ubuntu systemd[1]: run-cloud\x2dinit-tmp-tmpcnu31_o_.mount: Deactivated successfully.
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Finished cloud-init-local.service - Cloud-init: Local Stage (pre-network).
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Reached target network-pre.target - Preparation for Network.
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Starting systemd-networkd.service - Network Configuration...
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: lo: Link UP
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: lo: Gained carrier
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: Enumeration completed
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Started systemd-networkd.service - Network Configuration.
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Reached target network.target - Network.
+Oct 11 21:36:12 lab5-ubuntu systemd[1]: Starting systemd-networkd-wait-online.service - Wait for Network to be Configured...
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: enp0s3: Configuring with /run/systemd/network/10-netplan-enp0s3.network.
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: enp0s8: Configuring with /run/systemd/network/10-netplan-enp0s8.network.
+Oct 11 21:36:12 lab5-ubuntu systemd-networkd[694]: enp0s3: Link UP
+Oct 11 21:36:13 lab5-ubuntu systemd-networkd[694]: enp0s3: Gained carrier
+Oct 11 21:36:13 lab5-ubuntu systemd-networkd[694]: enp0s8: Link UP
+Oct 11 21:36:13 lab5-ubuntu systemd-networkd[694]: enp0s8: Gained carrier
+Oct 11 21:36:13 lab5-ubuntu systemd-networkd[694]: enp0s3: DHCPv4 address 10.0.2.15/24, gateway 10.0.2.2 acquired from 10.0.2.2
+Oct 11 21:36:13 lab5-ubuntu systemd-timesyncd[483]: Network configuration changed, trying to establish connection.
+Oct 11 21:36:13 lab5-ubuntu systemd-timesyncd[483]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 11 21:36:13 lab5-ubuntu systemd-timesyncd[483]: Initial clock synchronization to Sun 2026-10-11 21:36:13.579140 UTC.
+Oct 11 21:36:14 lab5-ubuntu systemd-networkd[694]: enp0s3: Gained IPv6LL
+Oct 11 21:36:14 lab5-ubuntu systemd-networkd[694]: enp0s8: Gained IPv6LL
+Oct 11 21:36:14 lab5-ubuntu systemd[1]: Finished systemd-networkd-wait-online.service - Wait for Network to be Configured.
+Oct 11 21:36:14 lab5-ubuntu systemd[1]: Starting cloud-init.service - Cloud-init: Network Stage...
+Oct 11 21:36:17 lab5-ubuntu systemd[1]: systemd-fsckd.service: Deactivated successfully.
+Oct 11 21:36:18 lab5-ubuntu cloud-init[705]: Cloud-init v. 26.1-0ubuntu1~24.04.1 running 'init' at Sun, 11 Oct 2026 21:36:18 +0000. Up 62.40 seconds.
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +++++++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++++++++
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +--------+------+---------------------------------------+---------------+--------+-------------------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | Device |  Up  |                Address                |      Mask     | Scope  |     Hw-Address    |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +--------+------+---------------------------------------+---------------+--------+-------------------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | enp0s3 | True |               10.0.2.15               | 255.255.255.0 | global | 08:00:27:5c:08:8e |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | enp0s3 | True | fd17:625c:f037:2:a00:27ff:fe5c:88e/64 |       .       | global | 08:00:27:5c:08:8e |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | enp0s3 | True |       fe80::a00:27ff:fe5c:88e/64      |       .       |  link  | 08:00:27:5c:08:8e |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | enp0s8 | True |             192.168.56.10             | 255.255.255.0 | global | 08:00:27:b1:41:d6 |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | enp0s8 | True |      fe80::a00:27ff:feb1:41d6/64      |       .       |  link  | 08:00:27:b1:41:d6 |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   lo   | True |               127.0.0.1               |   255.0.0.0   |  host  |         .         |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   lo   | True |                ::1/128                |       .       |  host  |         .         |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +--------+------+---------------------------------------+---------------+--------+-------------------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: ++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++++
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+----------------+----------+-----------------+-----------+-------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | Route |  Destination   | Gateway  |     Genmask     | Interface | Flags |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+----------------+----------+-----------------+-----------+-------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   0   |    0.0.0.0     | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   1   |    10.0.2.0    | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   2   |    10.0.2.2    | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   3   |  192.168.56.0  | 0.0.0.0  |  255.255.255.0  |   enp0s8  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   4   | 216.230.139.8  | 10.0.2.2 | 255.255.255.255 |   enp0s3  |  UGH  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   5   | 216.230.147.90 | 10.0.2.2 | 255.255.255.255 |   enp0s3  |  UGH  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+----------------+----------+-----------------+-----------+-------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: ++++++++++++++++++++++++Route IPv6 info++++++++++++++++++++++++
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+-----------------------+---------+-----------+-------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: | Route |      Destination      | Gateway | Interface | Flags |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+-----------------------+---------+-----------+-------+
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   0   | fd17:625c:f037:2::/64 |    ::   |   enp0s3  |   Ue  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   1   |       fe80::/64       |    ::   |   enp0s3  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   2   |       fe80::/64       |    ::   |   enp0s8  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   3   |          ::/0         | fe80::2 |   enp0s3  |  UGe  |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   5   |         local         |    ::   |   enp0s3  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   6   |         local         |    ::   |   enp0s3  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   7   |         local         |    ::   |   enp0s8  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   8   |       multicast       |    ::   |   enp0s3  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: |   9   |       multicast       |    ::   |   enp0s8  |   U   |
+Oct 11 21:36:19 lab5-ubuntu cloud-init[705]: ci-info: +-------+-----------------------+---------+-----------+-------+
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: Finished cloud-init.service - Cloud-init: Network Stage.
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: Reached target cloud-config.target - Cloud-config availability.
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: Reached target network-online.target - Network is Online.
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: Reached target sysinit.target - System Initialization.
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: apport-autoreport.path - Process error reports when automatic reporting is enabled (file watch) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: tpm-udev.path - Handle dynamically added tpm devices was skipped because of an unmet condition check (ConditionVirtualization=container).
+Oct 11 21:36:21 lab5-ubuntu systemd[1]: apport-autoreport.timer - Process error reports when automatic reporting is enabled (timer based) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started apt-daily.timer - Daily apt download activities.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started fstrim.timer - Discard unused filesystem blocks once a week.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started fwupd-refresh.timer - Refresh fwupd metadata regularly.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started logrotate.timer - Daily rotation of log files.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started man-db.timer - Daily man-db regeneration.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started motd-news.timer - Message of the Day.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: snapd.snap-repair.timer - Timer to automatically fetch and run repair assertions was skipped because no trigger condition checks were met.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started sysstat-collect.timer - Run system activity accounting tool every 10 minutes.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started sysstat-summary.timer - Generate summary of yesterday's process accounting.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: ua-timer.timer - Ubuntu Pro Timer for running repeated jobs was skipped because of an unmet condition check (ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json).
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started update-notifier-download.timer - Download data for packages that failed at package install time.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started update-notifier-motd.timer - Check to see whether there is a new version of Ubuntu available.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target paths.target - Path Units.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target timers.target - Timer Units.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: apport-forward.socket - Unix socket for apport crash forwarding was skipped because of an unmet condition check (ConditionVirtualization=container).
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on cloud-init-hotplugd.socket - cloud-init hotplug hook socket.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on iscsid.socket - Open-iSCSI iscsid Socket.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Starting lxd-installer.socket - Helper to install lxd snap on demand...
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Starting snapd.socket - Socket activation for snappy daemon...
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on ssh.socket - OpenBSD Secure Shell server socket.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on uuidd.socket - UUID daemon activation socket.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: open-iscsi.service - Login to default iSCSI targets was skipped because no trigger condition checks were met.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target remote-fs-pre.target - Preparation for Remote File Systems.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target remote-fs.target - Remote File Systems.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Finished blk-availability.service - Availability of block devices.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: systemd-pcrphase-sysinit.service - TPM2 PCR Barrier (Initialization) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on lxd-installer.socket - Helper to install lxd snap on demand.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Listening on snapd.socket - Socket activation for snappy daemon.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target sockets.target - Socket Units.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Reached target basic.target - Basic System.
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Starting apport.service - automatic crash report generation...
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Starting cloud-config.service - Cloud-init: Config Stage...
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started cron.service - Regular background program processing daemon.
+Oct 11 21:36:22 lab5-ubuntu (cron)[741]: cron.service: Referenced but unset environment variable evaluates to an empty string: EXTRA_OPTS
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Starting dbus.service - D-Bus System Message Bus...
+Oct 11 21:36:22 lab5-ubuntu cron[741]: (CRON) INFO (pidfile fd = 3)
+Oct 11 21:36:22 lab5-ubuntu systemd[1]: Started dmesg.service - Save initial kernel messages after boot.
+Oct 11 21:36:22 lab5-ubuntu cron[741]: (CRON) INFO (Running @reboot jobs)
+Oct 11 21:36:23 lab5-ubuntu systemd[1]: Starting dovecot.service - Dovecot IMAP/POP3 email server...
+Oct 11 21:36:23 lab5-ubuntu systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Oct 11 21:36:23 lab5-ubuntu systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/dbus-daemon).
+Oct 11 21:36:23 lab5-ubuntu systemd[1]: Starting grub-common.service - Record successful boot for GRUB...
+Oct 11 21:36:23 lab5-ubuntu systemd[1]: Starting named.service - BIND Domain Name Server...
+Oct 11 21:36:24 lab5-ubuntu dbus-daemon[742]: [system] AppArmor D-Bus mediation is enabled
+Oct 11 21:36:24 lab5-ubuntu systemd[1]: Starting networkd-dispatcher.service - Dispatcher daemon for systemd-networkd...
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: Starting polkit.service - Authorization Manager...
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: pollinate.service - Pollinate to seed the pseudo random number generator was skipped because of an unmet condition check (ConditionPathExists=!/var/cache/pollinate/seeded).
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: Starting rsyslog.service - System Logging Service...
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: secureboot-db.service - Secure Boot updates for DB and DBX was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/db-d719b2cb-3d3a-4596-a3bc-dad00e67656f).
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: Starting slapd.service - LSB: OpenLDAP standalone server (Lightweight Directory Access Protocol)...
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: snapd.core-fixup.service - Automatically repair incorrect owner/permissions on core devices was skipped because no trigger condition checks were met.
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: snapd.recovery-chooser-trigger.service - Wait for the Ubuntu Core chooser trigger was skipped because of an unmet condition check (ConditionKernelCommandLine=snapd_recovery_mode).
+Oct 11 21:36:25 lab5-ubuntu systemd[1]: Reached target getty-pre.target - Preparation for Logins.
+Oct 11 21:36:26 lab5-ubuntu systemd[1]: Starting snapd.seeded.service - Wait until snapd is fully seeded...
+Oct 11 21:36:26 lab5-ubuntu systemd[1]: Starting snapd.service - Snap Daemon...
+Oct 11 21:36:26 lab5-ubuntu dovecot[744]: master: Dovecot v2.3.21 (47349e2482) starting up for imap, lmtp (core dumps disabled)
+Oct 11 21:36:27 lab5-ubuntu systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Oct 11 21:36:27 lab5-ubuntu systemd[1]: ssl-cert.service - Generate snakeoil SSL keypair was skipped because of an unmet condition check (ConditionPathExists=!/etc/ssl/private/ssl-cert-snakeoil.key).
+Oct 11 21:36:28 lab5-ubuntu systemd[1]: Starting sysstat.service - Resets System Activity Logs...
+Oct 11 21:36:28 lab5-ubuntu kernel: kauditd_printk_skb: 25 callbacks suppressed
+Oct 11 21:36:28 lab5-ubuntu kernel: audit: type=1400 audit(1791754588.266:121): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=760 comm="apparmor_parser"
+Oct 11 21:36:28 lab5-ubuntu systemd[1]: Starting systemd-logind.service - User Login Management...
+Oct 11 21:36:28 lab5-ubuntu systemd[1]: systemd-pcrphase.service - TPM2 PCR Barrier (User) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Oct 11 21:36:29 lab5-ubuntu systemd[1]: Starting systemd-user-sessions.service - Permit User Sessions...
+Oct 11 21:36:29 lab5-ubuntu systemd[1]: ua-reboot-cmds.service - Ubuntu Pro reboot cmds was skipped because of an unmet condition check (ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json).
+Oct 11 21:36:29 lab5-ubuntu systemd[1]: ubuntu-advantage.service - Ubuntu Pro Background Auto Attach was skipped because no trigger condition checks were met.
+Oct 11 21:36:29 lab5-ubuntu systemd[1]: Starting udisks2.service - Disk Manager...
+Oct 11 21:36:30 lab5-ubuntu systemd[1]: Starting vsftpd.service - vsftpd FTP server...
+Oct 11 21:36:30 lab5-ubuntu systemd[1]: Started dbus.service - D-Bus System Message Bus.
+Oct 11 21:36:30 lab5-ubuntu systemd-logind[766]: New seat seat0.
+Oct 11 21:36:30 lab5-ubuntu systemd[1]: Started dovecot.service - Dovecot IMAP/POP3 email server.
+Oct 11 21:36:31 lab5-ubuntu systemd-logind[766]: Watching system buttons on /dev/input/event0 (Power Button)
+Oct 11 21:36:31 lab5-ubuntu systemd-logind[766]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Oct 11 21:36:31 lab5-ubuntu systemd[1]: e2scrub_reap.service: Deactivated successfully.
+Oct 11 21:36:31 lab5-ubuntu systemd-logind[766]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Oct 11 21:36:31 lab5-ubuntu systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Oct 11 21:36:31 lab5-ubuntu udisksd[769]: udisks daemon version 2.10.1 starting
+Oct 11 21:36:31 lab5-ubuntu systemd[1]: Started systemd-logind.service - User Login Management.
+Oct 11 21:36:33 lab5-ubuntu systemd[1]: Finished sysstat.service - Resets System Activity Logs.
+Oct 11 21:36:33 lab5-ubuntu systemd[1]: Finished systemd-user-sessions.service - Permit User Sessions.
+Oct 11 21:36:33 lab5-ubuntu systemd[1]: Started vsftpd.service - vsftpd FTP server.
+Oct 11 21:36:34 lab5-ubuntu sshd[807]: Server listening on 0.0.0.0 port 22.
+Oct 11 21:36:34 lab5-ubuntu sshd[807]: Server listening on :: port 22.
+Oct 11 21:36:35 lab5-ubuntu dbus-daemon[742]: [system] Activating systemd to hand-off: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.4' (uid=0 pid=769 comm="/usr/libexec/udisks2/udisksd" label="unconfined")
+Oct 11 21:36:35 lab5-ubuntu systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Oct 11 21:36:36 lab5-ubuntu systemd[1]: grub-common.service: Deactivated successfully.
+Oct 11 21:36:37 lab5-ubuntu systemd[1]: Finished grub-common.service - Record successful boot for GRUB.
+Oct 11 21:36:37 lab5-ubuntu networkd-dispatcher[749]: No valid path found for iwconfig
+Oct 11 21:36:37 lab5-ubuntu networkd-dispatcher[749]: No valid path found for iw
+Oct 11 21:36:38 lab5-ubuntu dbus-daemon[742]: [system] Successfully activated service 'org.freedesktop.systemd1'
+Oct 11 21:36:38 lab5-ubuntu named[747]: starting BIND 9.18.39-0ubuntu0.24.04.7-Ubuntu (Extended Support Version) <id:>
+Oct 11 21:36:38 lab5-ubuntu kernel: audit: type=1400 audit(1791754598.263:122): apparmor="DENIED" operation="open" class="file" profile="named" name="/proc/version_signature" pid=747 comm="named" requested_mask="r" denied_mask="r" fsuid=109 ouid=0
+Oct 11 21:36:38 lab5-ubuntu kernel: audit: type=1400 audit(1791754598.263:123): apparmor="DENIED" operation="capable" class="cap" profile="named" pid=747 comm="named" capability=21  capname="sys_admin"
+Oct 11 21:36:38 lab5-ubuntu systemd[1]: Started rsyslog.service - System Logging Service.
+Oct 11 21:36:38 lab5-ubuntu named[747]: running on Linux x86_64 6.8.0-136-generic #136-Ubuntu SMP PREEMPT_DYNAMIC Wed Jul  1 21:53:05 UTC 2026
+Oct 11 21:36:38 lab5-ubuntu named[747]: built with  '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--disable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=yes' '--with-libidn2' '--with-json-c' '--with-lmdb=/usr' '--with-gnu-ld' '--with-maxminddb' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--disable-native-pkcs11' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/bind9-8LYxaJ/bind9-9.18.39=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/bind9-8LYxaJ/bind9-9.18.39=/usr/src/bind9-1:9.18.39-0ubuntu0.24.04.7 -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now -ledit' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3'
+Oct 11 21:36:38 lab5-ubuntu named[747]: running as: named -f -u bind -4 -n 2
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled by GCC 13.3.0
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled with OpenSSL version: OpenSSL 3.0.13 30 Jan 2024
+Oct 11 21:36:38 lab5-ubuntu named[747]: linked to OpenSSL version: OpenSSL 3.0.13 30 Jan 2024
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled with libuv version: 1.48.0
+Oct 11 21:36:38 lab5-ubuntu named[747]: linked to libuv version: 1.48.0
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled with libxml2 version: 2.9.14
+Oct 11 21:36:38 lab5-ubuntu named[747]: linked to libxml2 version: 20914
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled with json-c version: 0.17
+Oct 11 21:36:38 lab5-ubuntu named[747]: linked to json-c version: 0.17
+Oct 11 21:36:38 lab5-ubuntu named[747]: compiled with zlib version: 1.3
+Oct 11 21:36:38 lab5-ubuntu named[747]: linked to zlib version: 1.3
+Oct 11 21:36:39 lab5-ubuntu systemd[1]: Starting grub-initrd-fallback.service - GRUB failed boot detection...
+Oct 11 21:36:38 lab5-ubuntu named[747]: ----------------------------------------------------
+Oct 11 21:36:39 lab5-ubuntu slapd[753]:  * Starting OpenLDAP slapd
+Oct 11 21:36:38 lab5-ubuntu named[747]: BIND 9 is maintained by Internet Systems Consortium,
+Oct 11 21:36:39 lab5-ubuntu systemd[1]: Starting plymouth-quit-wait.service - Hold until boot process finishes up...
+Oct 11 21:36:38 lab5-ubuntu named[747]: Inc. (ISC), a non-profit 501(c)(3) public-benefit
+Oct 11 21:36:38 lab5-ubuntu named[747]: corporation.  Support and training for BIND 9 are
+Oct 11 21:36:38 lab5-ubuntu named[747]: available at https://www.isc.org/support
+Oct 11 21:36:38 lab5-ubuntu named[747]: ----------------------------------------------------
+Oct 11 21:36:38 lab5-ubuntu named[747]: adjusted limit on open files from 524288 to 1048576
+Oct 11 21:36:38 lab5-ubuntu named[747]: found 1 CPU, using 2 worker threads
+Oct 11 21:36:38 lab5-ubuntu named[747]: using 1 UDP listener per interface
+Oct 11 21:36:38 lab5-ubuntu rsyslogd[806]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2312.0]
+Oct 11 21:36:38 lab5-ubuntu rsyslogd[806]: rsyslogd's groupid changed to 102
+Oct 11 21:36:38 lab5-ubuntu rsyslogd[806]: rsyslogd's userid changed to 102
+Oct 11 21:36:38 lab5-ubuntu rsyslogd[806]: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="806" x-info="https://www.rsyslog.com"] start
+Oct 11 21:36:39 lab5-ubuntu named[747]: DNSSEC algorithms: RSASHA1 NSEC3RSASHA1 RSASHA256 RSASHA512 ECDSAP256SHA256 ECDSAP384SHA384 ED25519 ED448
+Oct 11 21:36:39 lab5-ubuntu named[747]: DS algorithms: SHA-1 SHA-256 SHA-384
+Oct 11 21:36:39 lab5-ubuntu named[747]: HMAC algorithms: HMAC-MD5 HMAC-SHA1 HMAC-SHA224 HMAC-SHA256 HMAC-SHA384 HMAC-SHA512
+Oct 11 21:36:39 lab5-ubuntu named[747]: TKEY mode 2 support (Diffie-Hellman): yes
+Oct 11 21:36:40 lab5-ubuntu systemd[1]: Starting plymouth-quit.service - Terminate Plymouth Boot Screen...
+Oct 11 21:36:39 lab5-ubuntu named[747]: TKEY mode 3 support (GSS-API): yes
+Oct 11 21:36:39 lab5-ubuntu named[747]: the initial working directory is '/'
+Oct 11 21:36:39 lab5-ubuntu named[747]: loading configuration from '/etc/bind/named.conf'
+Oct 11 21:36:39 lab5-ubuntu named[747]: the working directory is now '/var/cache/bind'
+Oct 11 21:36:39 lab5-ubuntu polkitd[751]: Started polkitd version 124
+Oct 11 21:36:39 lab5-ubuntu named[747]: reading built-in trust anchors from file '/etc/bind/bind.keys'
+Oct 11 21:36:40 lab5-ubuntu named[747]: looking for GeoIP2 databases in '/usr/share/GeoIP'
+Oct 11 21:36:40 lab5-ubuntu named[747]: using default UDP/IPv4 port range: [32768, 60999]
+Oct 11 21:36:40 lab5-ubuntu named[747]: listening on IPv4 interface lo, 127.0.0.1#53
+Oct 11 21:36:40 lab5-ubuntu named[747]: listening on IPv4 interface enp0s3, 10.0.2.15#53
+Oct 11 21:36:40 lab5-ubuntu named[747]: listening on IPv4 interface enp0s8, 192.168.56.10#53
+Oct 11 21:36:41 lab5-ubuntu systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Oct 11 21:36:40 lab5-ubuntu named[747]: generating session key for dynamic DNS
+Oct 11 21:36:41 lab5-ubuntu systemd[1]: networkd-dispatcher.service: Got notification message from PID 846, but reception only permitted for main PID 749
+Oct 11 21:36:40 lab5-ubuntu named[747]: sizing zone task pool based on 6 zones
+Oct 11 21:36:40 lab5-ubuntu named[747]: none:99: 'max-cache-size 90%' - setting to 1317MB (out of 1464MB)
+Oct 11 21:36:40 lab5-ubuntu polkitd[751]: Loading rules from directory /etc/polkit-1/rules.d
+Oct 11 21:36:40 lab5-ubuntu polkitd[751]: Loading rules from directory /usr/share/polkit-1/rules.d
+Oct 11 21:36:41 lab5-ubuntu polkitd[751]: Finished loading, compiling and executing 6 rules
+Oct 11 21:36:41 lab5-ubuntu dbus-daemon[742]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Oct 11 21:36:41 lab5-ubuntu polkitd[751]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Oct 11 21:36:42 lab5-ubuntu kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 32 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:42 lab5-ubuntu named[747]: obtaining root key for view _default from '/etc/bind/bind.keys'
+Oct 11 21:36:42 lab5-ubuntu named[747]: set up managed keys zone for view _default, file 'managed-keys.bind'
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 10.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 16.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 17.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 18.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu systemd[1]: Finished plymouth-quit-wait.service - Hold until boot process finishes up.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 19.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 20.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 21.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 22.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 23.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 24.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 25.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 26.172.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 27.172.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu kernel: workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 32 times, consider switching to WQ_UNBOUND
+Oct 11 21:36:43 lab5-ubuntu systemd[1]: Finished apport.service - automatic crash report generation.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 28.172.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu systemd[1]: Finished plymouth-quit.service - Terminate Plymouth Boot Screen.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 29.172.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu udisksd[769]: Acquired the name org.freedesktop.UDisks2 on the system message bus
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 30.172.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu systemd[1]: Started polkit.service - Authorization Manager.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 31.172.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu systemd[1]: grub-initrd-fallback.service: Deactivated successfully.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 168.192.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 64.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 65.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 66.100.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu systemd[1]: Finished grub-initrd-fallback.service - GRUB failed boot detection.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 67.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 68.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 69.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 70.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 71.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 72.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 73.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 74.100.IN-ADDR.ARPA
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 75.100.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu systemd[1]: Started named.service - BIND Domain Name Server.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 76.100.IN-ADDR.ARPA
+Oct 11 21:36:44 lab5-ubuntu systemd[1]: Started networkd-dispatcher.service - Dispatcher daemon for systemd-networkd.
+Oct 11 21:36:42 lab5-ubuntu named[747]: automatic empty zone: 77.100.IN-ADDR.ARPA
+Oct 11 21:36:45 lab5-ubuntu systemd[1]: Started udisks2.service - Disk Manager.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 78.100.IN-ADDR.ARPA
+Oct 11 21:36:45 lab5-ubuntu systemd[1]: Reached target nss-lookup.target - Host and Network Name Lookups.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 79.100.IN-ADDR.ARPA
+Oct 11 21:36:45 lab5-ubuntu systemd[1]: Starting ModemManager.service - Modem Manager...
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 80.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 81.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 82.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 83.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 84.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 85.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 86.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 87.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 88.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 89.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 90.100.IN-ADDR.ARPA
+Oct 11 21:36:45 lab5-ubuntu systemd[1]: Starting apache2.service - The Apache HTTP Server...
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 91.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 92.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 93.100.IN-ADDR.ARPA
+Oct 11 21:36:46 lab5-ubuntu systemd[1]: Starting postfix@-.service - Postfix Mail Transport Agent (instance -)...
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 94.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 95.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 96.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 97.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 98.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 99.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 100.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 101.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 102.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 103.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 104.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 105.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 106.100.IN-ADDR.ARPA
+Oct 11 21:36:46 lab5-ubuntu systemd[1]: Starting setvtrgb.service - Set console scheme...
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 107.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 108.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 109.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 110.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 111.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 112.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 113.100.IN-ADDR.ARPA
+Oct 11 21:36:46 lab5-ubuntu snapd[755]: seclog.go:174: security logger enabled
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 114.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 115.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 116.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 117.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 118.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 119.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 120.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 121.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 122.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 123.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 124.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 125.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 126.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 127.100.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 254.169.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 2.0.192.IN-ADDR.ARPA
+Oct 11 21:36:48 lab5-ubuntu systemd[1]: Finished setvtrgb.service - Set console scheme.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 100.51.198.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 113.0.203.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 255.255.255.255.IN-ADDR.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+Oct 11 21:36:48 lab5-ubuntu systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: D.F.IP6.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 8.E.F.IP6.ARPA
+Oct 11 21:36:48 lab5-ubuntu systemd[1]: Started getty@tty1.service - Getty on tty1.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 9.E.F.IP6.ARPA
+Oct 11 21:36:48 lab5-ubuntu systemd[1]: Reached target getty.target - Login Prompts.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: A.E.F.IP6.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: B.E.F.IP6.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: EMPTY.AS112.ARPA
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: HOME.ARPA
+Oct 11 21:36:49 lab5-ubuntu slapd[753]:    ...done.
+Oct 11 21:36:43 lab5-ubuntu named[747]: automatic empty zone: RESOLVER.ARPA
+Oct 11 21:36:49 lab5-ubuntu systemd[1]: Started slapd.service - LSB: OpenLDAP standalone server (Lightweight Directory Access Protocol).
+Oct 11 21:36:43 lab5-ubuntu named[747]: configuring command channel from '/etc/bind/rndc.key'
+Oct 11 21:36:44 lab5-ubuntu named[747]: command channel listening on 127.0.0.1#953
+Oct 11 21:36:44 lab5-ubuntu named[747]: managed-keys-zone: loaded serial 9
+Oct 11 21:36:44 lab5-ubuntu named[747]: zone 127.in-addr.arpa/IN: loaded serial 1
+Oct 11 21:36:44 lab5-ubuntu named[747]: zone 0.in-addr.arpa/IN: loaded serial 1
+Oct 11 21:36:44 lab5-ubuntu named[747]: zone localhost/IN: loaded serial 2
+Oct 11 21:36:44 lab5-ubuntu named[747]: zone 255.in-addr.arpa/IN: loaded serial 1
+Oct 11 21:36:44 lab5-ubuntu named[747]: zone aerolinea.redes.test/IN: loaded serial 2026101101
+Oct 11 21:36:44 lab5-ubuntu named[747]: all zones loaded
+Oct 11 21:36:44 lab5-ubuntu named[747]: running
+Oct 11 21:36:44 lab5-ubuntu named[747]: managed-keys-zone: Key 20326 for zone . is now trusted (acceptance timer complete)
+Oct 11 21:36:44 lab5-ubuntu named[747]: managed-keys-zone: Key 38696 for zone . is now trusted (acceptance timer complete)
+Oct 11 21:36:45 lab5-ubuntu slapd[854]: @(#) $OpenLDAP: slapd 2.6.10+dfsg-0ubuntu0.24.04.1 (Sep 23 2025 16:26:39) $
+                                                Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Oct 11 21:36:48 lab5-ubuntu ModemManager[886]: <msg> ModemManager (version 1.23.4) starting in system bus...
+Oct 11 21:36:48 lab5-ubuntu slapd[909]: slapd starting
+Oct 11 21:36:49 lab5-ubuntu sshd[873]: Accepted publickey for labadmin from 192.168.56.1 port 53249 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:36:49 lab5-ubuntu sshd[873]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:36:50 lab5-ubuntu systemd-logind[766]: New session 1 of user labadmin.
+Oct 11 21:36:50 lab5-ubuntu systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Oct 11 21:36:50 lab5-ubuntu systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 11 21:36:51 lab5-ubuntu systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 11 21:36:51 lab5-ubuntu systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Oct 11 21:36:51 lab5-ubuntu (systemd)[956]: pam_unix(systemd-user:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Queued start job for default target default.target.
+Oct 11 21:36:58 lab5-ubuntu systemd-journald[290]: /var/log/journal/3f197a3bd5004e1c94eb1192924c53da/user-1000.journal: Journal file uses a different sequence number ID, rotating.
+Oct 11 21:36:58 lab5-ubuntu snapd[755]: overlord.go:313: Acquiring state lock file
+Oct 11 21:36:58 lab5-ubuntu snapd[755]: overlord.go:318: Acquired state lock file
+Oct 11 21:36:58 lab5-ubuntu snapd[755]: daemon.go:277: started snapd/2.76+ubuntu24.04.1 (series 16; classic) ubuntu/24.04 (amd64) linux/6.8.0-136-generic.
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Created slice app.slice - User Application Slice.
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Oct 11 21:36:59 lab5-ubuntu kernel: loop0: detected capacity change from 0 to 8
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Reached target paths.target - Paths.
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Reached target timers.target - Timers.
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 11 21:37:00 lab5-ubuntu sshd[873]: pam_unix(sshd:session): session closed for user labadmin
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Oct 11 21:37:00 lab5-ubuntu snapd[755]: daemon.go:371: adjusting startup timeout by 30s (pessimistic estimate of 30s plus 5s per snap)
+Oct 11 21:37:00 lab5-ubuntu snapd[755]: backends.go:70: AppArmor status: apparmor is enabled and all features are available
+Oct 11 21:37:00 lab5-ubuntu ModemManager[886]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:03.0': not supported by any plugin
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 11 21:37:00 lab5-ubuntu ModemManager[886]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:08.0': not supported by any plugin
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 11 21:37:00 lab5-ubuntu apachectl[947]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using fd17:625c:f037:2:a00:27ff:fe5c:88e. Set the 'ServerName' directive globally to suppress this message
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 11 21:36:52 lab5-ubuntu systemd[956]: Listening on keyboxd.socket - GnuPG public key management service.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Reached target sockets.target - Sockets.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Reached target basic.target - Basic System.
+Oct 11 21:36:53 lab5-ubuntu systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Reached target default.target - Main User Target.
+Oct 11 21:36:53 lab5-ubuntu systemd[956]: Startup finished in 2.052s.
+Oct 11 21:36:53 lab5-ubuntu systemd[1]: Started session-1.scope - Session 1 of User labadmin.
+Oct 11 21:36:54 lab5-ubuntu systemd[1]: Started ModemManager.service - Modem Manager.
+Oct 11 21:37:00 lab5-ubuntu systemd[1]: session-1.scope: Deactivated successfully.
+Oct 11 21:37:00 lab5-ubuntu systemd[1]: session-1.scope: Consumed 2.141s CPU time.
+Oct 11 21:37:00 lab5-ubuntu systemd-logind[766]: Session 1 logged out. Waiting for processes to exit.
+Oct 11 21:37:00 lab5-ubuntu systemd-logind[766]: Removed session 1.
+Oct 11 21:37:00 lab5-ubuntu systemd[1]: tmp-syscheck\x2dmountpoint\x2d2038397679.mount: Deactivated successfully.
+Oct 11 21:37:01 lab5-ubuntu snapd[755]: backend.go:145: reloading profiles for snap-confine
+Oct 11 21:37:01 lab5-ubuntu systemd[1]: Started apache2.service - The Apache HTTP Server.
+Oct 11 21:37:03 lab5-ubuntu systemd[1]: dmesg.service: Deactivated successfully.
+Oct 11 21:37:03 lab5-ubuntu systemd[1]: dmesg.service: Consumed 2.915s CPU time.
+Oct 11 21:37:03 lab5-ubuntu kernel: audit: type=1400 audit(1791754623.317:124): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1126 comm="apparmor_parser"
+Oct 11 21:37:03 lab5-ubuntu snapd[755]: standby.go:95: will consider standby after: 5s
+Oct 11 21:37:03 lab5-ubuntu systemd[1]: Started snapd.service - Snap Daemon.
+Oct 11 21:37:04 lab5-ubuntu dbus-daemon[742]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.18' (uid=0 pid=755 comm="/usr/lib/snapd/snapd" label="unconfined")
+Oct 11 21:37:04 lab5-ubuntu systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+Oct 11 21:37:04 lab5-ubuntu dbus-daemon[742]: [system] Successfully activated service 'org.freedesktop.timedate1'
+Oct 11 21:37:04 lab5-ubuntu systemd[1]: Started systemd-timedated.service - Time & Date Service.
+Oct 11 21:37:04 lab5-ubuntu snapd[755]: snapmgr.go:1675: performing periodic snap downloads cache cleanup
+Oct 11 21:37:04 lab5-ubuntu systemd[1]: Finished snapd.seeded.service - Wait until snapd is fully seeded.
+Oct 11 21:37:04 lab5-ubuntu systemd[1]: snapd.autoimport.service - Auto import assertions from block devices was skipped because no trigger condition checks were met.
+Oct 11 21:37:04 lab5-ubuntu snapd[755]: snapmgr.go:1685: cannot clean store downloads cache: open /var/lib/snapd/cache: no such file or directory
+Oct 11 21:37:04 lab5-ubuntu snapd[755]: autorepair.go:177: WARNING: the system booted with an old initrd without unlocked status reporting
+Oct 11 21:37:05 lab5-ubuntu cloud-init[1222]: Cloud-init v. 26.1-0ubuntu1~24.04.1 running 'modules:config' at Sun, 11 Oct 2026 21:37:04 +0000. Up 108.58 seconds.
+Oct 11 21:37:06 lab5-ubuntu systemd[1]: Finished cloud-config.service - Cloud-init: Config Stage.
+Oct 11 21:37:08 lab5-ubuntu snapd[755]: standby.go:101: standby conditions met, initiating standby...
+Oct 11 21:37:09 lab5-ubuntu snapd[755]: daemon.go:569: gracefully waiting for running hooks
+Oct 11 21:37:09 lab5-ubuntu snapd[755]: daemon.go:571: done waiting for running hooks
+Oct 11 21:37:10 lab5-ubuntu systemd[1]: Stopping user@1000.service - User Manager for UID 1000...
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Activating special unit exit.target...
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped target default.target - Main User Target.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped target basic.target - Basic System.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped target paths.target - Paths.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped target sockets.target - Sockets.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped target timers.target - Timers.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 11 21:37:10 lab5-ubuntu sshd[1324]: Accepted publickey for labadmin from 192.168.56.1 port 53279 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+Oct 11 21:37:10 lab5-ubuntu sshd[1324]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 11 21:37:11 lab5-ubuntu (sd-pam)[958]: pam_unix(systemd-user:session): session closed for user labadmin
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed keyboxd.socket - GnuPG public key management service.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed pk-debconf-helper.socket - debconf communication socket.
+Oct 11 21:37:10 lab5-ubuntu systemd[956]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+Oct 11 21:37:11 lab5-ubuntu systemd[956]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 11 21:37:11 lab5-ubuntu systemd[956]: Removed slice app.slice - User Application Slice.
+Oct 11 21:37:11 lab5-ubuntu systemd[956]: Reached target shutdown.target - Shutdown.
+Oct 11 21:37:11 lab5-ubuntu systemd[956]: Finished systemd-exit.service - Exit the Session.
+Oct 11 21:37:11 lab5-ubuntu systemd[956]: Reached target exit.target - Exit the Session.
+Oct 11 21:37:11 lab5-ubuntu systemd[1]: user@1000.service: Deactivated successfully.
+Oct 11 21:37:11 lab5-ubuntu systemd[1]: Stopped user@1000.service - User Manager for UID 1000.
+Oct 11 21:37:11 lab5-ubuntu systemd[1]: user@1000.service: Consumed 1.495s CPU time.
+Oct 11 21:37:11 lab5-ubuntu systemd[1]: Stopping user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 11 21:37:12 lab5-ubuntu snapd[755]: standby.go:121: standby monitoring stop requested
+Oct 11 21:37:12 lab5-ubuntu snapd[755]: overlord.go:568: Released state lock file
+Oct 11 21:37:12 lab5-ubuntu snapd[755]: seclog.go:189: security logger disabled
+Oct 11 21:37:12 lab5-ubuntu snapd[755]: daemon stop requested to wait for socket activation
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: run-user-1000.mount: Deactivated successfully.
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: snapd.service: Deactivated successfully.
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: snapd.service: Consumed 4.114s CPU time.
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: user-runtime-dir@1000.service: Deactivated successfully.
+Oct 11 21:37:12 lab5-ubuntu systemd-logind[766]: New session 3 of user labadmin.
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 11 21:37:12 lab5-ubuntu systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 11 21:37:13 lab5-ubuntu systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Oct 11 21:37:13 lab5-ubuntu (systemd)[1372]: pam_unix(systemd-user:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Queued start job for default target default.target.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Created slice app.slice - User Application Slice.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Reached target paths.target - Paths.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Reached target timers.target - Timers.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 11 21:37:14 lab5-ubuntu systemd[1372]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on keyboxd.socket - GnuPG public key management service.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Reached target sockets.target - Sockets.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Reached target basic.target - Basic System.
+Oct 11 21:37:15 lab5-ubuntu systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Reached target default.target - Main User Target.
+Oct 11 21:37:15 lab5-ubuntu systemd[1372]: Startup finished in 2.112s.
+Oct 11 21:37:15 lab5-ubuntu systemd[1]: Started session-3.scope - Session 3 of User labadmin.
+Oct 11 21:37:17 lab5-ubuntu postmulti[1492]: postfix/postlog: starting the Postfix mail system
+Oct 11 21:37:17 lab5-ubuntu postfix/postfix-script[1492]: starting the Postfix mail system
+Oct 11 21:37:17 lab5-ubuntu postfix/master[1499]: daemon started -- version 3.8.6, configuration /etc/postfix
+Oct 11 21:37:17 lab5-ubuntu systemd[1]: Started postfix@-.service - Postfix Mail Transport Agent (instance -).
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Starting postfix.service - Postfix Mail Transport Agent...
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Finished postfix.service - Postfix Mail Transport Agent.
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Reached target multi-user.target - Multi-User System.
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Reached target graphical.target - Graphical Interface.
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Starting cloud-final.service - Cloud-init: Final Stage...
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+Oct 11 21:37:18 lab5-ubuntu systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Oct 11 21:37:19 lab5-ubuntu systemd[1]: Finished systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP.
+Oct 11 21:37:19 lab5-ubuntu sshd[1324]: pam_unix(sshd:session): session closed for user labadmin
+Oct 11 21:37:19 lab5-ubuntu systemd[1]: session-3.scope: Deactivated successfully.
+Oct 11 21:37:19 lab5-ubuntu systemd[1]: session-3.scope: Consumed 1.440s CPU time.
+Oct 11 21:37:19 lab5-ubuntu systemd-logind[766]: Session 3 logged out. Waiting for processes to exit.
+Oct 11 21:37:19 lab5-ubuntu systemd-logind[766]: Removed session 3.
+Oct 11 21:37:19 lab5-ubuntu sshd[1521]: Accepted publickey for labadmin from 192.168.56.1 port 53287 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:37:19 lab5-ubuntu sshd[1519]: Accepted publickey for labadmin from 192.168.56.1 port 53286 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:37:19 lab5-ubuntu sshd[1521]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:19 lab5-ubuntu sshd[1519]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:20 lab5-ubuntu systemd-logind[766]: New session 5 of user labadmin.
+Oct 11 21:37:20 lab5-ubuntu systemd[1]: Started session-5.scope - Session 5 of User labadmin.
+Oct 11 21:37:20 lab5-ubuntu systemd-logind[766]: New session 6 of user labadmin.
+Oct 11 21:37:20 lab5-ubuntu systemd[1]: Started session-6.scope - Session 6 of User labadmin.
+Oct 11 21:37:26 lab5-ubuntu sudo[1634]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/find /var/mail/vhosts -type f ( -path */Maildir/cur/* -o -path */Maildir/new/* ) -exec sha256sum {} +
+Oct 11 21:37:26 lab5-ubuntu sudo[1634]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+Oct 11 21:37:26 lab5-ubuntu sudo[1636]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/ss -lntp#015
+Oct 11 21:37:26 lab5-ubuntu sudo[1636]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+Oct 11 21:37:27 lab5-ubuntu sudo[1636]: pam_unix(sudo:session): session closed for user root
+Oct 11 21:37:27 lab5-ubuntu sudo[1634]: pam_unix(sudo:session): session closed for user root
+Oct 11 21:37:27 lab5-ubuntu sshd[1521]: pam_unix(sshd:session): session closed for user labadmin
+Oct 11 21:37:27 lab5-ubuntu systemd[1]: session-5.scope: Deactivated successfully.
+Oct 11 21:37:27 lab5-ubuntu systemd[1]: session-5.scope: Consumed 1.649s CPU time.
+Oct 11 21:37:27 lab5-ubuntu systemd-logind[766]: Session 5 logged out. Waiting for processes to exit.
+Oct 11 21:37:27 lab5-ubuntu sudo[1631]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/find /srv/ftp -type f -exec sha256sum {} +
+Oct 11 21:37:27 lab5-ubuntu sudo[1631]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+Oct 11 21:37:27 lab5-ubuntu systemd-logind[766]: Removed session 5.
+Oct 11 21:37:27 lab5-ubuntu sudo[1631]: pam_unix(sudo:session): session closed for user root
+Oct 11 21:37:27 lab5-ubuntu sshd[1519]: pam_unix(sshd:session): session closed for user labadmin
+Oct 11 21:37:27 lab5-ubuntu systemd[1]: session-6.scope: Deactivated successfully.
+Oct 11 21:37:27 lab5-ubuntu systemd[1]: session-6.scope: Consumed 1.761s CPU time.
+Oct 11 21:37:27 lab5-ubuntu systemd-logind[766]: Session 6 logged out. Waiting for processes to exit.
+Oct 11 21:37:27 lab5-ubuntu systemd-logind[766]: Removed session 6.
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59669 (ns1.aerolinea.redes.test): query: ns1.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#59670 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59671 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#59674 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59675 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#59676 (aerolinea.redes.test): query: aerolinea.redes.test IN SOA - (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#55965 (aerolinea.redes.test): query: aerolinea.redes.test IN MX + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63291 (noexiste.aerolinea.redes.test): query: noexiste.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63292 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 fd=12 ACCEPT from IP=192.168.56.1:53334 (IP=0.0.0.0:389)
+Oct 11 21:37:28 lab5-ubuntu cloud-init[1644]: Cloud-init v. 26.1-0ubuntu1~24.04.1 running 'modules:final' at Sun, 11 Oct 2026 21:37:27 +0000. Up 131.66 seconds.
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=0 BIND dn="" method=128
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=0 RESULT tag=97 err=0 qtime=0.000057 etime=0.005779 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=1 SEARCH RESULT tag=101 err=0 qtime=0.001199 etime=0.020887 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000081 etime=0.042998 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=3 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=3 filter="(objectClass=inetOrgPerson)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=3 SRCH attr=uid cn sn mail
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63309 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=4 UNBIND
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 fd=15 ACCEPT from IP=192.168.56.1:53335 (IP=0.0.0.0:389)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 op=3 SEARCH RESULT tag=101 err=0 qtime=0.000900 etime=0.038749 nentries=6 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1000 fd=12 closed
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: connection_input: conn=1001 deferring operation: binding
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=0 RESULT tag=97 err=0 qtime=0.000052 etime=0.001676 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000828 etime=0.013086 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000056 etime=0.051752 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 op=3 UNBIND
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63317 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1001 fd=15 closed
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 fd=12 ACCEPT from IP=192.168.56.1:53345 (IP=0.0.0.0:389)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: connection_input: conn=1002 deferring operation: binding
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=0 RESULT tag=97 err=0 qtime=0.000059 etime=0.012013 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=1 SEARCH RESULT tag=101 err=0 qtime=0.007052 etime=0.027084 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000968 etime=0.090992 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63318 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 op=3 UNBIND
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1002 fd=12 closed
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 fd=12 ACCEPT from IP=192.168.56.1:53346 (IP=0.0.0.0:389)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: connection_input: conn=1003 deferring operation: binding
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=0 RESULT tag=97 err=0 qtime=0.000063 etime=0.010128 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=1 SEARCH RESULT tag=101 err=0 qtime=0.009271 etime=0.021118 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000069 etime=0.067006 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63321 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 op=3 UNBIND
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1003 fd=12 closed
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 fd=15 ACCEPT from IP=192.168.56.1:53347 (IP=0.0.0.0:389)
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=0 RESULT tag=97 err=0 qtime=0.003211 etime=0.007215 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: connection_input: conn=1004 deferring operation: binding
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=1 SEARCH RESULT tag=101 err=0 qtime=0.002891 etime=0.004702 nentries=1 text=
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:28 lab5-ubuntu slapd[909]: conn=1004 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63322 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1004 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000061 etime=0.063036 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1004 op=3 UNBIND
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1004 fd=15 closed
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 fd=12 ACCEPT from IP=192.168.56.1:53348 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=0 RESULT tag=97 err=0 qtime=0.000065 etime=0.017591 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=1 SEARCH RESULT tag=101 err=0 qtime=0.014707 etime=0.051610 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000145 etime=0.073083 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63332 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 fd=15 ACCEPT from IP=192.168.56.1:53349 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 op=3 UNBIND
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1005 fd=12 closed
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: connection_input: conn=1006 deferring operation: binding
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=0 RESULT tag=97 err=0 qtime=0.004061 etime=0.010444 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=1 SEARCH RESULT tag=101 err=0 qtime=0.003053 etime=0.022082 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000094 etime=0.035269 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63333 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 op=3 UNBIND
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1007 fd=12 ACCEPT from IP=192.168.56.1:53350 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1006 fd=15 closed
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1007 op=0 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63334 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1007 op=0 RESULT tag=97 err=49 qtime=0.003944 etime=0.007585 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1008 fd=15 ACCEPT from IP=192.168.56.1:53351 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1008 op=0 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1008 op=0 RESULT tag=97 err=49 qtime=0.000067 etime=0.008709 text=
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63335 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1009 fd=16 ACCEPT from IP=192.168.56.1:53352 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1009 op=0 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710013ec8 192.168.56.1#63336 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1010 fd=17 ACCEPT from IP=192.168.56.1:53353 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1009 op=0 RESULT tag=97 err=49 qtime=0.000123 etime=0.015061 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1010 op=0 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63337 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1011 fd=18 ACCEPT from IP=192.168.56.1:53354 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1011 op=0 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63338 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1011 op=0 RESULT tag=97 err=49 qtime=0.000039 etime=0.008243 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1012 fd=19 ACCEPT from IP=192.168.56.1:53355 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1010 op=0 RESULT tag=97 err=49 qtime=0.001139 etime=0.035018 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1012 op=0 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63339 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1012 op=0 RESULT tag=97 err=49 qtime=0.000054 etime=0.002796 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1013 fd=20 ACCEPT from IP=192.168.56.1:53356 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1013 op=0 BIND dn="uid=noexiste,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:29 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63340 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1013 op=0 RESULT tag=97 err=49 qtime=0.000133 etime=0.012239 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 fd=21 ACCEPT from IP=192.168.56.1:53357 (IP=0.0.0.0:389)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=0 BIND dn="" method=128
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: connection_input: conn=1014 deferring operation: binding
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=0 RESULT tag=97 err=0 qtime=0.001769 etime=0.007709 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=1 SRCH base="" scope=0 deref=3 filter="(objectClass=*)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=1 SRCH attr=subschemaSubentry +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=1 SEARCH RESULT tag=101 err=0 qtime=0.011001 etime=0.029839 nentries=1 text=
+Oct 11 21:37:30 lab5-ubuntu cloud-init[1644]: Cloud-init v. 26.1-0ubuntu1~24.04.1 finished at Sun, 11 Oct 2026 21:37:30 +0000. Datasource DataSourceNoCloud [seed=/dev/sr0].  Up 134.12 seconds
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=2 SRCH base="cn=Subschema" scope=0 deref=3 filter="(objectClass=subschema)"
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=2 SRCH attr=objectClasses attributeTypes ldapSyntaxes matchingRules matchingRuleUse dITContentRules dITStructureRules nameForms createTimestamp modifyTimestamp * +
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1014 op=2 SEARCH RESULT tag=101 err=0 qtime=0.000133 etime=0.102990 nentries=1 text=
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1007 fd=12 closed (connection lost)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1008 fd=15 closed (connection lost)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1010 fd=17 closed (connection lost)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1009 fd=16 closed (connection lost)
+Oct 11 21:37:29 lab5-ubuntu slapd[909]: conn=1011 fd=18 closed (connection lost)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1012 fd=19 closed (connection lost)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1013 fd=20 closed (connection lost)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1014 op=3 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=3 filter="(objectClass=inetOrgPerson)"
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1014 op=3 SRCH attr=uid cn sn mail
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63341 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1014 op=4 UNBIND
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1014 op=3 SEARCH RESULT tag=101 err=0 qtime=0.161923 etime=0.233630 nentries=6 text=
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1014 fd=21 closed
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63344 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63347 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.10#54363 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN A +E(0) (192.168.56.10)
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.10#54266 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA +E(0) (192.168.56.10)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 fd=12 ACCEPT from IP=192.168.56.10:44960 (IP=0.0.0.0:389)
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=0 BIND dn="" method=128
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=0 RESULT tag=97 err=0 qtime=0.000060 etime=0.000852 text=
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=1 SRCH attr=uid cn mail
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=1 SEARCH RESULT tag=101 err=0 qtime=0.004735 etime=0.039917 nentries=1 text=
+Oct 11 21:37:30 lab5-ubuntu slapd[909]: conn=1015 op=2 RESULT tag=97 err=0 qtime=0.000104 etime=0.040693 text=
+Oct 11 21:37:30 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63352 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.10#54915 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA +E(0) (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 fd=15 ACCEPT from IP=192.168.56.10:44976 (IP=0.0.0.0:389)
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=0 BIND dn="" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=0 RESULT tag=97 err=0 qtime=0.000778 etime=0.022574 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=1 SRCH attr=uid cn mail
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000052 etime=0.017213 nentries=1 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=2 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=2 RESULT tag=97 err=0 qtime=0.000075 etime=0.016785 text=
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63373 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=3 BIND dn="" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=3 RESULT tag=97 err=0 qtime=0.000052 etime=0.000615 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=4 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=fruiz))"
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=4 SRCH attr=uid cn mail
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=4 SEARCH RESULT tag=101 err=0 qtime=0.000281 etime=0.013590 nentries=1 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=5 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=5 BIND dn="uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1015 op=5 RESULT tag=97 err=0 qtime=0.000060 etime=0.000420 text=
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63384 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63399 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63405 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63406 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu systemd[1]: Finished cloud-final.service - Cloud-init: Final Stage.
+Oct 11 21:37:31 lab5-ubuntu systemd[1]: Reached target cloud-init.target - Cloud-init target.
+Oct 11 21:37:31 lab5-ubuntu systemd[1]: Startup finished in 12.833s (kernel) + 2min 2.501s (userspace) = 2min 15.335s.
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63432 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=3 BIND dn="" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=3 RESULT tag=97 err=0 qtime=0.000094 etime=0.020920 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=4 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=4 SRCH attr=uid cn mail
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=5 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=5 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=4 SEARCH RESULT tag=101 err=0 qtime=0.001171 etime=0.049253 nentries=1 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=5 RESULT tag=97 err=0 qtime=0.001913 etime=0.013555 text=
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63443 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=6 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=6 BIND dn="" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=6 RESULT tag=97 err=0 qtime=0.000690 etime=0.003815 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=7 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=7 SRCH attr=uid cn mail
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=7 SEARCH RESULT tag=101 err=0 qtime=0.000805 etime=0.020857 nentries=1 text=
+Oct 11 21:37:31 lab5-ubuntu slapd[909]: conn=1016 op=8 RESULT tag=97 err=0 qtime=0.000210 etime=0.007511 text=
+Oct 11 21:37:31 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63452 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=6 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=6 BIND dn="" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=6 RESULT tag=97 err=0 qtime=0.000050 etime=0.001002 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=7 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=hbarillas))"
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=7 SRCH attr=uid cn mail
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=8 BIND dn="uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=7 SEARCH RESULT tag=101 err=0 qtime=0.000063 etime=0.021783 nentries=1 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1015 op=8 RESULT tag=97 err=0 qtime=0.000046 etime=0.003009 text=
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63453 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63456 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63457 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63460 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63463 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=9 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=9 BIND dn="" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=9 RESULT tag=97 err=0 qtime=0.000613 etime=0.021808 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=10 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=10 SRCH attr=uid cn mail
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=10 SEARCH RESULT tag=101 err=0 qtime=0.004071 etime=0.005294 nentries=1 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=11 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=11 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=11 RESULT tag=97 err=0 qtime=0.000778 etime=0.001139 text=
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63464 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=12 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=12 BIND dn="" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=12 RESULT tag=97 err=0 qtime=0.000035 etime=0.012270 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=13 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=13 SRCH attr=uid cn mail
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=13 SEARCH RESULT tag=101 err=0 qtime=0.010100 etime=0.042712 nentries=1 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=14 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=14 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=14 RESULT tag=97 err=0 qtime=0.000053 etime=0.001144 text=
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63467 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=15 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=15 BIND dn="" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=15 RESULT tag=97 err=0 qtime=0.003172 etime=0.022082 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=16 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=icumes))"
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=16 SRCH attr=uid cn mail
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=16 SEARCH RESULT tag=101 err=0 qtime=0.008276 etime=0.023943 nentries=1 text=
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=17 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=17 BIND dn="uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:32 lab5-ubuntu slapd[909]: conn=1016 op=17 RESULT tag=97 err=0 qtime=0.000061 etime=0.031814 text=
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63468 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63469 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:32 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63470 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63471 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63472 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=18 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=18 BIND dn="" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=18 RESULT tag=97 err=0 qtime=0.003212 etime=0.017108 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=19 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=19 SRCH attr=uid cn mail
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=19 SEARCH RESULT tag=101 err=0 qtime=0.003746 etime=0.054562 nentries=1 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=20 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=20 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=20 RESULT tag=97 err=0 qtime=0.001114 etime=0.065786 text=
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63473 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=21 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=21 BIND dn="" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=21 RESULT tag=97 err=0 qtime=0.000043 etime=0.003189 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=22 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=22 SRCH attr=uid cn mail
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=22 SEARCH RESULT tag=101 err=0 qtime=0.000065 etime=0.014657 nentries=1 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=23 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=23 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=23 RESULT tag=97 err=0 qtime=0.000052 etime=0.004811 text=
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63475 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=24 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=24 BIND dn="" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=24 RESULT tag=97 err=0 qtime=0.000120 etime=0.015259 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=25 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=jvalladares))"
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=25 SRCH attr=uid cn mail
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=25 SEARCH RESULT tag=101 err=0 qtime=0.004070 etime=0.014286 nentries=1 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=26 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=26 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=26 RESULT tag=97 err=0 qtime=0.000054 etime=0.014862 text=
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63476 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63477 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63478 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63479 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63484 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=27 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=27 BIND dn="" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=27 RESULT tag=97 err=0 qtime=0.000294 etime=0.009199 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=28 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=28 SRCH attr=uid cn mail
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=29 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=29 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=28 SEARCH RESULT tag=101 err=0 qtime=0.002909 etime=0.014769 nentries=1 text=
+Oct 11 21:37:33 lab5-ubuntu slapd[909]: conn=1016 op=29 RESULT tag=97 err=0 qtime=0.000048 etime=0.013754 text=
+Oct 11 21:37:33 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63485 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=9 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=9 BIND dn="" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: connection_input: conn=1015 deferring operation: binding
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=9 RESULT tag=97 err=0 qtime=0.000113 etime=0.033282 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=10 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=10 SRCH attr=uid cn mail
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=10 SEARCH RESULT tag=101 err=0 qtime=0.008050 etime=0.060566 nentries=1 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=11 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=11 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=11 RESULT tag=97 err=0 qtime=0.000075 etime=0.034208 text=
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63486 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=12 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=12 BIND dn="" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=12 RESULT tag=97 err=0 qtime=0.000043 etime=0.003624 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=13 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=13 SRCH attr=uid cn mail
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=13 SEARCH RESULT tag=101 err=0 qtime=0.000770 etime=0.025667 nentries=1 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=14 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=14 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1015 op=14 RESULT tag=97 err=0 qtime=0.007052 etime=0.026137 text=
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63487 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63488 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63489 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63490 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63491 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=30 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=30 BIND dn="" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=30 RESULT tag=97 err=0 qtime=0.001924 etime=0.013728 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=31 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=31 SRCH attr=uid cn mail
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=31 SEARCH RESULT tag=101 err=0 qtime=0.002335 etime=0.020447 nentries=1 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=32 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=32 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=32 RESULT tag=97 err=0 qtime=0.003787 etime=0.024969 text=
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63492 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=33 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=33 BIND dn="" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=33 RESULT tag=97 err=0 qtime=0.000044 etime=0.011393 text=
+Oct 11 21:37:34 lab5-ubuntu systemd[1]: systemd-timedated.service: Deactivated successfully.
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=34 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=34 SRCH attr=uid cn mail
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=35 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=35 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=34 SEARCH RESULT tag=101 err=0 qtime=0.000556 etime=0.022540 nentries=1 text=
+Oct 11 21:37:34 lab5-ubuntu slapd[909]: conn=1016 op=35 RESULT tag=97 err=0 qtime=0.000096 etime=0.009851 text=
+Oct 11 21:37:34 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63493 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=36 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=36 BIND dn="" method=128
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=36 RESULT tag=97 err=0 qtime=0.006236 etime=0.017046 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=37 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=mpolanco))"
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=37 SRCH attr=uid cn mail
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=37 SEARCH RESULT tag=101 err=0 qtime=0.000039 etime=0.015450 nentries=1 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=38 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=38 BIND dn="uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=38 RESULT tag=97 err=0 qtime=0.000127 etime=0.016114 text=
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63494 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63495 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63496 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63497 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63498 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=39 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=39 BIND dn="" method=128
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=39 RESULT tag=97 err=0 qtime=0.000046 etime=0.000387 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: connection_input: conn=1016 deferring operation: binding
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=40 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=nmolina))"
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=40 SRCH attr=uid cn mail
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=40 SEARCH RESULT tag=101 err=0 qtime=0.003266 etime=0.043315 nentries=1 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=41 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=41 RESULT tag=97 err=49 qtime=0.000959 etime=0.068909 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 op=42 UNBIND
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1016 fd=15 closed
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63499 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63500 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63502 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63503 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.10#48467 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA +E(0) (192.168.56.10)
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1017 fd=15 ACCEPT from IP=192.168.56.10:44984 (IP=0.0.0.0:389)
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1017 op=0 BIND dn="" method=128
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1017 op=0 RESULT tag=97 err=0 qtime=0.000045 etime=0.000842 text=
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1017 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=3 filter="(&(objectClass=*)(uid=noexiste))"
+Oct 11 21:37:35 lab5-ubuntu slapd[909]: conn=1017 op=1 SRCH attr=uid cn mail
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1017 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000051 etime=0.022226 nentries=0 text=
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63504 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63505 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#63506 (www.aerolinea.redes.test): query: www.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63507 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63508 (aerolinea.redes.test): query: aerolinea.redes.test IN MX + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63509 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.10#55576 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA +E(0) (192.168.56.10)
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1018 fd=16 ACCEPT from IP=192.168.56.10:44994 (IP=0.0.0.0:389)
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1018 op=0 BIND dn="" method=128
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1018 op=0 RESULT tag=97 err=0 qtime=0.000052 etime=0.004763 text=
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1018 op=1 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:36 lab5-ubuntu slapd[909]: conn=1018 op=1 RESULT tag=97 err=49 qtime=0.000218 etime=0.006042 text=
+Oct 11 21:37:37 lab5-ubuntu systemd[1]: Stopping user@1000.service - User Manager for UID 1000...
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Activating special unit exit.target...
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped target default.target - Main User Target.
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped target basic.target - Basic System.
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped target paths.target - Paths.
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped target sockets.target - Sockets.
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped target timers.target - Timers.
+Oct 11 21:37:37 lab5-ubuntu systemd[1372]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed keyboxd.socket - GnuPG public key management service.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed pk-debconf-helper.socket - debconf communication socket.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+Oct 11 21:37:38 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#63510 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:38 lab5-ubuntu dovecot[764]: imap-login: Disconnected: Aborted login by logging out (auth failed, 1 attempts in 2 secs): user=<nmolina>, method=PLAIN, rip=192.168.56.1, lip=192.168.56.10, session=<cqPXY5ddwNDAqDgB>
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Removed slice app.slice - User Application Slice.
+Oct 11 21:37:38 lab5-ubuntu (sd-pam)[1375]: pam_unix(systemd-user:session): session closed for user labadmin
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Reached target shutdown.target - Shutdown.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Finished systemd-exit.service - Exit the Session.
+Oct 11 21:37:38 lab5-ubuntu systemd[1372]: Reached target exit.target - Exit the Session.
+Oct 11 21:37:38 lab5-ubuntu systemd[1]: user@1000.service: Deactivated successfully.
+Oct 11 21:37:38 lab5-ubuntu systemd[1]: Stopped user@1000.service - User Manager for UID 1000.
+Oct 11 21:37:38 lab5-ubuntu systemd[1]: user@1000.service: Consumed 1.450s CPU time.
+Oct 11 21:37:38 lab5-ubuntu systemd[1]: Stopping user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 11 21:37:39 lab5-ubuntu postfix/submission/smtpd[1661]: warning: dict_nis_init: NIS domain name not set - NIS lookups disabled
+Oct 11 21:37:39 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.10#56855 (1.56.168.192.in-addr.arpa): query: 1.56.168.192.in-addr.arpa IN PTR +E(0) (192.168.56.10)
+Oct 11 21:37:39 lab5-ubuntu systemd[1]: run-user-1000.mount: Deactivated successfully.
+Oct 11 21:37:39 lab5-ubuntu postfix/submission/smtpd[1661]: connect from unknown[192.168.56.1]
+Oct 11 21:37:39 lab5-ubuntu systemd[1]: user-runtime-dir@1000.service: Deactivated successfully.
+Oct 11 21:37:39 lab5-ubuntu systemd[1]: Stopped user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 11 21:37:39 lab5-ubuntu systemd[1]: Removed slice user-1000.slice - User Slice of UID 1000.
+Oct 11 21:37:39 lab5-ubuntu systemd[1]: user-1000.slice: Consumed 10.242s CPU time.
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1018 op=2 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1018 op=2 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1018 op=2 RESULT tag=97 err=0 qtime=0.000049 etime=0.044458 text=
+Oct 11 21:37:43 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.10#55921 (ldap.aerolinea.redes.test): query: ldap.aerolinea.redes.test IN AAAA +E(0) (192.168.56.10)
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 fd=17 ACCEPT from IP=192.168.56.10:43906 (IP=0.0.0.0:389)
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 op=0 BIND dn="" method=128
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 op=0 RESULT tag=97 err=0 qtime=0.000103 etime=0.000377 text=
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 op=1 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=jvalladares@aerolinea.redes.test))"
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 op=1 SRCH attr=uid
+Oct 11 21:37:43 lab5-ubuntu slapd[909]: conn=1019 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000039 etime=0.009519 nentries=1 text=
+Oct 11 21:37:43 lab5-ubuntu postfix/submission/smtpd[1661]: D043C46163: client=unknown[192.168.56.1], sasl_method=PLAIN, sasl_username=nmolina
+Oct 11 21:37:43 lab5-ubuntu postfix/cleanup[1670]: D043C46163: message-id=<>
+Oct 11 21:37:43 lab5-ubuntu postfix/qmgr[1502]: D043C46163: from=<nmolina@aerolinea.redes.test>, size=374, nrcpt=1 (queue active)
+Oct 11 21:37:43 lab5-ubuntu postfix/submission/smtpd[1661]: disconnect from unknown[192.168.56.1] ehlo=1 auth=1 mail=1 rcpt=1 data=1 quit=1 commands=6
+Oct 11 21:37:44 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#54361 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=3 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=3 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=3 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=3 RESULT tag=97 err=0 qtime=0.000046 etime=0.004289 text=
+Oct 11 21:37:44 lab5-ubuntu dovecot[764]: imap-login: Login: user=<jvalladares>, method=PLAIN, rip=192.168.56.1, lip=192.168.56.10, mpid=1673, session=<Wx5JZJddydDAqDgB>
+Oct 11 21:37:44 lab5-ubuntu dovecot[764]: lmtp(1674): Connect from local
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=4 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=4 BIND dn="" method=128
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=4 RESULT tag=97 err=0 qtime=0.000046 etime=0.009073 text=
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=5 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=2 deref=0 filter="(&(objectClass=inetOrgPerson)(uid=jvalladares))"
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=5 SRCH attr=uid
+Oct 11 21:37:44 lab5-ubuntu slapd[909]: conn=1018 op=5 SEARCH RESULT tag=101 err=0 qtime=0.000019 etime=0.006807 nentries=1 text=
+Oct 11 21:37:44 lab5-ubuntu kernel: workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 64 times, consider switching to WQ_UNBOUND
+Oct 11 21:37:45 lab5-ubuntu dovecot[764]: imap(jvalladares)<1673><Wx5JZJddydDAqDgB>: Disconnected: Logged out in=89 out=909 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+Oct 11 21:37:45 lab5-ubuntu dovecot[764]: lmtp(jvalladares)<1674><WKA/J6gBzGqKBgAAtJetsQ>: msgid=unspecified: saved mail to INBOX
+Oct 11 21:37:45 lab5-ubuntu postfix/lmtp[1672]: D043C46163: to=<jvalladares@aerolinea.redes.test>, relay=mail.aerolinea.redes.test[private/dovecot-lmtp], delay=1.4, delays=0.22/0.36/0.35/0.45, dsn=2.0.0, status=sent (250 2.0.0 <jvalladares@aerolinea.redes.test> WKA/J6gBzGqKBgAAtJetsQ Saved)
+Oct 11 21:37:45 lab5-ubuntu dovecot[764]: lmtp(1674): Disconnect from local: Logged out (state=READY)
+Oct 11 21:37:45 lab5-ubuntu postfix/qmgr[1502]: D043C46163: removed
+Oct 11 21:37:45 lab5-ubuntu kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 64 times, consider switching to WQ_UNBOUND
+Oct 11 21:37:46 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#61010 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=6 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=6 BIND dn="uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=6 RESULT tag=97 err=0 qtime=0.000058 etime=0.012491 text=
+Oct 11 21:37:46 lab5-ubuntu dovecot[764]: imap-login: Login: user=<jvalladares>, method=PLAIN, rip=192.168.56.1, lip=192.168.56.10, mpid=1676, session=<AMloZJddy9DAqDgB>
+Oct 11 21:37:46 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#61011 (mail.aerolinea.redes.test): query: mail.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:46 lab5-ubuntu dovecot[764]: imap(jvalladares)<1676><AMloZJddy9DAqDgB>: Disconnected: Logged out in=118 out=1713 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=1 body_bytes=687
+Oct 11 21:37:46 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.10#56769 (1.56.168.192.in-addr.arpa): query: 1.56.168.192.in-addr.arpa IN PTR +E(0) (192.168.56.10)
+Oct 11 21:37:46 lab5-ubuntu postfix/submission/smtpd[1661]: connect from unknown[192.168.56.1]
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=7 BIND anonymous mech=implicit bind_ssf=0 ssf=0
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=7 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" method=128
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=7 BIND dn="uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test" mech=SIMPLE bind_ssf=0 ssf=0
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1018 op=7 RESULT tag=97 err=0 qtime=0.002530 etime=0.008548 text=
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=2 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=noexiste@aerolinea.redes.test))"
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=2 SRCH attr=uid
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=3 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=noexiste))"
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=3 SRCH attr=uid
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=2 SEARCH RESULT tag=101 err=0 qtime=0.002564 etime=0.026787 nentries=0 text=
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=3 SEARCH RESULT tag=101 err=0 qtime=0.000000 etime=0.004187 nentries=0 text=
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=4 SRCH base="ou=People,dc=aerolinea,dc=redes,dc=test" scope=1 deref=0 filter="(&(objectClass=inetOrgPerson)(mail=@aerolinea.redes.test))"
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=4 SRCH attr=uid
+Oct 11 21:37:46 lab5-ubuntu postfix/submission/smtpd[1661]: NOQUEUE: reject: RCPT from unknown[192.168.56.1]: 550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table; from=<nmolina@aerolinea.redes.test> to=<noexiste@aerolinea.redes.test> proto=ESMTP helo=<[192.168.1.22]>
+Oct 11 21:37:46 lab5-ubuntu slapd[909]: conn=1019 op=4 SEARCH RESULT tag=101 err=0 qtime=0.000678 etime=0.012679 nentries=0 text=
+Oct 11 21:37:46 lab5-ubuntu postfix/submission/smtpd[1661]: disconnect from unknown[192.168.56.1] ehlo=1 auth=1 mail=1 rcpt=0/1 quit=1 commands=4/5
+Oct 11 21:37:46 lab5-ubuntu named[747]: client @0x7507193302f8 192.168.56.1#61013 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:46 lab5-ubuntu named[747]: client @0x750719309488 192.168.56.1#61014 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:47 lab5-ubuntu named[747]: client @0x750719309488 192.168.56.1#54612 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:47 lab5-ubuntu vsftpd[1680]: pam_unix(vsftpd:auth): authentication failure; logname= uid=0 euid=0 tty=ftp ruser=ftpuser rhost=192.168.56.1  user=ftpuser
+Oct 11 21:37:50 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59612 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:51 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59613 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:51 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59614 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:52 lab5-ubuntu named[747]: client @0x750710010898 192.168.56.1#59615 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:52 lab5-ubuntu named[747]: client @0x750719309488 192.168.56.1#59616 (ftp.aerolinea.redes.test): query: ftp.aerolinea.redes.test IN A + (192.168.56.10)
+Oct 11 21:37:53 lab5-ubuntu sshd[1696]: Accepted publickey for labadmin from 192.168.56.1 port 53474 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:37:53 lab5-ubuntu sshd[1696]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:53 lab5-ubuntu systemd-logind[766]: New session 7 of user labadmin.
+Oct 11 21:37:53 lab5-ubuntu systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Oct 11 21:37:53 lab5-ubuntu systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 11 21:37:53 lab5-ubuntu systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 11 21:37:53 lab5-ubuntu systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Oct 11 21:37:53 lab5-ubuntu (systemd)[1701]: pam_unix(systemd-user:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Queued start job for default target default.target.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Created slice app.slice - User Application Slice.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Reached target paths.target - Paths.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Reached target timers.target - Timers.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on keyboxd.socket - GnuPG public key management service.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Reached target sockets.target - Sockets.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Reached target basic.target - Basic System.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Reached target default.target - Main User Target.
+Oct 11 21:37:54 lab5-ubuntu systemd[1701]: Startup finished in 1.029s.
+Oct 11 21:37:54 lab5-ubuntu systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Oct 11 21:37:54 lab5-ubuntu systemd[1]: Started session-7.scope - Session 7 of User labadmin.
+Oct 11 21:37:56 lab5-ubuntu sudo[1767]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/ss -lntup
+Oct 11 21:37:56 lab5-ubuntu sudo[1767]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+Oct 11 21:37:56 lab5-ubuntu sudo[1767]: pam_unix(sudo:session): session closed for user root
+Oct 11 21:37:57 lab5-ubuntu sudo[1766]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/systemctl show named slapd apache2 postfix@- dovecot vsftpd -p MainPID -p ControlGroup
+Oct 11 21:37:57 lab5-ubuntu sudo[1766]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+Oct 11 21:37:57 lab5-ubuntu sudo[1766]: pam_unix(sudo:session): session closed for user root
+Oct 11 21:37:57 lab5-ubuntu sshd[1696]: pam_unix(sshd:session): session closed for user labadmin
+Oct 11 21:37:57 lab5-ubuntu systemd[1]: session-7.scope: Deactivated successfully.
+Oct 11 21:37:57 lab5-ubuntu systemd[1]: session-7.scope: Consumed 1.651s CPU time.
+Oct 11 21:37:57 lab5-ubuntu systemd-logind[766]: Session 7 logged out. Waiting for processes to exit.
+Oct 11 21:37:57 lab5-ubuntu systemd-logind[766]: Removed session 7.
+Oct 11 21:37:57 lab5-ubuntu sshd[1779]: Accepted publickey for labadmin from 192.168.56.1 port 53482 ssh2: RSA SHA256:P6zofdudOmNDqzlx/gOdOyVqxJEMmlnxumOS0zEe+mM
+Oct 11 21:37:57 lab5-ubuntu sshd[1779]: pam_unix(sshd:session): session opened for user labadmin(uid=1000) by labadmin(uid=0)
+Oct 11 21:37:57 lab5-ubuntu systemd-logind[766]: New session 9 of user labadmin.
+Oct 11 21:37:57 lab5-ubuntu systemd[1]: Started session-9.scope - Session 9 of User labadmin.
+Oct 11 21:37:59 lab5-ubuntu sudo[1835]: labadmin : PWD=/home/labadmin ; USER=root ; COMMAND=/usr/bin/journalctl --since today --no-pager -n 1200
+Oct 11 21:37:59 lab5-ubuntu sudo[1835]: pam_unix(sudo:session): session opened for user root(uid=0) by labadmin(uid=1000)
+==> /var/log/apache2/aerolinea-access.log <==
+192.168.56.1 - - [11/Oct/2026:21:24:46 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:46 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:46 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:24:46 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:24:47 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:24:47 +0000] "GET /privado/usuario.json HTTP/1.1" 200 598 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:47 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:47 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:47 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:47 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:24:47 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:24:47 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:24:48 +0000] "GET /privado/usuario.json HTTP/1.1" 200 588 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:24:48 +0000] "POST /dologin HTTP/1.1" 302 760 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:24:48 +0000] "GET /privado/ HTTP/1.1" 200 1308 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:24:48 +0000] "GET /privado/usuario.json HTTP/1.1" 200 626 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:48 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:24:49 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:24:49 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:24:49 +0000] "GET /privado/usuario.json HTTP/1.1" 200 592 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:49 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:24:49 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:24:50 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:24:50 +0000] "GET /privado/usuario.json HTTP/1.1" 200 597 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:24:50 +0000] "POST /dologin HTTP/1.1" 302 664 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET /login/?error=1 HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:50 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:51 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - noexiste [11/Oct/2026:21:24:51 +0000] "POST /dologin HTTP/1.1" 302 664 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:51 +0000] "GET /login/?error=1 HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:51 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:24:51 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:34:33 +0000] "POST /dologin HTTP/1.1" 500 985 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:34:38 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:34:39 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:30 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - fruiz [11/Oct/2026:21:37:30 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - fruiz [11/Oct/2026:21:37:30 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - fruiz [11/Oct/2026:21:37:31 +0000] "GET /privado/usuario.json HTTP/1.1" 200 589 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:31 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:31 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:31 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:31 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:37:31 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:37:31 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - hbarillas [11/Oct/2026:21:37:31 +0000] "GET /privado/usuario.json HTTP/1.1" 200 598 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:37:32 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:37:32 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - icumes [11/Oct/2026:21:37:32 +0000] "GET /privado/usuario.json HTTP/1.1" 200 588 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:32 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:33 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:37:33 +0000] "POST /dologin HTTP/1.1" 302 760 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:37:33 +0000] "GET /privado/ HTTP/1.1" 200 1308 "-" "Python-urllib/3.12"
+192.168.56.1 - jvalladares [11/Oct/2026:21:37:33 +0000] "GET /privado/usuario.json HTTP/1.1" 200 626 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:33 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:33 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:33 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:33 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:37:33 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:37:33 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:37:34 +0000] "GET /privado/usuario.json HTTP/1.1" 200 592 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:34 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:34 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:34 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:34 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:37:34 +0000] "POST /dologin HTTP/1.1" 302 740 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:37:34 +0000] "GET /privado/ HTTP/1.1" 200 1288 "-" "Python-urllib/3.12"
+192.168.56.1 - mpolanco [11/Oct/2026:21:37:34 +0000] "GET /privado/usuario.json HTTP/1.1" 200 597 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /logout HTTP/1.1" 307 697 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET / HTTP/1.1" 200 1108 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - nmolina [11/Oct/2026:21:37:35 +0000] "POST /dologin HTTP/1.1" 302 664 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /login/?error=1 HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:35 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - noexiste [11/Oct/2026:21:37:35 +0000] "POST /dologin HTTP/1.1" 302 664 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:36 +0000] "GET /login/?error=1 HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:36 +0000] "GET /privado/ HTTP/1.1" 302 648 "-" "Python-urllib/3.12"
+192.168.56.1 - - [11/Oct/2026:21:37:36 +0000] "GET /login/ HTTP/1.1" 200 1116 "-" "Python-urllib/3.12"
+
+==> /var/log/apache2/aerolinea-error.log <==
+[Sun Oct 11 21:00:00.176380 2026] [authnz_ldap:info] [pid 6919:tid 123582021584576] [client 192.168.56.1:50105] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:00:00.181713 2026] [auth_form:error] [pid 6919:tid 123582021584576] [client 192.168.56.1:50105] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:00:00.415138 2026] [authnz_ldap:info] [pid 6919:tid 123582013191872] [client 192.168.56.1:50110] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:00:00.417386 2026] [auth_form:error] [pid 6919:tid 123582013191872] [client 192.168.56.1:50110] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:00:35.857124 2026] [authnz_ldap:info] [pid 6918:tid 123582021584576] [client 192.168.56.10:42598] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:00:35.857201 2026] [auth_form:error] [pid 6918:tid 123582021584576] [client 192.168.56.10:42598] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:00:36.303168 2026] [authnz_ldap:info] [pid 6918:tid 123582004799168] [client 192.168.56.10:42650] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:00:36.303233 2026] [auth_form:error] [pid 6918:tid 123582004799168] [client 192.168.56.10:42650] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:01:44.679268 2026] [authnz_ldap:info] [pid 6919:tid 123582071940800] [client 192.168.56.1:65350] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:01:44.679341 2026] [auth_form:error] [pid 6919:tid 123582071940800] [client 192.168.56.1:65350] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:01:44.915552 2026] [authnz_ldap:info] [pid 6919:tid 123582055155392] [client 192.168.56.1:65354] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:01:44.916337 2026] [auth_form:error] [pid 6919:tid 123582055155392] [client 192.168.56.1:65354] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:04:56.746359 2026] [authnz_ldap:info] [pid 6918:tid 123582071940800] [client 192.168.56.1:56420] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [LDAP: ldap_simple_bind() failed][Can't contact LDAP server]
+[Sun Oct 11 21:05:02.025159 2026] [authnz_ldap:info] [pid 6919:tid 123581996406464] [client 192.168.56.1:56427] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]
+[Sun Oct 11 21:17:10.171800 2026] [authnz_ldap:info] [pid 990:tid 131151792436928] [client 192.168.56.1:51653] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [LDAP: ldap_simple_bind() failed][Can't contact LDAP server]
+[Sun Oct 11 21:20:00.827847 2026] [authnz_ldap:info] [pid 985:tid 136504747726528] [client 192.168.56.1:60086] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:20:00.831909 2026] [auth_form:error] [pid 985:tid 136504747726528] [client 192.168.56.1:60086] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:20:01.444668 2026] [authnz_ldap:info] [pid 985:tid 136504705763008] [client 192.168.56.1:60090] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:20:01.444862 2026] [auth_form:error] [pid 985:tid 136504705763008] [client 192.168.56.1:60090] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:20:53.049838 2026] [authnz_ldap:info] [pid 985:tid 136504893806272] [client 192.168.56.1:60209] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:20:53.049838 2026] [auth_form:error] [pid 985:tid 136504893806272] [client 192.168.56.1:60209] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:20:53.449012 2026] [authnz_ldap:info] [pid 985:tid 136504798082752] [client 192.168.56.1:60213] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:20:53.449090 2026] [auth_form:error] [pid 985:tid 136504798082752] [client 192.168.56.1:60213] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:21:52.803034 2026] [authnz_ldap:info] [pid 985:tid 136504663799488] [client 192.168.56.10:52570] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:21:52.803903 2026] [auth_form:error] [pid 985:tid 136504663799488] [client 192.168.56.10:52570] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:21:53.113028 2026] [authnz_ldap:info] [pid 986:tid 136504286357184] [client 192.168.56.10:52596] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:21:53.113097 2026] [auth_form:error] [pid 986:tid 136504286357184] [client 192.168.56.10:52596] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:22:15.931104 2026] [authnz_ldap:info] [pid 986:tid 136504277964480] [client 192.168.56.1:60259] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_search_ext_s() for user failed with server down][Can't contact LDAP server]
+[Sun Oct 11 21:24:50.813392 2026] [authnz_ldap:info] [pid 997:tid 139775667328704] [client 192.168.56.1:50138] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:24:50.824050 2026] [auth_form:error] [pid 997:tid 139775667328704] [client 192.168.56.1:50138] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:24:51.225288 2026] [authnz_ldap:info] [pid 997:tid 139775189173952] [client 192.168.56.1:50142] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:24:51.225348 2026] [auth_form:error] [pid 997:tid 139775189173952] [client 192.168.56.1:50142] AH01808: user 'noexiste' not found: /dologin
+[Sun Oct 11 21:34:33.247429 2026] [authnz_ldap:info] [pid 1001:tid 138866138805952] [client 192.168.56.1:53155] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [LDAP: ldap_simple_bind() failed][Can't contact LDAP server]
+[Sun Oct 11 21:37:35.592465 2026] [authnz_ldap:info] [pid 1123:tid 140370620946112] [client 192.168.56.1:53430] AH01695: auth_ldap authenticate: user nmolina authentication failed; URI /dologin [ldap_simple_bind() to check user credentials failed][Invalid credentials]
+[Sun Oct 11 21:37:35.608193 2026] [auth_form:error] [pid 1123:tid 140370620946112] [client 192.168.56.1:53430] AH01807: user 'nmolina': authentication failure for "/dologin": password Mismatch
+[Sun Oct 11 21:37:36.000373 2026] [authnz_ldap:info] [pid 1123:tid 140370503513792] [client 192.168.56.1:53436] AH01695: auth_ldap authenticate: user noexiste authentication failed; URI /dologin [User not found][No such object]
+[Sun Oct 11 21:37:36.000458 2026] [auth_form:error] [pid 1123:tid 140370503513792] [client 192.168.56.1:53436] AH01808: user 'noexiste' not found: /dologin
+
+==> /var/log/vsftpd.log <==
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP response: Client "192.168.56.1", "200 Switching to Binary mode."
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP command: Client "192.168.56.1", "PASV"
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP response: Client "192.168.56.1", "227 Entering Passive Mode (192,168,56,10,156,101)."
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP command: Client "192.168.56.1", "RETR /etc/passwd"
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP response: Client "192.168.56.1", "550 Failed to open file."
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FAIL DOWNLOAD: Client "192.168.56.1", "/etc/passwd", 0.00Kbyte/sec
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:25:09 2026 [pid 1619] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."
+Sun Oct 11 21:37:46 2026 [pid 1678] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:46 2026 [pid 1678] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:46 2026 [pid 1678] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:46 2026 [pid 1678] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:46 2026 [pid 1678] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:47 2026 [pid 1677] [ftpuser] OK LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:47 2026 [pid 1679] [ftpuser] FTP response: Client "192.168.56.1", "230 Login successful."
+Sun Oct 11 21:37:47 2026 [pid 1679] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:37:47 2026 [pid 1679] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."
+Sun Oct 11 21:37:47 2026 [pid 1681] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:47 2026 [pid 1681] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:47 2026 [pid 1681] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:47 2026 [pid 1681] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:47 2026 [pid 1681] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:49 2026 [pid 1680] [ftpuser] FAIL LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:50 2026 [pid 1681] [ftpuser] FTP response: Client "192.168.56.1", "530 Login incorrect."
+Sun Oct 11 21:37:50 2026 [pid 1683] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:50 2026 [pid 1683] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:50 2026 [pid 1683] FTP command: Client "192.168.56.1", "USER anonymous"
+Sun Oct 11 21:37:51 2026 [pid 1683] [anonymous] FTP response: Client "192.168.56.1", "530 Permission denied."
+Sun Oct 11 21:37:51 2026 [pid 1685] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:51 2026 [pid 1685] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:51 2026 [pid 1685] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:51 2026 [pid 1685] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:51 2026 [pid 1685] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:51 2026 [pid 1684] [ftpuser] OK LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "230 Login successful."
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP command: Client "192.168.56.1", "TYPE A"
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "200 Switching to ASCII mode."
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP command: Client "192.168.56.1", "PASV"
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "227 Entering Passive Mode (192,168,56,10,156,117)."
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP command: Client "192.168.56.1", "NLST"
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "150 Here comes the directory listing."
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "226 Directory send OK."
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:37:51 2026 [pid 1686] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."
+Sun Oct 11 21:37:51 2026 [pid 1688] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:51 2026 [pid 1688] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:51 2026 [pid 1688] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:51 2026 [pid 1688] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:51 2026 [pid 1688] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:51 2026 [pid 1687] [ftpuser] OK LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "230 Login successful."
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP command: Client "192.168.56.1", "TYPE I"
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "200 Switching to Binary mode."
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP command: Client "192.168.56.1", "PASV"
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "227 Entering Passive Mode (192,168,56,10,156,129)."
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP command: Client "192.168.56.1", "STOR uploads/Lab5-audit-1791754658526277400.txt"
+Sun Oct 11 21:37:51 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "150 Ok to send data."
+Sun Oct 11 21:37:52 2026 [pid 1689] [ftpuser] OK UPLOAD: Client "192.168.56.1", "/uploads/Lab5-audit-1791754658526277400.txt", 41 bytes, 1.83Kbyte/sec
+Sun Oct 11 21:37:52 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "226 Transfer complete."
+Sun Oct 11 21:37:52 2026 [pid 1689] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:37:52 2026 [pid 1689] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."
+Sun Oct 11 21:37:52 2026 [pid 1691] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:52 2026 [pid 1691] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:52 2026 [pid 1691] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:52 2026 [pid 1691] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:52 2026 [pid 1691] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:52 2026 [pid 1690] [ftpuser] OK LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "230 Login successful."
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP command: Client "192.168.56.1", "TYPE I"
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "200 Switching to Binary mode."
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP command: Client "192.168.56.1", "PASV"
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "227 Entering Passive Mode (192,168,56,10,156,155)."
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP command: Client "192.168.56.1", "RETR uploads/Lab5-audit-1791754658526277400.txt"
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "150 Opening BINARY mode data connection for uploads/Lab5-audit-1791754658526277400.txt (41 bytes)."
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] OK DOWNLOAD: Client "192.168.56.1", "/uploads/Lab5-audit-1791754658526277400.txt", 41 bytes, 4.95Kbyte/sec
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "226 Transfer complete."
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:37:52 2026 [pid 1692] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."
+Sun Oct 11 21:37:52 2026 [pid 1694] CONNECT: Client "192.168.56.1"
+Sun Oct 11 21:37:52 2026 [pid 1694] FTP response: Client "192.168.56.1", "220 (vsFTPd 3.0.5)"
+Sun Oct 11 21:37:52 2026 [pid 1694] FTP command: Client "192.168.56.1", "USER ftpuser"
+Sun Oct 11 21:37:52 2026 [pid 1694] [ftpuser] FTP response: Client "192.168.56.1", "331 Please specify the password."
+Sun Oct 11 21:37:52 2026 [pid 1694] [ftpuser] FTP command: Client "192.168.56.1", "PASS <password>"
+Sun Oct 11 21:37:52 2026 [pid 1693] [ftpuser] OK LOGIN: Client "192.168.56.1"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "230 Login successful."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "CWD /"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "250 Directory successfully changed."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "CDUP"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "250 Directory successfully changed."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "PWD"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "257 "/" is the current directory"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "TYPE I"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "200 Switching to Binary mode."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "PASV"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "227 Entering Passive Mode (192,168,56,10,156,145)."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "RETR /etc/passwd"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "550 Failed to open file."
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FAIL DOWNLOAD: Client "192.168.56.1", "/etc/passwd", 0.00Kbyte/sec
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP command: Client "192.168.56.1", "QUIT"
+Sun Oct 11 21:37:52 2026 [pid 1695] [ftpuser] FTP response: Client "192.168.56.1", "221 Goodbye."

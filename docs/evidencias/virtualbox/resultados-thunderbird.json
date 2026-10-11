@@ -1,0 +1,78 @@
+[
+  {
+    "id": "MAIL-02",
+    "status": "PASS",
+    "observed": [
+      {
+        "uid": "jvalladares",
+        "host": "mail.aerolinea.redes.test",
+        "port": 143,
+        "auth": 3,
+        "socket": 0
+      },
+      {
+        "uid": "nmolina",
+        "host": "mail.aerolinea.redes.test",
+        "port": 143,
+        "auth": 3,
+        "socket": 0
+      }
+    ],
+    "time": "2026-10-11T21:38:33.153587+00:00",
+    "scope": "Thunderbird Windows real -> SSH SOCKS -> servicios nativos VirtualBox"
+  },
+  {
+    "id": "MAIL-03",
+    "status": "PASS",
+    "observed": [
+      {
+        "uid": "nmolina",
+        "status": 0,
+        "folders": [
+          {
+            "name": "INBOX",
+            "uri": "imap://nmolina@mail.aerolinea.redes.test/INBOX"
+          },
+          {
+            "name": "Trash",
+            "uri": "imap://nmolina@mail.aerolinea.redes.test/Trash"
+          }
+        ]
+      },
+      {
+        "uid": "jvalladares",
+        "status": 0,
+        "folders": [
+          {
+            "name": "INBOX",
+            "uri": "imap://jvalladares@mail.aerolinea.redes.test/INBOX"
+          },
+          {
+            "name": "Trash",
+            "uri": "imap://jvalladares@mail.aerolinea.redes.test/Trash"
+          }
+        ]
+      }
+    ],
+    "time": "2026-10-11T21:38:37.622103+00:00",
+    "scope": "Thunderbird Windows real -> SSH SOCKS -> servicios nativos VirtualBox"
+  },
+  {
+    "id": "MAIL-06",
+    "status": "PASS",
+    "observed": {
+      "smtp": {
+        "status": 0,
+        "error": null
+      },
+      "recibido": {
+        "subject": "VirtualBox-Thunderbird-1791754710719388300",
+        "from": "nmolina@aerolinea.redes.test",
+        "to": "jvalladares@aerolinea.redes.test",
+        "uri": "imap-message://jvalladares@mail.aerolinea.redes.test/INBOX#13"
+      }
+    },
+    "time": "2026-10-11T21:38:42.643307+00:00",
+    "scope": "Thunderbird Windows real -> SSH SOCKS -> servicios nativos VirtualBox"
+  }
+]

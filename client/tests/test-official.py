@@ -175,10 +175,11 @@ def main():
         for _ in range(15):
             c=imap('jvalladares',passwords['jvalladares'])
             try:
-                c.select('INBOX'); status,data=c.search(None,'SUBJECT',subject)
+                c.select('INBOX'); status,data=c.uid('search',None,'SUBJECT',subject)
                 if data[0]:
-                    status,msg=c.fetch(data[0].split()[-1],'(RFC822)')
-                    assert body.encode() in msg[0][1],msg
+                    status,msg=c.uid('fetch',data[0].split()[-1],'(RFC822)')
+                    payloads=[item[1] for item in msg if isinstance(item,tuple) and isinstance(item[1],bytes)]
+                    assert status=='OK' and any(body.encode() in payload for payload in payloads),msg
                     return 'SMTP entregado e IMAP FETCH verificado: '+subject
             finally: c.logout()
             time.sleep(1)
@@ -251,7 +252,7 @@ def main():
         return hosts+'\nTodos los protocolos usan FQDN'
     record('INT-01',names,'Sin sustitución de DNS en /etc/hosts')
     for test in ['INT-02','INT-03','INT-04']: blocked(test,'Evidencia de servidores registrada por el orquestador')
-    args.output.write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+    args.output.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf8')
     assert len(rows)==33
     return 1 if any(r['status']=='FAIL' for r in rows) else 0
 

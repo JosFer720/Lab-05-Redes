@@ -1,0 +1,175 @@
+ Static hostname: lab5-ubuntu
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 3f197a3bd5004e1c94eb1192924c53da
+         Boot ID: 528f7a8f7a51407bb6d0f933022fa91d
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.4 LTS
+          Kernel: Linux 6.8.0-136-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 10month 1w 3d
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:5c:08:8e <BROADCAST,MULTICAST,UP,LOWER_UP> 
+enp0s8           UP             08:00:27:b1:41:d6 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe5c:88e/64 fe80::a00:27ff:fe5c:88e/64 
+enp0s8           UP             192.168.56.10/24 fe80::a00:27ff:feb1:41d6/64 
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100 
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.10 
+216.230.139.8 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+216.230.147.90 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+192.168.56.1 dev enp0s8 lladdr 0a:00:27:00:00:11 REACHABLE 
+10.0.2.2 dev enp0s3 lladdr 52:54:00:12:35:00 REACHABLE 
+fe80::2 dev enp0s3 lladdr 52:54:00:12:35:00 router STALE 
+enabled
+enabled
+enabled
+enabled
+enabled
+enabled
+active
+active
+active
+active
+active
+active
+zone aerolinea.redes.test/IN: loaded serial 2026101101
+OK
+# 2.3.21 (47349e2482): /etc/dovecot/dovecot.conf
+# Pigeonhole version 0.5.21 (f6cd4b8e)
+# OS: Linux 6.8.0-136-generic x86_64 Ubuntu 24.04.4 LTS 
+# Hostname: lab5-ubuntu
+auth_mechanisms = plain login
+auth_username_format = %Ln
+disable_plaintext_auth = no
+first_valid_uid = 5000
+last_valid_uid = 5000
+listen = *
+mail_gid = vmail
+mail_location = maildir:~/Maildir
+mail_privileged_group = mail
+mail_uid = vmail
+namespace inbox {
+  inbox = yes
+  location = 
+  mailbox Drafts {
+    special_use = \Drafts
+  }
+  mailbox Junk {
+    special_use = \Junk
+  }
+  mailbox Sent {
+    special_use = \Sent
+  }
+  mailbox "Sent Messages" {
+    special_use = \Sent
+  }
+  mailbox Trash {
+    special_use = \Trash
+  }
+  prefix = 
+}
+passdb {
+  args = /etc/dovecot/dovecot-ldap.conf.ext
+  driver = ldap
+}
+protocols = imap lmtp
+service auth {
+  unix_listener /var/spool/postfix/private/auth {
+    group = postfix
+    mode = 0660
+    user = postfix
+  }
+}
+service lmtp {
+  unix_listener /var/spool/postfix/private/dovecot-lmtp {
+    group = postfix
+    mode = 0600
+    user = postfix
+  }
+}
+ssl = no
+ssl_cert = </etc/dovecot/private/dovecot.pem
+ssl_client_ca_dir = /etc/ssl/certs
+ssl_dh = # hidden, use -P to show it
+ssl_key = # hidden, use -P to show it
+userdb {
+  args = uid=vmail gid=vmail home=/var/mail/vhosts/aerolinea.redes.test/%n
+  driver = static
+}
+protocol lmtp {
+  postmaster_address = postmaster@aerolinea.redes.test
+}
+Netid State  Recv-Q Send-Q    Local Address:Port Peer Address:PortProcess                                                                               
+udp   UNCONN 0      0         192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=39))                                                      
+udp   UNCONN 0      0         192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=38))                                                      
+udp   UNCONN 0      0             10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=35))                                                      
+udp   UNCONN 0      0             10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=34))                                                      
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=29))                                                      
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=28))                                                      
+udp   UNCONN 0      0            127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=16))                                            
+udp   UNCONN 0      0         127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=14))                                            
+udp   UNCONN 0      0      10.0.2.15%enp0s3:68        0.0.0.0:*    users:(("systemd-network",pid=694,fd=22))                                            
+tcp   LISTEN 0      100             0.0.0.0:143       0.0.0.0:*    users:(("dovecot",pid=744,fd=36))                                                    
+tcp   LISTEN 0      100             0.0.0.0:25        0.0.0.0:*    users:(("master",pid=1499,fd=13))                                                    
+tcp   LISTEN 0      4096            0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=807,fd=3),("systemd",pid=1,fd=88))                                
+tcp   LISTEN 0      32              0.0.0.0:21        0.0.0.0:*    users:(("vsftpd",pid=813,fd=3))                                                      
+tcp   LISTEN 0      10        192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=41))                                                      
+tcp   LISTEN 0      10        192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=40))                                                      
+tcp   LISTEN 0      2048            0.0.0.0:389       0.0.0.0:*    users:(("slapd",pid=909,fd=8))                                                       
+tcp   LISTEN 0      10            10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=37))                                                      
+tcp   LISTEN 0      10            10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=36))                                                      
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=32))                                                      
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=30))                                                      
+tcp   LISTEN 0      4096         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=17))                                            
+tcp   LISTEN 0      100             0.0.0.0:587       0.0.0.0:*    users:(("smtpd",pid=1661,fd=6),("master",pid=1499,fd=94))                            
+tcp   LISTEN 0      5             127.0.0.1:953       0.0.0.0:*    users:(("named",pid=747,fd=43))                                                      
+tcp   LISTEN 0      5             127.0.0.1:953       0.0.0.0:*    users:(("named",pid=747,fd=42))                                                      
+tcp   LISTEN 0      4096      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=15))                                            
+tcp   LISTEN 0      4096               [::]:22           [::]:*    users:(("sshd",pid=807,fd=4),("systemd",pid=1,fd=89))                                
+tcp   LISTEN 0      511                   *:80              *:*    users:(("apache2",pid=1124,fd=4),("apache2",pid=1123,fd=4),("apache2",pid=1117,fd=4))
+tcp   LISTEN 0      2048               [::]:389          [::]:*    users:(("slapd",pid=909,fd=9))                                                       
+BOOT_IMAGE=/vmlinuz-6.8.0-136-generic root=UUID=bd538862-c78b-47a7-a5b0-63ba5b68ac12 ro quiet noapic clocksource=acpi_pm
+PING 192.168.56.1 (192.168.56.1) 56(84) bytes of data.
+64 bytes from 192.168.56.1: icmp_seq=1 ttl=128 time=4.77 ms
+64 bytes from 192.168.56.1: icmp_seq=2 ttl=128 time=1.84 ms
+
+--- 192.168.56.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1008ms
+rtt min/avg/max/mdev = 1.838/3.305/4.773/1.467 ms
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp on enp0s3           ALLOW IN    Anywhere                  
+22/tcp on enp0s8           ALLOW IN    192.168.56.0/24           
+53/tcp on enp0s8           ALLOW IN    192.168.56.0/24           
+80/tcp on enp0s8           ALLOW IN    192.168.56.0/24           
+389/tcp on enp0s8          ALLOW IN    192.168.56.0/24           
+25/tcp on enp0s8           ALLOW IN    192.168.56.0/24           
+587/tcp on enp0s8          ALLOW IN    192.168.56.0/24           
+143/tcp on enp0s8          ALLOW IN    192.168.56.0/24           
+21/tcp on enp0s8           ALLOW IN    192.168.56.0/24           
+53/udp on enp0s8           ALLOW IN    192.168.56.0/24           
+40000:40100/tcp on enp0s8  ALLOW IN    192.168.56.0/24           
+22/tcp (v6) on enp0s3      ALLOW IN    Anywhere (v6)             
+
+apache2	2.4.58-1ubuntu8.16
+bind9	1:9.18.39-0ubuntu0.24.04.7
+dovecot-core	1:2.3.21+dfsg1-2ubuntu6.5
+postfix	3.8.6-1ubuntu0.1
+slapd	2.6.10+dfsg-0ubuntu0.24.04.1
+vsftpd	3.0.5-0ubuntu3.1
+slapd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install is-enabled slapd
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using fd17:625c:f037:2:a00:27ff:fe5c:88e. Set the 'ServerName' directive globally to suppress this message
+Syntax OK
