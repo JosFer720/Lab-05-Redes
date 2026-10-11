@@ -1,0 +1,19 @@
+﻿
+Name                                           Type   TTL   Section    IPAddress                                
+----                                           ----   ---   -------    ---------                                
+ns1.aerolinea.redes.test                       A      300   Answer     192.168.56.10                            
+
+
+
+Name                                     Type   TTL   Section    NameExchange                              Preference  
+----                                     ----   ---   -------    ------------                              ----------  
+aerolinea.redes.test                     MX     300   Answer     mail.aerolinea.redes.test                 10          
+
+Name       : mail.aerolinea.redes.test
+QueryType  : A
+TTL        : 300
+Section    : Additional
+IP4Address : 192.168.56.10
+
+
+

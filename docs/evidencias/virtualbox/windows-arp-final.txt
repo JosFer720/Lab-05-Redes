@@ -1,0 +1,13 @@
+﻿
+
+IPAddress        : 192.168.56.10
+InterfaceIndex   : 17
+InterfaceAlias   : Ethernet 2
+AddressFamily    : IPv4
+LinkLayerAddress : 08-00-27-B1-41-D6
+State            : Reachable
+PolicyStore      : ActiveStore
+
+
+
+

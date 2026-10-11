@@ -1,0 +1,332 @@
+[
+  {
+    "id": "DNS-01",
+    "status": "PASS",
+    "expected": "IP de ns1 correcta",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:19:53.615932+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: dnspython contra BIND real; record('DNS-01',lambda: dns('ns1.'+DOMAIN,expected=os.getenv('DNS_SERVER')), 'IP de ns1 correcta')"
+  },
+  {
+    "id": "DNS-02",
+    "status": "PASS",
+    "expected": "Cuatro IP coinciden con la zona",
+    "observed": "{'ldap': '192.168.56.10', 'www': '192.168.56.10', 'mail': '192.168.56.10', 'ftp': '192.168.56.10'}",
+    "time": "2026-10-11T21:19:53.631055+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: dnspython contra BIND real; dig +short ldap/www/mail/ftp.aerolinea.redes.test A; comparar con zona esperada"
+  },
+  {
+    "id": "DNS-03",
+    "status": "PASS",
+    "expected": "SOA con flag aa",
+    "observed": "status: NOERROR; flags: qr aa ra;\nid 12316\nopcode QUERY\nrcode NOERROR\nflags QR AA RA\n;QUESTION\naerolinea.redes.test. IN SOA\n;ANSWER\naerolinea.redes.test. 300 IN SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300\n;AUTHORITY\naerolinea.redes.test. 300 IN NS ns1.aerolinea.redes.test.\n;ADDITIONAL\nns1.aerolinea.redes.test. 300 IN A 192.168.56.10",
+    "time": "2026-10-11T21:19:53.665464+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: dnspython contra BIND real; dig +norecurse @DNS_SERVER aerolinea.redes.test SOA"
+  },
+  {
+    "id": "DNS-04",
+    "status": "PASS",
+    "expected": "MX prioridad 10",
+    "observed": "10 mail.aerolinea.redes.test.",
+    "time": "2026-10-11T21:19:53.675912+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: dnspython contra BIND real; record('DNS-04',lambda:dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.'),'MX prioridad 10')"
+  },
+  {
+    "id": "DNS-05",
+    "status": "PASS",
+    "expected": "NXDOMAIN",
+    "observed": "status: NXDOMAIN; flags: qr aa rd ra;\nid 27217\nopcode QUERY\nrcode NXDOMAIN\nflags QR AA RD RA\n;QUESTION\nnoexiste.aerolinea.redes.test. IN A\n;ANSWER\n;AUTHORITY\naerolinea.redes.test. 300 IN SOA ns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300\n;ADDITIONAL",
+    "time": "2026-10-11T21:19:53.693913+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: dnspython contra BIND real; dig noexiste.aerolinea.redes.test A"
+  },
+  {
+    "id": "LDAP-01",
+    "status": "PASS",
+    "expected": "Seis integrantes presentes; pueden existir fixtures adicionales",
+    "observed": "dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test",
+    "time": "2026-10-11T21:19:53.699018+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: ldap3, bind/búsqueda/rechazo LDAP reales; ldapsearch -LLL -b ou=People,... uid cn sn mail; exigir las seis cuentas"
+  },
+  {
+    "id": "LDAP-02",
+    "status": "PASS",
+    "expected": "Bind correcto de los seis",
+    "observed": "Seis binds válidos",
+    "time": "2026-10-11T21:19:54.007581+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: ldap3, bind/búsqueda/rechazo LDAP reales; ldapwhoami con archivo privado -y; bind individual de seis uid"
+  },
+  {
+    "id": "LDAP-03",
+    "status": "PASS",
+    "expected": "Credenciales rechazadas con LDAP 49",
+    "observed": "Siete rechazos LDAP 49",
+    "time": "2026-10-11T21:19:54.790784+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: ldap3, bind/búsqueda/rechazo LDAP reales; ldapwhoami de cada uid con clave incorrecta y de usuario inexistente; exigir LDAP 49"
+  },
+  {
+    "id": "LDAP-04",
+    "status": "PASS",
+    "expected": "Identidades y correos correctos en seis cuentas",
+    "observed": "dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test",
+    "time": "2026-10-11T21:19:55.016146+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: ldap3, bind/búsqueda/rechazo LDAP reales; ldapsearch uid cn sn mail; comparar identidad y correo de cada integrante"
+  },
+  {
+    "id": "WEB-01",
+    "status": "PASS",
+    "expected": "DNS del sitio",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:19:55.378921+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; record('WEB-01',lambda:dns('www.'+DOMAIN),'DNS del sitio')"
+  },
+  {
+    "id": "WEB-02",
+    "status": "PASS",
+    "expected": "Página original accesible; evidencia HTTP, captura gráfica pendiente",
+    "observed": "HTTP 200; Aerolínea Redes",
+    "time": "2026-10-11T21:19:55.386884+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; HTTP GET / por FQDN; exigir marca del sitio React/Vite"
+  },
+  {
+    "id": "WEB-03",
+    "status": "PASS",
+    "expected": "Área privada accesible solo con sesión válida",
+    "observed": "Seis logins y logout correctos",
+    "time": "2026-10-11T21:19:55.529996+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; HTTP POST /dologin y GET /privado/usuario.json para las seis cuentas"
+  },
+  {
+    "id": "WEB-04",
+    "status": "PASS",
+    "expected": "No se crea sesión autorizada",
+    "observed": "Ambos accesos rechazados",
+    "time": "2026-10-11T21:20:00.863818+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; POST /dologin con clave incorrecta y usuario inexistente; exigir redirección a login"
+  },
+  {
+    "id": "WEB-05",
+    "status": "BLOCKED",
+    "expected": "El orquestador detiene LDAP y verifica recuperación y log",
+    "observed": "El orquestador detiene LDAP y verifica recuperación y log",
+    "time": "2026-10-11T21:20:01.763530+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "MAIL-01",
+    "status": "PASS",
+    "expected": "A y MX correctos",
+    "observed": "('192.168.56.10', '10 mail.aerolinea.redes.test.')",
+    "time": "2026-10-11T21:20:01.763530+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; record('MAIL-01',lambda:(dns('mail.'+DOMAIN),dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.')),'A y MX correctos')"
+  },
+  {
+    "id": "MAIL-02",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:20:01.787911+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "MAIL-03",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:20:01.787911+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "MAIL-06",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:20:01.787911+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "MAIL-04",
+    "status": "PASS",
+    "expected": "Dovecot rechaza credenciales incorrectas",
+    "observed": "IMAP AUTHENTICATIONFAILED; reproducción gráfica pendiente",
+    "time": "2026-10-11T21:20:01.787911+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; IMAP LOGIN con clave incorrecta; exigir respuesta NO, no error de conectividad"
+  },
+  {
+    "id": "MAIL-05",
+    "status": "FAIL",
+    "expected": "Envío entre dos integrantes y entrega real; IMAP complementario",
+    "observed": "TypeError: argument of type 'int' is not iterable",
+    "time": "2026-10-11T21:20:04.543672+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; SMTP AUTH LOGIN/PLAIN :587 nmolina -> jvalladares; mensaje único; IMAP FETCH contenido"
+  },
+  {
+    "id": "MAIL-07",
+    "status": "PASS",
+    "expected": "550 destinatario inexistente",
+    "observed": "550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table",
+    "time": "2026-10-11T21:20:10.796809+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; SMTP autenticado, RCPT TO noexiste; exigir rechazo 550"
+  },
+  {
+    "id": "FTP-01",
+    "status": "PASS",
+    "expected": "DNS FTP",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:20:11.066742+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; record('FTP-01',lambda:dns('ftp.'+DOMAIN),'DNS FTP')"
+  },
+  {
+    "id": "FTP-02",
+    "status": "PASS",
+    "expected": "Login válido",
+    "observed": "220 (vsFTPd 3.0.5)",
+    "time": "2026-10-11T21:20:11.083161+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; FTP USER/PASS y QUIT por FQDN"
+  },
+  {
+    "id": "FTP-03",
+    "status": "PASS",
+    "expected": "530 clave incorrecta",
+    "observed": "530 Login incorrect.",
+    "time": "2026-10-11T21:20:11.849667+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; record('FTP-03',lambda:ftpreject(credentials['ftp_user'],'incorrecta-audit'),'530 clave incorrecta')"
+  },
+  {
+    "id": "FTP-04",
+    "status": "PASS",
+    "expected": "530 anónimo",
+    "observed": "530 Permission denied.",
+    "time": "2026-10-11T21:20:14.830097+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; record('FTP-04',lambda:ftpreject('anonymous','audit@example.test'),'530 anónimo')"
+  },
+  {
+    "id": "FTP-05",
+    "status": "PASS",
+    "expected": "Listado autorizado",
+    "observed": "['bienvenida.txt', 'uploads']",
+    "time": "2026-10-11T21:20:15.890980+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; FTP NLST pasivo; exigir bienvenida.txt"
+  },
+  {
+    "id": "FTP-06",
+    "status": "PASS",
+    "expected": "226 carga completa",
+    "observed": "226 Transfer complete.",
+    "time": "2026-10-11T21:20:16.157567+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; FTP STOR uploads/<id único>.txt en modo pasivo"
+  },
+  {
+    "id": "FTP-07",
+    "status": "PASS",
+    "expected": "Descarga idéntica",
+    "observed": "SHA256 0f031217170eb10c5da528ed5d717e4c8e228dce78f56dd8034466cd853d6fcc",
+    "time": "2026-10-11T21:20:16.391386+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; FTP RETR del mismo archivo; comparar bytes y SHA256"
+  },
+  {
+    "id": "FTP-08",
+    "status": "PASS",
+    "expected": "No se escapa de chroot",
+    "observed": "CWD .. permanece /; 550 Failed to open file.",
+    "time": "2026-10-11T21:20:16.625270+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; FTP CWD .. debe permanecer en /; RETR /etc/passwd debe dar 550"
+  },
+  {
+    "id": "INT-01",
+    "status": "FAIL",
+    "expected": "Sin sustitución de DNS en /etc/hosts",
+    "observed": "AssertionError: ",
+    "time": "2026-10-11T21:20:16.816755+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Inspeccionar /etc/hosts y exigir pruebas FQDN de todos los protocolos PASS"
+  },
+  {
+    "id": "INT-02",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:20:16.816755+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "INT-03",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:20:16.816755+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  },
+  {
+    "id": "INT-04",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:20:16.816755+00:00",
+    "machine": "Nery",
+    "scope": "Windows independiente -> Ubuntu VirtualBox host-only; DNS real consultado por dnspython",
+    "procedure": "Windows: protocolos nativos Python y resolución A consultada a BIND; Pendiente"
+  }
+]

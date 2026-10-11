@@ -1,0 +1,55 @@
+Netid State  Recv-Q Send-Q    Local Address:Port Peer Address:PortProcess                                                                               
+udp   UNCONN 0      0         192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=39))                                                      
+udp   UNCONN 0      0         192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=38))                                                      
+udp   UNCONN 0      0             10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=35))                                                      
+udp   UNCONN 0      0             10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=34))                                                      
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=29))                                                      
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=28))                                                      
+udp   UNCONN 0      0            127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=16))                                            
+udp   UNCONN 0      0         127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=14))                                            
+udp   UNCONN 0      0      10.0.2.15%enp0s3:68        0.0.0.0:*    users:(("systemd-network",pid=694,fd=22))                                            
+tcp   LISTEN 0      100             0.0.0.0:143       0.0.0.0:*    users:(("dovecot",pid=744,fd=36))                                                    
+tcp   LISTEN 0      100             0.0.0.0:25        0.0.0.0:*    users:(("master",pid=1499,fd=13))                                                    
+tcp   LISTEN 0      4096            0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=807,fd=3),("systemd",pid=1,fd=88))                                
+tcp   LISTEN 0      32              0.0.0.0:21        0.0.0.0:*    users:(("vsftpd",pid=813,fd=3))                                                      
+tcp   LISTEN 0      10        192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=41))                                                      
+tcp   LISTEN 0      10        192.168.56.10:53        0.0.0.0:*    users:(("named",pid=747,fd=40))                                                      
+tcp   LISTEN 0      2048            0.0.0.0:389       0.0.0.0:*    users:(("slapd",pid=909,fd=8))                                                       
+tcp   LISTEN 0      10            10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=37))                                                      
+tcp   LISTEN 0      10            10.0.2.15:53        0.0.0.0:*    users:(("named",pid=747,fd=36))                                                      
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=32))                                                      
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=747,fd=30))                                                      
+tcp   LISTEN 0      4096         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=17))                                            
+tcp   LISTEN 0      100             0.0.0.0:587       0.0.0.0:*    users:(("smtpd",pid=1661,fd=6),("master",pid=1499,fd=94))                            
+tcp   LISTEN 0      5             127.0.0.1:953       0.0.0.0:*    users:(("named",pid=747,fd=43))                                                      
+tcp   LISTEN 0      5             127.0.0.1:953       0.0.0.0:*    users:(("named",pid=747,fd=42))                                                      
+tcp   LISTEN 0      4096      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=475,fd=15))                                            
+tcp   LISTEN 0      4096               [::]:22           [::]:*    users:(("sshd",pid=807,fd=4),("systemd",pid=1,fd=89))                                
+tcp   LISTEN 0      511                   *:80              *:*    users:(("apache2",pid=1124,fd=4),("apache2",pid=1123,fd=4),("apache2",pid=1117,fd=4))
+tcp   LISTEN 0      2048               [::]:389          [::]:*    users:(("slapd",pid=909,fd=9))                                                       
+enabled
+enabled
+enabled
+enabled
+enabled
+enabled
+oracle
+MainPID=747
+ControlGroup=/system.slice/named.service
+
+MainPID=0
+ControlGroup=/system.slice/slapd.service
+
+MainPID=1117
+ControlGroup=/system.slice/apache2.service
+
+MainPID=0
+ControlGroup=/system.slice/system-postfix.slice/postfix@-.service
+
+MainPID=744
+ControlGroup=/system.slice/dovecot.service
+
+MainPID=813
+ControlGroup=/system.slice/vsftpd.service
+slapd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install is-enabled slapd

@@ -9,3 +9,6 @@ db.* text eol=lf
 *.pdf binary
 *.png binary
 *.pptx binary
+# Conservar el espaciado original de las salidas de consola.
+docs/evidencias/virtualbox/*.txt whitespace=-blank-at-eol,-blank-at-eof
+docs/evidencias/virtualbox/*.log whitespace=-blank-at-eol,-blank-at-eof

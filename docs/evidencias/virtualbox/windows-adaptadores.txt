@@ -1,0 +1,10 @@
+﻿
+Name                               Status       MacAddress       
+----                               ------       ----------       
+vEthernet (WSL (Hyper-V firewall)) Up           00-15-5D-4D-36-34
+Ethernet                           Up           04-BF-1B-BC-3F-77
+Ethernet 2                         Up           0A-00-27-00-00-11
+Bluetooth Network Connection       Disconnected 4C-49-6C-38-14-EE
+Wi-Fi                              Disconnected 4C-49-6C-38-14-EA
+
+

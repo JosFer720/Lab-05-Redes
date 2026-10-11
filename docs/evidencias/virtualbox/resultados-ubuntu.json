@@ -1,0 +1,332 @@
+[
+  {
+    "id": "DNS-01",
+    "status": "PASS",
+    "expected": "IP de ns1 correcta",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:21:43.002143+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('DNS-01',lambda: dns('ns1.'+DOMAIN,expected=os.getenv('DNS_SERVER')), 'IP de ns1 correcta')"
+  },
+  {
+    "id": "DNS-02",
+    "status": "PASS",
+    "expected": "Cuatro IP coinciden con la zona",
+    "observed": "{'ldap': '192.168.56.10', 'www': '192.168.56.10', 'mail': '192.168.56.10', 'ftp': '192.168.56.10'}",
+    "time": "2026-10-11T21:21:43.212604+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "dig +short ldap/www/mail/ftp.aerolinea.redes.test A; comparar con zona esperada"
+  },
+  {
+    "id": "DNS-03",
+    "status": "PASS",
+    "expected": "SOA con flag aa",
+    "observed": "\n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +norecurse +time=3 +tries=1 @192.168.56.10 aerolinea.redes.test SOA\n; (1 server found)\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30582\n;; flags: qr aa ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: e1aec36065cf19c4010000006acbfde70a49a77b018f229f (good)\n;; QUESTION SECTION:\n;aerolinea.redes.test.\t\tIN\tSOA\n\n;; ANSWER SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tNS\tns1.aerolinea.redes.test.\n\n;; ADDITIONAL SECTION:\nns1.aerolinea.redes.test. 300\tIN\tA\t192.168.56.10\n\n;; Query time: 10 msec\n;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)\n;; WHEN: Sun Oct 11 21:21:43 UTC 2026\n;; MSG SIZE  rcvd: 153\n\n",
+    "time": "2026-10-11T21:21:43.720628+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "dig +norecurse @DNS_SERVER aerolinea.redes.test SOA"
+  },
+  {
+    "id": "DNS-04",
+    "status": "PASS",
+    "expected": "MX prioridad 10",
+    "observed": "10 mail.aerolinea.redes.test.",
+    "time": "2026-10-11T21:21:43.821733+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('DNS-04',lambda:dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.'),'MX prioridad 10')"
+  },
+  {
+    "id": "DNS-05",
+    "status": "PASS",
+    "expected": "NXDOMAIN",
+    "observed": "\n; <<>> DiG 9.18.39-0ubuntu0.24.04.7-Ubuntu <<>> +time=3 +tries=1 noexiste.aerolinea.redes.test A\n;; global options: +cmd\n;; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 20744\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 65494\n;; QUESTION SECTION:\n;noexiste.aerolinea.redes.test.\tIN\tA\n\n;; AUTHORITY SECTION:\naerolinea.redes.test.\t300\tIN\tSOA\tns1.aerolinea.redes.test. admin.aerolinea.redes.test. 2026101101 3600 900 604800 300\n\n;; Query time: 0 msec\n;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)\n;; WHEN: Sun Oct 11 21:21:44 UTC 2026\n;; MSG SIZE  rcvd: 104\n\n",
+    "time": "2026-10-11T21:21:43.972749+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "dig noexiste.aerolinea.redes.test A"
+  },
+  {
+    "id": "LDAP-01",
+    "status": "PASS",
+    "expected": "Seis integrantes presentes; pueden existir fixtures adicionales",
+    "observed": "dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n",
+    "time": "2026-10-11T21:21:44.071940+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "ldapsearch -LLL -b ou=People,... uid cn sn mail; exigir las seis cuentas"
+  },
+  {
+    "id": "LDAP-02",
+    "status": "PASS",
+    "expected": "Bind correcto de los seis",
+    "observed": "Seis binds válidos",
+    "time": "2026-10-11T21:21:44.329033+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "ldapwhoami con archivo privado -y; bind individual de seis uid"
+  },
+  {
+    "id": "LDAP-03",
+    "status": "PASS",
+    "expected": "Credenciales rechazadas con LDAP 49",
+    "observed": "Siete rechazos LDAP 49",
+    "time": "2026-10-11T21:21:45.390090+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "ldapwhoami de cada uid con clave incorrecta y de usuario inexistente; exigir LDAP 49"
+  },
+  {
+    "id": "LDAP-04",
+    "status": "PASS",
+    "expected": "Identidades y correos correctos en seis cuentas",
+    "observed": "dn: uid=fruiz,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: fruiz\ncn: Fernando Ruiz\nsn: Ruiz\nmail: fruiz@aerolinea.redes.test\n\ndn: uid=hbarillas,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: hbarillas\ncn: Hugo Barillas\nsn: Barillas\nmail: hbarillas@aerolinea.redes.test\n\ndn: uid=icumes,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: icumes\ncn: Ian Cumes\nsn: Cumes\nmail: icumes@aerolinea.redes.test\n\ndn: uid=jvalladares,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: jvalladares\ncn: Javier Valladares\nsn: Valladares\nmail: jvalladares@aerolinea.redes.test\n\ndn: uid=nmolina,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: nmolina\ncn: Nery Molina\nsn: Molina\nmail: nmolina@aerolinea.redes.test\n\ndn: uid=mpolanco,ou=People,dc=aerolinea,dc=redes,dc=test\nuid: mpolanco\ncn: Milton Polanco\nsn: Polanco\nmail: mpolanco@aerolinea.redes.test\n\n",
+    "time": "2026-10-11T21:21:46.770592+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "ldapsearch uid cn sn mail; comparar identidad y correo de cada integrante"
+  },
+  {
+    "id": "WEB-01",
+    "status": "PASS",
+    "expected": "DNS del sitio",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:21:47.089022+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('WEB-01',lambda:dns('www.'+DOMAIN),'DNS del sitio')"
+  },
+  {
+    "id": "WEB-02",
+    "status": "PASS",
+    "expected": "Página original accesible; evidencia HTTP, captura gráfica pendiente",
+    "observed": "HTTP 200; Aerolínea Redes",
+    "time": "2026-10-11T21:21:47.205848+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "HTTP GET / por FQDN; exigir marca del sitio React/Vite"
+  },
+  {
+    "id": "WEB-03",
+    "status": "PASS",
+    "expected": "Área privada accesible solo con sesión válida",
+    "observed": "Seis logins y logout correctos",
+    "time": "2026-10-11T21:21:47.385086+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "HTTP POST /dologin y GET /privado/usuario.json para las seis cuentas"
+  },
+  {
+    "id": "WEB-04",
+    "status": "PASS",
+    "expected": "No se crea sesión autorizada",
+    "observed": "Ambos accesos rechazados",
+    "time": "2026-10-11T21:21:52.621084+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "POST /dologin con clave incorrecta y usuario inexistente; exigir redirección a login"
+  },
+  {
+    "id": "WEB-05",
+    "status": "BLOCKED",
+    "expected": "El orquestador detiene LDAP y verifica recuperación y log",
+    "observed": "El orquestador detiene LDAP y verifica recuperación y log",
+    "time": "2026-10-11T21:21:53.328076+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-01",
+    "status": "PASS",
+    "expected": "A y MX correctos",
+    "observed": "('192.168.56.10', '10 mail.aerolinea.redes.test.')",
+    "time": "2026-10-11T21:21:53.328774+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('MAIL-01',lambda:(dns('mail.'+DOMAIN),dns(DOMAIN,'MX','10 mail.'+DOMAIN+'.')),'A y MX correctos')"
+  },
+  {
+    "id": "MAIL-02",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:21:53.497953+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-03",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:21:53.499681+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-06",
+    "status": "BLOCKED",
+    "expected": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "observed": "El PDF oficial exige Thunderbird; las pruebas de protocolo se guardan como evidencia complementaria",
+    "time": "2026-10-11T21:21:53.499754+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "MAIL-04",
+    "status": "PASS",
+    "expected": "Dovecot rechaza credenciales incorrectas",
+    "observed": "IMAP AUTHENTICATIONFAILED; reproducción gráfica pendiente",
+    "time": "2026-10-11T21:21:53.499801+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "IMAP LOGIN con clave incorrecta; exigir respuesta NO, no error de conectividad"
+  },
+  {
+    "id": "MAIL-05",
+    "status": "PASS",
+    "expected": "Envío entre dos integrantes y entrega real; IMAP complementario",
+    "observed": "SMTP entregado e IMAP FETCH verificado: Lab5-audit-1791753715302996796",
+    "time": "2026-10-11T21:21:55.303610+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "SMTP AUTH LOGIN/PLAIN :587 nmolina -> jvalladares; mensaje único; IMAP FETCH contenido"
+  },
+  {
+    "id": "MAIL-07",
+    "status": "PASS",
+    "expected": "550 destinatario inexistente",
+    "observed": "550 5.1.1 <noexiste@aerolinea.redes.test>: Recipient address rejected: User unknown in virtual mailbox table",
+    "time": "2026-10-11T21:22:00.748715+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "SMTP autenticado, RCPT TO noexiste; exigir rechazo 550"
+  },
+  {
+    "id": "FTP-01",
+    "status": "PASS",
+    "expected": "DNS FTP",
+    "observed": "192.168.56.10",
+    "time": "2026-10-11T21:22:02.373069+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('FTP-01',lambda:dns('ftp.'+DOMAIN),'DNS FTP')"
+  },
+  {
+    "id": "FTP-02",
+    "status": "PASS",
+    "expected": "Login válido",
+    "observed": "220 (vsFTPd 3.0.5)",
+    "time": "2026-10-11T21:22:02.517549+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "FTP USER/PASS y QUIT por FQDN"
+  },
+  {
+    "id": "FTP-03",
+    "status": "PASS",
+    "expected": "530 clave incorrecta",
+    "observed": "530 Login incorrect.",
+    "time": "2026-10-11T21:22:02.982808+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('FTP-03',lambda:ftpreject(credentials['ftp_user'],'incorrecta-audit'),'530 clave incorrecta')"
+  },
+  {
+    "id": "FTP-04",
+    "status": "PASS",
+    "expected": "530 anónimo",
+    "observed": "530 Permission denied.",
+    "time": "2026-10-11T21:22:06.533544+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "record('FTP-04',lambda:ftpreject('anonymous','audit@example.test'),'530 anónimo')"
+  },
+  {
+    "id": "FTP-05",
+    "status": "PASS",
+    "expected": "Listado autorizado",
+    "observed": "['bienvenida.txt', 'uploads']",
+    "time": "2026-10-11T21:22:07.643124+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "FTP NLST pasivo; exigir bienvenida.txt"
+  },
+  {
+    "id": "FTP-06",
+    "status": "PASS",
+    "expected": "226 carga completa",
+    "observed": "226 Transfer complete.",
+    "time": "2026-10-11T21:22:07.929917+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "FTP STOR uploads/<id único>.txt en modo pasivo"
+  },
+  {
+    "id": "FTP-07",
+    "status": "PASS",
+    "expected": "Descarga idéntica",
+    "observed": "SHA256 400dd439b3ff7faf6f4fdb46e7fb0e53f40508a92fb1f20924c70ba4e12dc53b",
+    "time": "2026-10-11T21:22:08.237837+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "FTP RETR del mismo archivo; comparar bytes y SHA256"
+  },
+  {
+    "id": "FTP-08",
+    "status": "PASS",
+    "expected": "No se escapa de chroot",
+    "observed": "CWD .. permanece /; 550 Failed to open file.",
+    "time": "2026-10-11T21:22:08.558553+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "FTP CWD .. debe permanecer en /; RETR /etc/passwd debe dar 550"
+  },
+  {
+    "id": "INT-01",
+    "status": "PASS",
+    "expected": "Sin sustitución de DNS en /etc/hosts",
+    "observed": "127.0.0.1 localhost\n\n# The following lines are desirable for IPv6 capable hosts\n::1 ip6-localhost ip6-loopback\nfe00::0 ip6-localnet\nff00::0 ip6-mcastprefix\nff02::1 ip6-allnodes\nff02::2 ip6-allrouters\nff02::3 ip6-allhosts\n\nTodos los protocolos usan FQDN",
+    "time": "2026-10-11T21:22:08.891860+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Inspeccionar /etc/hosts y exigir pruebas FQDN de todos los protocolos PASS"
+  },
+  {
+    "id": "INT-02",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:22:08.925249+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "INT-03",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:22:08.925334+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  },
+  {
+    "id": "INT-04",
+    "status": "BLOCKED",
+    "expected": "Evidencia de servidores registrada por el orquestador",
+    "observed": "Evidencia de servidores registrada por el orquestador",
+    "time": "2026-10-11T21:22:08.925374+00:00",
+    "machine": "lab5-ubuntu",
+    "scope": "Ubuntu 24.04 nativo, VirtualBox; pruebas locales del servidor",
+    "procedure": "Pendiente"
+  }
+]
