@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-12T05:19:37.942424+00:00",
+  "vm": "CC3067-Lab5-Ubuntu",
+  "state": "poweroff",
+  "mode": "bridged",
+  "physical_adapter": "Realtek PCIe GbE Family Controller",
+  "guest_mac": "08:00:27:5c:08:8e",
+  "host_only_mac": "08:00:27:b1:41:d6",
+  "windows_ipv4": "192.168.1.22",
+  "current_guest_lan_ipv4": null,
+  "bridge_verified": false,
+  "lan_services_verified": false,
+  "error": "WHvSetupPartition E_ACCESSDENIED VERR_NEM_VM_CREATE_FAILED; reproducido tambi?n con NAT",
+  "professor_network_available": false,
+  "another_authorized_machine_available": false,
+  "dns_updated": false,
+  "notes": "VM apagada de forma segura antes del cambio; MAC conservada. FC26 no se cerr? por petici?n del usuario; causalidad no confirmada."
+}

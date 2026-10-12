@@ -2,6 +2,10 @@
 
 Repositorio de configuración y evidencias para `aerolinea.redes.test`.
 
+Preparación actual de LAN: [puente y bloqueo de arranque](docs/preparacion-lan.md).
+La VM está apagada y configurada en puente sobre Ethernet; todavía no se
+obtuvo una IP LAN ni se comprobaron servicios desde la red del profesor.
+
 El despliegue de trabajo utiliza **Ubuntu nativo en Oracle VirtualBox**.
 Arranque, SSH y cliente Windows: [virtualbox/README.md](virtualbox/README.md).
 La validación nueva se registra en `docs/evidencias/virtualbox/` y se documenta

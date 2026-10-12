@@ -1,0 +1,15 @@
+﻿
+
+InterfaceAlias  : Ethernet
+InterfaceIndex  : 18
+AddressFamily   : IPv4
+ServerAddresses : {216.230.147.90, 216.230.139.8}
+
+InterfaceAlias  : Ethernet
+InterfaceIndex  : 18
+AddressFamily   : IPv6
+ServerAddresses : {2800:98:0:4::4, 2803:f340:1300::c, 2800:98:0:4::4, 2803:f340:1300::c}
+
+
+
+

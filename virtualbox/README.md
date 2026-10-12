@@ -1,5 +1,11 @@
 # Laboratorio nativo en Oracle VirtualBox
 
+Preparación posterior para la red del profesor:
+[modo puente y estado actual](../docs/preparacion-lan.md).
+El adaptador principal está en puente sobre Ethernet; el arranque actual
+está bloqueado por `WHvSetupPartition: E_ACCESSDENIED`. Los resultados de
+33 casos descritos abajo son la ejecución anterior en host-only.
+
 La VM de trabajo es `CC3067-Lab5-Ubuntu`, Ubuntu 24.04 x86_64.
 Los servicios se instalan con `apt` y arrancan con `systemd` dentro de la VM.
 Las evidencias de esta ejecución están en `docs/evidencias/virtualbox/`.
