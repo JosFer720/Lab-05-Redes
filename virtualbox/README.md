@@ -146,3 +146,63 @@ conservados fuera de Git. `main` y el repositorio remoto se mantienen intactos.
 El snapshot `Lab5-servicios-persistentes` conserva los servicios instalados
 con la VM apagada. Un intento de snapshot en vivo no terminó y fue cancelado;
 el snapshot sin memoria de ejecución se guardó correctamente.
+
+## Modo puente (otros equipos de la red)
+
+Host-only solo conecta a esta computadora con la VM. Para que otros equipos del
+grupo alcancen los cinco servicios, la VM se crea con un segundo adaptador en
+puente a la tarjeta física (Wi-Fi o Ethernet) y obtiene su IP por DHCP. El
+adaptador NAT se conserva para instalar paquetes y para administrar por SSH
+(`127.0.0.1:22225`). Los valores originales no cambian si no se definen estas
+variables:
+
+```powershell
+# Si el repositorio está en una carpeta sincronizada (OneDrive), guarde los secretos fuera de ella.
+# Las credenciales deben estar en <LAB5_PRIVATE_DIR>\lab5-private\credentials.json.
+$env:LAB5_PRIVATE_DIR = "$env:USERPROFILE\.lab5-private"
+$env:LAB_NET_MODE = 'bridged'          # crear-ubuntu.py: NAT + puente (LAB_BRIDGE_ADAPTER opcional)
+python virtualbox/crear-ubuntu.py
+
+$env:LAB_SSH_HOST = '127.0.0.1'; $env:LAB_SSH_PORT = '22225'   # administración por NAT
+# IP y red que la VM recibió por DHCP en enp0s8 (ip -br addr):
+$env:LAB_IP = '192.168.1.50'; $env:LAB_NETWORK = '192.168.1.0/24'
+$env:LAB_IFACE = 'enp0s8'; $env:LAB_RESOLVER = '127.0.0.1'
+$env:LAB_PORTS = '53 80 389 25 587 143 21'   # sin SSH hacia la red local
+python virtualbox/desplegar.py
+```
+
+Como la IP viene por DHCP, conviene reservarla en el router usando la MAC del
+adaptador en puente (`VBoxManage showvminfo CC3067-Lab5-Ubuntu --machinereadable`,
+campo `macaddress2`). En Wi-Fi, VirtualBox sustituye la MAC de origen por la de la
+tarjeta del equipo físico en las tramas que salen al aire; la MAC de la VM solo
+viaja dentro de los paquetes DHCP, que es lo que un router usa para reservar la IP.
+
+Dos problemas de VirtualBox 7.2 con Hyper-V/WSL2 activos que `crear-ubuntu.py` ya
+resuelve: `--x2apic off` dejaba el APIC principal apagado (`Cannot disable the APIC
+for a 64-bit guest`; ahora se activa `--apic on`) y, en algunos equipos, el kernel
+entraba en pánico en el primer arranque con `IO-APIC + timer doesn't work!` antes de
+que cloud-init pudiera corregir GRUB. Como la VM usa una sola CPU, el IO-APIC se
+apaga por defecto; `LAB_IOAPIC=on` restaura el comportamiento original.
+
+Si la red o la IP cambian (otro Wi-Fi, hotspot), dentro de la VM:
+
+```bash
+sudo bash /opt/lab5/virtualbox/cambiar-ip.sh
+```
+
+Actualiza la zona DNS, la red permitida de BIND, la dirección pasiva de FTP y UFW.
+Después hay que avisar a los demás equipos de la nueva IP del DNS.
+
+### Todo en un comando y utilidades
+
+| Archivo | Para qué |
+|---|---|
+| `levantar-puente.ps1` | Primera vez en una PC Windows: comprueba requisitos, genera credenciales, crea la VM en puente, espera el arranque, lee la IP por DHCP, instala los cinco servicios y muestra IP y MAC. `-Adaptador "<nombre>"` elige el adaptador físico; `-Forzar` reinstala. |
+| `puente.ps1 iniciar\|estado\|ip\|mac\|ssh\|traer\|detener` | Operación diaria de la VM en puente. `traer <ruta-en-la-VM> [destino]` copia archivos o carpetas de la VM a Windows (scp). `LAB_VM_NAME` y `LAB_NAT_SSH_PORT` permiten una segunda VM. |
+| `generar-credenciales.py` | Crea `credentials.json` con claves aleatorias (no las imprime). Lo entrega, por un canal privado, quien aloja el servidor a quien lo prueba. |
+| `esperar-vm.py` | Espera SSH, cloud-init y la IP de `enp0s8`; imprime `LAB_IP`, `LAB_NETWORK`. |
+| `instalar-en-ubuntu.sh` | Alternativa sin Windows ni VirtualBox: dentro de cualquier Ubuntu 24.04 con red en puente (VM de UTM, VMware, Parallels... x86-64 o ARM64), `sudo bash virtualbox/instalar-en-ubuntu.sh` genera las credenciales y deja los cinco servicios funcionando. `--solo-preparar` solo calcula IP y archivos. |
+| `crear-paquete.py` | Zip sin secretos para pasar estos scripts a otro equipo antes de subirlos al repositorio. |
+| `cambiar-ip.sh` | Reconfigura zona, BIND, FTP pasivo y UFW al cambiar la IP o la red (lee `/root/lab5-private/red.env`). Acepta `IP/prefijo` y, si los demás servicios corren en computadoras de los compañeros, `ldap=IP www=IP mail=IP ftp=IP` (ns1 sigue siendo esta VM; lo no indicado apunta a ella). |
+
+La batería oficial desde otra computadora (cliente) se explica en [`client/README.md`](../client/README.md).
