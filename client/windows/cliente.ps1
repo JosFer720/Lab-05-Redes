@@ -15,6 +15,8 @@
    -Credenciales   credentials.json del servidor que se prueba. Si se omite se busca en LAB_CREDENTIALS,
                    %LAB5_PRIVATE_DIR%\lab5-private\ y %USERPROFILE%\.lab5-private\lab5-private\.
    -Salida         JSON de resultados (predeterminado: %USERPROFILE%\lab5-evidencias\resultados-<IP>-<fecha>.json).
+   -Zona           archivo de zona con las IPs esperadas (db.aerolinea.redes.test). Imprescindible cuando cada servicio corre en una
+                   computadora distinta (los nombres apuntan a IPs distintas); sin el, se espera que los cinco nombres den la IP de -Servidor.
    -Usuario        uid LDAP para las pruebas del subcomando ldap (predeterminado: icumes).
 #>
 param(
@@ -22,6 +24,7 @@ param(
     [string]$Servidor = $env:LAB_DNS_SERVER,
     [string]$Credenciales,
     [string]$Salida,
+    [string]$Zona,
     [string]$Usuario = 'icumes'
 )
 $ErrorActionPreference = 'Stop'
@@ -85,7 +88,12 @@ switch ($Accion) {
             $r = Resolve-DnsName -Name "ns1.$Dominio" -Server $Servidor -Type A -DnsOnly -QuickTimeout -ErrorAction Stop
             Write-Host ("DNS 53/udp:   OK  ns1.{0} -> {1}" -f $Dominio, ($r | Where-Object { $_.Type -eq 'A' } | Select-Object -First 1).IPAddress)
         } catch { Write-Host 'DNS 53/udp:   FALLA (BIND no responde por UDP)' -ForegroundColor Red; $fallas++ }
-        $puertos = [ordered]@{ 'DNS 53/tcp' = 53; 'HTTP 80' = 80; 'LDAP 389' = 389; 'SMTP 25' = 25; 'Submission 587' = 587; 'IMAP 143' = 143; 'FTP 21' = 21 }
+        # DNS por TCP: consulta completa (no solo abrir el puerto), como la hace un cliente cuando la respuesta UDP no cabe.
+        try {
+            $r = Resolve-DnsName -Name "ns1.$Dominio" -Server $Servidor -Type A -DnsOnly -TcpOnly -ErrorAction Stop
+            Write-Host ("DNS 53/tcp:   OK  ns1.{0} -> {1}" -f $Dominio, ($r | Where-Object { $_.Type -eq 'A' } | Select-Object -First 1).IPAddress)
+        } catch { Write-Host 'DNS 53/tcp:   FALLA (BIND no responde por TCP)' -ForegroundColor Red; $fallas++ }
+        $puertos = [ordered]@{ 'HTTP 80' = 80; 'LDAP 389' = 389; 'SMTP 25' = 25; 'Submission 587' = 587; 'IMAP 143' = 143; 'FTP 21' = 21 }
         foreach ($k in $puertos.Keys) {
             if (Test-Tcp $Servidor $puertos[$k]) { Write-Host ('{0,-13} OK' -f ($k + ':')) }
             else { Write-Host ('{0,-13} FALLA' -f ($k + ':')) -ForegroundColor Red; $fallas++ }
@@ -129,6 +137,11 @@ switch ($Accion) {
         Write-Host "Credenciales:     $cred   (deben ser las del servidor que pruebas)"
         Write-Host "Resultados:       $Salida`n"
         $env:LAB_DNS_SERVER = $Servidor; $env:LAB_CREDENTIALS = $cred; $env:LAB_RESULTS = $Salida
+        if ($Zona) {
+            if (-not (Test-Path -LiteralPath $Zona)) { throw "No existe el archivo de zona indicado: $Zona" }
+            $env:LAB_ZONE_FILE = (Resolve-Path -LiteralPath $Zona).Path
+            Write-Host "Zona esperada:    $($env:LAB_ZONE_FILE)"
+        }
         & python (Join-Path $Repo 'virtualbox\pruebas-windows.py')
         $codigo = $LASTEXITCODE
         if (Test-Path -LiteralPath $Salida) {

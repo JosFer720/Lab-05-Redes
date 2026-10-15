@@ -31,6 +31,8 @@ fi
 apt-get update
 apt-get install -y curl ca-certificates xz-utils python3 ufw
 bash "$ROOT/dns/scripts/install.sh"
+# En modo puente: reenviadores de BIND = DNS que entrega el DHCP de la red (si no hay, no cambia nada).
+LAB_IFACE=$LAB_IFACE bash "$ROOT/virtualbox/ajustar-dns-salida.sh" || true
 install -d /etc/systemd/resolved.conf.d
 printf '[Resolve]\nDNS=%s\nDomains=~aerolinea.redes.test\n' "$LAB_RESOLVER" > /etc/systemd/resolved.conf.d/lab5.conf
 systemctl restart systemd-resolved
@@ -76,4 +78,6 @@ ufw --force enable
 # cambiar-ip.sh lee esto para reconstruir el firewall con la misma interfaz y puertos.
 printf 'LAB_IFACE=%q\nLAB_PORTS=%q\n' "$LAB_IFACE" "$LAB_PORTS" > /root/lab5-private/red.env
 chmod 600 /root/lab5-private/red.env
+# Si la VM cambia de red (otro Wi-Fi, hotspot), reconfigura sola zona, ACL, FTP pasivo y UFW (ver red-auto.sh).
+bash "$ROOT/virtualbox/instalar-red-auto.sh"
 bash "$ROOT/virtualbox/arrancar-servicios.sh"

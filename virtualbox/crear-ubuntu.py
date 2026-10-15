@@ -74,9 +74,11 @@ def netplan_text():
         # El puente va primero como ruta predeterminada (métrica menor que la NAT, que queda en 100);
         # NAT queda para administración y respaldo. No se tocan las métricas de enp0s3: cloud-init
         # le activa DHCPv6 y netplan exige métricas iguales en dhcp4 y dhcp6 cuando se sobrescriben.
+        # dhcp-identifier: mac hace que el DHCP presente la MAC como identificador (por defecto Ubuntu manda un DUID y las
+        # reservas de IP por MAC de muchos routers no lo reconocen).
         return ('network:\n  version: 2\n  ethernets:\n'
                 '    enp0s3:\n      dhcp4: true\n'
-                '    enp0s8:\n      dhcp4: true\n      dhcp4-overrides:\n        route-metric: 50\n')
+                '    enp0s8:\n      dhcp4: true\n      dhcp-identifier: mac\n      dhcp4-overrides:\n        route-metric: 50\n')
     return ('network:\n  version: 2\n  ethernets:\n'
             '    enp0s3:\n      dhcp4: true\n'
             '    enp0s8:\n      dhcp4: false\n      addresses: [192.168.56.10/24]\n')
